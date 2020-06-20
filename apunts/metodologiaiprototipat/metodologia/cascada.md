@@ -3,7 +3,7 @@ layout: default
 --
 
 
-## Historia: Metodologia en cascada
+# Historia: Metodologia en cascada
 
 Existeixen una gran varietat de metodologies per administrar projectes de desnvolupament de Sw. Un dels que més s'ha utilitzat va ser el mòdel en cascada.  Es tractad'un mòdel secuencial on una etapa de desenvolupament no pot iniciar-se fins que l'etapa anterior no s'ha finalitzat. En particular, les etapes de desenvolupament d'aquest mòdel són:
 

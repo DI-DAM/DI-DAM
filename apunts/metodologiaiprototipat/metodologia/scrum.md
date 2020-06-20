@@ -2,21 +2,21 @@
 layout: default
 ---
 
-## Metodologia Scrum.
+# Metodologia Scrum.
 
-### Què és?
+## Què és?
 
 Scrum és una metodologia àgil i flexible per a gestionar el desenvolupament de programari, el principal objectiu del qual és maximitzar el retorn de la inversió per a la seua empresa (ROI). Es basa a construir primer la funcionalitat de major valor per al client i en els principis d'inspecció contínua, adaptació, acte-gestió i innovació.
 
 ![model scrum](./images/scrum1.jpg)
 
-### Quan s'utilitza?
+## Quan s'utilitza?
  Amb la metodologia Scrum el client s'entusiasma i es compromet amb el projecte atés que el veu créixer iteració a iteració. Així mateix li permet en qualsevol moment realinear el programari amb els objectius de negoci de la seua empresa, ja que pot introduir canvis funcionals o de prioritat en l'inici de cada nova iteració sense cap problema.
 
 Aquesta metòdica de treball promou la innovació, motivació i compromís de l'equip que forma part del projecte, per la qual cosa els professionals troben un àmbit propici per a desenvolupar les seues capacitats. 
  
  
-### Beneficis
+## Beneficis
 
 - E**mplene d'expectatives**: El client estableix les seues expectatives indicant el valor que li aporta cada requisit / historia del projecte, l'equip els estima i amb aquesta informació el Product Owner estableix la seua prioritat. De manera regular, en les demos de Sprint el Product Owner comprova que efectivament els requisits s'han complit i transmet es feedback a l'equip. 
 - **Flexibilitat a canvis**: Alta capacitat de reacció davant els canvis de requeriments generats per necessitats del client o evolucions del mercat. La metodologia està dissenyada per a adaptar-se als canvis de requeriments que comporten els projectes complexos.

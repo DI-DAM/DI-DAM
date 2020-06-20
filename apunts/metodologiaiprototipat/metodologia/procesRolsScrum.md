@@ -2,9 +2,9 @@
 layout: default
 ---
 
-## Procesos i rols d'Scrum.
+# Procesos i rols d'Scrum.
 
-### El procés
+## El procés
 
 El desenvolupament es realitza de manera iterativa i incremental. Cada iteració, denominada Sprint, té una duració preestablida d'entre 2 i 4 setmanes, obtenint com a resultat una versió del programari amb noves prestacions llestes per a ser usades. En cada nou Sprint, es va ajustant la funcionalitat ja construïda i s'afigen noves prestacions prioritzant-se sempre aquelles que aporten major valor de negoci.
 
