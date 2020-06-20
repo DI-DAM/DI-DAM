@@ -10,6 +10,8 @@ layout: default
         - [Procés i Rols en Scrum](metodologia/procesRolsScrum.html)
 - Disseny d'interfici d'usucari
     - [Disseny centrat en l'usuari](./disseny/DissenyCentratUsuari.html)
+        - [Disseny de l'experiencia d'usuari](./disseny/experienciaUsuari.html)
+        - [Disseny d'interfície d'usuari](./disseny/InterficieUsuari.html)
 - Prototipat
 
 

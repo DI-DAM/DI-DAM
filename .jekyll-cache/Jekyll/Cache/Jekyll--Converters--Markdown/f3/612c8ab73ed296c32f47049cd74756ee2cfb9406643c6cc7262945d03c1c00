@@ -1,0 +1,254 @@
+I":2<h2 id="disseny-centrat-en-lusuari">Disseny Centrat en l’usuari</h2>
+
+<h3 id="disseny-dexperiencies-dusuari">Disseny d’experiencies d’usuari.</h3>
+
+<p>El rol que exerceix el Dissenyador d’Experiència d’Usuari dins del disseny de programari pot ser vist com un procés comunicatiu, inspirat en el model de comunicació de Shannon-Weaver. És a dir, el dissenyador es converteix en un mediador entre:</p>
+
+<ul>
+  <li>Les necessitats comunicatives que estableix la persona o institució que sol·licita o encarrega el producte (clients).</li>
+  <li>Les necessitats informatives i funcionals de les persones que usaran el producte (usuaris).</li>
+</ul>
+
+<p>El dissenyado r ha de lograr un equilibri en el proces comunicatiu entre emisors (clients) i receptors (usuaris).</p>
+
+<p><img src="./images/expUser1.png" alt="Rol del dissenyador en el procés de creació" /></p>
+
+<p>Existeix una frase que actualment s’ha convertit en un lema per a tots els que s’exerceixen com a dissenyadors d’experiència d’usuari:</p>
+<blockquote>
+  <p>“Depén”</p>
+</blockquote>
+
+<p>En el disseny de programari no existeix gens absolut, les decisions de disseny més encertades varien en funció del context, els continguts i els usuaris. És per això que resulta difícil definir pautes o metodologies rígides per a la seua realització, i es fa imprescindible que els dissenyadors afronten de manera flexible cada projecte concret.</p>
+
+<h4 id="metodologia">Metodologia</h4>
+
+<p>L’enfocament metodològic proposat en el present treball es basa en les etapes del disseny de programari descrites anteriorment. Un enfocament que consta de quatre elements bàsics per a la seua comprensió:</p>
+
+<ul>
+  <li><strong>Etapes</strong>: Són les que responen al temps transcorregut <strong>quan?</strong></li>
+  <li><strong>Activitats o tasques</strong>: Són les que responen al procés <strong>què?</strong></li>
+  <li><strong>Tècniques</strong>: Són les que responen al que es fa per a aconseguir els processos i tasca <strong>com?</strong></li>
+  <li><strong>Eines</strong>: Són les que responen a què s’usa per a aplicar les tècniques <strong>amb què?</strong></li>
+</ul>
+
+<h4 id="etapes">Etapes</h4>
+<p>Les etapes es divideixen en quatre moments per els que transcurreixen le labor del dissenyador del software:</p>
+
+<ol>
+  <li><strong>Investigació</strong>: en la qual s’obté tota la informació possible del projecte, usuaris i producte a dissenyar.</li>
+  <li><strong>Organització</strong>: en la qual es processa tota la informació per a convertir-la en un producte.</li>
+  <li><strong>Disseny</strong>: en la qual es plasma el disseny del producte a partir de l’organitzat.</li>
+  <li><strong>Prova</strong>: en la qual es comprova la qualitat del disseny proposat.</li>
+</ol>
+
+<p>El resultat d’aquesta etapa es materialitza en forma d’entregable o artefacte
+<img src="./images/expUser2.png" alt="Etapes de disseny d'experiencia d'usuari" /></p>
+
+<h4 id="activitats-o-tasques">Activitats o tasques</h4>
+<p>En la següent imatge es mostren les activitats o tasques que es realitzarien primcipalment dorant cada etapa.
+<img src="./images/expUser3.png" alt="Activitats de disseny d'experiencia d'usuari" /></p>
+
+<p>#####Etapa 1. Investigacio</p>
+
+<p>Durant aquesta etapa es tracta d’obtindre la major quantitat d’informació possible i necessària per al projecte a realitzar, tant sobre el client com dels usuaris. El correcte balanç entre demandes i necessitats dels uns i els altres és el que porta a l’èxit el producte a crear.</p>
+
+<ul>
+  <li>Informació relacionada amb el projecte
+    <ul>
+      <li>Definir les necessitats generals del projecte.</li>
+      <li>Definir la temàtica general del producte a realitzar o redissenyar.</li>
+      <li>Definir els objectius dels clients o emissors amb el producte.</li>
+      <li>Definir la intensión comunicativa del producte (Informar, entretindre, alertar)</li>
+      <li>Definir la tipologia de producte que es desitja.</li>
+      <li>Definir de manera general als usuaris del producte, el seu context d’ús, i els continguts que tindrà el mateix.</li>
+    </ul>
+  </li>
+  <li>Estudi d’Usuaris (receptors)
+    <ul>
+      <li>Caracteritzar als usuaris. (tipologia, rols, etc.)
+        <ul>
+          <li>Definir perfils d’usuaris.</li>
+        </ul>
+      </li>
+      <li>Investigar les seues necessitats. (d’informació, formació, etc.)</li>
+      <li>Definir escenaris.</li>
+      <li>Definir els processos que realitzen els usuaris en els seus contextos reals.</li>
+    </ul>
+  </li>
+  <li>Estudi del Context
+    <ul>
+      <li>Definir les característiques del context d’ús (culturals, polítiques, econòmiques, socials i tecnològiques).</li>
+      <li>Definir el model de negoci.</li>
+      <li>Realitzar una matriu DAFO (FODA).</li>
+      <li>Definir un banc de problemes del context d’ús.</li>
+      <li>Realitzar fluxogrames de processos i activitats.</li>
+      <li>Realitzar un estudi de mercat i/o de productes similars al que es vol realitzar o redissenyar.</li>
+      <li>En cas d’estar redissenyant un producte
+        <ul>
+          <li>Realitzar una anàlisi de l’ús del mateix (Exemple: Logs, Google Analytics).</li>
+          <li>Realitzar una avaluació del producte existent per a determinar la seua qualitat.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Estudi dels Continguts
+    <ul>
+      <li>Realitzar un inventari de recursos d’informació del producte.</li>
+      <li>Realitzar mapes de conceptes (Concept Map).</li>
+      <li>Realitzar mapes de continguts (Content Map).</li>
+    </ul>
+  </li>
+  <li>Estudi del procés de disseny
+    <ul>
+      <li>Definir una estratègia de treball.</li>
+      <li>Analitzar els recursos de treball amb què es compte.</li>
+      <li>Planificar el temps de treball.</li>
+    </ul>
+  </li>
+</ul>
+
+<ol>
+  <li>Els artefactes generats durant aquesta etapa serien: Informes i Diagrames en forma d’organigrames i mapes.</li>
+</ol>
+
+<p>#####Etapa 2. Organització
+Aquesta és l’etapa que més es relaciona amb l’expressió artística. És quan el dissenyador usa tant criteris cientificotècnics com culturals per a organitzar tota la informació obtinguda durant l’etapa anterior.</p>
+
+<ul>
+  <li>Representar totes les estructures possibles dels continguts, en correspondència a les necessitats d’usuaris i el seu context.</li>
+  <li>Definir de totes les maneres de jerarquitzar les temàtiques i els continguts.</li>
+  <li>Fer correspondre les estructures plantejades a les necessitats tant d’emissors (clients) com de receptors (usuaris).</li>
+  <li>Definir tots els fluxos funcionals que tindrà el producte de programari, corresponent amb els fluxos reals dels usuaris en el seu context.</li>
+</ul>
+
+<p>Els artefactes generats durant aquesta etapa serien: <strong>Diagrames manuscrits i anotacions en forma d’esborrany.</strong></p>
+
+<p>#####Etapa 3. Disseny
+ És l’etapa en la qual es plasmen els resultats de l’etapa anterior, ara amb tots els requeriments tècnics amb la finalitat que siguen compresos per usuaris, client i la resta de l’equip de treball.</p>
+
+<ul>
+  <li>Definir l’estructura del producte (taxonomia i diagrames d’organització o blueprints).</li>
+  <li>Definir el funcionament del producte (diagrames de funcionament).</li>
+  <li>Definir les pantalles del producte (diagrames de presentació o wireframes).</li>
+  <li>Definir els serveis i funcionalitats que tindrà el producte.</li>
+  <li>Definir les etiquetes del producte (labeling).</li>
+  <li>Crear prototips de baix i alt nivell.</li>
+</ul>
+
+<p>Els artefactes generats durant aquesta etapa serien: Diagrames digitals i prototips, informes del producte.</p>
+
+<p>#####Etapa 5. Prova
+És l’etapa en la qual es comproven les propostes de disseny. Les proves es realitzen tant amb clients com amb usuaris. Amb els clients amb l’objectiu de saber si s’han aconseguit els objectius i demandes plantejades. I amb els usuaris, amb l’objectiu de saber resoltes les necessitats identificades.</p>
+
+<ul>
+  <li>Proves de prototips.</li>
+  <li>Revisió de diagrames.</li>
+  <li>Comprovació de robustesa en l’etiquetatge.</li>
+  <li>Comprensió dels serveis dissenyats per part dels usuaris.</li>
+</ul>
+
+<p>Els artefactes generats durant aquesta etapa serien: Informes avaluatius
+####Tècniques
+Les tècniques no estan obligatòriament relacionades amb les activitats ni les etapes, per la qual cosa poden usar-se en qualsevol moment del projecte. Tot depén del que es vulga obtindre amb la tècnica. Hi ha tècniques que tenen major ús durant alguna etapa o activitat, però no per ells estan restringides a aquestes. Si es necessita, es poden mesclar tècniques entre si per a aconseguir algun objectiu específic. Per exemple: Aplicar un card sorting a experts, o realitzar una tempesta d’idees dins d’un Disseny Participatiu.</p>
+
+<p>Es mostren algunes tècniques usades segons la seua funció principal, encara que no exclusiva:</p>
+
+<p>Tècniques bàsiques dins d’un procés de disseny:</p>
+
+<ul>
+  <li>Reunió</li>
+  <li>Entrevista i Enquesta</li>
+  <li>Observació</li>
+  <li>Revisió bibliogràfica</li>
+  <li>Consulta a expert</li>
+  <li>Representació i mapatge</li>
+</ul>
+
+<p>Tècniques molt usades per a la cerca d’informació:</p>
+
+<ul>
+  <li>Tempesta d’idees (brainstorming).</li>
+  <li>Focus group</li>
+  <li>Crítica de dissenys anteriors.</li>
+  <li>Disseny participatiu.</li>
+  <li>Tempesta d’idea de necessitats d’informació (brainstorming).</li>
+  <li>Escenaris.</li>
+  <li>Persones.</li>
+  <li>Benchmarking (anàlisi competitiva).</li>
+  <li>Anàlisi de freqüència de text (repetició de termes i conceptes en els contextos).</li>
+</ul>
+
+<p>Tècniques molt usades per a l’organització:</p>
+
+<ul>
+  <li>Organització de targetes (card sorting).</li>
+  <li>Agrupació (finalitzant en un Diagrama d’Afinitat).</li>
+  <li>Seqüència (Anàlisi de seqüència) (Ronda León, Mesa Rábade; 2005).</li>
+  <li>Tabulació de continguts (crear taules amb els diferents continguts a organitzar).</li>
+  <li>Validació de termes.</li>
+</ul>
+
+<p>Tècniques molt usades per al funcionament del producte:</p>
+
+<ul>
+  <li>Anàlisi de tasques (Task Analysis).</li>
+  <li>Fluxogrames.</li>
+  <li>Passeig cognitiu (Cognitive Walkthrough).</li>
+</ul>
+
+<p>Tècniques molt usades per a dissenyar el producte:</p>
+
+<ul>
+  <li>Diagramació en paper.</li>
+  <li>Diagrama d’organització (Blueprint)</li>
+  <li>Diagrama de funcionament (Flow diagram).</li>
+  <li>Diagrama de presentació (Wireframe).</li>
+  <li>Etiquetatge (Labeling).</li>
+  <li>Prototipado digital.</li>
+</ul>
+
+<p>Tècniques usades per a fer els test del disseny plantejat:</p>
+
+<ul>
+  <li>Crítica de disseny amb usuaris i clients (Critic design).</li>
+  <li>Proves amb usuaris (User test).</li>
+  <li>Avaluació heurística (Heuristic test).</li>
+  <li>Mapatge de clics dins de la pantalla del producte (MouseTracking).</li>
+  <li>Monitoratge o seguiment visual (EyeTracking).
+####Eines
+Les eines per al treball del dissenyador d’experiència d’usuari varien segons les possibilitats econòmiques i tecnològiques del projecte. En el mercat existeixen tant eines professionals d’un alt cost monetari com a eines gratuïtes.</li>
+</ul>
+
+<p>Per al maneig de la informació amb usuaris podem comptar amb les enquestes online, eines que permeten dissenyar un enquesta en línia i que els usuaris, de manera remota, la responguen.</p>
+
+<p>Com a exemples tenim:</p>
+
+<ul>
+  <li>Survey Manager de Netquest (www.solucionesnetquest.com/survey_manager)</li>
+  <li>E-enquestes (www.e-encuesta.com)</li>
+</ul>
+
+<p>Per al mapatge de continguts i conceptes es poden usar algunes aplicacions com ara:</p>
+
+<ul>
+  <li>MindManager de MindJet (www.mindjet.com)</li>
+  <li>CMapTools. (http://cmap.ihmc.us)</li>
+  <li>Freemind (http://freemind.sourceforge.net)</li>
+  <li>PowerMapper (www.powermapper.com)</li>
+  <li>Xtreeme SiteXpert (www.xtreeme.com/sitexpert)</li>
+</ul>
+
+<p>Per a la representació de continguts, ja siga en diagrames o prototips, les següents eines tendeixen a ser molt acceptades:</p>
+
+<ul>
+  <li>Axure RP Pro (www.axure.com)</li>
+  <li>SmartDraw (www.smartdraw.com)</li>
+  <li>Microsoft Visio (www.microsoft.com)</li>
+  <li>OmniGraffle (OSX) (www.omnigroup.com)</li>
+  <li>iGrafx Flowcharter (www.igrafx.com)</li>
+</ul>
+
+<p>Encara que existeixen nombroses aplicacions que serveixen d’eines per al treball del dissenyador d’experiència d’usuari, el paper i el llapis han sigut i continuen sent les més usades. És clar que els “tables” amb les seues pantalles “touch” han vingut a substituir en alguns casos al paper i al llapis, gràcies a les aplicacions que funcionen com a tals en aquests dispositius.</p>
+
+<p><a href="../metiprot.html">back</a></p>
+:ET

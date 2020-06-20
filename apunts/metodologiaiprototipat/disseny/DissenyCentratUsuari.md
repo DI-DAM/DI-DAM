@@ -16,6 +16,7 @@ El disseny d'interficies és un subcamp del disseny d'experiencies d'usuari. Aix
 - **Disseny de l'experiencia d'usuari**: s'encarrega de com l'usuari es sent durant eixa interacció. 
 El disseny d'experiencia de l'usuari dibuixa l'esquelet, mentres que el disseny d'interfaces el desarrolla amb punts de contacte visuals e interactius que conduixen al usuari a través de la seva interacció de manera més intuitiva possible.
 
-### Disseny d'experiencies d'usuari.
+
+
 
 [back](../metiprot.html)
