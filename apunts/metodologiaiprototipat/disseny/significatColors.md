@@ -21,7 +21,7 @@ El roig porta text i imatges al primer pla. Utilitza-ho com un color d'accent pe
 - **El marró vermellós** s'associa amb la collita i la caiguda.
 
 ![Color Roig](./images/significatRoig.png)
-### Taronja Color ![](./images/orange.gif)
+### Color Taronja ![](./images/orange.gif)
 
 El taronja combina l'energia del roig i la felicitat del groc. Està associat amb l'alegria, el sol i els tròpics. Representa entusiasme, fascinació, felicitat, creativitat, determinació, atracció, èxit, alé i estimulació.
 
