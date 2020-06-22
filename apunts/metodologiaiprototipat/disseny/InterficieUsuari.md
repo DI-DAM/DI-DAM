@@ -22,6 +22,8 @@ Pel contrari, l'experiencia interactiva fa referència al comportament de l'usua
 - **Asegurat que el sistema comunique el que està succedint**. Informa en tot moment a l'usuari de l'ubicació, accions, canvis d'estat o errors. Pot ser necessites varis elements per comunicar l'estat o les següents pases a seguir, de forma que reduix la possibe fustració de l'usuari. 
 - **Pensa en els valors predeterminats**. Al pensar cuidadosament i anticipar els objectius que atrau l'usuari, pot crear valors predeterminats que reduixen la carrega de l'usuari. Açó es pot tornar particularment important quan es tracta del disseny de formularis, en el que es poden tenir l'oportunitat de tenir alguns camps preelegits o emplenats.
 
-Dintre dels principis pel dissenu de l'interficie d'usuari un dels aspectes més importants que podem trobar és la  [Jerarquia Visual](./jerarquiaVisual.html).
+Per realitzar un bon disseny d'interfici d'usuari, s'ha de crear una bona jerarquia visual. Per lo qual ens pot ajudar un bon coneixement del treball amb les paletes de colors. Seguidament teniu els enllaços a aquests dos apartats.
+[Jerarquia visual](./jerarquiaVisual.html)
+- [El color en la interfaz d'usuari](./colors.html)
 
 [back](../metiprot.html)

@@ -21,6 +21,8 @@ layout: default
         - [Disseny d'interfície d'usuari - UI (User Interface)](./disseny/InterficieUsuari.html)
         	
             - [Jerarquia Visual](./disseny/jerarquiaVisual.html)
+            
+            - [El color en la interfaz d'usuari](./disseny/colors.html)
        	
         - [Principi del disseny de la interacció]
         
