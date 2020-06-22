@@ -62,7 +62,7 @@ Utilitza el verd per a indicar seguretat en anunciar medicaments i productes mè
 
 ![Color Verd](./images/significatVerd.png)
 
-### Blau color  ![](./images/blue.gif)
+### Color Blau  ![](./images/blue.gif)
 
 El blau és el color del cel i la mar. Sovint s'associa amb profunditat i estabilitat. Simbolitza confiança, lleialtat, saviesa, confiança, intel·ligència, fe, veritat i cel.
 
@@ -100,7 +100,7 @@ Blanc significa seguretat, puresa i neteja. A diferència del negre, el blanc ge
 
 En publicitat, el blanc està associat amb la frescor i la neteja perquè és el color de la neu. Pot usar el blanc per a suggerir simplicitat en productes d'alta tecnologia. El blanc és un color apropiat per a organitzacions de caritat. El blanc està associat amb hospitals, metges i esterilitat, per la qual cosa pot usar el blanc per a suggerir seguretat en promocionar productes mèdics. El blanc sovint s'associa amb baix pes, aliments baixos en greix i productes lactis.
 
-### Negre color  ![](./images/black.gif)
+### Color Negre  ![](./images/black.gif)
 
 El negre s'associa amb poder, elegància, formalitat, mort, maldat i misteri.
 
