@@ -1,0 +1,67 @@
+I"�<h1 id="disseny-centrat-en-lusuari---disseny-dinterfície-dusuari">Disseny Centrat en l’usuari - Disseny d’interfície d’usuari.</h1>
+
+<h2 id="jerarquia-visual">Jerarquia Visual.</h2>
+
+<p>La jerarquia visual és una de les técniques bàsiques que s’aplica al procés de disseny. es basa inicialment en la teoria psicolófica de Gestalt, que examina la percepció visual dels elements en relació amb els demes i mostra com els usuaris tendeixen a unificar els elements visuals en grup.</p>
+
+<p>La jerarquia visual té com objectiu presentar el contingut d’una aplicació de tal manera que els usuaris poden comprendre el nivell d’importancia de cada element. Per aixó, organitza els elements de l’interficie de forma que el cervell puga distinguir els objectes en base a les diferencies físiques, com el tamany, color, contraste, estil, etc…</p>
+
+<p>De fet, la presentació visual dels elements de l’interficie d’usuari té una gran influencia en l’experiencia de l’usuari d’una aplicació. Si els components de contingut es veuen com un desastre, l’usuari no pot navegar dintre de l’aplicació o interactuar amb ella de forma adecuada.</p>
+
+<h3 id="conceptes-i-exemples-de-jerarquia-visual">Conceptes i exemples de jerarquia visual:</h3>
+
+<p>Dins de les tècniques a aplicar a una interfície, les de jerarquia visual són d’allò més important, perquè depenent de com s’apliquen, fan que la tasca a realitzar per part de l’usuari, es comprenga o resulte confusa
+<img src="./images/jerarquiaVisual1.png" alt="jerarquia visual 1" /></p>
+<h3 id="claus">Claus</h3>
+
+<p>Emfatitza la informació més important i minimitza la menys important</p>
+
+<ul>
+  <li>Identifica l’ordre d’importància dels elements de la interfície</li>
+  <li>Estableix una pauta de moviment per a guiar als usuaris</li>
+  <li>Crear un centre d’interés que atraga l’atenció. L’atenció ha de recaure sobre un nombre reduït d’elements i aquests han de ser clau en eixa pantalla</li>
+</ul>
+
+<p>Usar els atributs preatencionales per a generar una jerarquia clara:</p>
+
+<ul>
+  <li><strong>Moviment</strong>. El que genera moviment té més importància jeràrquicament que el que està estàtic</li>
+  <li><strong>Localització</strong>. La posició superior és més important que la inferior</li>
+  <li><strong>Grandària</strong>. La grandària major és més important que el menor
+<img src="./images/elementsjv1.jpg" alt="exemple jerarquia grandaria" /></li>
+  <li><strong>Contrast</strong>. Quanta més diferència de contrast (Ej: blanc sobre negre) cridarà més l’atenció que els tons menys contrastats.
+<img src="./images/elementsjv2.jpg" alt="exemple jerarquia contrast" /></li>
+  <li><strong>Color</strong>. Els colors càlids (roig, groc, taronja) són més pròxims es perceben com més importants que els freds (blaus, violetes, indis)
+<img src="./images/elementsjv3.jpg" alt="exemple jerarquia color" /></li>
+  <li><strong>Saturació</strong>. En un matís de color, com més pur (saturats) s’entendrà més important que un altre més clar o desaturado (en gris)
+<img src="./images/elementsjv8.png" alt="exemple jerarquia color" /></li>
+  <li><strong>Rostres</strong>. Les cares humanes criden poderosament l’atenció respecte a una altra mena d’imatges o il·lustracions</li>
+  <li><strong>proximitat</strong> . És una manera de separar i agrupar elements. Mentre més pròxims estiguen són considerats com un grup i es poden identificar com sub-jerarquies. La proximitat serveix per a agrupar elements similars i separar aquells que són diferents, per això és de molta importància al moment de dissenyar un lloc web.
+<img src="./images/elementsjv4.jpg" alt="exemple jerarquia proximitat" /></li>
+  <li><strong>Alineació</strong>. La ubicació dels elements també pot indicar importància. Seguint l’exemple mostrat a continuació, sabem que els elements situats en la barra lateral són de menor importància que els elements que se situen en el centre perquè ocupen un major espai. D’igual manera, els elements que es col·loquen en la part superior solen ser de major importància, per això aqueix lloc és el comú per a la barra de menú i el logo. En una botiga online, el carret de compres també es sol situar en la part superior.
+<img src="./images/elementsjv5.jpg" alt="exemple jerarquia Alineació" /></li>
+  <li><strong>Repetició</strong>. La repetició és un element que també serveix per a agrupar elements. Si prenem com a exemple el text dins d’una pàgina web veiem que cada paràgraf té una font i una puntaje igual. Això permet a l’usuari reconéixer fàcilment els elements similars.
+  Encara que la repetició és importants, és també essencial saber com trencar eixa repetició per a generar interés, en cas contrari la pàgina es veuria massa estàtica i avorrida. Prenent com a exemple el text, veiem que cada cert nombre de paràgrafs es col·loca un subtítol, usualment en major puntaje o en negretes o amb alguna mena de format diferent que el del paràgraf. Aquest subtítol funciona com un element que genera un trencament visual.
+<img src="./images/elementsjv6.jpg" alt="exemple jerarquia Repetició" /></li>
+  <li><strong>El espaiat</strong>: És un dels principis de disseny més descurats però també és un dels més importants.
+  L’espai en blanc és essencial per a separar i organitzar els elements i ajudar al fet que el disseny es veja ordenat i ben equilibrat. D’aquesta manera dónes un respir als ulls de l’espectador perquè puga centrar la seua atenció en els elements que realment importen.
+<img src="./images/elementsjv7.webp" alt="exemple jerarquia espaiat" /></li>
+  <li><strong>Layout</strong>: La distribució dels elements en una interficie d’usuari està directament relacionada amb l’atenció que requereix. No obstant, cada persona visualitza el contingut de maner diferent. De fet, existeixen diferents patrons de seguiment ocular que representen com interactuen els usuaris amb les interficies en els primers segons. Açó ens pot ajudar als dissenyadors a prioritzar els continguts, col·locar l’informació important en  les zones visibles primaries  i establir una forta jerarquia visual.</li>
+</ul>
+
+<p>Per saber més aspects relacionats amb els patrons, pots clicar <a href="https://appdesignbook.com/es/contenidos/patrones-interaccion-moviles">ací</a>.</p>
+
+<h3 id="exemples">Exemples:</h3>
+
+<h4 id="exemple-1-pagina-inici-de-highrise">Exemple 1. Pagina inici de Highrise.</h4>
+
+<p>En aquesta pàgina de Highrise de la jerarquia està ben lograda. La cara (1) és el que més predomina en tota la composició, vinculandola amb la marca (2), per a finalment guiar la mirada de l’usuari cap al text (3) i finalment pot veure el botó verd (4).</p>
+
+<p><img src="./images/examplejv1.png" alt="exemple jerarquia visual 1" /></p>
+
+<h4 id="exemple-2-google-drive">Exemple 2. Google Drive.</h4>
+<p>En la interfície de Google Drive (abans Google Docs) el boton “Crear + pujar” (1) és més important visualment que el botó “buscar” (2).
+Quan passem sobre els elements aquests es ressalten en groc (3) i es transforma en un element jeràrquicament més important que la resta de línies. 
+<img src="./images/exemplejv2.png" alt="exemple jerarquia visual 2" />
+<a href="../metiprot.html">back</a></p>
+:ET

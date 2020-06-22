@@ -1,4 +1,4 @@
-<h1 id="disseny-centrat-en-lusuari---interfície-dusuari-ui">Disseny Centrat en l’usuari - Interfície d’usuari (UI).</h1>
+I"�<h1 id="disseny-centrat-en-lusuari---disseny-dinterfície-dusuari">Disseny Centrat en l’usuari - Disseny d’interfície d’usuari.</h1>
 <p><img src="./images/interfazUser1.webp" alt="Disseny d'interficie d'usuari" /></p>
 
 <p>El disseny de l’interficie d’usuari s’encarrega de l’experiencia visual e interactiva de l’usuari amb una interficie de producte, ja siga una aplicació, un videojoc o un lloc web.</p>
@@ -20,6 +20,21 @@ Pel contrari, l’experiencia interactiva fa referència al comportament de l’
   <li><strong>Pensa en els valors predeterminats</strong>. Al pensar cuidadosament i anticipar els objectius que atrau l’usuari, pot crear valors predeterminats que reduixen la carrega de l’usuari. Açó es pot tornar particularment important quan es tracta del disseny de formularis, en el que es poden tenir l’oportunitat de tenir alguns camps preelegits o emplenats.</li>
 </ul>
 
-<p>Dintre dels principis pel dissenu de l’interficie d’usuari un dels aspectes més importants que podem trobar és la  <a href="./jerarquiaVisual.html">Jerarquia Visual</a>.</p>
+<p>Dintre dels principis pel dissenu de l’interficie d’usuari, podem trobar:</p>
+<ul>
+  <li><a href="./jerarquiaVisual.html">Jerarquia Visual</a></li>
+</ul>
+
+<p>-[layout]</p>
+
+<ul>
+  <li>
+    <p>[Tipografia]</p>
+  </li>
+  <li>
+    <p>[Ús de color, llum i contrast de forma efectiva]</p>
+  </li>
+</ul>
 
 <p><a href="../metiprot.html">back</a></p>
+:ET

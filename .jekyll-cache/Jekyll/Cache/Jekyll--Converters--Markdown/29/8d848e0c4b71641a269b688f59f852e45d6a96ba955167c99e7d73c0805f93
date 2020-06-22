@@ -1,0 +1,46 @@
+I"w<h1 id="metodologia-i-prototipat">Metodologia i Prototipat</h1>
+
+<ul>
+  <li>
+    <p>Metodologia</p>
+
+    <ul>
+      <li>
+        <p><a href="metodologia/cascada.html">Metodologia Cascada</a></p>
+      </li>
+      <li>
+        <p><a href="metodologia/scrum.html">Metodologia Scrum</a></p>
+
+        <ul>
+          <li><a href="metodologia/procesRolsScrum.html">Procés i Rols en Scrum</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Disseny d’interfici d’usucari
+    <ul>
+      <li><a href="./disseny/DissenyCentratUsuari.html">Disseny centrat en l’usuari</a>
+        <ul>
+          <li><a href="./disseny/experienciaUsuari.html">Disseny de l’experiencia d’usuari</a></li>
+          <li><a href="./disseny/InterficieUsuari.html">Disseny d’interfície d’usuari</a></li>
+        </ul>
+
+  	- <a href="./disseny/jerarquiaVisual.html">Jerarquia Visual</a>
+
+  	- [layout]
+
+  	- [Tipografia]
+
+  	- [Ús de color, llum i contrast de forma efectiva]
+
+        <ul>
+          <li>[Principi del disseny de la interacció]</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Prototipat</li>
+</ul>
+
+<p><a href="../..">back</a></p>
+:ET

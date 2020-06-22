@@ -1,4 +1,6 @@
-<h1 id="disseny-centrat-en-lusuari---experiencies-dusuari-ux">Disseny Centrat en l’usuari - Experiencies d’usuari (UX).</h1>
+I"�2<h1 id="disseny-centrat-en-lusuari">Disseny Centrat en l’usuari</h1>
+
+<h2 id="disseny-dexperiencies-dusuari">Disseny d’experiencies d’usuari.</h2>
 
 <p>El rol que exerceix el Dissenyador d’Experiència d’Usuari dins del disseny de programari pot ser vist com un procés comunicatiu, inspirat en el model de comunicació de Shannon-Weaver. És a dir, el dissenyador es converteix en un mediador entre:</p>
 
@@ -18,7 +20,7 @@
 
 <p>En el disseny de programari no existeix gens absolut, les decisions de disseny més encertades varien en funció del context, els continguts i els usuaris. És per això que resulta difícil definir pautes o metodologies rígides per a la seua realització, i es fa imprescindible que els dissenyadors afronten de manera flexible cada projecte concret.</p>
 
-<h2 id="metodologia">Metodologia</h2>
+<h3 id="metodologia">Metodologia</h3>
 
 <p>L’enfocament metodològic proposat en el present treball es basa en les etapes del disseny de programari descrites anteriorment. Un enfocament que consta de quatre elements bàsics per a la seua comprensió:</p>
 
@@ -29,7 +31,7 @@
   <li><strong>Eines</strong>: Són les que responen a què s’usa per a aplicar les tècniques <strong>amb què?</strong></li>
 </ul>
 
-<h2 id="etapes">Etapes</h2>
+<h3 id="etapes">Etapes</h3>
 <p>Les etapes es divideixen en quatre moments per els que transcurreixen le labor del dissenyador del software:</p>
 
 <ol>
@@ -43,11 +45,11 @@
 
 <p><img src="./images/expUser2.png" alt="Etapes de disseny d'experiencia d'usuari" /></p>
 
-<h2 id="activitats-o-tasques">Activitats o tasques</h2>
+<h3 id="activitats-o-tasques">Activitats o tasques</h3>
 <p>En la següent imatge es mostren les activitats o tasques que es realitzarien primcipalment dorant cada etapa.
 <img src="./images/expUser3.png" alt="Activitats de disseny d'experiencia d'usuari" /></p>
 
-<h3 id="etapa-1-investigacio">Etapa 1. Investigacio</h3>
+<h4 id="etapa-1-investigacio">Etapa 1. Investigacio</h4>
 
 <p>Durant aquesta etapa es tracta d’obtindre la major quantitat d’informació possible i necessària per al projecte a realitzar, tant sobre el client com dels usuaris. El correcte balanç entre demandes i necessitats dels uns i els altres és el que porta a l’èxit el producte a crear.</p>
 
@@ -110,7 +112,7 @@
   <li>Els artefactes generats durant aquesta etapa serien: Informes i Diagrames en forma d’organigrames i mapes.</li>
 </ol>
 
-<h3 id="etapa-2-organització">Etapa 2. Organització</h3>
+<h4 id="etapa-2-organització">Etapa 2. Organització</h4>
 <p>Aquesta és l’etapa que més es relaciona amb l’expressió artística. És quan el dissenyador usa tant criteris cientificotècnics com culturals per a organitzar tota la informació obtinguda durant l’etapa anterior.</p>
 
 <ul>
@@ -122,7 +124,7 @@
 
 <p>Els artefactes generats durant aquesta etapa serien: <strong>Diagrames manuscrits i anotacions en forma d’esborrany.</strong></p>
 
-<h3 id="etapa-3-disseny">Etapa 3. Disseny</h3>
+<h4 id="etapa-3-disseny">Etapa 3. Disseny</h4>
 <p>És l’etapa en la qual es plasmen els resultats de l’etapa anterior, ara amb tots els requeriments tècnics amb la finalitat que siguen compresos per usuaris, client i la resta de l’equip de treball.</p>
 
 <ul>
@@ -136,7 +138,7 @@
 
 <p>Els artefactes generats durant aquesta etapa serien: Diagrames digitals i prototips, informes del producte.</p>
 
-<h3 id="etapa-5-prova">Etapa 5. Prova</h3>
+<h4 id="etapa-5-prova">Etapa 5. Prova</h4>
 <p>És l’etapa en la qual es comproven les propostes de disseny. Les proves es realitzen tant amb clients com amb usuaris. Amb els clients amb l’objectiu de saber si s’han aconseguit els objectius i demandes plantejades. I amb els usuaris, amb l’objectiu de saber resoltes les necessitats identificades.</p>
 
 <ul>
@@ -147,7 +149,7 @@
 </ul>
 
 <p>Els artefactes generats durant aquesta etapa serien: Informes avaluatius</p>
-<h2 id="tècniques">Tècniques</h2>
+<h3 id="tècniques">Tècniques</h3>
 <p>Les tècniques no estan obligatòriament relacionades amb les activitats ni les etapes, per la qual cosa poden usar-se en qualsevol moment del projecte. Tot depén del que es vulga obtindre amb la tècnica. Hi ha tècniques que tenen major ús durant alguna etapa o activitat, però no per ells estan restringides a aquestes. Si es necessita, es poden mesclar tècniques entre si per a aconseguir algun objectiu específic. Per exemple: Aplicar un card sorting a experts, o realitzar una tempesta d’idees dins d’un Disseny Participatiu.</p>
 
 <p>Es mostren algunes tècniques usades segons la seua funció principal, encara que no exclusiva:</p>
@@ -216,7 +218,7 @@
   <li>Monitoratge o seguiment visual (EyeTracking).</li>
 </ul>
 
-<h2 id="eines">Eines</h2>
+<h3 id="eines">Eines</h3>
 <p>Les eines per al treball del dissenyador d’experiència d’usuari varien segons les possibilitats econòmiques i tecnològiques del projecte. En el mercat existeixen tant eines professionals d’un alt cost monetari com a eines gratuïtes.</p>
 
 <p>Per al maneig de la informació amb usuaris podem comptar amb les enquestes online, eines que permeten dissenyar un enquesta en línia i que els usuaris, de manera remota, la responguen.</p>
@@ -250,3 +252,4 @@
 
 <p>Encara que existeixen nombroses aplicacions que serveixen d’eines per al treball del dissenyador d’experiència d’usuari, el paper i el llapis han sigut i continuen sent les més usades. És clar que els “tables” amb les seues pantalles “touch” han vingut a substituir en alguns casos al paper i al llapis, gràcies a les aplicacions que funcionen com a tals en aquests dispositius.
 <a href="../metiprot.html">back</a></p>
+:ET

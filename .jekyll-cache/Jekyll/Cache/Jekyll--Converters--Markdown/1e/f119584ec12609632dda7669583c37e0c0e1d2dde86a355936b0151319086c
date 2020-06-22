@@ -1,4 +1,4 @@
-<h1 id="metodologia-i-prototipat">Metodologia i Prototipat</h1>
+I"�<h1 id="metodologia-i-prototipat">Metodologia i Prototipat</h1>
 
 <ul>
   <li>
@@ -26,18 +26,23 @@
 
         <ul>
           <li>
-            <p><a href="./disseny/experienciaUsuari.html">Disseny de l’experiencia d’usuari - UX (Use eXperience)</a></p>
+            <p><a href="./disseny/experienciaUsuari.html">Disseny de l’experiencia d’usuari</a></p>
           </li>
           <li>
-            <p><a href="./disseny/InterficieUsuari.html">Disseny d’interfície d’usuari - UI (User Interface)</a></p>
+            <p><a href="./disseny/InterficieUsuari.html">Disseny d’interfície d’usuari</a></p>
+          </li>
+        </ul>
 
-            <ul>
-              <li><a href="./disseny/jerarquiaVisual.html">Jerarquia Visual</a></li>
-            </ul>
-          </li>
-          <li>
-            <p>[Principi del disseny de la interacció]</p>
-          </li>
+  	- <a href="./disseny/jerarquiaVisual.html">Jerarquia Visual</a>
+
+  	- [layout]
+
+  	- [Tipografia]
+
+  	- [Ús de color, llum i contrast de forma efectiva]
+
+        <ul>
+          <li>[Principi del disseny de la interacció]</li>
         </ul>
       </li>
     </ul>
@@ -48,3 +53,4 @@
 </ul>
 
 <p><a href="../..">back</a></p>
+:ET
