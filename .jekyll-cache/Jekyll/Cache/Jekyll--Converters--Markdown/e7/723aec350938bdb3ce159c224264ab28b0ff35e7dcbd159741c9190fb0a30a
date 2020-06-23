@@ -1,4 +1,4 @@
-<h1 id="disseny-centrat-en-lusuari">Disseny Centrat en l’usuari</h1>
+I"'<h1 id="disseny-centrat-en-lusuari">Disseny Centrat en l’usuari</h1>
 
 <h2 id="què-és">Què és?</h2>
 
@@ -14,14 +14,5 @@ El disseny d’interficies és un subcamp del disseny d’experiencies d’usuar
 El disseny d’experiencia de l’usuari dibuixa l’esquelet, mentres que el disseny d’interfaces el desarrolla amb punts de contacte visuals e interactius que conduixen al usuari a través de la seva interacció de manera més intuitiva possible.</li>
 </ul>
 
-<p>Dintre del disseny Centrat en l’usuari, ens podem trobar amb:</p>
-<ul>
-  <li>
-    <p><a href="./experienciaUsuari.html">Disseny de l’experiencia d’usuari - UX (Use eXperience)</a></p>
-  </li>
-  <li>
-    <p><a href="./InterficieUsuari.html">Disseny d’interfície d’usuari - UI (User Interface)</a></p>
-  </li>
-</ul>
-
 <p><a href="../metiprot.html">back</a></p>
+:ET

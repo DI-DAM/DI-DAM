@@ -2,9 +2,9 @@
 layout: default
 ---
 
-## Disseny Centrat en l'usuari
+# Disseny Centrat en l'usuari
 
-### Què és?
+## Què és?
 
 El disseny de l'interficie d'usuari es el procés de fer interfaces amb un enfoque en l'apariencia o l'estil. L'objectiu dels dissenyadors es crear dissenys que els usuaris troben fàcils d'utilitzar i siguen agradables.
 
@@ -16,7 +16,10 @@ El disseny d'interficies és un subcamp del disseny d'experiencies d'usuari. Aix
 - **Disseny de l'experiencia d'usuari**: s'encarrega de com l'usuari es sent durant eixa interacció. 
 El disseny d'experiencia de l'usuari dibuixa l'esquelet, mentres que el disseny d'interfaces el desarrolla amb punts de contacte visuals e interactius que conduixen al usuari a través de la seva interacció de manera més intuitiva possible.
 
-
+Dintre del disseny Centrat en l'usuari, ens podem trobar amb:
+- [Disseny de l'experiencia d'usuari - UX (Use eXperience)](./experienciaUsuari.html)
+        
+- [Disseny d'interfície d'usuari - UI (User Interface)](./InterficieUsuari.html)
 
 
 [back](../metiprot.html)

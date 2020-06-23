@@ -1,6 +1,6 @@
-I"'(<h1 id="disseny-centrat-en-lusuari---disseny-dinterfície-dusuari">Disseny Centrat en l’usuari - Disseny d’interfície d’usuari.</h1>
+I"q(<h1 id="disseny-centrat-en-lusuari---disseny-dinterfície-dusuari">Disseny Centrat en l’usuari - Disseny d’interfície d’usuari.</h1>
 
-<h2 id="jerarquia-visual">Jerarquia Visual.</h2>
+<h1 id="jerarquia-visual">Jerarquia Visual.</h1>
 
 <p>La jerarquia visual és una de les técniques bàsiques que s’aplica al procés de disseny. es basa inicialment en la teoria psicolófica de Gestalt, que examina la percepció visual dels elements en relació amb els demes i mostra com els usuaris tendeixen a unificar els elements visuals en grup.</p>
 
@@ -13,55 +13,55 @@
 
 <p>A continuació es mostren un conjunt de atributs per ajudar a generar una jerarquia clara:</p>
 
-<h3 id="moviment">Moviment</h3>
+<h2 id="moviment">Moviment</h2>
 <p>El que genera moviment té més importància jeràrquicament que el que està estàtic</p>
 
-<h3 id="localització">Localització</h3>
+<h2 id="localització">Localització</h2>
 <p>La posició superior és més important que la inferior</p>
 
-<h3 id="grandària">Grandària</h3>
+<h2 id="grandària">Grandària</h2>
 <p>La grandària major és més important que el menor
 <img src="./images/elementsjv1.jpg" alt="exemple jerarquia grandaria" /></p>
 
-<h3 id="contrast">Contrast.</h3>
+<h2 id="contrast">Contrast.</h2>
 <p>Quanta més diferència de contrast (Ej: blanc sobre negre) cridarà més l’atenció que els tons menys contrastats.
 <img src="./images/elementsjv2.jpg" alt="exemple jerarquia contrast" /></p>
 
-<h3 id="color">Color</h3>
-<p>Els colors càlids (roig, groc, taronja) són més pròxims es perceben com més importants que els freds (blaus, violetes, indis)
+<h2 id="color">Color</h2>
+<p>Els colors càlids (roig, groc, taronja) són més pròxims es perceben com més importants que els freds (blaus, violetes…). Podem ambliar els coneixements dels colors <a href="./colors.html">ací</a>.
 <img src="./images/elementsjv3.jpg" alt="exemple jerarquia color" /></p>
 
-<h3 id="saturació">Saturació</h3>
+<h2 id="saturació">Saturació</h2>
 <p>En un matís de color, com més pur (saturats) s’entendrà més important que un altre més clar o desaturado (en gris)
 <img src="./images/elementsjv8.png" alt="exemple jerarquia color" /></p>
 
-<h3 id="rostres">Rostres</h3>
+<h2 id="rostres">Rostres</h2>
 <p>Les cares humanes criden poderosament l’atenció respecte a una altra mena d’imatges o il·lustracions</p>
 
-<h3 id="proximitat">proximitat</h3>
+<h2 id="proximitat">proximitat</h2>
 <p>És una manera de separar i agrupar elements. Mentre més pròxims estiguen són considerats com un grup i es poden identificar com sub-jerarquies. La proximitat serveix per a agrupar elements similars i separar aquells que són diferents, per això és de molta importància al moment de dissenyar un lloc web.
 <img src="./images/elementsjv4.jpg" alt="exemple jerarquia proximitat" /></p>
 
-<h3 id="alineació">Alineació</h3>
+<h2 id="alineació">Alineació</h2>
 <p>La ubicació dels elements també pot indicar importància. Seguint l’exemple mostrat a continuació, sabem que els elements situats en la barra lateral són de menor importància que els elements que se situen en el centre perquè ocupen un major espai. D’igual manera, els elements que es col·loquen en la part superior solen ser de major importància, per això aqueix lloc és el comú per a la barra de menú i el logo. En una botiga online, el carret de compres també es sol situar en la part superior.
 <img src="./images/elementsjv5.jpg" alt="exemple jerarquia Alineació" /></p>
 
-<h3 id="repetició">Repetició</h3>
+<h2 id="repetició">Repetició</h2>
 <p>La repetició és un element que també serveix per a agrupar elements. Si prenem com a exemple el text dins d’una pàgina web veiem que cada paràgraf té una font i una puntaje igual. Això permet a l’usuari reconéixer fàcilment els elements similars.
 	Encara que la repetició és importants, és també essencial saber com trencar eixa repetició per a generar interés, en cas contrari la pàgina es veuria massa estàtica i avorrida. Prenent com a exemple el text, veiem que cada cert nombre de paràgrafs es col·loca un subtítol, usualment en major puntaje o en negretes o amb alguna mena de format diferent que el del paràgraf. Aquest subtítol funciona com un element que genera un trencament visual.
 <img src="./images/elementsjv6.jpg" alt="exemple jerarquia Repetició" /></p>
 
-<h3 id="el-espaiat">El espaiat</h3>
+<h2 id="el-espaiat">El espaiat</h2>
 <p>És un dels principis de disseny més descurats però també és un dels més importants.
 	L’espai en blanc és essencial per a separar i organitzar els elements i ajudar al fet que el disseny es veja ordenat i ben equilibrat. D’aquesta manera dónes un respir als ulls de l’espectador perquè puga centrar la seua atenció en els elements que realment importen.
 <img src="./images/elementsjv7.webp" alt="exemple jerarquia espaiat" /></p>
 
-<h3 id="layout">Layout</h3>
+<h2 id="layout">Layout</h2>
 <p>La distribució dels elements en una interficie d’usuari està directament relacionada amb l’atenció que requereix. No obstant, cada persona visualitza el contingut de maner diferent. De fet, existeixen diferents patrons de seguiment ocular que representen com interactuen els usuaris amb les interficies en els primers segons. Açó ens pot ajudar als dissenyadors a prioritzar els continguts, col·locar l’informació important en  les zones visibles primaries  i establir una forta jerarquia visual.
 	Per saber més aspects relacionats amb els patrons, pots clicar <a href="https://appdesignbook.com/es/contenidos/patrones-interaccion-moviles">ací</a>.
 	<img src="./images/pattern.png" alt="pattern" />
 	Els patrons més utiilitzats són els que tenim a continuació:</p>
-<h4 id="patró-f">Patró F</h4>
+<h3 id="patró-f">Patró F</h3>
 <p>El patró d’escaneig en forma de F es caracteritza per moltes fixacions concentrades en la part superior i esquerra de la pàgina. Específicament</p>
 <ol>
   <li>Els usuaris lligen primer en un moviment horitzontal, generalment en la part superior de l’àrea de contingut. Aquest element inicial forma la barra superior de F.</li>
@@ -74,7 +74,7 @@
       <li>Les primeres línies de text en una pàgina reben més mirades que les línies de text posteriors en la mateixa pàgina.</li>
       <li>Les primeres paraules a l’esquerra de cada línia de text reben més fixacions que les paraules subsegüents en la mateixa línia. 
  <img src="./images/fpattern3.png" alt="fpattern3" />
-        <h4 id="patró-z">Patró z</h4>
+        <h3 id="patró-z">Patró z</h3>
         <p>Segueix la forma de la lletra Z. Un disseny del patró z traça la ruta que recorre l’ull humà quan escaneja la pàgina, d’esquerra a dreta, de dalt a baix:</p>
       </li>
       <li>Primer, les persones escanegen des de la part superior esquerra a la part superior dreta, formant una línia horitzontal</li>
@@ -85,7 +85,7 @@
   Aquest patró funciona perquè la majoria dels lectors occidentals escanejaran la seua pàgina de la mateixa manera que escanejarien un full de paper: de dalt a baix, d’esquerra a dreta.
   L’escaneig de Z-Pattern ocorre en pàgines que no estan centrades en el text (per a pàgines amb molt de text com a articles o resultats de cerca, és millor usar F-Pattern). Això fa que el patró z siga una bona solució per a dissenys simples amb una còpia mínima i alguns elements clau que han de veure’s. Les pàgines minimalistes o les pàgines de destí centrades principalment en un o dos elements principals poden implementar el patró Z perquè el procediment d’escaneig de pàgines siga molt més fàcil per als visitants del lloc.
   <img src="./images/zpattern2.png" alt="zpattern2" />
-        <h4 id="altres-patrons-utilitzats-són">Altres patrons utilitzats són:</h4>
+        <h3 id="altres-patrons-utilitzats-són">Altres patrons utilitzats són:</h3>
         <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Layer-cake Pattern: els usuaris segueixen aquest patró en escanejar encapçalats i subtítols per a determinar ràpidament on (i si) la informació que busquen es pot trobar en la pàgina.
 - spotted Patern: les creativitats solen seguir aquest model d'escaneig, on ometen grans fragments de text i escanegen components visuals com el color, les formes i les anomalies de proporció per a trobar una informació específica.
 - Marking pattern: igual que un ballarí que es fixa en un objecte per a mantindre's equilibrat mentre giren, els usuaris mantenen l'ull enfocat en un lloc mentre es desplacen, un patró molt comú per a UX mòbil.

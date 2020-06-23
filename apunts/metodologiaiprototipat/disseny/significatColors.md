@@ -4,9 +4,9 @@ layout: default
 
 # Disseny Centrat en l'usuari - Disseny d'interfície d'usuari.
 
-## El color en la interfaz d'usuari
+# El color en la interfaz d'usuari
 ![Significat Color](./images/significatColor.jpg)
-### Color roig ![](./images/red.gif)
+## Color roig ![](./images/red.gif)
 
 El roig és el color del foc i la sang, per la qual cosa està associat amb l'energia, la guerra, el perill, la força, el poder, la determinació, així com la passió, el desig i l'amor.
 
@@ -21,7 +21,7 @@ El roig porta text i imatges al primer pla. Utilitza-ho com un color d'accent pe
 - **El marró vermellós** s'associa amb la collita i la caiguda.
 
 ![Color Roig](./images/significatRoig.png)
-### Color Taronja ![](./images/orange.gif)
+## Color Taronja ![](./images/orange.gif)
 
 El taronja combina l'energia del roig i la felicitat del groc. Està associat amb l'alegria, el sol i els tròpics. Representa entusiasme, fascinació, felicitat, creativitat, determinació, atracció, èxit, alé i estimulació.
 
@@ -35,7 +35,7 @@ El taronja té una visibilitat molt alta, per la qual cosa pot usar-ho per a cri
 
 ![Color Taronja](./images/significatTaronja.png)
 
-### Color groc  ![](./images/yellow.gif)
+## Color groc  ![](./images/yellow.gif)
 
 El groc és el color del sol. S'associa amb alegria, felicitat, intel·lecte i energia.
 
@@ -48,7 +48,7 @@ Usa el groc per a evocar sentiments agradables i alegres. Pot triar el groc per 
 
 ![Color Groc](./images/significatGroc.png)
 
-### Color verd  ![](./images/green.gif)
+## Color verd  ![](./images/green.gif)
 
 El verd és el color de la naturalesa. Simbolitza creixement, harmonia, frescor i fertilitat. Green té una forta correspondència emocional amb la seguretat. El verd fosc també s'associa comunament amb els diners.
 
@@ -62,7 +62,7 @@ Utilitza el verd per a indicar seguretat en anunciar medicaments i productes mè
 
 ![Color Verd](./images/significatVerd.png)
 
-### Color Blau  ![](./images/blue.gif)
+## Color Blau  ![](./images/blue.gif)
 
 El blau és el color del cel i la mar. Sovint s'associa amb profunditat i estabilitat. Simbolitza confiança, lleialtat, saviesa, confiança, intel·ligència, fe, veritat i cel.
 
@@ -79,7 +79,7 @@ Evite usar blau quan promoga el menjar i la cuina, perquè el blau suprimeix l'a
 - **El blau és clar** associat amb la salut, la curació, la tranquil·litat, la comprensió i la suavitat.
 - **El blau fosc** representa coneixement, poder, integritat i serietat.
 
-### Color magenta ![](./images/magenta.gif)
+## Color magenta ![](./images/magenta.gif)
 
 Combina l'estabilitat del blau i l'energia del roig. El porpra està associat amb la reialesa. Simbolitza poder, noblesa, luxe i ambició. Transmet riquesa i extravagància. El porpra està associat amb la saviesa, la dignitat, la independència, la creativitat, el misteri i la màgia.
 
@@ -92,7 +92,7 @@ El violeta clar és una bona opció per a un disseny femení. Pot usar un color 
 
 ![Color Morat](./images/significatMorat.png)
 
-### Color blanc  ![](./images/white.gif)
+## Color blanc  ![](./images/white.gif)
 
 El blanc està associat amb la llum, la bondat, la innocència, la puresa i la virginitat. Es considera el color de la perfecció.
 
@@ -100,7 +100,7 @@ Blanc significa seguretat, puresa i neteja. A diferència del negre, el blanc ge
 
 En publicitat, el blanc està associat amb la frescor i la neteja perquè és el color de la neu. Pot usar el blanc per a suggerir simplicitat en productes d'alta tecnologia. El blanc és un color apropiat per a organitzacions de caritat. El blanc està associat amb hospitals, metges i esterilitat, per la qual cosa pot usar el blanc per a suggerir seguretat en promocionar productes mèdics. El blanc sovint s'associa amb baix pes, aliments baixos en greix i productes lactis.
 
-### Color Negre  ![](./images/black.gif)
+## Color Negre  ![](./images/black.gif)
 
 El negre s'associa amb poder, elegància, formalitat, mort, maldat i misteri.
 

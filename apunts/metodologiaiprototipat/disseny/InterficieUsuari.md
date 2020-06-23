@@ -23,7 +23,7 @@ Pel contrari, l'experiencia interactiva fa referència al comportament de l'usua
 - **Pensa en els valors predeterminats**. Al pensar cuidadosament i anticipar els objectius que atrau l'usuari, pot crear valors predeterminats que reduixen la carrega de l'usuari. Açó es pot tornar particularment important quan es tracta del disseny de formularis, en el que es poden tenir l'oportunitat de tenir alguns camps preelegits o emplenats.
 
 Per realitzar un bon disseny d'interfici d'usuari, s'ha de crear una bona jerarquia visual. Per lo qual ens pot ajudar un bon coneixement del treball amb les paletes de colors. Seguidament teniu els enllaços a aquests dos apartats.
-[Jerarquia visual](./jerarquiaVisual.html)
+- [Jerarquia visual](./jerarquiaVisual.html)
 - [El color en la interfaz d'usuari](./colors.html)
 
 [back](../metiprot.html)
