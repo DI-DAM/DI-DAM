@@ -24,8 +24,10 @@ layout: default
             
             - [El color en la interfaz d'usuari](./disseny/colors.html)
        	
-        - [Principi del disseny de la interacció]
+        - [Principi del disseny de la interacció](./disseny/principisInteraccio.html)
         
+    - [Accessibilitat](./disseny/accessibilitat.html)
+
 - Prototipat
 
 

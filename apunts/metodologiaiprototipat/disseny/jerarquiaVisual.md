@@ -93,5 +93,29 @@ Segueix la forma de la lletra Z. Un disseny del patró z traça la ruta que reco
 - Bypassing Pattern: els usuaris ometen deliberadament les primeres paraules d'una línia quan diverses línies de text en una llista comencen totes amb les mateixes paraules.
 - Commitment Pattern: Aquest és un patró extrany i només ocorre quan un usuari està molt interessat en el contingut i està motivat per a consumir-lo tot.
 
+## Tipografia
+
+El contingut és una part significativa de qualsevol disseny d'interficie d'usuari. Per tal cosa, la tipografia afecta en gran mesura a la jerarquia visual. S'encarrega d'organitzar el contingut de la millor manera per la percepció dels usuaris. 
+
+La jerarquia tipografica inclou diferents elements de contingut que són:
+- Títols
+- Subtítols
+- Cos
+- Elements que generen una acció
+- Peus de pagina
+- ...
+
+Per construir una jerarquia visual efectiva, tots els elements han de ser segmentats en diferents nivells, els quals són:
+
+![Jerarquia Tipografica](./images/jerarquiaTipografica1.png)
+
+- Nivell Primari: Inclou el tipo més gran. Com el que s'utilitza als títols. El nivell primari té com objectiu proporcionar als usuaris l'informació bàsica. També ha de cridar l'atenció sobre el seu contingut.
+- El nivell secundari. És utilitzat en els elements que han de ser facilment escanejats, com subtítols que ajuden als usuaris a navegar ràpidament pel contingut. 
+- Nivell terciari: El cos del text i algunes dades adicionals constitueixen el nivell terciari. Es sol aplicar un tipus de lletra relativament xicotiu, pero ha de ser suficientment legible.
+
+Com el contingut mostrat sol ser una font important de informació en l'interficie d'usuari, els dissenyadors han de presentar les dades de forma gradual. Al segmentar els elements en diferents nivells, els dissenyadors ajuden a l'usuari a passar facilment d'una part del text a l'altra i percebre la informació en el ordre correcte.
+
+En cas d'aplicacions mòbils, es recomana que es mantinguen com màxim dos nivells, ja que el tamany de les pantalles en aquestos dispositius no proporcionen suficient espai per 3 nivells. 
+
 
 [back](../metiprot.html)
