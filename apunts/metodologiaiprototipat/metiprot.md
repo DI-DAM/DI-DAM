@@ -28,7 +28,11 @@ layout: default
         
     - [Accessibilitat](./disseny/accessibilitat.html)
 
-- Prototipat
+    - mackup, freeware, Prototipat
 
+       	- [Prototipat](./disseny/prototipat/prototipat.html)
 
+    - [Avaluació euristica i test d'usuari](./disseny/avaluacio/avaluacio.html)
+        - [test d'usabilitat](./disseny/avaluacio/testUsabilitat.html)
+    
 [back](../..)

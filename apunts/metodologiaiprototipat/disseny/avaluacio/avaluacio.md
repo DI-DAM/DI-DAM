@@ -25,3 +25,271 @@ Cap destacar que aquests test d'usuari es realitzen al llarg de tot el procés d
 ![fases avaluació](./images/avaluacio1.png)
 
 ### Pas 1. Crear un plá de test.
+
+És el primer que s'ha de fer per realitzar un bon test d'usabilitat. Per aixó es necessari realitzar les seguents tasques:
+
+1. **Definir l'àmbit del test**: És necessari decidir quines funcionalitats es volen provar. Important, no tenir més de 12 funcionalitats per provar en cada sessió.
+
+2. **Reclutar usuaris**: pot realitzar-se per:
+    - Demografia: Edat, lloc de residencia ...
+    - psicografia: Antecedents cognitius, en cas de realitzar els escenaris propostos.
+    Lo ideal, és reclutar els usuaris pensant en els dos aspectes, però tenint en compter la psicografia es poden  obtenir conneixements més relevants sobre l'ús i la adopció de l'aplicació. La pregunta clau que ens formulares és: Quants usuaris necessitem per al test?
+    Per una vista ràpida, 5 usuaris per segment estaria bé.
+    
+ 3. **Identificar els objectius**
+    - Que volem lograr en aquest test
+    - que s'està buscant?
+    - que es vol demostrar als interesats?
+
+4. Establir la mètrica. Aquestes donen una descripció comú basada en fets de l'acompliment del usuari/tasca sobre les quals prendre decisions de disseny sobre. Les métriques més comuns que es troben està:
+
+    - Temps de resposta.
+    - Rendiment
+    - Tasa d'exit
+    - Velocitat
+    - Acompliment dels objectius
+    - Coincidencia amb les expectatives.
+
+### Pas 2. Facilitar el test
+
+Algunes regles d'aquest pas són:
+
+- Solicitar als usuaris que exterioritzen els pensaments i sentiments al interactuar amb l'aplicació.
+- Pren notes (estructurades o no estructurades)
+- simula un entorn reial. No ha de tractar de minimitzar-se les distraccions.
+- Grava la sessió
+- No guies al usuari
+- Durant les sessions, no s'extrauen conclusions.
+- No hi ha que vendre-li el producte al usuari. No hi ha que fer-li comentaris.
+
+### Pas 3. Analitzar les dades
+
+Quan hem acabat en totes les sessions de test, ha d'analitzar-se tota la informació i extraure conclusions. No hi ha cap regla comú per fer aço, però quan es té tota la informació, es tenen que cercar les tendencies que apareixen, prendre notes dels possibles problemes i les possibles solucions.
+
+### Pas 4. Crear l'informe del test.
+
+S'ha de crear un informe del test cada vegada que es realitze un test d'usabilitat i s'ha d'emmagatzemar junt a qualsevol altra documentació de test que se li ha fet a l'aplicació. Aquet informe ha d'incloure, per lo menys:
+
+   - **Resument d'antecedents**: 
+   
+      - Resum del que s'ha provat
+      - L'equip de test
+      - Material utilitzat
+      - Descripció de tot el que s'ha descubert en base al objectiu de la sessió.
+      
+   - **Metodologia**: On expliquem:
+
+      - com s'han realitzat les session, tasques o escenaris que s'han provat.
+      - Mètriques que s'ha seleccionat.
+      - Descripció de cada segment d'usuari.
+      
+   - **Resultats del test**: on es resumeixen tots els resultats de les métriques que s'ha elegit.
+   
+   - **Descobriments i recomanacions**: S'ha de indicar tant els descobriments possitius (indiquen que estan en el cami correcte), com els negatius (hi haurà que resoldrels).
+   
+## Com fer un test d'usuari: Entrevistes
+
+Un del test d'usuari més comú són les entrevistes individualitzades. Les quals són realitzades per investigadors qualificats en eXperiencia d'Usuari. Aquest métode d'investigació permet obtenir informació sobre les pautes de comportament, preferencia i opinió dels usuaris, amb el fi d'aplicar aquesta informació per obtenir una aplicació de major exit. La realització d'aquestos test en les primeres fases de procés de disseny permeteixen evitar futurs costres de redissenyament i llançar una aplicació facil d'utilitzar. Els test no requereixen una gran mostra de participants, ja que l'objectiu és juntar dades qualitatives. 
+
+En la sessió de test d'usuari, es pot utilitzar una amplia gama d'eines. Així pues, en funció dels objectius de cada sessió de test, s'elegeix una técnica o un altra adaptan-se a les necessitats del test.
+
+Cap destacar que els test d'usuari, generalment estan orientats a tasques. Les quals han de crear-se amb antelació i es demanarà al usuari que les complete, mentres un investigador li realitza una serie de perguntes que analitzarà i avaluarà en temps reïal. Un bon investigador arreplegarà els problemes de l'UX com i quan acorren, i seguiran una línea de questionari relevant. Derspres de les sessions de test, el nostre expert analitzarà el reultat a fons i proporcionarà una gama completa de solucions de disseny.
+
+Un test d'usuari, també pot incloure activitats per informar de l'estructura i la navegació, com la classificació de targetes. També es poden inclouremesures típiques d'utilitat, com l'escala de qualificació del SUS (System Usability Scale), que és la mesura oficial de la satisfacció del usuari. Es tracta d'un questionari que l'usuari completa per obtenir la puntuació de satisfacció general. Aquest questionari conté 10 preguntes que els participants mitjançant una escala de Likert amb 5 opcions. En la que 1 significa completament desacord, i la 5 significa estar completament d'acord.
+
+![Avaluacio 2](./images/avaluacio2.png)
+
+Les 10 preguntes del SUS, poden ser personalitzades per l'aplicació o funcionalitat a testejar són:
+
+1. Crec que m'agradaria usar aquest sistema amb freqüència.
+2. Vaig trobar el sistema innecessàriament complex.
+3. Vaig pensar que el sistema era fàcil d'usar.
+4. Crec que necessitaria el suport d'una persona tècnica per a poder utilitzar aquest sistema.
+5. Vaig trobar que les diverses funcions en aquest sistema estaven ben integrades.
+6. Vaig pensar que hi havia massa inconsistència en aquest sistema!
+7. M'imagine que la majoria de la gent aprendria a usar aquest sistema molt ràpidament.
+8. El sistema em va semblar molt incomoda d'usar.
+9. Em vaig sentir molt segur usant el sistema.
+10. Necessitava aprendre moltes coses abans de poder començar amb aquest sistema.
+
+Les regles per obtenir la puntuació són:
+
+- Per cada pregunta impar, es resta 1 a la puntuació (X-1). Per exemple, si en la primera pregunta "Crec que m'agradaria utilitzar aquesta aplicació amb freqüencia", l'usuari respon amb una puntuació de 4, la puntuació utilitzada per calcular la puntuació final es 3 -> = 4 - 1.
+
+- Per cada pregunta número par, es resta la puntació a 5 (5-X). Per exemple, si en la segona pregunta "Vaig trobar el sistema innecessàriament complex", l'usuari contest 1, la puntuació utilitzada per calcular la puntuació final és 4 -> = 5-1.
+
+- Es sumen les puntuacions de les preguntes pars e impars i després es multiplica per 2'5. Sent esta puntuació la nota final del test SUS.
+
+- La puntuació SUS més alta és 100. Si s'obté un valor major que este, serà necessari revisar el càlcul.
+
+Hi ha que tenir en compter, que es possible que no trobem el problema especific de l'aplicació o funcionalitat amb la puntuació obtinguda del SUS. Però pot ser una base per veure l'usabilitat de l'aplicació o fincionalitat. Hi ha que tenir en compter, quina és la puntuació mínima del SUS, per que la nostra aplicació o funcionalitat es considere com a bona. El promedi estandar, diu que que ha de ser com a mínim de 68. Si l'aplicació o funcionalitat és menor, es possible que haja que canviar o millorar l'usabilitat  de l'aplicació o de la funcionalitat analitzada. Seguidament, podem veure una taula base per interpretar els resultats del SUS:
+
+![Avaluacio 3](./images/avaluacio3.png)
+
+### Altres Test
+
+En l'actualitat existeixen online, alguns qüestionaris d'usabilitat que ja han sigut creats i provats. Cadascun és diferent per les seues dimensions, per la fiabilitat dels seus resultats i pel seu preu. 
+
+La fiabilitat dels seus resultats està valorada entre 0 i 1.
+
+- [SUMI](https://sumi.uxp.ie/): Núm. de preguntes: 50. Fiablidad: 0,92. Preu: $700
+
+- [QUIS](https://www.cs.umd.edu/hcil/quis/): Núm. preguntes: 41-122. Fiablidad: 0,94. Preu: $750
+
+- [PSSQ](https://www.conetrees.com/): Núm. de preguntes: 19. Fiablidad: 0,94. Gratis
+
+- [SUS](https://measuringu.com/sus/): Núm. de preguntes: 10. Fiablidad: 0,91. Gratis
+
+
+## Avaluació Heurística
+
+Una Avaluació Heurística (AH) és un **mètode d'inspecció de la usabilitat sense usuaris**. Consisteix a examinar la qualitat d'ús d'una interfície per part de diversos avaluadors experts, a partir del compliment d'uns principis reconeguts d'usabilitat:** els heurístics**.
+
+Igual que els Walkthroughs, el principal objectiu de l'AH és mesurar la qualitat de la interfície de qualsevol aplicatiu en relació a la seua facilitat per a ser aprés i usat per primera vegada. No obstant això, mentre els primers se centren en la consecució de tasques, les AH **inspeccionen problemes potencials**. Ja que l'avaluador es posa en la pell de l'usuari real del sistema, intentant **predir els errors** que podrà trobar-se.
+
+### Els 10 principis heurístics de Bielsen
+
+A continuació es presenten d'un en un els principis heurístics postulats per Jakob Nielsen.
+
+Per a entendre com s'han d'aplicar en l'avaluació de la usabilitat d'un sistema interactiu, s'afegiran per a cadascun, exemples de bones i males pràctiques de webs i aplicacions reals:
+
+#### 1. Visibilitat de l'estat del sistema
+
+El sistema sempre ha de mantindre als usuaris informats sobre el que ocorre, a través d'una retroalimentació apropiada en un temps raonable.
+
+- **Bona pràctica**: En la web de Vueling l'usuari sap en tot moment l'estat del sistema. Se l'informa quina informació ha buscat prèviament i en quina pàgina del procés de compra es troba. És important indicar sempre on es troba l'usuari respecte a l'estructura de la pàgina, així com d'on ve i cap a on pot anar.
+
+![visibilitat estat del sistema](./images/heuristic1a.jpg)
+
+- **Mala pràctica**: En la web de compra on-line de FNAC, encara que a priori s'indica on es troba l'usuari mitjançant breadcrumbs i títols de pàgina, és confús que no se seleccione cap opció de menú quan es navega per ell.
+
+![visibilitat estat del sistema](./images/heuristic1b.jpg)
+
+
+#### 2. Coincidencia entre l'apllicació i el món real
+
+El sistema ha de parlar en el llenguatge de l'usuari, amb paraules, frases i conceptes familiars per a ell. Utilitzar convencions del món real, fent que la informació aparega en un ordre natural i lògic.
+
+- **Bona pràctica**: En totes les pàgines on s'ha de fer una cerca per data, s'usa (amb més o menys variants) el ja clàssic datepicker. El seu ús i aparença estan tan interioritzats per tots els usuaris, que s'ha convertit en un estàndard.
+Així mateix, també ho fa Airbnb en el seu cercador principal.
+
+![Coincidencia entre l'apllicació i el món real](./images/heuristic2a.jpg)
+
+- **Mala pràctica**: Una molt mala pràctica referent a aquest heurístic, és l'ús d'un vocabulari o argot que no siguen familiars al llenguatge que solen usar els usuaris.Per exemple, en la web de British Airways amb l'idioma ‘espanyol’ seleccionat, el calendari apareix en el sistema anglosaxó, mostrant el ‘Diumenge’ com a primer dia de la setmana. Aquest detall segurament serà confús per a l'usuari hispanoparlant mitjà.
+
+![Coincidencia entre l'apllicació i el món real](./images/heuristic2b.jpg)
+
+#### 3. Control i llibertat de l'usuari
+
+Sovint els usuaris trien funcionalitats per error i necessiten una ‘porta d'emergència’ per a eixir de l'estat indesitjat. Oferir suport per a desfer i refer accions.
+
+- **Bona pràctica**: A vegades quan es realitza una acció (com per exemple la de suprimir un producte d'un carret de compra) és millor permetre desfer l'acció que preguntar a través d'un molest avís si realment es vol suprimir aquest producte.
+Gmail porta anys permetent desfer l'acció d'enviament de correus electrònics, evitant així aqueixos incòmodes correus amb destinatari erroni.
+
+![Control i llibertat de l'usuari](./images/heuristic3a.jpg)
+
+- **Mala pràctica**: Una mala pràctica molt comuna la trobem en els anuncis en portals de vídeo com Youtube. D'una banda es permet correctament a l'usuari “Saltar l'anunci”, però per l'altre es limita la seua llibertat d'interacció en intentar navegar per la barra de control del vídeo.
+
+![Control i llibertat de l'usuari](./images/heuristic3b.jpg)
+
+#### 4. Consistència i estàndards
+
+Els usuaris no han d'haver de preguntar-se si les diverses paraules, situacions, o accions signifiquen les mateixa cosa. Que se seguisquen les normes i convencions de la plataforma sobre la qual està implementant el sistema.
+
+- **Bona pràctica**: La consistència és una de la claus, per no dir LA CLAU, a l'hora de dissenyar UI’s usables. Un element, com per exemple un botó d'acció, ha de veure's exactament igual en totes les pantalles de la web. Això fa que es limiten el nombre d'accions i operacions que es representen, assegurant que els usuaris no hagen d'aprendre noves funcionalitats en cada tasca que realitzen. Una dels principals avantatges d'utilitzar frameworks de disseny front-end, com per exemple [Bootstrap](https://getbootstrap.com/), és que la consistència de tots els seus elements està assegurada.
+
+![Consistència i estàndards](./images/heuristic4a.jpg)
+
+- **Mala pràctica**: Un mal exemple d'aplicació de la consistència i els estàndards el trobem a la botiga online de Pull&Bear. On situen el formulari de cerca en una zona molt poc comuna per a aquesta finalitat: la part esquerra, just abans del logotip de la marca. Situem sempre els elements on els usuaris esperen trobar-los.
+
+![Consistència i estàndards](./images/heuristic4b.jpg)
+
+#### 5. Prevenció d'errors
+
+Abans que dissenyar bons missatges d'error, és millor evitar que el problema ocórrega.
+
+- **Bona pràctica**: Un escenari clàssic on ocorren molts errors és en la validació de formularis. Això ocorre quan no s'informen degudament els requisits de cada camp, i l'usuari obté errors no esperats. Com a exemple de formulari ben dissenyat trobem el del procés de ‘Registre’ de Facebook. On en tot moment s'indiquen els detalls necessaris per a completar cada camp.
+
+![Prevenció d'errors](./images/heuristic5a.jpg)
+
+- **Mala pràctica**: No obstant això, en el formulari d'alta de la web de Correus no s'informa de les característiques que ha de tindre cada camp. Cosa que fa que fins que l'usuari no valida el formulari, aquest no sap que per exemple el camp ‘Contrasenya’ ha de tindre un mínim 8 caràcters.
+
+![Prevenció d'errors](./images/heuristic5b.jpg)
+
+#### 6. Reconeixement millor que recorde
+
+Minimitzar la càrrega de memòria de l'usuari fent que els objectes, les accions i les opcions estiguen visibles. L'usuari no hauria d'haver de recordar la informació d'una part del diàleg a una altra.
+
+- **Bona pràctica**: Sempre s'han d'indicar els camps pels quals s'ha realitzat una cerca. Per exemple, en la pàgina web d'Atrapalo es mostra una llegenda en la part superior amb els paràmetres pels quals s'ha buscat un hotel.
+
+![Reconeixement millor que recorde](./images/heuristic6a.jpg)
+
+- **Mala pràctica**: No obstant això, en la web de Wallapop no s'especifiquen clarament els conceptes ni els filtres a manera de resum. Obligant així a l'usuari a revisar diferents zones de la pantalla per a recordar què havia buscat prèviament.
+
+![Reconeixement millor que recorde](./images/heuristic6b.jpg)
+
+#### 7. Flexibilitat i eficiència d'ús
+
+Els acceleradors, no vistos per l'usuari principiant, milloren la interacció per a l'usuari expert de tal manera que el sistema pot servir per a usuaris inexperts i experimentats. És important que el sistema permeta personalitzar accions freqüents.
+
+- **Bona pràctica**: Les dreceres de teclat (shortcuts) són el clàssic exemple de ‘acceleradors’ que milloren la interacció dels usuaris experts. Permetent així realitzar accions de manera més ràpida i automatitzada. Per exemple, Twitter, com fan moltes altres webs, proporciona els següents:
+
+![Flexibilitat i eficiència d'ús](./images/heuristic7a.jpg)
+
+- **Mala pràctica**: En aquest sentit, s'han d'evitar casuístiques i accions que afecten considerablement al mateix temps que inverteix l'usuari per a dur-les a terme. Per exemple, el típic formulari en el qual si una vegada es valida i existeix un error, s'esborren tots els camps prèviament informats. Comportant que l'usuari perda el temps i en definitiva, la paciència.
+
+#### 8. Disseny estètic i minimalista
+
+Els diàlegs no haurien de contindre informació irrellevant o que es necessite rarament. Cada unitat extra d'informació en un diàleg competeix amb la informació important, disminuint la seua visibilitat relativa.
+
+- **Bona pràctica**: Menys és més! En el disseny d'una pàgina solament s'ha de mostrar aquella informació que realment és important per a l'usuari. Evitant així, soroll i elements innecessaris que no compleixen amb la fi principal d'aqueixa pàgina. Per exemple, Google porta anys resistint-se a afegir més informació en la seua pàgina inicial. Donant així protagonisme a la seua funcionalitat principal: el cercador.
+
+![Disseny estètic i minimalista](./images/heuristic8a.jpg)
+
+- **Mala pràctica**: No obstant això el portal Yahoo, encara que haja millorat substancialment el seu disseny en els últims anys, sempre ha presentat una estètica sobrecarregada i amb massa elements.
+
+![Disseny estètic i minimalista](./images/heuristic8b.jpg)
+
+#### 9. Ajudar a reconéixer, diagnosticar i recuperar-se d'errors
+
+Els missatges d'error han d'estar expressats en llenguatge pla (sense codis), indicant amb precisió el problema i suggerint una solució.
+
+- **Bona pràctica**: Un molt bon exemple de pàgina d'error 404 la trobem en la web oficial de Spotify. On s'informa correctament del problema succeït i de les possibles eixides per a solucionar-lo: “Preguntes freqüents”, “Comunitat” i “Tornar”.
+
+![Ajudar a reconéixer, diagnosticar i recuperar-se d'errors](./images/heuristic9a.jpg)
+
+- **Mala pràctica**: Per l'altre costat, com a exemple de mala pràctica trobem la web de Renfe. On en el procés de compra d'un bitllet, apareixen múltiples missatges d'error amb un sistema de numeració que l'usuari difícilment entendrà.
+
+![Ajudar a reconéixer, diagnosticar i recuperar-se d'errors](./images/heuristic9b.jpg)
+
+#### 10. Ajuda i documentació
+
+Encara que és millor que es puga usar el sistema sense documentació, és necessari proveir a l'usuari d'ajuda i documentació. Aquesta ha de ser fàcil de buscar, centrada en les tasques de l'usuari, amb informació de les etapes a realitzar i que no siga molt extensa.
+
+- **Bona pràctica**: El portal Stackoverflow proporciona una detallada secció d'ajuda en la seua ‘Help center’. En una mateixa pàgina es pot trobar un cercador, un mòdul de Onboarding i les F.A.Q’s.
+
+![Ajuda i documentació](./images/heuristic10a.jpg)
+
+- **Mala pràctica**: Qualsevol pàgina web que no presente cap secció d'ajuda, documentació o fins i tot de contacte, possiblement provocarà desemparament i incertesa a l'usuari.
+
+### Com realitzar una avaluació heuristica
+
+Quan es disposa de recursos, eds recomana que l'aplicació la probenn per lo menys 3 experts en usabilitat. Així, despres 'acordar un conjunt de directrius comunies, cada expert en usabilitat revisa l'aplicació per separat. Nielsen recomana que, algú que estiga familiartzat amb l'aplicació actue tant com a gracador i com aclarador. Responent a qualsevol pregunta aclaratoria que el revisor piga tenir sobre l'aplicació. Tal cosa augmenta l'eficiencia de l'avaluació.
+
+Despres, serà necessari compilar, revisar i prioritzar les dades dels tres experts. El benefici de tenir multiples revisions, es que encara que segurament troben els mateixos errors. És probable que algun d'ells trobe alguno que la resta ha pasat per alt. 
+
+En el cas de no disposar de recursos neecessaris per contratar a experts en usabilitat, es poden utilitzar la metodologia coneguda com "Heurisitic Markup" proposada per Leah buley en el seu llibre "The User Experience Team of One". Bàsicament, tracta en navegar per l'aplciació, de principi a fi, com es creu que ho faria un usuari. La idea, es posar-se en el lloc del usuari. Intentant dur a terme les tasques/funcionalitats específiques. 
+
+### Conclusions sobre l'avaluació Heuristica
+
+L'Avaluació heurística és una tècnica crucial i molt útil a l'hora de trobar errors d'usabilitat, sobretot en fases molt primerenques d'un projecte de disseny web. No obstant això, la popularització dels heurístics de Nielsen ha creat una falsa creença que dóna a entendre que solament amb complir una sèrie de principis heurístics ja basta per a considerar una aplicació com a usable.
+
+Hem d'entendre llavors que les avaluacions heurístiques en cap cas substitueixen les avaluacions d'usabilitat amb usuaris reals. Solament les complementen. I és que, encara que en el global del procés de definició, disseny i implementació d'un sistema interactiu s'han de tindre en compte diferents tècniques per a assegurar la usabilitat, sempre s'ha de considerar a l'usuari com a centre de tot el procés.
+
+Per a acabar, només afegir que en el meu pròxim post hi haurà una segona part d'aquesta publicació on s'aprofundirà en la metodologia a seguir per a preparar, executar i analitzar una avaluació heurística.
+
+Fent clic al següent enllaç, pot observar un test d'usabilitat.
+
+- [test d'usabilitat](testUsabilitat.html)
+
+[back](../../metiprot.html)
