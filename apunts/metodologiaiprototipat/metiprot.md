@@ -23,7 +23,9 @@ layout: default
             - [Jerarquia Visual](./disseny/jerarquiaVisual.html)
             
             - [El color en la interfaz d'usuari](./disseny/colors.html)
-       	
+            
+            - [10 principis de disseny segons Jakob Nielsen](./disseny/prototipat/deuPrincipisNielsen.html)
+
         - [Principi del disseny de la interacció](./disseny/principisInteraccio.html)
         
     - [Accessibilitat](./disseny/accessibilitat.html)
@@ -33,6 +35,7 @@ layout: default
        	- [Prototipat](./disseny/prototipat/prototipat.html)
 
     - [Avaluació euristica i test d'usuari](./disseny/avaluacio/avaluacio.html)
+    
         - [test d'usabilitat](./disseny/avaluacio/testUsabilitat.html)
     
 [back](../..)

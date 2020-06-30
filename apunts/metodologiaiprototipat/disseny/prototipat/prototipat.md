@@ -160,6 +160,6 @@ A continuació es detallen alguns aspectes a tenir en compter durant el procés 
 - Les especificacions que sorgeixen durant les últimes etapes del procés de prototipado poden reduir la integritat estructural del sistema, encara parcialment dissenyat
 - El context d'ús del prototip pot ser ben diferent del context d'ús del sistema final
 - No hi ha garantia que les posicions de desenvolupadors i clients convergisquen durant el cicle d'iteració
-**
+
 
 [back](../../metiprot.html)

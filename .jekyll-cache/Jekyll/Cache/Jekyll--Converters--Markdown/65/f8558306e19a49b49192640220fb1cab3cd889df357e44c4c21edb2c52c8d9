@@ -1,4 +1,4 @@
-<h1 id="metodologia-i-prototipat">Metodologia i Prototipat</h1>
+I"�<h1 id="metodologia-i-prototipat">Metodologia i Prototipat</h1>
 
 <ul>
   <li>
@@ -38,14 +38,14 @@
               <li>
                 <p><a href="./disseny/colors.html">El color en la interfaz d’usuari</a></p>
               </li>
-              <li>
-                <p><a href="./disseny/prototipat/deuPrincipisNielsen.html">10 principis de disseny segons Jakob Nielsen</a></p>
-              </li>
             </ul>
           </li>
-          <li>
-            <p><a href="./disseny/principisInteraccio.html">Principi del disseny de la interacció</a></p>
-          </li>
+        </ul>
+
+ 	    - <a href="./disseny/prototip/deuPrincipisNielsen.html">10 principis de disseny segons Jakob Nielsen</a>
+
+        <ul>
+          <li><a href="./disseny/principisInteraccio.html">Principi del disseny de la interacció</a></li>
         </ul>
       </li>
       <li>
@@ -58,7 +58,6 @@
       </li>
       <li>
         <p><a href="./disseny/avaluacio/avaluacio.html">Avaluació euristica i test d’usuari</a></p>
-
         <ul>
           <li><a href="./disseny/avaluacio/testUsabilitat.html">test d’usabilitat</a></li>
         </ul>
@@ -68,3 +67,4 @@
 </ul>
 
 <p><a href="../..">back</a></p>
+:ET
