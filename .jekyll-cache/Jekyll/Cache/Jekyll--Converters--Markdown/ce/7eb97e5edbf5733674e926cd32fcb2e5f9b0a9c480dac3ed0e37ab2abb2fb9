@@ -1,4 +1,4 @@
-<h1 id="disseny-centrat-en-lusuari---disseny-dinterfície-dusuari">Disseny Centrat en l’usuari - Disseny d’interfície d’usuari.</h1>
+I"MR<h1 id="disseny-centrat-en-lusuari---disseny-dinterfície-dusuari">Disseny Centrat en l’usuari - Disseny d’interfície d’usuari.</h1>
 
 <h1 id="prototips">Prototips</h1>
 
@@ -109,7 +109,7 @@ Alta Fidelitat: conjunt de pantalles que proporcionen un model dinàmic, automat
   <li>Dissenyar a grandària real, respectar la grandària de les imatges i continguts i incloure l’estructura de navegació.</li>
 </ul>
 
-<h2 id="bones-pràctiques-per-la-creació-de-prototips">Bones pràctiques per la creació de prototips.</h2>
+<h3 id="bones-pràctiques-per-la-creació-de-prototips">Bones pràctiques per la creació de prototips.</h3>
 
 <p>A continuació es detallen alguns aspectes a tenir en compter durant el procés de prototipat:</p>
 <ul>
@@ -121,7 +121,7 @@ Alta Fidelitat: conjunt de pantalles que proporcionen un model dinàmic, automat
   <li>Implementar les caracteístiques importants des del principi per que si s’acaba el temps, s’obtinga un prototip que puga utilitzar-se  perl’implementació.</li>
 </ul>
 
-<h2 id="avantatges-del-prototip">Avantatges del prototip</h2>
+<h3 id="avantatges-del-prototip">Avantatges del prototip</h3>
 
 <ul>
   <li>Els usuaris participen activament en el dessenvolupament. Per tant,, es pot detectar errors en l’etapa inicial del procés de desenrotllament de l’aplicació.</li>
@@ -145,7 +145,7 @@ Alta Fidelitat: conjunt de pantalles que proporcionen un model dinàmic, automat
   <li>Els prototips poden oferir una capacitació inicial per els futurs usuaris de l’aplicació.</li>
 </ul>
 
-<h2 id="riscos-del-prototip">Riscos del prototip</h2>
+<h3 id="riscos-del-prototip">Riscos del prototip</h3>
 
 <ul>
   <li>El prototipat pot estimular un número de petició de canvis excessiu</li>
@@ -205,3 +205,4 @@ Alta Fidelitat: conjunt de pantalles que proporcionen un model dinàmic, automat
 <blockquote>
   <p><em>Informació extreta de la web: https://mosaic.uoc.edu</em></p>
 </blockquote>
+:ET

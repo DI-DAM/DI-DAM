@@ -1,4 +1,4 @@
-<h1 id="metodologia-i-prototipat">Metodologia i Prototipat</h1>
+I"�<h1 id="metodologia-i-prototipat">Metodologia i Prototipat</h1>
 
 <ul>
   <li>
@@ -52,22 +52,15 @@
         <p><a href="./disseny/accessibilitat.html">Accessibilitat</a></p>
       </li>
       <li>
-        <p><a href="./disseny/prototipat/etapesDisseny.html">Etapes de disseny d’una aplicació</a></p>
+        <p><a href="./disseny/etapesDisseny.html">Etapes de disseny d’una aplicació</a></p>
 
-        <ul>
-          <li>
-            <p><a href="./disseny/prototipat/sketch.html">Sketch</a></p>
-          </li>
-          <li>
-            <p><a href="./disseny/prototipat/wireframe.html">Wireframe</a></p>
-          </li>
-          <li>
-            <p><a href="./disseny/prototipat/mockup.html">Mockup</a></p>
-          </li>
-          <li>
-            <p><a href="./disseny/prototipat/prototipat.html">Prototipat</a></p>
-          </li>
-        </ul>
+ 	- <a href="./disseny/sketch.html">Sketch</a>
+
+ 	- <a href="./disseny/wireframe.html">Wireframe</a>
+
+ 	- <a href="./disseny/mockup.html">Mockup</a>
+
+ 	- <a href="./disseny/prototipat/prototipat.html">Prototipat</a>
       </li>
       <li>
         <p><a href="./disseny/avaluacio/avaluacio.html">Avaluació euristica i test d’usuari</a></p>
@@ -81,3 +74,4 @@
 </ul>
 
 <p><a href="../..">back</a></p>
+:ET

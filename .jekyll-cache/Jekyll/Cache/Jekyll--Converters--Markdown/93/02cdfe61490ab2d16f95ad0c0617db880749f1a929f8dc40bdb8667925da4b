@@ -1,4 +1,4 @@
-<h1 id="disseny-centrat-en-lusuari---disseny-dinterfície-dusuari">Disseny Centrat en l’usuari - Disseny d’interfície d’usuari.</h1>
+I"�,<h1 id="disseny-centrat-en-lusuari---disseny-dinterfície-dusuari">Disseny Centrat en l’usuari - Disseny d’interfície d’usuari.</h1>
 
 <h1 id="prototips">Prototips</h1>
 
@@ -41,63 +41,6 @@
 
 <p>En aquesta fase convé tindre molt en compte els <a href="./deuPrincipisNielsen.html">10 principis de disseny basats en l’usuari</a>, que va definir Jakob Nielsen en 1990 , que continuen sent un referent importantíssim per a avaluar la usabilitat d’un lloc web.</p>
 
-<h2 id="caracteristiques-del-prototip">Caracteristiques del prototip</h2>
-
-<h3 id="baixa-fidelitat-vs-alta-fidelitat">Baixa Fidelitat vs. Alta Fidelitat</h3>
-
-<ul>
-  <li><strong>Baixa Fidelitat</strong>: conjunt de dibuixos (per exemple, una presentació d’escenaris) que constitueix una maqueta estàtica, no automatitzada i no operativa d’una interfície d’usuari per a un sistema en planificació.
-Alta Fidelitat: conjunt de pantalles que proporcionen un model dinàmic, automatitzat i operatiu d’un sistema en planificació.</li>
-</ul>
-
-<h3 id="exploratori-vs-experimental-vs-operacional">Exploratori vs. Experimental vs. Operacional</h3>
-
-<ul>
-  <li><strong>Exploratori</strong>: prototip no reutilitzable utilitzat per a aclarir les metes del projecte, identificar requeriments, examinar alternatives de disseny o investigar un sistema extens i complex.</li>
-  <li><strong>Experimental</strong>: prototip utilitzat per a la validació d’especificacions de sistema</li>
-  <li><strong>Operacional</strong>: prototip iteratiu que és progressivament refinat fins que es converteix en el sistema final.</li>
-</ul>
-
-<h3 id="horitzontal-vs-vertical">Horitzontal vs. Vertical</h3>
-
-<ul>
-  <li><strong>Horitzontal</strong>: prototip que modela moltes característiques d’un sistema però amb poc detall. Aquest detall aconseguirà una profunditat determinada, resultarà especialment útil en les etapes primerenques de disseny i té com a objectiu el test de la manera d’interacció global, en contemplar funcions comunes que l’usuari utilitzarà sovint.</li>
-  <li><strong>Vertical</strong>: prototip que modela poques característiques d’un sistema però amb molt de detall. Resultarà especialment útil en etapes més avançades del disseny i té com a objectiu el test de detalls del disseny</li>
-  <li><strong>Diagonal</strong>: prototip horitzontal fins a un cert nivell, a partir del qual es pot considerar vertical</li>
-</ul>
-
-<h3 id="global-vs-local">Global vs. Local</h3>
-
-<ul>
-  <li><strong>Global</strong>: prototip del sistema complet. Prototip horitzontal expandit que modela una gran quantitat de característiques i cobreix un ampli rang de funcionalitats. Resultarà molt útil al llarg de tot el procés de disseny.</li>
-  <li><strong>Local</strong>: prototip d’un únic component o característica del sistema d’usabilitat crítica. Resultarà d’utilitat en algunes etapes específiques del procés de disseny.</li>
-</ul>
-
-<h2 id="dimensions-del-prototipat">Dimensions del prototipat</h2>
-
-<ul>
-  <li>
-    <p><strong>Executabilitat</strong>: serà operatiu el prototip i en aquest cas què significarà això?</p>
-
-    <ul>
-      <li><strong>Prototip Guiat</strong>: prototip prou operatiu com per a dur a terme una revisió o passeig cognitiu</li>
-      <li><strong>Prototip d’Animació</strong>: prototip prou operatiu com per a ser executat per parts en manera de presentació en un ordenador</li>
-      <li><strong>Prototip del Mag de Oz</strong>: prototip que permet ser executat en manera de presentació i la participació d’un tercer subjecte que, ocult a la vista de l’usuari que interactua, gestiona l’evolució de la presentació en funció de les entrades que l’usuari proporciona al sistema</li>
-      <li><strong>Prototip Interactiu</strong>: operatiu en sentit estricte, s’executa i respon a les entrades que li proporciona l’usuari participant en temps real</li>
-      <li><strong>Prototip Funcional</strong>: operatiu en sentit estricte, s’executa, respon a les entrades que li proporciona l’usuari participant en temps real i efectua alguna de les operacions que se li sol·liciten</li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>Maduració</strong>: es millorarà el prototip per etapes i, en aquest cas, es convertirà en el producte final?</p>
-  </li>
-  <li>
-    <p><strong>Representació</strong>: quin nivell de fidelitat aconseguirà el prototip?</p>
-  </li>
-  <li>
-    <p><strong>Perspectiva</strong>: es limitarà el prototip a àrees específiques de funcionalitat?</p>
-  </li>
-</ul>
-
 <h2 id="alguns-consells-a-lhora-de-crear-un-prototip">Alguns consells a l’hora de crear un prototip</h2>
 
 <p>No hi ha una formula general que puguem aplicar a l’hora de crear un prototip, ja que aquest dependrà de molts factors, però si hi ha algunes coses que podem tindre en compte:</p>
@@ -107,71 +50,6 @@ Alta Fidelitat: conjunt de pantalles que proporcionen un model dinàmic, automat
   <li>Depenent de la mena de prototip, si és d’una web, o d’una aplicació multimèdia, el prototip haurà de ser més o menys complet, en una web senzilla pot tindre només les pàgines més importants que siguen diferents, i en una altra mena d’aplicacions és possible que hàgem de desenvolupar-lo completament.</li>
   <li>És convenient que en la creació del prototip participe també l’equip de disseny. Encara que es pot considerar que és un treball més relacionat amb els equips de desenvolupament, una bona comunicació amb la resta de persones implicades en el producte pot solucionar molts problemes durant la fase de creació del prototip.</li>
   <li>Dissenyar a grandària real, respectar la grandària de les imatges i continguts i incloure l’estructura de navegació.</li>
-</ul>
-
-<h2 id="bones-pràctiques-per-la-creació-de-prototips">Bones pràctiques per la creació de prototips.</h2>
-
-<p>A continuació es detallen alguns aspectes a tenir en compter durant el procés de prototipat:</p>
-<ul>
-  <li>Utilitzar el prototipat quan els requisits no estiguen clars.</li>
-  <li>És important realitzar un prototipat palnificat i controlat.</li>
-  <li>Les reunions regulars són vitals per desenrrotllar l’aplicació a temps i evitar retrasos costosos.</li>
-  <li>Els usuaris i els dissenyadors deuen estar al tanto dels pronlemes durant la creació dels prototips</li>
-  <li>És necessari aprvar un prototip abans de pasar a l’implementació.</li>
-  <li>Implementar les caracteístiques importants des del principi per que si s’acaba el temps, s’obtinga un prototip que puga utilitzar-se  perl’implementació.</li>
-</ul>
-
-<h2 id="avantatges-del-prototip">Avantatges del prototip</h2>
-
-<ul>
-  <li>Els usuaris participen activament en el dessenvolupament. Per tant,, es pot detectar errors en l’etapa inicial del procés de desenrotllament de l’aplicació.</li>
-  <li>Es pot identificar les funcions que falten. Ajudant d’aquesta forma a reduir el risc de falles.</li>
-  <li>Ajuda als membres del equip de desenvolupament a comunicar-se de forma eficaç.</li>
-  <li>Els errors poden detectar-se molt antes.</li>
-  <li>Es disposa de retroalimentaciómés ràpida dels usuaris, el que condueix a millors solucions.</li>
-  <li>La satisfacció del client existeix perque el client pot sentir l’aplicació en una etapa inicial.</li>
-  <li>Apenes hi haurà possibilitat de rebuig de l’aplicació.</li>
-  <li>La retroalimentació més ràpida del usuari ajyda a lograr millors solucions de desenvolupament d’aplicacions..</li>
-  <li>Permet al client comparar si el codi de l’aplicació coincideix amb l’especificació de la mateixa.</li>
-  <li>Permet descobrir fàcilment la funcionalitat o funcionalitats que falten en el sistema.</li>
-  <li>Permet identificar els funcions complexes o dificils</li>
-  <li>Fomenta la innovació i el disseny flexible.</li>
-  <li>Es un model sencill, per lo que és fàcil d’entendre.</li>
-  <li>No hi ha necessitat d’experts especialitzats per construir el model.</li>
-  <li>El prototip serveix com a base per derivar una especificació de l’aplicació.</li>
-  <li>El prototip ajuda a comprendre millor les necessitats del client.</li>
-  <li>Els prototips poden ser canviats e inclús descartats.</li>
-  <li>Un prototip també serveix com a base per les especificacions operacionals.</li>
-  <li>Els prototips poden oferir una capacitació inicial per els futurs usuaris de l’aplicació.</li>
-</ul>
-
-<h2 id="riscos-del-prototip">Riscos del prototip</h2>
-
-<ul>
-  <li>El prototipat pot estimular un número de petició de canvis excessiu</li>
-  <li>Els prototips operatius poden induir a pensar a la directiva i als clients que el producte final està pràcticament disposat per a la seua eixida al mercat</li>
-  <li>Les característiques del prototip poden conduir a interpretacions errònies de l’usuari-client</li>
-  <li>Els clients podrien no estar disposats a participar en el cicle d’iteració durant llargs períodes de temps</li>
-  <li>Els desenvolupadors poden trobar dificultats en l’enllestiment de detalls que han resultat de fàcil desenvolupament amb una eina de prototipado</li>
-  <li>A causa de les exigències temporals i de mercat, les especificacions del sistema podrien congelar-se abans que el procés de prototipado haja aconseguit una etapa definitiva</li>
-  <li>Durant el prototipado, l’única especificació de disseny és el propi prototip, havent d’admetre quantes modificacions siguen necessàries.</li>
-  <li>Els prototips en etapes primerenques han de ser de baixa fidelitat</li>
-  <li>Els prototips d’alta fidelitat poden ser confosos amb el producte real</li>
-  <li>Es corre el risc d’ignorar importants característiques del sistema (actuació, seguretat, robustesa i fiabilitat, p.e.) durant el desenvolupament del prototip</li>
-  <li>Pot resultar impossible implementar funcions crítiques del sistema per a la seguretat o l’operació</li>
-  <li>La directiva pot trobar problemes en la planificació de la iteració del prototipado</li>
-  <li>Els prototips poden albergar simplificacions i imprecisions</li>
-  <li>Els prototips poden encarir el producte</li>
-  <li>Els prototips de sistemes complexos poden resultar excessivament complicats</li>
-  <li>El procés de prototipado és un procés continu que no de deure presentar fases ben definides.</li>
-  <li>El procés de prototipado es pot allargar en excés si no s’han establit criteris de conclusió</li>
-  <li>El prototipado pot portar als dissenyadors a modificar la seua filosofia de disseny i a l’adopció de models diferents</li>
-  <li>El prototipado pot donar poca opció al test de requeriments no funcionals de sistema</li>
-  <li>El prototipado es pot estancar si els membres de l’equip de disseny no disposen d’autoritat per a la presa de decisions</li>
-  <li>El prototipado pot generar problemes de disciplina</li>
-  <li>Les especificacions que sorgeixen durant les últimes etapes del procés de prototipado poden reduir la integritat estructural del sistema, encara parcialment dissenyat</li>
-  <li>El context d’ús del prototip pot ser ben diferent del context d’ús del sistema final</li>
-  <li>No hi ha garantia que les posicions de desenvolupadors i clients convergisquen durant el cicle d’iteració</li>
 </ul>
 
 <h2 id="eines-per-a-la-creació-de-prototips">Eines per a la creació de prototips.</h2>
@@ -199,9 +77,9 @@ Alta Fidelitat: conjunt de pantalles que proporcionen un model dinàmic, automat
   <li><a href="http://www.pixate.com/">Pixate</a> És més potent que FLINTO. Et permet animar independentment cada part de la interfície. També té plantilles per a diferents dispositius a les que els pots variar la grandària.</li>
 </ul>
 
-<p><a href="../../metiprot.html">back</a></p>
-
-<hr />
 <blockquote>
-  <p><em>Informació extreta de la web: https://mosaic.uoc.edu</em></p>
+  <p>Informació de la web: https://mosaic.uoc.edu</p>
 </blockquote>
+
+<p><a href="../../metiprot.html">back</a></p>
+:ET

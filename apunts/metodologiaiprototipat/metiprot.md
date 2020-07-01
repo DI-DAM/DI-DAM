@@ -30,9 +30,15 @@ layout: default
         
     - [Accessibilitat](./disseny/accessibilitat.html)
 
-    - mackup, freeware, Prototipat
-
-       	- [Prototipat](./disseny/prototipat/prototipat.html)
+    - [Etapes de disseny d'una aplicació](./disseny/prototipat/etapesDisseny.html)
+    
+        - [Sketch](./disseny/prototipat/sketch.html)
+        
+        - [Wireframe](./disseny/prototipat/wireframe.html)
+        
+        - [Mockup](./disseny/prototipat/mockup.html)
+        
+        - [Prototipat](./disseny/prototipat/prototipat.html)
 
     - [Avaluació euristica i test d'usuari](./disseny/avaluacio/avaluacio.html)
     

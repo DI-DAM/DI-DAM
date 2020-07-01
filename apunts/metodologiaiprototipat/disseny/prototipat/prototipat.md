@@ -4,57 +4,45 @@ layout: default
 
 # Disseny Centrat en l'usuari - Disseny d'interfície d'usuari.
 
-# Prototipat
+# Prototips
 
-El prototipat d'una aplicació es refereix a la constitució d'un mòdel que mostra la funcionalitat de l'aplicació en el desenrotllament, però en realitat pot no tenir la lògica exacta de l'aplicació original. Es ampliament utilitzat en el desenvolupament d'aplicación ja que compren els requisits del client en una etapa  primerenca del desenvolupament. Podent adaptar-se fàcilment a partir de la retroalimentació del client i facilitant a dissenyadors i dessenrotlladors la comprensió del que s'espera exactament de l'aplicació en desenvolupament, així com els requisits que són especifics de l'usuari i que poden no haver sigut considerats durant el disseny de l'aplicació.
-
-Cap destacar que el prototip és un mòdel de la primera aplicació amb algunes funcionalitatslimitades. Encara que permet als usuaris obtindre una sensació reial de l'aplicació, evaluar-la i provar-la abans de les implementacions. Així, el prototipus té com objectiu proporcionar un mòdel amb una funcionalitat global, però no sol ser complet, obviant molts dels detalls que finalment tindrà l'aplicació.
-
-Un mòdel de protoripus sól implicar les següents fases:
-
-![Fases de Prototipat](./images/prototipat1.png)
+Mentre que els wireframes són un «esbós» , els MockUps mostren la «sensació», la textura del disseny, és el prototip el que dóna vida a la «experiència» darrere «de l'experiència de l'usuari».
 
 
-- **Identificació dels requisits bàsics**: Implica la comprensió dels requisits bàsics de l'aplicació, especialment en el que respecta a l'interficie d'usuari. Els detalls més intrincats del disseny intern i els aspectes externs com el rendiment i la seguretat, poden ser ignorats en aquesta etàpa.
-- **Disseny ràpit:** consisteix en un disseny preliminar o un disseny ràpit i simple de l'aplicació, donant-li una breu idea del sistema al usuari. Aquest disseny ràpit és el que hem denominat estructura de l'aplicació i és la base per desenvolupar el prototipus.
+## Què és un prototip?
 
-- **Construcció del prototipat inicial de l'aplicació**: és desenvolupa el prototipo inicial basat en el disseny ràpit, mostrant-se els requisits bàsics i proporcionant les interficies d'usuari. Es possible que aquestes característiques no funcionen exactament de la mateixa manera internament en l'aplicació reial final. Encara que els prototipos provisionals s'utilitzen per mostrar-li al client el mateix aspecte que tindria l'aplicació final.
+Un prototip és un model (representació, demostració o simulació) fàcilment ampliable i modificable d'un sistema planificat, probablement incloent la seua interfície i la seua funcionalitat d'entrades i eixides.
 
-- **Evaluació de l'usuari**: El prototip és evaluat pel client Aquesta etapa ajuda a descobrir les fortalees i debilitats del mòdel de prototip. La retroalimentació (comentaris i sugerencies) s'arrepleguen de manera que organitzada i s'utilitza per seguir millorant l'aplicació que s'està desenvolupant. De fet, Aquesta fase és repetirà ciclicament fins obtenir un prototupus adequat i poder passar a l'etapa d'implementació.
+El prototip és una representació d'alt detall d'un projecte digital. En ella es pot identificar i operar:
 
-- **Refinament del prototipus**: S'analitza les observacions i els comentaris de l'avaluació realitzada en el pas anterior i es porta a terme algunes negociacions amb el client sobre la base de factors com les limitacions de temps, presupostos i la viabilitat tècnica de l'aplicació reial. Els canvis acceptats s'incorporen en el nou prototipus i el cicle és repeteix fins que s'acompleixquen tots els requisits especificats per l'usuari. Una vegada que l'usuari està satisfet amb el prototipus desenvolupat, es desarrotlla l'aplicació, basant-se en l'últim prototipus aprovat.
+- Sistemes de navegació
+- Paleta de colors aplicada
+- Iconografia
+- Experiència d'usuari
+- Serveis d'ajuda, cerca, interacció.
+- Altres elements del projecte
 
-- **Implementació i manteniment**: Una vegada que s'implementa l'aplicació en base al prototipus final, es prova exaustivament i es desplega en producció. L'aplicació es somet a un manteniment rutinari per reduir al mínim el temps d'innactivitat i evitar falles a gran escala.
+La creació del prototip ha de dur-se a terme quan avaluarem la interacció, i serveix per a definir aspectes que no queden clarament reflectits en un esbós de paper o un wireframe no navegable.
 
-## Tipus de prototipat
+Els prototips són navegables, per la qual cosa serveixen per a testar elements d'interacció com a estats «damunt» de botons, validació de formularis, icones, o qualsevol element amb el qual l'usuari interactue. A través de la creació de prototips, identifiquem i solucionem problemes UX com poden ser la transició des de la pàgina principal als resultats de cerca sense recarregar a l'usuari amb massa informació. Ens serveix com a model del comportament del sistema que pot ser usat per a entendre-ho completament o uns certs aspectes d'ell i així aclarir els requeriments.
 
-Existeixen diferents tipus de prototipat, encara que els més utilitzats són:
+Durant la fase de creació de prototips és quan podem fusionar les nostres metes conceptuals amb la nostra realitat pràctica. És quan disseny visual i disseny d'interacció entren en equilibri.
 
-### Prototipat de descart ràpit
+És una fase que pot obviar-se en alguns projectes (si publicaràs un blog o una senzilla pàgina informativa, probablement no necessites un prototip), però si resulta de gran utilitat en uns altres, com a apps, videojocs, grans webs, etc.
 
-També anomenat prototipus d'un sol ús, es basa en utilitzar molt poccs esforsos jynt amb un mínim d'analisis de requeriments per construir el prototip. Per tant, es desenvolupa un prototipus ràpit per mostrar com serà la aplicació visualment. Ante comentaris i sugerencies del client, el prototipo es tira, elaborannt-se un de nou fins que s'alcança un prototipo adecuat. Aquesta tècnica és útil per explotar idees i obtenir retroalimentació instantanea en finció dels requisits del client.
+Un dels possibles errors a l'hora de llançar un sistema online o aplicació és pensar només en el disseny del model de negoci, el desenvolupament del producte o les vendes. Abans que les nostres aplicacions arriben a les mans dels clients és important que els hàgem provats. Invertir en proves amb usuaris mitjançant prototips ens ajudarà a estalviar temps i costos i sobretot a conéixer si el producte s'adapta a les necessitats dels clients. És el pas previ al desenvolupament i presentació final del projecte. Ens serveix per a identificar, a partir de proves d'usuari (beta-tester), les dificultats del projecte. Això, en el cas de la creació d'aplicacions, apps, startups que estiguen començant el seu projecte, o grans webs , és un avantatge inestimable, ja que permet refinar la interfície sobre la base de dades objectives.
 
-### Prototipat evolutiu.
+![Exemple de prototip.](./images/prototip1.png)
 
-També anomenat prototip de tauler, es basa en la construcció de prototips funcionals reals amb una funcionalitat mínima al principi. El prototip desenrrotllat forma el cor dels futurs prototips sobre els que es construirà l'aplicació. Al utilitzar el prototipat evolutiu, els requisits ben entesos s'inclouen en el prototipus i els requisits s'afegeixen com forme es van comprenen. Així, el prototip desenvolupat inicialment, es refina gradualment en base a la informació del client fins que és finalment acceptat. Per tant, ajuda a estalviar temps i esforç.
+## Prototips, UX, usabilitat i accessibilitat.
 
-Aquest mòdel és útil per una aplicació o projecte que faça ús d'una nova tecnologia que encara no s'enten molt bé. també s'utilitza per aplicacions complexes on cada funcionalitat deu ser comprovada individualment. És útil quan no s'enten clarament l'etapa inicial.
+Quan ens dediquem al desenvolupament web o de productes interactius, veiem el complicat que resulta aconseguir crear una web o aplicació informàtica que complisca els requisits de UX, usabilitat i accessibilitat, i que a més siga agradable estèticament al client final.
 
-### Prototip incremental
+Segons la definició ISO, la usabilitat és «l'eficàcia, l'eficiència i la satisfacció amb la qual els usuaris aconsegueixen uns objectius concrets en un entorn particular» (ISO 9241-11). Un concepte que està lligat a la usabilitat és el d'accessibilitat, el qual no es refereix a la facilitat d'ús, sinó a la possibilitat d'accés. Per a alguns clients és a més un requisit el que l'aplicació ha de ser «usable» per tots els usuaris potencials, sense excloure a aquells amb limitacions individuals. La importància de tots dos termes dependrà del nostre públic objectiu, un disseny accessible implica la necessitat de tindre en compte altres característiques per a fer-lo més universal i heterogeni, mentre que el disseny usable se centra més en uns usuaris concrets. D'altra banda, com déiem anteriorment, l'experiència d'usuari (UX) és el conjunt d'idees, sensacions i valoracions de l'usuari resultat de la interacció amb un producte; és resultat dels objectius de l'usuari, les variables culturals i el disseny de la interfície. Intenta evocar una emoció en l'usuari, és a dir, intenta que l'ús d'un determinat objecte o pàgina web siga satisfactori des d'altres punts de vista més enllà de l'utilitari: estètica, diversió, identificació, etc.
 
-Es creen multiples prototips fincionals de les diversis parts que integren l'aplicació. Després, s'integren tots els prototipus per formar una aplicació completa.
+Aquests tres conceptes van molt lligats a la utilitat de crear un prototip i la realització de proves per beta-tester. L'objectiu és aconseguir la major quantitat d'informació possible de la interacció entre l'usuari i el prototip. La seua avaluació assegura que els productes siguen fàcils d'usar i s'ajusten al nostre públic. No cal perdre de vista que el producte serà utilitzat per persones, individus que probablement no se semblen a nosaltres i no tinguen el mateix gust, però volen que el nostre producte funcione. Gràcies a les proves d'usuari amb prototips, serem capaços de detectar problemes i solucionar-los abans del començament de la fase de producció, estalviant així bastants problemes i costos que caldria d'intentar solucionar quan ja està creada tota la programació, o quan s'ha llançat ja el producte. Estalvia hores de desenvolupament, ja que són necessàries menys versions de l'aplicació.
 
-Aquest mètode és útil per reduir el temps de retroalimentació entre l'usuari i l'equip de desenrotllament de l'aplicació.
-
-###Prototipat extrem.
-
-El mètode de prototipat extrem  s'utiitza principalment per el desenvolupament Web i consisteix en tres fases seqüencials:
-El prototip bàsic amb tota la pàgina existent en format HTML
-Es  simula el procés de dades utilitzant una capa de serveis de prototip.
-els serveis s'implementen i s'integren en el prototip final.
-
-Aquest prototipat s'utilitza per cridar l'atenció sonre la segona fase del procés, en la que es desenrrotlla una interficie d'usuari plenament funcional amb molt poca consideració per els serveis reials.
-
+En aquesta fase convé tindre molt en compte els [10 principis de disseny basats en l'usuari](./deuPrincipisNielsen.html), que va definir Jakob Nielsen en 1990 , que continuen sent un referent importantíssim per a avaluar la usabilitat d'un lloc web.
 
 ## Caracteristiques del prototip
 
@@ -82,27 +70,31 @@ Alta Fidelitat: conjunt de pantalles que proporcionen un model dinàmic, automat
 
 ## Dimensions del prototipat
 
-Executabilitat: serà operatiu el prototip i en aquest cas què significarà això?
+- **Executabilitat**: serà operatiu el prototip i en aquest cas què significarà això?
 
-- **Prototip Guiat**: prototip prou operatiu com per a dur a terme una revisió o passeig cognitiu
-- **Prototip d'Animació**: prototip prou operatiu com per a ser executat per parts en manera de presentació en un ordenador
-- **Prototip del Mag de Oz**: prototip que permet ser executat en manera de presentació i la participació d'un tercer subjecte que, ocult a la vista de l'usuari que interactua, gestiona l'evolució de la presentació en funció de les entrades que l'usuari proporciona al sistema
-- **Prototip Interactiu**: operatiu en sentit estricte, s'executa i respon a les entrades que li proporciona l'usuari participant en temps real
-- **Prototip Funcional**: operatiu en sentit estricte, s'executa, respon a les entrades que li proporciona l'usuari participant en temps real i efectua alguna de les operacions que se li sol·liciten
+    - **Prototip Guiat**: prototip prou operatiu com per a dur a terme una revisió o passeig cognitiu
+    - **Prototip d'Animació**: prototip prou operatiu com per a ser executat per parts en manera de presentació en un ordenador
+    - **Prototip del Mag de Oz**: prototip que permet ser executat en manera de presentació i la participació d'un tercer subjecte que, ocult a la vista de l'usuari que interactua, gestiona l'evolució de la presentació en funció de les entrades que l'usuari proporciona al sistema
+    - **Prototip Interactiu**: operatiu en sentit estricte, s'executa i respon a les entrades que li proporciona l'usuari participant en temps real
+    - **Prototip Funcional**: operatiu en sentit estricte, s'executa, respon a les entrades que li proporciona l'usuari participant en temps real i efectua alguna de les operacions que se li sol·liciten
 
-Maduració:es millorarà el prototip per etapes i, en aquest cas, es convertirà en el producte final?
+- **Maduració**: es millorarà el prototip per etapes i, en aquest cas, es convertirà en el producte final?
 
-Representació:quin nivell de fidelitat aconseguirà el prototip?
+- **Representació**: quin nivell de fidelitat aconseguirà el prototip?
 
-Perspectiva:es limitarà el prototip a àrees específiques de funcionalitat?
+- **Perspectiva**: es limitarà el prototip a àrees específiques de funcionalitat?
 
-## Quan utilitzar el prototipat.
 
-Ha d'utilitzar-se quan l'aplicació té molta interacció amb els usuaris finals. Tipicament, els sistemes en línees, les interficies web o les aplicacions mòbils requereixen una gran interacció amb els usuaris finals. Per lo tant són els més adequats pel prototipat.
+## Alguns consells a l'hora de crear un prototip
 
-Cap destacar que la creació d'un prototip garanteix que els usuaris finals treballen constantment amb l'aplicació i proporcionen una retroalimentació que s'incorpora al prototip per donar lloc a una aplicació utilitzable.
+No hi ha una formula general que puguem aplicar a l'hora de crear un prototip, ja que aquest dependrà de molts factors, però si hi ha algunes coses que podem tindre en compte:
 
-### Bones pràctiques per la creació de prototips.
+- Cada secció d'una web té un objectiu i aquest ha de quedar clar en veure el prototip.
+- Depenent de la mena de prototip, si és d'una web, o d'una aplicació multimèdia, el prototip haurà de ser més o menys complet, en una web senzilla pot tindre només les pàgines més importants que siguen diferents, i en una altra mena d'aplicacions és possible que hàgem de desenvolupar-lo completament.
+- És convenient que en la creació del prototip participe també l'equip de disseny. Encara que es pot considerar que és un treball més relacionat amb els equips de desenvolupament, una bona comunicació amb la resta de persones implicades en el producte pot solucionar molts problemes durant la fase de creació del prototip.
+- Dissenyar a grandària real, respectar la grandària de les imatges i continguts i incloure l'estructura de navegació.
+
+## Bones pràctiques per la creació de prototips.
 
 A continuació es detallen alguns aspectes a tenir en compter durant el procés de prototipat:
 - Utilitzar el prototipat quan els requisits no estiguen clars.
@@ -112,7 +104,7 @@ A continuació es detallen alguns aspectes a tenir en compter durant el procés 
 - És necessari aprvar un prototip abans de pasar a l'implementació.
 - Implementar les caracteístiques importants des del principi per que si s'acaba el temps, s'obtinga un prototip que puga utilitzar-se  perl'implementació.
 
-### Avantatges del prototip
+## Avantatges del prototip
 
 - Els usuaris participen activament en el dessenvolupament. Per tant,, es pot detectar errors en l'etapa inicial del procés de desenrotllament de l'aplicació.
 - Es pot identificar les funcions que falten. Ajudant d'aquesta forma a reduir el risc de falles.
@@ -134,7 +126,7 @@ A continuació es detallen alguns aspectes a tenir en compter durant el procés 
 - Un prototip també serveix com a base per les especificacions operacionals. 
 - Els prototips poden oferir una capacitació inicial per els futurs usuaris de l'aplicació.
 
-### Riscos del prototip
+## Riscos del prototip
 
 - El prototipat pot estimular un número de petició de canvis excessiu
 - Els prototips operatius poden induir a pensar a la directiva i als clients que el producte final està pràcticament disposat per a la seua eixida al mercat
@@ -161,5 +153,30 @@ A continuació es detallen alguns aspectes a tenir en compter durant el procés 
 - El context d'ús del prototip pot ser ben diferent del context d'ús del sistema final
 - No hi ha garantia que les posicions de desenvolupadors i clients convergisquen durant el cicle d'iteració
 
+## Eines per a la creació de prototips.
+
+Existeixen múltiples maneres de crear un prototip, com comentàvem anteriorment, dependrà molt de la mena d'aplicació que estiguem realitzant, podem des de crear una aplicació pràcticament funcional, usant HTML, CSS, etc. si per exemple estem creant una web, o també podem usar alguna de les aplicacions que existeixen en el mercat per a realitzar un prototip.
+
+A continuació podeu veure una llista d'alguna de les aplicacions més usades
+
+- [Justinmind](http://www.justinmind.com/): Eina professional per a realitzar un prototip de llocs web, aplicacions de programari i aplicacions mòbils. Pot treballar amb Windows o amb Mac.
+- [Axure RP](http://www.axure.com/): És una eina de realització de prototips professional que permet crear wireframes per a fer el pre-disseny d'una pàgina web així com MockUps. Disponible tant per a plataforma Windows com Mac. Pots dibuixar tant wireframes estàtics com a interactius que simulen una experiència de navegació de l'usuari real..
+- [Balsamiq](http://balsamiq.com/products/mockups/): Amb ella pots fer prototips interactius de webs. Pots usar aquesta eina com un servei web o bé descarregar-la en el teu equip.
+- [Protoshare](http://www.protoshare.com/) Està basat en web, i té suport per a twitter bootstrap, a més permet fer simulacions sobre diferent dispositius
+- [Jumpchart](https://www.jumpchart.com/): és una aplicació de planificació de webs basades en el navegador la qual possibilita esbossar el contingut de la pàgina web. És possible crear wireframes tant estàtic com interactius que simulen la navegació entre les pàgines web de la maqueta.
+- [FlairBuilder](http://www.flairbuilder.com/): eina web que et permet fer esbossos dels teus webs i de les teues Apps per a iPhone. No té possibilitat de col·laborar amb altres persones ni tampoc és possible exportar característiques.
+- [iPlotz](http://iplotz.com/): Aquesta eina permet fer maquetes navegables de llocs web i d'aplicacions. Ho pots descarregar en el teu ordinador (Windows/ Mac) o bé pots usar el servei via web.
+- [MockFlow](http://www.mockflow.com/): Eina web molt senzilla d'utilitzar per a dissenyar llocs web i aplicacions de programari.
+- [Mockingbird](http://gomockingbird.com/): Es tracta d'un servei web gratuït amb el qual es poden fan prototips de pàgines web.
+- Si treballes amb l'entorn de programació [Eclipse](http://www.eclipse.org/), pots usar també [WireframeSketcher](http://wireframesketcher.com/), que s'integra dins de l'entorn a la perfecció.
+- Quartz composer Eina de disseny que inclou Apple en el seu paquet d'aplicacions per a desenvolupadors.
+- [Origami](https://facebook.github.io/origami/) És una eina gratuïta similar a Quartz creada per l'equip de Facebook, que usa Quartz Composer.
+- [io](http://proto.io/) et permet crear fàcilment prototips totalment interactius molt fiables que es veuen i funcionen exactament igual que l'aplicació, no requereix saber programar
+- [Framerjs](http://framerjs.com/) té l'avantatge que et deixa passar del Photoshop a Framer. Agafa les capes, les exporta i et permet fer interaccions usant javascript.
+- [FLINTO](https://www.flinto.com/) És com a POP però et permet fer més coses, i animacions més complexes, tant paraiOS com Android.
+- [Pixate](http://www.pixate.com/) És més potent que FLINTO. Et permet animar independentment cada part de la interfície. També té plantilles per a diferents dispositius a les que els pots variar la grandària.
 
 [back](../../metiprot.html)
+
+--------
+> *Informació extreta de la web: https://mosaic.uoc.edu*
