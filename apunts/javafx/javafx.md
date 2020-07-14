@@ -2,11 +2,11 @@
 layout: default
 ---
 
-## Java FX
+# Java FX
 
-- Instal·lació 
-- Configuració
+Podem trobar tota la informació referent a la instal·lació i configuració en la pàgina de Javafx:
+[https://openjfx.io/openjfx-docs/](https://openjfx.io/openjfx-docs/)
 
-_yay_
+- [JavaFX amb el gestor de dependencies Maven](./instalConfig/mavenIntellij.html)
 
-[back](./)
+[back](../..)

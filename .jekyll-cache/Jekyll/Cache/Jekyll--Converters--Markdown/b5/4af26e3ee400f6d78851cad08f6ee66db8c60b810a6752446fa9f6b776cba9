@@ -1,0 +1,17 @@
+I"R<h2 id="java-fx">Java FX</h2>
+
+<p>Podem trobar tota la informació referent a la instal·lació i configuració en la pàgina de Javafx:
+<a href="https://openjfx.io/openjfx-docs/">https://openjfx.io/openjfx-docs/</a></p>
+
+<ul>
+  <li><a href="./instalConfig/install.html">Instal·lació JavaFX</a></li>
+  <li>JavaFX amb IntelliJ IDEA
+    <ul>
+      <li><a href="./instalConfig/installIntellij.html">Instal·lació IntelliJ IDEA</a></li>
+      <li><a href="./instalConfig/intellijJavaFX.html">Configuració Intellij IDEA - JavaFX</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p><a href="../..">back</a></p>
+:ET

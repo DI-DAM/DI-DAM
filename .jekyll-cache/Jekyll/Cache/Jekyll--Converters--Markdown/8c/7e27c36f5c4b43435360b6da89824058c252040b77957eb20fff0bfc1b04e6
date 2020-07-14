@@ -1,0 +1,37 @@
+I"�
+<h1 id="java-fx--intellij-idea">Java FX &amp; Intellij Idea</h1>
+
+<p>En aquesta secció procedim a explicar com crear una aplicació JavaFX en Intellij IDEA. Per el nostre projecte no modular, utilitzarem les eines de Maven per construir-lo i executar-lo.</p>
+
+<h2 id="projecte-no-modular-amb-maven">Projecte no modular amb Maven</h2>
+
+<h3 id="1-crear-un-projecte-maven">1 Crear un projecte Maven</h3>
+
+<p>Seleccione <code class="language-plaintext highlighter-rouge">Arxiu -&gt; Nou -&gt; Projecte -&gt; Maven</code> i active <code class="language-plaintext highlighter-rouge">Create from archetype</code>. Si l’arquetip JavaFX encara no està instal·lat, seleccione <code class="language-plaintext highlighter-rouge">Add archetype ...</code> i configure el groupId (<code class="language-plaintext highlighter-rouge">org.openjfx</code>), el artifactId (<code class="language-plaintext highlighter-rouge">javafx-maven-archetypes</code>) i la versió (0.0.4), i pressione OK. Arquetip JavaFX</p>
+
+<p><img src="images/maven1.png" alt="add archetype" /></p>
+
+<p>una vegada instal·lat, seleccionem l’artquetip:</p>
+
+<p><img src="images/maven2.png" alt="select archetype" /></p>
+
+<p>Proporcione el groupId, com <code class="language-plaintext highlighter-rouge">org.openjfx</code>, el artifactId, com <code class="language-plaintext highlighter-rouge">hellofx</code>.</p>
+
+<p>Seleccione l’arquetip artifactId, entre <code class="language-plaintext highlighter-rouge">javafx-archetype-fxml</code> o <code class="language-plaintext highlighter-rouge">javafx-archetype-simple</code>, segons l’ús de FXML o no en el seu projecte.</p>
+
+<p><img src="images/maven3.png" alt="grupid" /></p>
+
+<p>Seleccione l’arquetypeartifactId, entre <code class="language-plaintext highlighter-rouge">javafx-archetype-fxml</code> o <code class="language-plaintext highlighter-rouge">javafx-archetype-simple</code>, segons l’ús de FXML o no en el seu projecte.</p>
+
+<p><img src="images/maven4.png" alt="archetypeArtifactid" /></p>
+
+<p>També pot crear una propietat per a la versió javafx (<code class="language-plaintext highlighter-rouge">javafx-version</code>) i establir-la en <code class="language-plaintext highlighter-rouge">14</code>.</p>
+
+<p><img src="images/maven5.png" alt="javafx-version" /></p>
+
+<h3 id="2-executar-el-projecte">2. Executar el projecte.</h3>
+
+<p>Pot obrir la finestra Projectes de Maven i fer clic en <code class="language-plaintext highlighter-rouge">HelloFX -&gt; Plugins -&gt; compiler -&gt; compiler:compile</code> per a compilar el projecte, i fer clic en <code class="language-plaintext highlighter-rouge">HelloFX -&gt; Plugins -&gt; javafx -&gt; javafx:run</code> per a executar el projecte.</p>
+
+<p><a href="../javafx.html">back</a></p>
+:ET

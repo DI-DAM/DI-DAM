@@ -1,0 +1,14 @@
+I"M<h1 id="java-fx--intellij-idea">Java FX &amp; Intellij Idea</h1>
+
+<p>En aquesta secció procedim a explicar com crear una aplicació JavaFX en Intellij IDEA. Per el nostre projecte no modular, utilitzarem les eines de Maven per construir-lo i executar-lo.</p>
+
+<h2 id="projecte-no-modular-amb-maven">Projecte no modular amb Maven</h2>
+
+<h3 id="1-crear-un-projecte-maven">1 Crear un projecte Maven</h3>
+
+<p>Seleccione <code class="language-plaintext highlighter-rouge">Arxiu -&gt; Nou -&gt; Projecte -&gt; Maven</code> i active <code class="language-plaintext highlighter-rouge">Create from archetype</code>. Si l’arquetip JavaFX encara no està instal·lat, seleccione <code class="language-plaintext highlighter-rouge">Add archetype ...</code> i configure el groupId (<code class="language-plaintext highlighter-rouge">org.openjfx</code>), el artifactId (<code class="language-plaintext highlighter-rouge">javafx-maven-archetypes</code>) i la versió (0.0.4), i pressione OK. Arquetip JavaFX</p>
+
+<p><img src="images/maven1.png" alt="add archetype" /></p>
+
+<p><a href="../javafx.html">back</a></p>
+:ET
