@@ -1,0 +1,31 @@
+I"�<h1 id="java-fx---contenidors">Java FX - Contenidors</h1>
+
+<h1 id="scroll-pane">Scroll Pane</h1>
+
+<p>ScrollPane és un component desplaçable que s’utilitza per a mostrar un gran contingut en un espai limitat. Conté barres de desplaçament horitzontal i vertical.</p>
+
+<p><img src="./images/scrollPane.png" alt="scroll Pane" /></p>
+
+<p>Pot configurar la política de visualització per a la barra de desplaçament:</p>
+
+<ul>
+  <li>NEVER - Never display</li>
+  <li>ALWAYS - Always display</li>
+  <li>AS_NEEDED - Display if needed.</li>
+</ul>
+
+<h2 id="menú-propietats">Menú Propietats</h2>
+
+<p><img src="./images/scrollPropierties.png" alt="scroll" /></p>
+
+<h2 id="menú-layout">Menú Layout</h2>
+
+<p><img src="./images/borderPane8.png" alt="scroll" /></p>
+
+<h2 id="menú-code">Menú Code</h2>
+
+<p><img src="./images/borderPane9.png" alt="scroll" /></p>
+
+<p><a href="../../javafx.html">back</a></p>
+
+:ET

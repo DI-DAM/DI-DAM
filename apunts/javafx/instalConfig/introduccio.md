@@ -31,5 +31,6 @@ Seguidament es poden observar els elements que acabem d'explicar (la vista i el 
 ![view - Controller](images/intro4.png)
   
 En aquest mòodul anem a centrar-se en la part gràfica de la creació de les aplicacions. Per tal de manipular els fitxers fxml, treballarem en l'aplicaió scene Builder.
+
 [back](../javafx.html)
 

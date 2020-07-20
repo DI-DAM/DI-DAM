@@ -1,0 +1,71 @@
+<h1 id="java-fx--scene-builder">Java FX -Scene Builder</h1>
+
+<p>JavaFX Scene Builder (Scene Builder) és una eina de disseny per a la plataforma JavaFX. Arrossega i solta els components de la interfície d’usuari en un panell de Contingut, i el codi FXML per al disseny que està creant es genera automàticament en segon pla. FXML és un llenguatge de marcat declaratiu basat en XML per a definir la interfície d’usuari en una aplicació JavaFX. Es tracta d’una eina WYSIWYG (What You See Is What You Get).</p>
+
+<p>El disseny d’un programa JavaFX, també podria ferse completament sense una eina gràfica com Scene Builder, però és comprensible que el disseny visual del disseny siga més sencill i més ràpit.</p>
+
+<p>L’interficie gràfica d’usuari es desenvolupa combinant el treball visual i de programació. Per exemple, el disseny bàsic es realitza amb una eina visual i despres s’afegeixen components clarament repetituius en temps d’execució amb codi de programa.</p>
+
+<p>Els arxius amb l’extensió .fxml també es poden obrir i escriure amb qualsevol editor de text, com NotePad ++, i la seua estructura és bastant comprensible. És a dir, bàsicament SceneBuilder és només una opció per a editar un arxiu xml d’un cert format.</p>
+
+<h3 id="descarregar">Descarregar</h3>
+
+<p>Des de la versió 2.0, oracle va anunciar que no proporcionaria executables. Per lo que la organització GLUON s’encarrega de fer-ho. Pots baixar el SceneBuilder per al nostre Sistema Operatiu des de la seva pàgina de descarregues.</p>
+
+<p><a href="https://gluonhq.com/products/scene-builder/#download">Descarregues de Scene Builder</a></p>
+
+<blockquote>
+  <p>Es pot trobar el Scene Buildeer incorporat en e IDE, però té menys funcionalitats.</p>
+</blockquote>
+
+<h3 id="utilitzar">Utilitzar</h3>
+<p>Es pot obrir el Scenen Builder clicant amb botó dret del ratolí en el fitxer fxml i seleccionar obrir amb Scene Builder.</p>
+
+<p><img src="images/sceneBuilder1.png" alt="scene Builder" /></p>
+
+<p>Per afegir un element dintre de la nostra finestra, sols tenim que triar el control que necesitem i arrosegar fins la zona de treball o també es pot arrosegar al panell de jerarquia de controls.</p>
+
+<p>Si es té algun dels elements seleccionats, es pot modificar qualsevol de les seves propietats a través del inspector que trobem a la dreta.</p>
+
+<h3 id="elements">Elements</h3>
+
+<h4 id="inspector">Inspector</h4>
+
+<p>En el inspector podem diferenciar 3 seccions:</p>
+
+<ul>
+  <li><strong>Propietats</strong>: Ens permet definir l’estil dels **components seleccionats.</li>
+  <li><strong>Layouts</strong>: Comportament del element respecte al layout que el inclou.</li>
+  <li><strong>Code</strong>: Ens permet definir els enllaços entre la interficie gràfica i el controlador de cada element: <em>listener</em>, identificador, …</li>
+</ul>
+
+<p><img src="images/sceneBuilder3.png" alt="scene Builder - Inspector " /></p>
+
+<h4 id="asociar-la-vista-al-controlador">Asociar la vista al controlador.</h4>
+
+<p>Es pot realitzar de dos formes diferents:</p>
+<ul>
+  <li>Des de la vista fxml: s’instancia al controlador des del objecte de forma automàtica (presenta alguna restricció).</li>
+</ul>
+
+<p><img src="images/sceneBuilder4.png" alt="scene Builder - Inspector " /></p>
+
+<ul>
+  <li>No es necessari especificar el controlador al carregar la vista:</li>
+</ul>
+
+<p><img src="images/sceneBuilder5.png" alt="sense especificar controlador " /></p>
+
+<ul>
+  <li>Definició del controlador al carregar la vista: ens permet pasar qualsevol dependencia que necessite el controlador a partir dels parametres formals del constructor.
+<img src="images/sceneBuilder6.png" alt="definit al carregar la vista" /></li>
+</ul>
+
+<p>per associar els nodes utilitzats en el nostre disseny i els gestor d’events, podem definir-los des de la part de <strong>code</strong> del menu <strong>inspector</strong>:</p>
+
+<p><img src="images/sceneBuilder7.png" alt="id - metode" /></p>
+
+<p>En els seguents apartats es definirà en més deteniment els elements que tenen en el seu interior els apartats definits anteriorment.</p>
+
+<p><a href="../javafx.html">back</a></p>
+

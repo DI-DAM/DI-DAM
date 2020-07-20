@@ -1,0 +1,68 @@
+I"]<h1 id="java-fx---contenidors">Java FX - Contenidors</h1>
+
+<h1 id="border-pane">Border Pane</h1>
+
+<p>El  BorderPane proporciona cinc regions en les quals col·locar nodes: dalt, baix, esquerra, dreta i centre, tal i com es mostra en la figura. Les regions poden ser de qualsevol grandària.</p>
+
+<p><img src="images/borderPane1.png" alt="Borde pane" /></p>
+
+<p>És útil per a <strong>l’aspecte clàssic</strong> d’una <strong>barra d’eines</strong> en la part superior, una <strong>barra d’estat</strong> en la part inferior, un <strong>panell de navegació</strong> a l’esquerra, <strong>informació addicional</strong> a la dreta i una àrea de treball en el centre.</p>
+
+<ul>
+  <li><strong>Àrea superior / inferior</strong>: pot contraure’s / expandir-se horitzontalment i mantindre l’altura sense canvis.</li>
+  <li><strong>Àrea esquerra / dreta</strong>: pot reduir-se / expandir-se verticalment i mantindre la longitud sense canvis.</li>
+  <li><strong>Àrea central</strong>: pot contraure’s / expandir-se en totes dues direccions.</li>
+</ul>
+
+<p>Cada àrea pot contindre només un element. Es pot agregar utilitzant els mètodes:</p>
+<ul>
+  <li>setTop(Node)</li>
+  <li>setRight(Node)</li>
+  <li>setBottom(Node)</li>
+  <li>setLeft(Node)</li>
+  <li>setCenter(Node)</li>
+</ul>
+
+<p>Les característiques d’aquestes àrees anteriors s’il·lustren a continuació:</p>
+
+<p><img src="images/borderPane2.png" alt="Borde pane" /></p>
+
+<p>Si una àrea determinada no conté subcomponentes, l’àrea estarà ocupada per altres àrees.</p>
+
+<p><strong>Exemple</strong>: Si l’àrea de TOP no té subcomponentes, el seu espai estarà ocupat per altres components:</p>
+
+<p><img src="images/borderPane3.png" alt="Borde pane" /></p>
+
+<p><strong>Exemple</strong>: Si l’àrea de DALT i DRETA no té subcomponentes, el seu espai estarà ocupat per altres components:</p>
+
+<p><img src="images/borderPane4.png" alt="Borde pane" /></p>
+
+<blockquote>
+  <p>Nota: Per a JavaFX, els subcomponentes que es troben en una àrea determinada de BorderPane tal vegada no omplin l’espai, per exemple, si Button es troba en una àrea de BorderPane, de manera predeterminada no emplenarà l’àrea.
+<img src="images/borderPane5.png" alt="Borde pane" /></p>
+</blockquote>
+
+<blockquote>
+  <p>Però si VBox o Hbox es troba en una àrea de BorderPane, per defecte omplirà l’àrea.
+<img src="images/borderPane6.png" alt="Borde pane" /></p>
+</blockquote>
+
+<p>En cas que es reduisca el la finestra i es faça més xicoteta que l’espai necessari per al contingut de cada regió, les regions poden superposar-se. La superposició està determinada per l’ordre en què s’estableixen les regions. Per exemple, si les regions s’estableixen en l’ordre d’esquerra, a baix i dreta, quan la finestra es fa més xicoteta, la regió inferior se superposa a la regió esquerra i la regió dreta se superposa a la regió inferior.</p>
+
+<p>En els contenidors, disposem del menú de Propietats, Layout i code. En ells podem modificar algunes de les seves opcions:</p>
+
+<h2 id="menú-propietats">Menú Propietats</h2>
+
+<p><img src="images/borderPane7.png" alt="Borde pane" /></p>
+
+<h2 id="menú-layout">Menú Layout</h2>
+
+<p><img src="images/borderPane8.png" alt="Borde pane" /></p>
+
+<h2 id="menú-code">Menú Code</h2>
+
+<p><img src="images/borderPane9.png" alt="Borde pane" /></p>
+
+<p><a href="../../javafx.html">back</a></p>
+
+:ET

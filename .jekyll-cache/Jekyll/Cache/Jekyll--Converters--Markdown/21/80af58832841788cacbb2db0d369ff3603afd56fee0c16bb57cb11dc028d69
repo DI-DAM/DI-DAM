@@ -1,0 +1,27 @@
+I"�<h1 id="java-fx---contenidors">Java FX - Contenidors</h1>
+
+<h1 id="tile-pane">Tile Pane</h1>
+
+<p>TilePane és un contenidor que molt similar a FlowPane. Organitza els subcomponentes consecutius en una fila, i automàticament espenta els subcomponentes cap avall a la següent línia si s’ompli la línia actual. Difereix de FlowPane en què els subcomponentes es troben en la mateixagrandaria de cel·la.</p>
+
+<p><img src="./images/tilePane1.gif" alt="Tile Pane" /></p>
+
+<p>Els subcomponentes es troben en cel·les de quadrícula de la mateixa grandària.</p>
+
+<p><img src="./images/tilePane2.png" alt="Tile Pane" /></p>
+
+<h2 id="menú-propietats">Menú Propietats</h2>
+
+<p><img src="images/tilePropierties.png" alt="tile pane" /></p>
+
+<h2 id="menú-layout">Menú Layout</h2>
+
+<p><img src="images/flowLayer.png" alt="tile pane" /></p>
+
+<h2 id="menú-code">Menú Code</h2>
+
+<p><img src="images/borderPane9.png" alt="tile pane" /></p>
+
+<p><a href="../../javafx.html">back</a></p>
+
+:ET

@@ -1,0 +1,179 @@
+I"0<h1 id="java-fx---panell-inspector">Java FX - Panell Inspector</h1>
+
+<h1 id="menú-propietats">Menú Propietats</h1>
+
+<p>En les propietats, tindrem les opcions que es veu en les imatges:</p>
+
+<ul>
+  <li>Node
+    <ul>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#isDisable--">Dissable</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOpacity--">Opacitat</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getNodeOrientation--">Orientació</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#isVisible--">Visible</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#isFocusTraversable--">Focus Transveersable</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/Region.html#isCacheShape--">Cache Shape</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/Region.html#isCenterShape--">Center Shape</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/Region.html#isScaleShape--">Scale Shape</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/Region.html#getOpaqueInsets--">Opaque Insets</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getCursor--">Cursor</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getEffect--">Effects</a></li>
+    </ul>
+  </li>
+  <li>JavaFX CSS
+    <ul>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getStyle--">Style</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getStyleClass--">Style Class</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Parent.html#getStylesheets--">Stylesheet</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getId--">Id</a></li>
+    </ul>
+  </li>
+  <li>Extras:
+    <ul>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getBlendMode--">Blend Mode</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#isCache--">Cache</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getCacheHint--">Cache Hint</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getDepthTest--">Depth Test</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/Region.html#getInsets--">Insets</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#isMouseTransparent--">Mouse Transparent</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#isPickOnBounds--">Pick on Bounds</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="menú-layout">Menú Layout</h1>
+
+<ul>
+  <li>Internal
+    <ul>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/Region.html#getPadding--">Padding</a></li>
+    </ul>
+  </li>
+  <li>Size
+    <ul>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/Region.html#getMinWidth--">Min with</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/Region.html#getMinHeight--">Min Height</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/Region.html#getPrefWidth--">Pref Width</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/Region.html#getPrefHeight--">Pref Height</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/Region.html#getMaxWidth--">Max Width</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/Region.html#getMaxHeight--">Max Height</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/Region.html#getWidth--">Widht</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/Region.html#getHeight--">Height</a></li>
+    </ul>
+  </li>
+  <li>Position
+    <ul>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getLayoutX--">Layout X</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getLayoutY--">Layout Y</a></li>
+    </ul>
+  </li>
+  <li>Transforms
+    <ul>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getRotate--">Rotate</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getRotationAxis--">Rotation Axis</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getScaleX--">Scale X</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getScaleY--">Scale Y</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getScaleZ--">Scale Z</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getTranslateX--">Translate X</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getTranslateY--">Translate Y</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getTranslateZ--">Translate Z</a></li>
+    </ul>
+  </li>
+  <li>Bounds
+    <ul>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getLayoutBounds--">Layout Bounds</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getBoundsInLocal--">Bounds in local</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getBoundsInParent--">Bounds in Parent</a></li>
+    </ul>
+  </li>
+  <li>Extras
+    <ul>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Parent.html#getBaselineOffset--">Baseline Offset</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/Region.html#isResizable--">Resizable</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/BorderPane.html#getContentBias--">Content Bias</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/Region.html#isSnapToPixel--">Snap To Pixel</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getEffectiveNodeOrientation--">Effective Node Orientation</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="menú-code">Menú Code</h1>
+
+<ul>
+  <li>Identity
+    <ul>
+      <li><a href="">Id</a></li>
+    </ul>
+  </li>
+  <li>DragDrop
+    <ul>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnDragDetected--">On Drag Detected</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnDragDone--">On Drag Done</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnDragDropped--">On Drag Dropped</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnDragEntered--">On Drag Entered</a></li>
+      <li><a href="">On Drag Exited</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnDragOver--">On Drag Over</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnMouseDragEntered--">On Mouse Drag Entered</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnMouseExited--">On Mouse Drag Exited</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnMouseDragOver--">On Mouse Drag Over</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnMouseDragReleased--">On Mouse Drag Released</a></li>
+    </ul>
+  </li>
+  <li>Keyboard
+    <ul>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnInputMethodTextChanged--">On Input Text Changed</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnKeyPressed--">On Key Pressed</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnKeyReleased--">On Key Released</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnKeyTyped--">On Key Typed</a></li>
+    </ul>
+  </li>
+  <li>Mouse
+    <ul>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnContextMenuRequested--">On Context Menu Requested</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnMouseClicked--">On Mouse Clicked</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnMouseDragged--">On Mouse Dragged</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnMouseEntered--">On Mouse Entered</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnMouseExited--">On Mouse Exited</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnMouseMoved--">On mouse Moved</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnMousePressed--">On Mouse Pressed</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnMouseReleased--">On Mouse Released</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnScroll--">On Scroll</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnScrollStarted--">On Scroll Started</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnScrollFinished--">On Scroll Finished</a></li>
+    </ul>
+  </li>
+  <li>Rotation
+    <ul>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnRotate--">On Rotate</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnRotationStarted--">On Rotation Started</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnRotationFinished--">On Rotation Finished</a></li>
+    </ul>
+  </li>
+  <li>Swipe
+    <ul>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnSwipeLeft--">On Swipe Left</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnSwipeRight--">On Swipe Right</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnSwipeUp--">On Swipe Up</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnSwipeDown--">On Swipe Down</a></li>
+    </ul>
+  </li>
+  <li>Touch
+    <ul>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnTouchMoved--">On Touch Moved</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnTouchPressed--">On Touch Pressed</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnTouchReleased--">On Touch Released</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnTouchStationary--">On Touch Stationary</a></li>
+    </ul>
+  </li>
+  <li>Zoom
+    <ul>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnZoom--">On Zoom</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnZoomStarted--">On Zoom Started</a></li>
+      <li><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#getOnZoomFinished--">On Zoom Finished</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p><a href="../javafx.html">back</a></p>
+
+:ET
