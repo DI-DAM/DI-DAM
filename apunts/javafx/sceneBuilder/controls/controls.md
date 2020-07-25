@@ -229,8 +229,224 @@ Ara podem veureun exemple d'un grup de Radio buttons, amb el seu codi fxml:
 
 ## ToogleButton
 
+Es poden combinar dos o més botons d'alternança en un grup on sol es pot seleccionar un botó alhora, o on no es requereix selecció. La següent figura mostra una captura de pantalla d'una aplicació que combina tres botons d'alternança en un grup. L'aplicació pinta el rectangle amb un color específic segons el botó d'alternança seleccionat.
 
---------------------------------------
+![toggleButton](./images/toggleButton1.png)
+
+Al igual que en els Radio Button, s'ha de indicar que els toggleButons pertanyen a un Toggle Group.
+
+
+![radio button](./images/radioButton1.png)
+
+
+
+## Checkbox
+
+Checkbox forma part del paquet JavaFX. És una casella amb una marca quan està seleccionada i buida quan no està seleccionada. Al principi, les caselles de verificació poden semblar similars als radio Button, però existeix la diferència entre elles que les caselles de verificació no es poden combinar en grups d'alternança, la qual cosa significa que no podem seleccionar diverses opcions al mateix temps.
+
+![checkbox](./images/checkbox1.gif)
+
+El checBox pot estar en els següents estats:
+- **Checked**: quan indeterminat és fals i marcat és vertader
+- **Unchecked**: quan indeterminat és fals i marcat és fals
+- **Undefined**: quan indeterminat és vertader
+
+Els constructors de la classe són:
+
+1. CheckBox(): crea una casella de verificació amb una cadena buida per a la seua etiqueta.
+2. ChecBox(String t): crea una casella de verificació amb el text donat com a etiqueta.
+
+Els mètodes més utilitzats són:
+
+- **isIndeterminate()**: Obté el valor de la propietat indeterminat.
+- **isSelected()**: Obté el valor de la propietat selected.
+- **selectedProperty()**: Indica si aquesta casella de verificació està marcada.
+- **setIndeterminate(boolean v)**: Estableix el valor de la propietat indeterminat.
+- **setSelected(boolean v)**: Estableix el valor de la propietat seleccionada.
+
+El codi fxml del checkbox seria:
+
+~~~
+<CheckBox fx:id="cbgroc" mnemonicParsing="false" text="Grog">
+</CheckBox>
+~~~
+
+
+## Choice Box
+
+ChoiceBox és part del paquet JavaFX. Mostra un conjunt d'elements i permet a l'usuari seleccionar una sola opció i mostrarà l'element seleccionat actualment en la part superior. ChoiceBox per defecte no té cap element seleccionat llevat que se seleccione el contrari. 
+
+Els constructors de la classe ChoiceBox són:
+
+- **ChoiceBox ()**: crea un nou ChoiceBox buit.
+- **ChoiceBox (elements ObservableList)**: crea un nou ChoiceBox amb el conjunt d'elements donat.
+
+Els mètodes que mes sol utilitzar són:
+
+- **getItems()**: Obté el valor dels elements de propietat.
+- **getValue()**: Obté el valor del valor de la propietat.
+- **hide()**:  Tanca la llista d'opcions.
+- **setItems(ObservableList value)**: Estableix el valor dels elements de propietat.
+- **setValue(T value)**: Estableix el valor del valor de la propietat.
+- **show()**: Obri la llista d'opcions.
+
+El codi fxml del checkbox seria:
+
+~~~
+<ChoiceBox fx:id="choiceBox" layoutX="383.0" layoutY="65.0" prefHeight="26.0" prefWidth="111.0" AnchorPane.rightAnchor="52.0" />
+~~~
+
+![choiceBox](./images/choiceBox1.gif)
+
+
+
+## WebView
+
+JavaFX WebView és un mini navegador otambè anomenat navegador integrat en l'aplicació JavaFX. Aquest navegador es basa en WebKit, que és un motor de navegador de codi font obert que admet CSS, Javascript, DOM i HTML5.
+JavaFX WebView li permet fer les següents tasques en les seues aplicacions JavaFX:
+
+- Renderitzar contingut HTML des d'URL locals i remotes
+- Obtindre historial web
+- Executar comandos de Javascript
+- Realitzar crides ascendents des de Javascript a JavaFX
+- Administrar finestres emergents web
+- Aplicar efectes al navegador incrustat
+
+La implementació actual (JavaFX 2.3) del component WebView admet les següents característiques HTML5:
+
+- Canvas
+- Media Playback
+- Controls de formulari (excepte `<input type = "color">`)
+- Contingut editable
+- Manteniment de la història
+- Suport per a les etiquetes:
+- `<meter>`<meter>
+- `<progress>`<progress>.
+- Suport per a les etiquetes `<details>` i `<summary>`.
+- DOM
+- SVG
+- Suport per a noms de domini escrits en idiomes nacionals.
+
+A continuació es mostra una imatge amb l'arquitectura del navegador integrat en JavaFX:
+
+ 
+![WebEngine](./images/webView1.png)
+
+### Web Engine
+
+La classe WebEngine proporciona funcionalitat bàsica de pàgina web. Admet la interacció de l'usuari, com navegar per enllaços i enviar formularis HTML, encara que no interactua directament amb els usuaris. La classe WebEngine maneja una pàgina web alhora. Admet les funcions bàsiques de navegació de carregar contingut HTML i accedir al DOM, així com executar comandos Javascript.
+
+### WebView
+
+WebView s'estén des de la classe Node, embolica un objecte WebEngine i mostra contingut HTML. Pot obtindre l'objecte WebEngine de WebView utilitzant el mètode getEngine ().
+
+~~~
+// Create a WebView
+WebView browser = new WebView();
+ 
+// Get WebEngine via WebView
+WebEngine webEngine = browser.getEngine();
+ 
+// Load page
+webEngine.load("http://www.cipfpbatoi.es");
+~~~
+
+
+### Mètodes més utilitzats
+
+**getChildren()**: Obté la llista de fills d'aquest pare.
+**getEngine()**: Retorna el motor de la vista web.
+**getFontScale()**: Retorna l'escala de font de l'objecte webview.
+**getHeight()**: Retorna l'altura d'aquest WebView.
+**getMaxHeight()**: Retorna l'altura màxima.
+**getMaxWidth()**: Retorna l'ample màxim.
+**getMinHeight()**: Estableix l'altura mínima.
+**getMinWidth()**: Retorna l'ample mínim.
+**getPrefHeight()**: Retorna l'altura preferida.
+**getPrefWidth()**: Retorna l'ample preferit.
+**getWidth()**: Retorna l'ample d'aquest WebView.
+**getZoom()**: Retorna el factor de zoom actual.
+**maxHeight(double v)**: Estableix l'altura màxima.
+**maxWidth(double v)**: Estableix l'ample màxim.
+**minHeight(double v)**: Estableix l'altura mínima.
+**minWidth(double v)**: Estableix l'ample mínim.
+**prefHeight(double v)**: Estableix l'altura preferida de la vista web.
+**prefWidth(double v)**: Estableix l'ample preferit de la vista web.
+**setFontScale(double v)**: Estableix l'escala de font de la vista web.
+**setMaxHeight(double v)**: Estableix l'altura màxima.
+**setMaxWidth(double v)**:  Estableix l'ample màxim.
+**setMinHeight(double v)**: Estableix l'altura mínima.
+**setMinWidth(double v)**: Estableix l'ample mínim.
+**setPrefHeight(double v)**: Estableix l'altura preferida.
+**setPrefWidth(double v)**: Estableix l'ample preferit.
+**setZoom(double v)**: Estableix el zoom per a la vista web.
+
+![web view](./images/webview1.gif)
+
+## TableView
+
+La classe TableView s'uitilitza juntament amb TableColumn i TableCell per a mostrar les dades en forma de taula.
+
+![Table view](./images/tableView.png)
+
+### Crear una taula:
+
+Primer s'ha de crear la tabla i dir-li que siga editable.
+
+~~~
+TableView table = new TableView();
+table.setEditable(true);
+~~~
+
+Una vegada creada, ja podem incloure-li les columnes que necessitem.
+
+~~~
+TableColumn nomCol = new TableColumn("Nom");
+TableColumn cognomCol = new TableColumn("Cognom");
+TableColumn direccioCol = new TableColumn("Direcció");
+~~~
+
+table.getColumns().addAll(nomCol, cognomCol, direccioCol);
+
+Si en algun moment es vol amagar alguna columna, podem fer-ho:
+
+`aColumn.setVisible(false)`
+
+Com sempre, aquesta tasca es pot realitzar des del Scene Builder.
+
+### Columnes anidades
+
+També es poden crear columnes anidades.
+
+Suposem que en la columna direcció li volem afegir: carrer, població i provincia.
+
+~~~
+TableColumn carrerCol = new TableColumn("Carrer");
+TableColumn poblacioCol = new TableColumn("Població");
+TableColumn provinciaCol = new TableColumn("Provincia");
+~~~
+
+i ara ja es poden anidar dintre de la columna superior:
+
+direccioCol.getColumns().addAll(carrerCol, poblacioCol,provinciaCol)
+
+### Afegir dades
+
+El següent codi li mostra com agregar dades a una vista de taula. Cada fila de la taula representa a una persona amb nom i cognom. 
+
+En la lògica de la interfície d'usuari, utilitza una ObservableList per a mantindre el valor d'una vista de taula. Cada element en la ObservableList és un objecte Person.
+
+En el controlador d'esdeveniments de botó, crea una nova Persona amb nom i cognom codificats, després s'agrega a la ObservableList.
+
+~~~
+private ObservableList<Person> data_table = FXCollections.observableArrayList(
+        new Person("lmanzaneque", "lmanz@gmail.al", "Lluis", "Manzaneque", "true"),
+        new Person ......
+        );
+~~~
+
+![Table view](./images/tableView2.gif)
+
 
 ## ListView
 
@@ -247,21 +463,7 @@ Fent funcionar un exemple:
 
 ![list view](./images/listView3.gif)
 
-## ComboBox
 
-ComboBox és un component de la interfície popular. Permet als usuaris seleccionar una de les opcions. Quan els usuaris fan clic en ell, apareixerà una llista d'opcions perquè els usuaris seleccionen.
-
-![combo Box](./images/comboBox1.png)
-
-Pots crear un ComboBox a partir d'una llista de valors:
-
-~~~
-ObservableList <Planet> list = PlanetDAO.getPlanetList ();
-
-comboBox.setItems (llesta);
-~~~
-
-També pot agregar elements a un ComboBox disponible.
 
 [back](../../javafx.html)
 
