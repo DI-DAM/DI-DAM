@@ -451,7 +451,7 @@ private ObservableList<Person> data_table = FXCollections.observableArrayList(
 ## ListView
 
 JavaFX ListView mostra els seus elements vertical o horitzontalment.
-La següentimatge mostra un ListView vertical que inclou 3 elements.
+La següent imatge mostra un ListView vertical que inclou 3 elements.
 
 ![list view](./images/listView1.png)
 
@@ -462,6 +462,88 @@ Ara mostrem una llista horitzontal:
 Fent funcionar un exemple:
 
 ![list view](./images/listView3.gif)
+
+
+### Métodes listView
+
+alguns métodes que podem utilitzar amb ListView són els següents:
+
+- **getSelectionModel().setSelectionMode** -> permet indicar si es poden seleccionar varis elements de la llista a la  vegada.
+- **setOrientation** -> mostra la llista en forma vertical o horitzontal. Per deffecte es mostra en forma vertical.
+- **getSelectionModel().getSelectedIndex()** –> Retorna l'índex dels elements seleccionats
+- **getSelectionModel().getSelectedItem()** –> Retorna l'element seleccionat actualment
+- **getFocusModel().getFocusedIndex()** – Retorna l'índex de l'element enfocat actualment
+- **getFocusModel().getFocusedItem()** –> Retorna l'element que té el focus actualment
+
+
+
+
+### Creació de listView.
+
+En les seguents linees de codi es mostra comes crea un ListView a traves d'un ObservableList.
+
+~~~
+ListView<String> list = new ListView<String>();
+
+//definim l'Observable list amb els camps que tindrà la nostra ListView
+ObservableList<String> items = FXCollections.observableArrayList("iron Man", "Batman", "Capità America", "Green Lantern");
+//afegim tots els items al listView
+listView.setItems(items);
+~~~
+
+En el exemple que es mostra en la pròxima imatge, fem que aparega en un label l'últim item seleccionat. açó ho fem afegint un listener al mètode selectedItemPropierty:
+
+~~~
+listView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+     @Override
+      public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+
+           labelItem.setText("- "+t1);
+      }
+});
+~~~
+
+![list view](./images/listView4.gif)
+
+També pot donar-se el cas de que vulgam afegir un element dintre de cadascun dels item del listview.
+
+en cas de que en una llista es vulga incloure un combo bóx, deurem de indicar que la llista siga editable, amb `listView.setEditable(true);` i despres dir-li que en cadascun dels items incloga un combobox:
+`listView.setCellFactory(ComboBoxListCell.forListView(names));`
+
+![list view](./images/listView5.gif)
+
+## TextField
+
+La classe TextField implementa un control d'interfície d'usuari que accepta i mostra l'entrada de text. Proporciona capacitats per a rebre entrada de text d'un usuari. Juntament amb un altre control d'entrada de text, PasswordField, aquesta classe estén la classe TextInput.
+
+![text view](./images/textView1.png)
+El contructor de la clase són:
+
+- **TextField()**: Crea un TextView buit.
+- **TextField(String s)**: Crea un TextField amb un text inicial.
+
+
+Alguns mètodes útils que ens podem trobar són:
+
+- **setPrefColumnCount(int v)**: Estableix el valor de la propietat prefColumnCount.
+- **setOnAction(EventHandler value)**: 	Estableix el valor de la propietat onAction.
+- **setAlignment(Pos v)**: Estableix el valor de l'alineació de la propietat.
+- **prefColumnCountProperty()**: El nombre preferit de columnes de text
+- **onActionProperty()**: El controlador d'accions associat amb aquest camp de text, o nul si no s'assigna cap controlador d'accions.
+- **getPrefColumnCount()**: Obté el valor de la propietat prefColumnCount.
+- **getOnAction()**: Obté el valor de la propietat onAction.
+- **getAlignment()**: Obté el valor de la propietat alineació.
+- **getCharacters()**: Retorna la seqüència de caràcters que recolza el contingut del camp de text.
+- **setText()**: escriu en el seu interior una cadena
+- **getText()**: agafa text que conté.
+- **clear()**: esborra el text de TextField.
+- **copy()**: transfereix el rang seleccionat actualment en el text al portapapers, deixant la selecció actual.
+- **cut()**: transfereix el rang seleccionat actualment en el text al portapapers, eliminant la selecció actual.
+- **paste()**: transfereix el contingut del portapapers a aquest text, reemplaçant la selecció actual.
+
+![text view](./images/textView2.gif)
+
+
 
 
 
