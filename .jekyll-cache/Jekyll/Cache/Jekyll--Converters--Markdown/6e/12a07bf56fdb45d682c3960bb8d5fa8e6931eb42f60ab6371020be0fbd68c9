@@ -1,0 +1,50 @@
+I"�<h1 id="progress-bar--progress-indicator">Progress Bar &amp; Progress Indicator</h1>
+
+<h2 id="progress-bar">Progress Bar</h2>
+
+<p>És una especialització del ProgressIndicator que es representa com una barra horitzontal. La barra de progrés generalment mostra la quantitat de finalització d’una tasca.</p>
+
+<p>Els constructors de la classe ProgressBar són:</p>
+
+<ul>
+  <li><strong>ProgressBar()</strong>: crea una nova barra de progrés intermèdia.</li>
+  <li><strong>ProgressBar(double p)</strong>: crea una barra de progrés amb un progrés especificat.</li>
+</ul>
+
+<p>Mètodes d’ús comú:</p>
+
+<ul>
+  <li><strong>isIndeterminate()</strong> Obté el valor de la propietat indeterminat.</li>
+  <li><strong>getProgress()</strong> Obté el valor del progrés de la propietat.</li>
+  <li><strong>setProgress(double v)</strong> Estableix el valor del progrés de la propietat</li>
+</ul>
+
+<h1 id="progress-indicator">Progress Indicator</h1>
+
+<p>És un control circular que s’utilitza per a indicar el progrés, ja siga infinit o finit. Sovint s’utilitza amb la API de tasques per a representar el progrés de les tasques en segon pla. En general, mostra la quantitat de finalització d’una tasca.</p>
+
+<p>Constructor de la classe són:</p>
+
+<ul>
+  <li><strong>ProgressIndicator()</strong>: crea un nou indicador de progrés intermedi.</li>
+  <li><strong>ProgressIndicator(doble p)</strong>: crea un indicador de progrés amb un progrés especificat</li>
+</ul>
+
+<p>Mètodes d’ús comú</p>
+<ul>
+  <li><strong>isIndeterminate()</strong> Obté el valor de la propietat indeterminat.</li>
+  <li><strong>getProgress()</strong> Obté el valor del progrés de la propietat.</li>
+  <li><strong>setProgress(double v)</strong> Estableix el valor del progrés de la propietat</li>
+</ul>
+
+<p>El següent programa il·lustra l’ús de l’indicador de progrés i de progress bar sense temps determinat:</p>
+
+<p><img src="./images/progressBar2.gif" alt="progress Bar" /></p>
+
+<p>A continuació s’observa un Progress Bar i un Progress Indicator per una determinada tasca:</p>
+
+<p><img src="./images/progressBar1.gif" alt="progress Bar" /></p>
+
+<p><a href="../../javafx.html">back</a></p>
+
+:ET

@@ -1,0 +1,47 @@
+I"�<h1 id="slider">Slider</h1>
+
+<p>Un control lliscant és un control en JavaFX que s’utilitza per a mostrar un rang continu o discret d’opcions numèriques vàlides i permet a l’usuari interactuar amb el control. Un control lliscant es representa com una barra vertical o horitzontal amb una perilla que l’usuari pot lliscar per a indicar el valor desitjat. Un control lliscant també pot tindre marques i etiquetes per a indicar els intervals al llarg de la barra.</p>
+
+<p><img src="./images/slider1.png" alt="slider" /></p>
+
+<p>Les tres variables fonamentals del control lliscant són min, max i value. El valor sempre ha de ser un número dins del rang definit per min i max. min sempre ha de ser menor que max. min per defecte és 0, mentre que max per defecte és 100.</p>
+
+<p><img src="./images/slider2.gif" alt="slider" /></p>
+
+<p>Constructors de la classe:</p>
+
+<ul>
+  <li><strong>Slider()</strong>: crea una instància de control lliscant predeterminada.</li>
+  <li><strong>Slider(doble mínim, doble màxim, doble valor)</strong>: construeix un control lliscant amb els valors mínims, màxims i actuals del control lliscant especificat.</li>
+</ul>
+
+<p>Mètodes d’ús comú:</p>
+
+<ul>
+  <li><strong>ajustValue(double newValue)</strong>: Ajusta el valor perquè coincidisca amb valor nou.</li>
+  <li><strong>decrement()</strong>: Disminueix el valor per blockIncrement, limitat per max.</li>
+  <li><strong>getBlockIncrement()</strong>: Obté el valor de la propietat blockIncrement.</li>
+  <li><strong>getMax()</strong>: Obté el valor de la propietat max.</li>
+  <li><strong>getMin()</strong>: Obté el valor de la propietat min.</li>
+  <li><strong>getMajorTickUnit(</strong>): Obté el valor de la propietat majorTickUnit.</li>
+  <li><strong>getMinorTickCount()</strong>: Obté el valor de la propietat minorTickCount.</li>
+  <li><strong>getValue()</strong>: Obté el valor del valor de la propietat.</li>
+  <li><strong>increment()</strong>: Incrementa el valor per blockIncrement, limitat per max.</li>
+  <li><strong>setBlockIncrement(double value)</strong>: Estableix el valor de la propietat blockIncrement.</li>
+  <li><strong>setMajorTickUnit(double value)</strong>: Estableix el valor de la propietat majorTickUnit.</li>
+  <li><strong>setMax(double value)</strong>: Estableix el valor de la propietat max.</li>
+  <li><strong>setMin(double value)</strong>: Estableix el valor de la propietat min.</li>
+  <li><strong>setMinorTickCount(int value)</strong>: Estableix el valor de la propietat minorTickCount.</li>
+  <li><strong>setValue(double value)</strong>: Estableix el valor del valor de la propietat.</li>
+  <li><strong>setValueChanging(boolean value)</strong>: Estableix el valor de la propietat valueChanging.</li>
+  <li><strong>setShowTickMarks(boolean value)</strong>: Estableix el valor de la propietat showTickMarks.</li>
+  <li><strong>setShowTickLabels(boolean value)</strong>: Estableix el valor de la propietat showTickLabels.</li>
+  <li><strong>isShowTickLabels()</strong>: Obté el valor de la propietat showTickLabels.</li>
+  <li><strong>isShowTickMarks()</strong>: Obté el valor de la propietat showTickMarks.</li>
+</ul>
+
+<p><img src="./images/slider3.gif" alt="slider" /></p>
+
+<p><a href="../../javafx.html">back</a></p>
+
+:ET

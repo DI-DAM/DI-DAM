@@ -1,0 +1,69 @@
+I"<h1 id="treetableview">TreeTableView</h1>
+
+<p>JavaFX li proporciona la classe TreeTableView i s’usa juntament amb TreeItem, TreeTableColumn i TreeTableCell que l’ajuda a mostrar dades a Tabular i en arbre. Vegem la següent il·lustració:</p>
+
+<p><img src="./images/treeTableView1.png" alt="tree table view" /></p>
+
+<p>Igual que TableView, pot crear columnes anidades. Per a crear un TreeTableView, necessita:</p>
+
+<ol>
+  <li>Afegir TreeItem a TreeTableView per a formar una estructura d’arbre.</li>
+  <li>definir les columnes de la taula.</li>
+  <li>Definir la manera de mostrar dades en cada cel·la mitjançant el mètode TreeTableColumn.setCellValueFactory.</li>
+</ol>
+
+<h2 id="creació-de-treetableview">Creació de TreeTableView</h2>
+
+<p>Es defineixen les TreeTableView i les TreeTabletCol</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@FXML
+TreeTableView&lt;Empleat&gt; treeTableView;
+@FXML
+TreeTableColumn&lt;Empleat,String&gt; empCol, fnameCol, lnameCol, positionCol, genderCol;
+@FXML
+TreeTableColumn&lt;Empleat,Boolean&gt; singleCol;
+</code></pre></div></div>
+
+<p>Creem els items i afegim les dades:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Employee empBoss = new Employee("E00", "Abc@gmail.com", "Boss", "Boss", "Manager", "M", false); 
+Employee empSmith = new Employee("E01", "Smith@gmail.com", "Susan", "Smith", "Salesman", "F", true); 
+Employee empMcNeil = new Employee("E02", "McNeil@gmail.com", "Anne", "McNeil", "Cleck", "M", false);
+ 
+// Root Item
+TreeItem&lt;Employee&gt; itemRoot = new TreeItem&lt;Employee&gt;(empBoss);
+TreeItem&lt;Employee&gt; itemSmith = new TreeItem&lt;Employee&gt;(empSmith);
+TreeItem&lt;Employee&gt; itemMcNeil = new TreeItem&lt;Employee&gt;(empMcNeil);
+ 
+itemRoot.getChildren().addAll(itemSmith, itemMcNeil);
+ 
+// definim l'item arrel.
+
+treeTableView.setRoot(itemRoot);
+</code></pre></div></div>
+
+<p>Definim com omplir les dades per cada cel·la:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>empNoCol.setCellValueFactory(new TreeItemPropertyValueFactory&lt;Employee, String&gt;("empNo"));
+firstNameCol.setCellValueFactory(new TreeItemPropertyValueFactory&lt;Employee, String&gt;("firstName"));
+lastNameCol.setCellValueFactory(new TreeItemPropertyValueFactory&lt;Employee, String&gt;("lastName"));
+positionCol.setCellValueFactory(new TreeItemPropertyValueFactory&lt;Employee, String&gt;("position"));
+genderCol.setCellValueFactory(new TreeItemPropertyValueFactory&lt;Employee, String&gt;("gender"));
+singleCol.setCellValueFactory(new TreeItemPropertyValueFactory&lt;Employee, Boolean&gt;("single"));
+</code></pre></div></div>
+
+<p><img src="./images/treetableView2.gif" alt="tree table view" /></p>
+
+<h3 id="setcellfactory--setcellvaluefactory">setCellFactory &amp; setCellValueFactory</h3>
+<ul>
+  <li>
+    <p><strong>treeTableColumn.setCellValueFactory</strong>: És el mètode que especifica com mostrar les dades en la cel·la de TreeTableView.</p>
+  </li>
+  <li>
+    <p><strong>treeTableColumn.setCellFactory</strong>: És el mètode que especifica com representar un control mentre l’usuari està editant dades en la cel·la.</p>
+  </li>
+</ul>
+
+<p><a href="../../javafx.html">back</a></p>
+
+:ET

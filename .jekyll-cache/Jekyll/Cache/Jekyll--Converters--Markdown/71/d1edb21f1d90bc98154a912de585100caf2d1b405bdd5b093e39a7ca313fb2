@@ -1,0 +1,83 @@
+I"e	<h1 id="controls----label">Controls -  Label</h1>
+
+<p>L’etiqueta és un control d’interfície d’usuari, pot mostrar text, icona o tots dos.</p>
+
+<p><img src="./images/label1.gif" alt="label" /></p>
+
+<h3 id="example">Example:</h3>
+
+<p><img src="./images/label2.png" alt="label" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Label label = new Label("My Label");
+ 
+FlowPane root = new FlowPane();
+root.setPadding(new Insets(10));
+root.getChildren().add(label);
+</code></pre></div></div>
+
+<h2 id="label-amb-icona">Label amb icona</h2>
+
+<p>L’etiqueta pot mostrar text, icona o tots dos.</p>
+
+<p><img src="./images/label3.png" alt="label" /></p>
+
+<h2 id="font-color-wrap--effects">Font, Color, Wrap &amp; Effects</h2>
+
+<p>Es pot modificar la font, el color i  el borde del label amb els mètodes:</p>
+
+<ul>
+  <li>setFont</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Use a constructor of the Font class
+label1.setFont(new Font("Arial", 30));
+ 
+// Use the font method of the Font class
+label2.setFont(Font.font("Cambria", 32));
+</code></pre></div></div>
+
+<ul>
+  <li>setTextFill</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Set font color for the Label.
+label1.setTextFill(Color.web("#0076a3"));
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>setWrapText</p>
+  </li>
+  <li>
+    <p>Effects</p>
+  </li>
+</ul>
+
+<p>Pot crear alguns efectes simples per a Lable. Per exemple, pot girar l’etiqueta d’acord amb un cert angle. Moga-ho d’acord amb l’eix x. També podem fer que s’acoste, allunye quan moga el mouse sobre la superfície de l’etiqueta.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Rotate 45 degrees
+label4.setRotate(45);
+ 
+// Translate Y axis 30 pixel
+label4.setTranslateY(30);
+ 
+label5.setOnMouseEntered(new EventHandler&lt;MouseEvent&gt;() {
+   @Override
+   public void handle(MouseEvent e) {
+       label5.setScaleX(1.5);
+       label5.setScaleY(1.5);
+   }
+});
+ 
+label5.setOnMouseExited(new EventHandler&lt;MouseEvent&gt;() {
+   @Override
+   public void handle(MouseEvent e) {
+       label5.setScaleX(1);
+       label5.setScaleY(1);
+   }
+});
+</code></pre></div></div>
+
+<p><a href="../../javafx.html">back</a></p>
+
+:ET

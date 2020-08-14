@@ -1,0 +1,63 @@
+I"�<h1 id="listview">ListView</h1>
+
+<p>JavaFX ListView mostra els seus elements vertical o horitzontalment.
+La següent imatge mostra un ListView vertical que inclou 3 elements.</p>
+
+<p><img src="./images/listView1.png" alt="list view" /></p>
+
+<p>Ara mostrem una llista horitzontal:</p>
+
+<p><img src="./images/listView2.png" alt="list view" /></p>
+
+<p>Fent funcionar un exemple:</p>
+
+<p><img src="./images/listView3.gif" alt="list view" /></p>
+
+<h2 id="métodes-listview">Métodes listView</h2>
+
+<p>alguns métodes que podem utilitzar amb ListView són els següents:</p>
+
+<ul>
+  <li><strong>getSelectionModel().setSelectionMode</strong> -&gt; permet indicar si es poden seleccionar varis elements de la llista a la  vegada.</li>
+  <li><strong>setOrientation</strong> -&gt; mostra la llista en forma vertical o horitzontal. Per deffecte es mostra en forma vertical.</li>
+  <li><strong>getSelectionModel().getSelectedIndex()</strong> –&gt; Retorna l’índex dels elements seleccionats</li>
+  <li><strong>getSelectionModel().getSelectedItem()</strong> –&gt; Retorna l’element seleccionat actualment</li>
+  <li><strong>getFocusModel().getFocusedIndex()</strong> – Retorna l’índex de l’element enfocat actualment</li>
+  <li><strong>getFocusModel().getFocusedItem()</strong> –&gt; Retorna l’element que té el focus actualment</li>
+</ul>
+
+<h2 id="creació-de-listview">Creació de listView.</h2>
+
+<p>En les seguents linees de codi es mostra comes crea un ListView a traves d’un ObservableList.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ListView&lt;String&gt; list = new ListView&lt;String&gt;();
+
+//definim l'Observable list amb els camps que tindrà la nostra ListView
+ObservableList&lt;String&gt; items = FXCollections.observableArrayList("iron Man", "Batman", "Capità America", "Green Lantern");
+//afegim tots els items al listView
+listView.setItems(items);
+</code></pre></div></div>
+
+<p>En el exemple que es mostra en la pròxima imatge, fem que aparega en un label l’últim item seleccionat. açó ho fem afegint un listener al mètode selectedItemPropierty:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>listView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener&lt;String&gt;() {
+     @Override
+      public void changed(ObservableValue&lt;? extends String&gt; observableValue, String s, String t1) {
+
+           labelItem.setText("- "+t1);
+      }
+});
+</code></pre></div></div>
+
+<p><img src="./images/listView4.gif" alt="list view" /></p>
+
+<p>També pot donar-se el cas de que vulgam afegir un element dintre de cadascun dels item del listview.</p>
+
+<p>en cas de que en una llista es vulga incloure un combo bóx, deurem de indicar que la llista siga editable, amb <code class="language-plaintext highlighter-rouge">listView.setEditable(true);</code> i despres dir-li que en cadascun dels items incloga un combobox:
+<code class="language-plaintext highlighter-rouge">listView.setCellFactory(ComboBoxListCell.forListView(names));</code></p>
+
+<p><img src="./images/listView5.gif" alt="list view" /></p>
+
+<p><a href="../../javafx.html">back</a></p>
+
+:ET

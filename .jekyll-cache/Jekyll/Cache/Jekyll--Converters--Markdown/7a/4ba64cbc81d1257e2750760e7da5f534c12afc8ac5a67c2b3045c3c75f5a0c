@@ -1,0 +1,32 @@
+I"<h1 id="choice-box">Choice Box</h1>
+
+<p>ChoiceBox és part del paquet JavaFX. Mostra un conjunt d’elements i permet a l’usuari seleccionar una sola opció i mostrarà l’element seleccionat actualment en la part superior. ChoiceBox per defecte no té cap element seleccionat llevat que se seleccione el contrari.</p>
+
+<p>Els constructors de la classe ChoiceBox són:</p>
+
+<ul>
+  <li><strong>ChoiceBox ()</strong>: crea un nou ChoiceBox buit.</li>
+  <li><strong>ChoiceBox (elements ObservableList)</strong>: crea un nou ChoiceBox amb el conjunt d’elements donat.</li>
+</ul>
+
+<p>Els mètodes que mes sol utilitzar són:</p>
+
+<ul>
+  <li><strong>getItems()</strong>: Obté el valor dels elements de propietat.</li>
+  <li><strong>getValue()</strong>: Obté el valor del valor de la propietat.</li>
+  <li><strong>hide()</strong>:  Tanca la llista d’opcions.</li>
+  <li><strong>setItems(ObservableList value)</strong>: Estableix el valor dels elements de propietat.</li>
+  <li><strong>setValue(T value)</strong>: Estableix el valor del valor de la propietat.</li>
+  <li><strong>show()</strong>: Obri la llista d’opcions.</li>
+</ul>
+
+<p>El codi fxml del checkbox seria:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ChoiceBox fx:id="choiceBox" layoutX="383.0" layoutY="65.0" prefHeight="26.0" prefWidth="111.0" AnchorPane.rightAnchor="52.0" /&gt;
+</code></pre></div></div>
+
+<p><img src="./images/choiceBox1.gif" alt="choiceBox" /></p>
+
+<p><a href="../../javafx.html">back</a></p>
+
+:ET

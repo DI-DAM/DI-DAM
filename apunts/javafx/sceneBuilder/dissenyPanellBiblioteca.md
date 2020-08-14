@@ -61,7 +61,52 @@ Ara es procedeix a mostrar els components més destacats que podem trobar:
     - [StackPane](./contenidors/stackPane.html)
     - [ScrollPane](./contenidors/scrollPane.html)
     - [TitledPane](./contenidors/titledPane.html)
-- Controls
-    
+- Controls & Menú
+    - [label](./controls/label.html)
+    - [Button](./controls/button.html)
+    - [Radio Button](./controls/radioButton.html)
+    - [Toggle Button](./controls/toogleButton.html)
+    - [Check Box](./controls/checkBox.html)
+    - [Choice Box](./controls/choiceBox.html)
+    - [Web View](./controls/webView.html)
+    - [Table View](./controls/tableView.html)
+    - [List View](./controls/listView.html)
+    - [Text Field, Password Field & Text Area](./controls/textField.html)
+    - [Tree View](./controls/treeView.html)
+    - [TreeTableView](./controls/treeTableView.html)
+    - [Menú](./controls/menu.html)
+    - [Image View](./controls/imageView.html)
+    - [Menu Button & Split Menu Button](./controls/menuButton.html)
+    - [Slider](./controls/slider.html)
+    - [Spinner](./controls/spinner.html)
+    - [Progress Bar & Progress Indicator](./controls/progressBarProgressIndicator.html)
+    - [Tooltip](./controls/tooltip.html)
+    - [Date Picker](./controls/datePicker.html)
+    - [Color Picker](./controls/colorPicker.html)
+    - [Obrir una nova finestra](./controls/obrirNOvaFinestra.html)
+- Shapes
+    - [Shapes 2D](./shape2D/shape2D.html)
+        - Línea
+        - Rectangle
+        - El·lipse
+        - Circle
+        - Polygons
+        - Cubic Curve
+        - Quad Curve
+    - [Shapes 3D](./shape3D/shape3D.html)
+        - Mode de dibuix
+        - Material de l'objecte
+        - Càmares
+        - Box
+        - Cilindre
+        - Esfera
+    - [Chart (gràfiques)](./charts/chart.html)
+        - Pie Chart
+        - Art Chart
+        - Area Chart
+        - Bar Chart
+
+
+
 [back](../javafx.html)
 

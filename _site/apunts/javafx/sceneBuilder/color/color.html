@@ -1,0 +1,119 @@
+<h1 id="java-fx---color">Java FX - Color</h1>
+
+<p>En JavaFX tenim la flexibilitat de crear el nostre propi color usant diversos mètodes i passar-ho com un objecte Paint al mètode setFill(). Analitzem els diversos mètodes per a crear color en JavaFX.</p>
+
+<h2 id="color-rgb">Color RGB</h2>
+
+<p>El sistema de color RGB és el mètode més popular per a crear un color en gràfics. Consta de tres components denominats ROIG → R, VERD → G i BLAU → B. Cada component usa 8 bits, la qual cosa significa que cada component pot tindre un valor sencer de 0 a 22 ^ 8 - 1 = 255.</p>
+
+<p>La pantalla de la computadora pot veure’s com una col·lecció de píxels. El conjunt (R, G, B) representa en realitat l’emissió dels seus respectius LED en la pantalla.</p>
+
+<p>Si el valor de ROIG s’estableix en 0, significa que el LED roig està apagat mentre que el valor 255 indica que l’emissió completa del LED és allí. La combinació de (0,0,0) representa el color negre mentre que (255,255,255) representa el color blanc. Els valors mitjans en aqueix rang poden representar diferents colors.</p>
+
+<p>Usant la superposició de RGB, podem representar 255 * 255 * 255 colors diferents. En JavaFX, la classe <strong>javafx.scene.paint.Color</strong> representa colors.</p>
+
+<p>Hi ha un mètode estàtic anomenat <strong>rgb()</strong> de la classe Color. Accepta tres arguments sencers com a roig, verd, blau i un argument doble opcional anomenat alfa. El valor <strong>d’alfa és proporcional a l’opacitat del color</strong>. El valor alfa 0 significa que el color és completament transparent, mentre que el valor 1 significa que el color és completament opac.</p>
+
+<h2 id="color-name">Color Name</h2>
+
+<p>En JavaFX, també podem crear el color pel nom del color. La classe javafx.scene.paint.Color conté tots els colors com a propietats de la classe. La propietat Color ha de passar-se, com l’objecte de la classe Paint.</p>
+
+<h2 id="hsb-color">HSB Color</h2>
+
+<p>Juntament amb els diversos mètodes que hem vist fins ara, JavaFX també ens permet crear el color usant HSB que és la combinació de To, Saturació i Lluentor. javafx.scene.paint.Color conté un mètode estàtic <strong>Color.hsb()</strong> que accepta tres nombres enters h, s y b.</p>
+
+<h2 id="web-color">Web Color</h2>
+
+<p>La classe javafx.scene.paint.color ens permet crear els colors web usant el mètode Color.web(). Això pot prendre fins a dos paràmetres, dels quals un és el valor hexadecimal del color i l’altre és un argument opcional anomenat canal alfa que representa l’opacitat del color.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Color.web("# 0000FF") // Color blau amb alfa implícit
+
+Color.web ("# 0000FF", 1) // Color blau amb alfa explícit
+</code></pre></div></div>
+<p>Alpha és un valor de tipus doble que pot contindre valors en el rang de 0.0 a 1.0.</p>
+
+<h1 id="gradient">Gradient</h1>
+
+<p>En gràfics per computadora, els colors de degradat (a vegades dits progressió de color) s’utilitzen per a especificar els colors dependents de la posició per a omplir una regió en particular. El valor del color degradat varia amb la posició. Els colors degradats produeixen les transicions de color suaus a la regió en variar el valor del color contínuament amb la posició.</p>
+
+<p>JavaFX ens permet implementar dos tipus de transicions de color de degradat:</p>
+
+<ul>
+  <li>Gradient lineal</li>
+  <li>Gradient radial</li>
+</ul>
+
+<h2 id="linear-gradient">Linear Gradient</h2>
+
+<p>Per a aplicar patrons de degradat lineal a les formes, necessitem crear una instància de la classe LinearGradient. Aquesta classe conté diversos mètodes d’instància que es descriuen a continuació en la taula.</p>
+
+<ul>
+  <li>
+    <p>Metodes</p>
+
+    <ul>
+      <li><strong>equals(Object o)</strong>: de tipus boolea Compara dos objectes</li>
+      <li><strong>getCycleMethod()</strong> Defineix quin mètode de cicle s’ha aplicat a LinearGradient.</li>
+      <li><strong>getEndX()</strong> de tipus doble: coordenada X del punt final de l’eix de degradat</li>
+      <li><strong>getEndY()</strong> de tipus doble: coordenada Y del punt final de l’eix de gradient</li>
+      <li><strong>getStartX()</strong> de tipus doble: Coordenada X del punt d’inici de l’eix de gradient</li>
+      <li><strong>getStartY()</strong> de tipus doble: Coordenada Y del punt d’inici de l’eix de gradient</li>
+      <li><strong>getStops()</strong> del tipus List <Stop>: Defineix la forma de distribucions de colors al llarg del degradat</Stop></li>
+      <li><strong>hashCode()</strong> de tipus enter: Retorna el codi hash per a l’objecte de gradient lineal</li>
+      <li><strong>isOpaque()</strong> de tipus boolea Comprova si la pintura és completament opaca o no.</li>
+      <li><strong>isProprtional()</strong> de tipus boolea Comprova si les ubicacions inicial i final són proporcionals o no.</li>
+      <li><strong>toString()</strong> Converteix l’objecte degradat en una cadena.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Constructors</p>
+
+    <ul>
+      <li><strong>new LinearGradient(startX, startY, endX, endY, Proportional, CycleMethod, stops)</strong></li>
+      <li><strong>(startX, startY)</strong>: representa les coordenades x e y del punt d’inici del color degradat.</li>
+      <li><strong>(endX, endY)</strong>: representa les coordenades x e y del punt final del color degradat.</li>
+      <li><strong>Proportional</strong>: aquesta és una propietat de tipus booleà. Si això és cert, el punt inicial i final del color degradat es tornarà proporcional.</li>
+      <li><strong>CycleMethod</strong>: Això defineix el mètode de cicle aplicat al gradient.</li>
+      <li><strong>Stops</strong>: defineix la distribució del color al llarg del degradat.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="./images/linear.png" alt="linear" /></p>
+
+<h2 id="radial-gradient">Radial Gradient</h2>
+
+<p>Per a aplicar degradat radial a les formes, necessitem instanciar la classe javafx.scene.paint.RadialGradient. Aquesta classe conté diversos mètodes d’instància descrits a continuació:</p>
+
+<ul>
+  <li>
+    <p>Metodes</p>
+
+    <ul>
+      <li><strong>equals(Object o)</strong> de tipus boolea: Compara dos objectes</li>
+      <li><strong>getCenterX()</strong> de tipus double: Coordenada X del cercle que defineix el degradat</li>
+      <li><strong>getCenterY()</strong> de tipus double: Coordenada Y del cercle que defineix el degradat</li>
+      <li><strong>getCycleMethod()</strong>: Defineix quin mètode de cicle s’ha aplicat a LinearGradient.</li>
+      <li><strong>getFocusAngle()</strong> amb tipus Double: Angle en graus entre el centre del degradat i el focus de la posició on s’assigna el primer color</li>
+      <li><strong>getFocusDistance()</strong> amb tipus Double: Distància entre el centre del degradat i el punt d’enfocament del primer color.</li>
+      <li><strong>getRadius</strong> amb tipus Double: Radi del gradient</li>
+      <li><strong>getStops()</strong> amb tipus List <Stop>: Defineix la forma de distribucions de colors al llarg del degradat</Stop></li>
+      <li><strong>hashCode()</strong> amb tipus int: Retorna el codi hash per a l’objecte de gradient lineal</li>
+      <li><strong>isOpaque()</strong> amb tipus booleà: Comprova si la pintura és completament opaca o no.</li>
+      <li><strong>isProprtional()</strong> amb tipus booleà: Comprova si les ubicacions inicial i final són proporcionals o no.</li>
+      <li><strong>toString()</strong> Converteix l’objecte degradat en una cadena (string).</li>
+    </ul>
+  </li>
+  <li>
+    <p>Constructor</p>
+  </li>
+</ul>
+
+<p>El constructor de la classe accepta alguns paràmetres.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>RadialGradient(double focusAngle, double focusDistance, double centerX, double centerY, double radius, boolean proportional, CycleMethod cycleMethod, Stops? stops)
+</code></pre></div></div>
+
+<p><img src="./images/radialGradient.png" alt="radial" /></p>
+
+<p><a href="../../javafx.html">back</a></p>

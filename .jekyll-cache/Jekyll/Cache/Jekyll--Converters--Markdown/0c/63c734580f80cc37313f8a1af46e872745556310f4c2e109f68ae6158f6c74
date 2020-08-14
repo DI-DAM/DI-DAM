@@ -1,0 +1,87 @@
+I"I<h1 id="webview">WebView</h1>
+
+<p>JavaFX WebView és un mini navegador otambè anomenat navegador integrat en l’aplicació JavaFX. Aquest navegador es basa en WebKit, que és un motor de navegador de codi font obert que admet CSS, Javascript, DOM i HTML5.
+JavaFX WebView li permet fer les següents tasques en les seues aplicacions JavaFX:</p>
+
+<ul>
+  <li>Renderitzar contingut HTML des d’URL locals i remotes</li>
+  <li>Obtindre historial web</li>
+  <li>Executar comandos de Javascript</li>
+  <li>Realitzar crides ascendents des de Javascript a JavaFX</li>
+  <li>Administrar finestres emergents web</li>
+  <li>Aplicar efectes al navegador incrustat</li>
+</ul>
+
+<p>La implementació actual (JavaFX 2.3) del component WebView admet les següents característiques HTML5:</p>
+
+<ul>
+  <li>Canvas</li>
+  <li>Media Playback</li>
+  <li>Controls de formulari (excepte <code class="language-plaintext highlighter-rouge">&lt;input type = "color"&gt;</code>)</li>
+  <li>Contingut editable</li>
+  <li>Manteniment de la història</li>
+  <li>Suport per a les etiquetes:</li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;meter&gt;</code><meter></meter></li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;progress&gt;</code><progress>.</progress></li>
+  <li>Suport per a les etiquetes <code class="language-plaintext highlighter-rouge">&lt;details&gt;</code> i <code class="language-plaintext highlighter-rouge">&lt;summary&gt;</code>.</li>
+  <li>DOM</li>
+  <li>SVG</li>
+  <li>Suport per a noms de domini escrits en idiomes nacionals.</li>
+</ul>
+
+<p>A continuació es mostra una imatge amb l’arquitectura del navegador integrat en JavaFX:</p>
+
+<p><img src="./images/webView1.png" alt="WebEngine" /></p>
+
+<h2 id="web-engine">Web Engine</h2>
+
+<p>La classe WebEngine proporciona funcionalitat bàsica de pàgina web. Admet la interacció de l’usuari, com navegar per enllaços i enviar formularis HTML, encara que no interactua directament amb els usuaris. La classe WebEngine maneja una pàgina web alhora. Admet les funcions bàsiques de navegació de carregar contingut HTML i accedir al DOM, així com executar comandos Javascript.</p>
+
+<h2 id="webview-1">WebView</h2>
+
+<p>WebView s’estén des de la classe Node, embolica un objecte WebEngine i mostra contingut HTML. Pot obtindre l’objecte WebEngine de WebView utilitzant el mètode getEngine ().</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Create a WebView
+WebView browser = new WebView();
+ 
+// Get WebEngine via WebView
+WebEngine webEngine = browser.getEngine();
+ 
+// Load page
+webEngine.load("http://www.cipfpbatoi.es");
+</code></pre></div></div>
+
+<h2 id="mètodes-més-utilitzats">Mètodes més utilitzats</h2>
+
+<p><strong>getChildren()</strong>: Obté la llista de fills d’aquest pare.
+<strong>getEngine()</strong>: Retorna el motor de la vista web.
+<strong>getFontScale()</strong>: Retorna l’escala de font de l’objecte webview.
+<strong>getHeight()</strong>: Retorna l’altura d’aquest WebView.
+<strong>getMaxHeight()</strong>: Retorna l’altura màxima.
+<strong>getMaxWidth()</strong>: Retorna l’ample màxim.
+<strong>getMinHeight()</strong>: Estableix l’altura mínima.
+<strong>getMinWidth()</strong>: Retorna l’ample mínim.
+<strong>getPrefHeight()</strong>: Retorna l’altura preferida.
+<strong>getPrefWidth()</strong>: Retorna l’ample preferit.
+<strong>getWidth()</strong>: Retorna l’ample d’aquest WebView.
+<strong>getZoom()</strong>: Retorna el factor de zoom actual.
+<strong>maxHeight(double v)</strong>: Estableix l’altura màxima.
+<strong>maxWidth(double v)</strong>: Estableix l’ample màxim.
+<strong>minHeight(double v)</strong>: Estableix l’altura mínima.
+<strong>minWidth(double v)</strong>: Estableix l’ample mínim.
+<strong>prefHeight(double v)</strong>: Estableix l’altura preferida de la vista web.
+<strong>prefWidth(double v)</strong>: Estableix l’ample preferit de la vista web.
+<strong>setFontScale(double v)</strong>: Estableix l’escala de font de la vista web.
+<strong>setMaxHeight(double v)</strong>: Estableix l’altura màxima.
+<strong>setMaxWidth(double v)</strong>:  Estableix l’ample màxim.
+<strong>setMinHeight(double v)</strong>: Estableix l’altura mínima.
+<strong>setMinWidth(double v)</strong>: Estableix l’ample mínim.
+<strong>setPrefHeight(double v)</strong>: Estableix l’altura preferida.
+<strong>setPrefWidth(double v)</strong>: Estableix l’ample preferit.
+<strong>setZoom(double v)</strong>: Estableix el zoom per a la vista web.</p>
+
+<p><img src="./images/webview1.gif" alt="web view" /></p>
+
+<p><a href="../../javafx.html">back</a></p>
+
+:ET

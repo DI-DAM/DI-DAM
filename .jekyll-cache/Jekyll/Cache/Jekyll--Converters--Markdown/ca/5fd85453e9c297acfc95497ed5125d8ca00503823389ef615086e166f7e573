@@ -1,0 +1,256 @@
+I"�7<h1 id="java-fx---charts">Java FX - Charts</h1>
+
+<p>En general, un gràfic és una representació gràfica de dades. Existeixen diversos tipus de gràfics per a representar dades com el Gràfic de barres, Gràfic circular, Gràfic de línies, Gràfic de dispersió, etc.</p>
+
+<p>JavaFX proporciona suport per a diversos gràfics circulars i gràfics XY. Els gràfics que es representen en un pla XY inclouen AreaChart, BarChart, BubbleChart, LineChart, ScatterChart, StackedAreaChart, StackedBarChart, etc.</p>
+
+<p>Cada gràfic està representat per una classe i tots aquests gràfics pertanyen al paquet javafx.scene.chart. La classe denominada Chart és la classe base de tots els gràfics en JavaFX i el XYChart és la classe base de tots els gràfics que es dibuixen en el pla XY.</p>
+
+<p><img src="./images/chart1.jpg" alt="chart" /></p>
+
+<h2 id="creació-dun-chart">Creació d’un Chart</h2>
+
+<p>Per a crear un gràfic, necessitem:</p>
+
+<ul>
+  <li>Definir l’eix del gràfic.</li>
+  <li>Instanciar la classe respectiva</li>
+  <li>Preparar i passar dades al gràfic.</li>
+</ul>
+
+<h4 id="instanciando-la-respectiva-classe">Instanciando la respectiva classe</h4>
+
+<p>Per a crear un gràfic, crea una instància de la seua classe respectiva. Per exemple, si desitja crear un gràfic de línies, ha de crear una instància de la classe anomenada Línia de la següent manera:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>LineChart linechart = new LineChart (xAxis, yAxis);
+</code></pre></div></div>
+
+<blockquote>
+  <p>Com la majoria de vegades, aço es pot fer també en el Scene Builder.</p>
+</blockquote>
+
+<p>Com s’observa en el codi anterior, en crear instàncies, ha de passar dos objectes que representen els eixos X i Y del gràfic, respectivament.</p>
+
+<h4 id="definint-leix">Definint l’Eix</h4>
+
+<p>En general, l’eix dels gràfics es pot representar mitjançant:</p>
+
+<ul>
+  <li>Números com a Població, Edat i</li>
+  <li>Categories com a Dies en una setmana, Països.</li>
+</ul>
+
+<p>En JavaFX, un eix és una classe abstracta que representa l’eix X o Y. Té dues subclasses per a definir cada tipus d’eix, que són <strong>CategoryAxis</strong> i <strong>NumberAxis</strong> com es mostra en el següent diagrama:</p>
+
+<p><img src="./images/chart2.jpg" alt="chart" /></p>
+
+<ul>
+  <li><strong>Category Axis</strong>: En crear una instància d’aquesta classe, pot definir (crear) un eix X o Y al llarg del qual cada valor representa una categoria. Pot definir un eix de categoria instanciant aquesta classe com es mostra a continuació:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CategoryAxis xAxis = new CategoryAxis();
+</code></pre></div></div>
+
+<p>Per a aquest eix, ha d’establir la llista de categories i etiquetes en l’eix com es mostra a continuació:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Establint el llistat de categories.
+xAxis.setCategories(FXCollections.&lt;String&gt;observableArrayList
+   (Arrays.asList("n ame1", "name2"….)));
+
+//Establint el label dels eixos
+xAxis.setLabel("name of the axis ");
+</code></pre></div></div>
+
+<ul>
+  <li><strong>NumberAxis</strong>: en crear una instància d’aquesta classe, pot definir (crear) un eix X o Y al llarg del qual cada valor representa un valor numèric. Pot usar qualsevol tipus de Número amb aquest Eix, <strong>Long</strong>, <strong>Double</strong>, <strong>BigDecimal</strong>, etc. Es pot definir un eix numéric instanciant aquesta classe de la següent manera:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//Defining the axis 
+NumberAxis yAxis = new NumberAxis();
+
+//Setting labelto the axis 
+yAxis.setLabel("name of the axis");
+</code></pre></div></div>
+
+<h4 id="pasar-les-dades-a-gràfics-xy">Pasar les dades a gràfics XY</h4>
+
+<p>Tots els gràfics XY estan representats al llarg del planol XY. Per a traçar un conjunt de punts en un gràfic, necessitem especificar una sèrie de coordenades XY.</p>
+
+<p>La classe &lt;X, Y&gt; del paquet javafx.scene.chart és una classe mitjançant la qual pot enviar dades a un gràfic. Aquesta classe conté una llista observable de sèries amb nom. Pot obtindre aquesta llista utilitzant el mètode getData () de la classe XYChart.Sèries com es mostra a continuació:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ObservableList list = series.getData();
+</code></pre></div></div>
+
+<p>On, sèries és l’objecte de la classe XYChart.Sèries. Pot agregar dades a aquesta llista utilitzant el mètode add () de la següent manera:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>list.add(new XYChart.Data(x-axis data, y-axis data));
+</code></pre></div></div>
+
+<p>Aquestes dues línies es poden escriure juntes com es mostra a continuació:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>series.getData().add(new XYChart.Data(x-axis data, y-axis data));
+</code></pre></div></div>
+
+<p>A continuació es proporciona una descripció de diversos gràfics (classes) proporcionats per JavaFX:</p>
+
+<h2 id="pie-chart">Pie Chart</h2>
+
+<p>Un pie chart (gràfic circular) és una representació de valors com a talls d’un cercle amb diferents colors. Aquestes seccions s’etiqueten i els valors corresponents a cada secció es representen en el gràfic.</p>
+
+<p>Els constructors de la classe són:</p>
+
+<ul>
+  <li><strong>PieChart()</strong>: crea una instància buida de gràfic circular.</li>
+  <li><strong>PieChart(dades de ObservableList)</strong>: crea una instància de gràfic circular amb dades donades.</li>
+</ul>
+
+<p>A continuació es mostra un gràfic circular que representa les dades del PIB d’alguns paisos en 2015.</p>
+
+<p>Mètodes més utilitzats</p>
+<ul>
+  <li><strong>getData()</strong> retorna les dades del gràfic circular</li>
+  <li><strong>getLabelLineLength()</strong> retorna la longitud de l’etiqueta del gràfic circular</li>
+  <li><strong>getLabelsVisible()</strong> Indica si les etiquetes de tall de pastís es dibuixen o no</li>
+  <li><strong>getStartAngle()</strong> retorna l’angle inicial del gràfic circular</li>
+  <li><strong>isClockwise()</strong> retorna si el gràfic circular està en sentit horari o no</li>
+  <li><strong>setClockwise(boolean v)</strong> estableix l’orientació del gràfic circular en sentit horari si es passa el valor vertader</li>
+  <li><strong>setData(dades de ObservableList)</strong> Estableix el valor de les dades de propietat.</li>
+  <li><strong>setLabelLineLength(doble v)</strong> estableix la longitud de la línia d’etiqueta del gràfic circular.</li>
+  <li><strong>setLabelsVisible(boolean v)</strong> Estableix el valor de la propietat labelsVisible.</li>
+  <li><strong>setStartAngle(doble v)</strong> estableix l’angle d’inici del gràfic circular</li>
+</ul>
+
+<p><img src="./images/chart3.png" alt="chart" /></p>
+
+<p>En JavaFX, un pie-Chart està representat per una classe anomenada PieChart. Aquesta classe pertany al paquet javafx.scene.chart.</p>
+
+<p>En crear una instància d’aquesta classe, pot crear un node PieChart en JavaFX.</p>
+
+<p>Aquesta classe té 5 propietats que són les següents:</p>
+
+<ul>
+  <li><strong>clockwise</strong>: Aquest és un operador booleà; En configurar aquest operador com a vertader, els segments de dades en els gràfics circulars s’organitzaran en el sentit de les agulles del rellotge a partir de l’angle d’inici del gràfic circular.</li>
+  <li><strong>data</strong>: representa un objecte ObservableList que conté les dades del gràfic circular.</li>
+  <li><strong>labelLineLength</strong>: un operador sencer que representa la longitud de les línies que connecten les etiquetes i els sectors del gràfic circular.</li>
+  <li><strong>labelsVisible</strong>: aquest és un operador booleà; En establir aquest operador com a vertader, es dibuixaran les etiquetes per als gràfics circulars. Per defecte, aquest operador està configurat per a ser verdader.</li>
+  <li><strong>startAngle</strong>: es tracta d’un operador de tipus doble, que representa l’angle en el qual s’inicia el primer talle circular.</li>
+</ul>
+
+<p>En aquest exemple, per a generar un gràfic circular, prepare un objecte ObservableList com es mostra en el següent bloc de codi:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//Preparant l'objecte ObservbleList
+ObservableList&lt;PieChart.Data&gt; pieChartData = FXCollections.observableArrayList( 
+new PieChart.Data("USA", 17947195), 
+new PieChart.Data("EU", 11540278), 
+new PieChart.Data("China", 10982829),
+new PieChart.Data("Japan", 4116242)
+new PieChart.Data("Others", 28584442)); 
+</code></pre></div></div>
+
+<p>Després de preparar l’objecte ObservableList, passe-ho com a argument al constructor de la classe PieChart de la següent forma:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//Creating a Pie chart 
+PieChart pieChart = new PieChart(pieChartData);
+</code></pre></div></div>
+
+<p>O, usant el mètode anomenat setData () de la classe anomenada PieChart del paquet anomenat javafx.scene.chart.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pieChart.setData(pieChartData);
+</code></pre></div></div>
+
+<p><img src="./images/chart3.gif" alt="chart" /></p>
+
+<p>per posar la llegenda a la part esquerra utilitzem:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pieChart.setLegendSide(Side.LEFT);
+</code></pre></div></div>
+
+<h2 id="area-chart">Area Chart</h2>
+
+<p>Els gràfics d’àrea s’utilitzen per a dibuixar gràfics basats en àrees. Traça l’àrea entre la sèrie de punts donada i l’eix. En general, aquest quadre s’usa per a comparar dues quantitats.</p>
+
+<p>La següent data descriu els ingresos mensuals en 2014 i 2015</p>
+
+<p><img src="./images/chart4.png" alt="chart" /></p>
+
+<p>L’eix X mostra els mesos de l’any, l’eix I representa els seus ingressos.</p>
+
+<p><img src="./images/chart5.png" alt="chart" /></p>
+
+<p>Per crear la gràfica del exemple:</p>
+
+<p>definim els eixos x i y, així com el area xart.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>NumberAxis xAxis = new NumberAxis(1, 12, 1);
+NumberAxis yAxis = new NumberAxis();
+AreaChart&lt;Number, Number&gt; areaChart = new AreaChart&lt;Number, Number&gt;(xAxis, yAxis);
+areaChart.setTitle("Revenue");
+</code></pre></div></div>
+
+<p>En aquest exemple anem introduint-li les dades de una en una, no  utilitzem un ObservableList. Es fá igual per al any 2014 que per al 2015.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Series data of 2014
+XYChart.Series&lt;Number, Number&gt; series2014 = new XYChart.Series&lt;Number, Number&gt;();
+ 
+series2014.setName("2014");
+         
+series2014.getData().add(new XYChart.Data&lt;Number, Number&gt;(1, 400));
+series2014.getData().add(new XYChart.Data&lt;Number, Number&gt;(3, 1000));
+series2014.getData().add(new XYChart.Data&lt;Number, Number&gt;(4, 1500));
+series2014.getData().add(new XYChart.Data&lt;Number, Number&gt;(5, 800));
+series2014.getData().add(new XYChart.Data&lt;Number, Number&gt;(7, 500));
+series2014.getData().add(new XYChart.Data&lt;Number, Number&gt;(8, 1800));
+series2014.getData().add(new XYChart.Data&lt;Number, Number&gt;(10, 1500));
+series2014.getData().add(new XYChart.Data&lt;Number, Number&gt;(12, 1300));
+</code></pre></div></div>
+
+<h2 id="bar-chart">Bar Chart</h2>
+
+<p>JavaFX BarChart s’utilitza per a dibuixar un gràfic de barres bidimensional amb 2 eixos X e Y. En aquest gràfic, un eix denota un grup d’objectes interessats i l’altre denota dades numèriques.</p>
+
+<p><img src="./images/chart6.png" alt="chart" /></p>
+
+<p>Per exemple, les dades a continuació descriuen la popularitat d’alguns llenguatges de programació en 2014 i 2015.</p>
+
+<p><img src="./images/chart7.png" alt="chart" /></p>
+
+<p>Es pot utilitzar BarChart per a dibuixar el quadre que descriu la popularitat dels llenguatges de programació amb les dades esmentades anteriorment. Vegem un exemple il·lustratiu a continuació:</p>
+
+<p>Definim els eixos X i Y.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CategoryAxis xAxis = new CategoryAxis();
+xAxis.setLabel("Programming Language");
+ 
+NumberAxis yAxis = new NumberAxis();
+yAxis.setLabel("Percent");
+</code></pre></div></div>
+
+<p>Creem el Bar Chart.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Create a BarChart
+BarChart&lt;String, Number&gt; barChart = new BarChart&lt;String, Number&gt;(xAxis, yAxis);
+</code></pre></div></div>
+
+<p>Introduim les dades per la serie 2014:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Series 1 - Data of 2014
+XYChart.Series&lt;String, Number&gt; dataSeries1 = new XYChart.Series&lt;String, Number&gt;();
+dataSeries1.setName("2014");
+ 
+dataSeries1.getData().add(new XYChart.Data&lt;String, Number&gt;("Java", 20.973));
+dataSeries1.getData().add(new XYChart.Data&lt;String, Number&gt;("C#", 4.429));
+dataSeries1.getData().add(new XYChart.Data&lt;String, Number&gt;("PHP", 2.792));
+</code></pre></div></div>
+
+<p>Per la serie 2015 s’introduirien igual les dades.</p>
+
+<p>Afegim les series al Bar chart:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Add Series to BarChart.
+barChart.getData().add(dataSeries1);
+barChart.getData().add(dataSeries2);
+ 
+barChart.setTitle("Some Programming Languages");
+</code></pre></div></div>
+
+<p><img src="./images/chart8.png" alt="chart" /></p>
+
+<p><a href="../../javafx.html">back</a></p>
+:ET

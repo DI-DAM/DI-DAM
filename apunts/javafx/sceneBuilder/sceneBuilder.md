@@ -36,7 +36,7 @@ Si es té algun dels elements seleccionats, es pot modificar qualsevol de les se
 
 En el inspector podem diferenciar 3 seccions:
 
-- **Propietats**: Ens permet definir l'estil dels **components seleccionats.
+- **Propietats**: Ens permet definir l'estil dels components seleccionats.
 - **Layouts**: Comportament del element respecte al layout que el inclou.
 - **Code**: Ens permet definir els enllaços entre la interficie gràfica i el controlador de cada element: *listener*, identificador, ...
 

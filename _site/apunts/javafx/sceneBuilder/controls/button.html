@@ -1,0 +1,47 @@
+<h1 id="controls---button">Controls - Button</h1>
+
+<p>Permet als desenvolupadors processar una acció quan un usuari fa clic en un botó. La classe Button és una extensió de la classe Etiquetada. Pot mostrar text, una imatge o tots dos.</p>
+
+<p><img src="./images/button1.png" alt="button1" /></p>
+
+<p>Button es un node, per lo que hereda tots els métodes d’utilització d’events de la classe node.</p>
+
+<h2 id="botó-amb-imatge">botó amb imatge:</h2>
+
+<p>Es crea igual que un botó normal, pero se li afegeix una imatge.</p>
+
+<p><img src="./images/button1.png" alt="button2" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ImageView imageView = new ImageView(new Image("icons/icon.png"));
+Button button = new Button("Botó amb text i imatge", imageView);
+        
+//button2.setGraphic(imageView); &lt;- una opció alternativa
+</code></pre></div></div>
+
+<h2 id="botó-i-events">botó i events.</h2>
+
+<p>El botó, al igual que altres nodes disposa de diferents métodes amb els quals pot interactuar l’usuari amb ell.Si volem veure els métodes més utilitzats es poden veure en el menú code del scene builder. Per veure-ho amb més detall, fes clic <a href="https://openjfx.io/javadoc/14/javafx.controls/javafx/scene/control/ButtonBase.html">ací</a></p>
+
+<p>En el següent exemple, anem a indicar-li que quan detecta que ha fet click en el botó, escriu un text en consola:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>button.setOnAction(actionEvent -&gt; {
+            System.out.println("has clicat...");
+        });
+</code></pre></div></div>
+
+<h2 id="efectes">Efectes</h2>
+
+<p>Com la clase button s’exten de la classe node, pots aplicar els efectes del paquet javafx.scene.effect per modificar l’apariencia del botó.</p>
+
+<p>En el següent exemple, quan pasem el ratolí per damunt del botó, li posará una ombra.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>button.setOnMouseEntered(dragEvent -&gt; {
+	button.setEffect(shadow);
+});
+button.setOnMouseExited(mouseEvent -&gt; {
+        button.setEffect(null);
+});
+</code></pre></div></div>
+
+<p><a href="../../javafx.html">back</a></p>
+

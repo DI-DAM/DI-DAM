@@ -1,0 +1,38 @@
+<h1 id="checkbox">Checkbox</h1>
+
+<p>Checkbox forma part del paquet JavaFX. És una casella amb una marca quan està seleccionada i buida quan no està seleccionada. Al principi, les caselles de verificació poden semblar similars als radio Button, però existeix la diferència entre elles que les caselles de verificació no es poden combinar en grups d’alternança, la qual cosa significa que no podem seleccionar diverses opcions al mateix temps.</p>
+
+<p><img src="./images/checkbox1.gif" alt="checkbox" /></p>
+
+<p>El checBox pot estar en els següents estats:</p>
+<ul>
+  <li><strong>Checked</strong>: quan indeterminat és fals i marcat és vertader</li>
+  <li><strong>Unchecked</strong>: quan indeterminat és fals i marcat és fals</li>
+  <li><strong>Undefined</strong>: quan indeterminat és vertader</li>
+</ul>
+
+<p>Els constructors de la classe són:</p>
+
+<ol>
+  <li>CheckBox(): crea una casella de verificació amb una cadena buida per a la seua etiqueta.</li>
+  <li>ChecBox(String t): crea una casella de verificació amb el text donat com a etiqueta.</li>
+</ol>
+
+<p>Els mètodes més utilitzats són:</p>
+
+<ul>
+  <li><strong>isIndeterminate()</strong>: Obté el valor de la propietat indeterminat.</li>
+  <li><strong>isSelected()</strong>: Obté el valor de la propietat selected.</li>
+  <li><strong>selectedProperty()</strong>: Indica si aquesta casella de verificació està marcada.</li>
+  <li><strong>setIndeterminate(boolean v)</strong>: Estableix el valor de la propietat indeterminat.</li>
+  <li><strong>setSelected(boolean v)</strong>: Estableix el valor de la propietat seleccionada.</li>
+</ul>
+
+<p>El codi fxml del checkbox seria:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;CheckBox fx:id="cbgroc" mnemonicParsing="false" text="Grog"&gt;
+&lt;/CheckBox&gt;
+</code></pre></div></div>
+
+<p><a href="../../javafx.html">back</a></p>
+

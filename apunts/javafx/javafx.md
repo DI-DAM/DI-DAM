@@ -9,7 +9,7 @@ Podem trobar tota la informació referent a la instal·lació i configuració en
 
 - [Introducció](./instalConfig/introduccio.html)
 - [JavaFX amb el gestor de dependencies Maven](./instalConfig/mavenIntellij.html)
-- [Scene Builder](./sceneBuilder/sceneBuilder.html)
+- [Element de l'Scene Builder](./sceneBuilder/sceneBuilder.html)
     - [Panell de continguts](./sceneBuilder/panellContinguts.html)
     - [Panell de Documents - Hierarchy](./sceneBuilder/panellDocuments.html)
     - [Panell Library](./sceneBuilder/dissenyPanellBiblioteca.html)
@@ -24,9 +24,78 @@ Podem trobar tota la informació referent a la instal·lació i configuració en
             - [StackPane](./sceneBuilder/contenidors/stackPane.html)
             - [ScrollPane](./sceneBuilder/contenidors/scrollPane.html)
             - [TitledPane](./sceneBuilder/contenidors/titledPane.html)
-        - Controls
-        
-        
+        - Controls & Menú
+            - [label](./sceneBuilder/controls/label.html)
+            - [Button](./sceneBuilder/controls/button.html)
+            - [Radio Button](./sceneBuilder/controls/radioButton.html)
+            - [Toggle Button](./controls/toogleButton.html)
+            - [Check Box](./sceneBuilder/controls/checkBox.html)
+            - [Choice Box](./sceneBuilder/controls/choiceBox.html)
+            - [Web View](./sceneBuilder/controls/webView.html)
+            - [Table View](./sceneBuilder/controls/tableView.html)
+            - [List View](./sceneBuilder/controls/listView.html)
+            - [Text Field, Password Field & Text Area](./sceneBuilder/controls/textField.html)
+            - [Tree View](./sceneBuilder/controls/treeView.html)
+            - [TreeTableView](./sceneBuilder/controls/treeTableView.html)
+            - [Menú](./sceneBuilder/controls/menu.html)
+            - [Image View](./sceneBuilder/controls/imageView.html)
+            - [Menu Button & Split Menu Button](./sceneBuilder/controls/menuButton.html)
+            - [Slider](./sceneBuilder/controls/slider.html)
+            - [Spinner](./sceneBuilder/controls/spinner.html)
+            - [Progress Bar & Progress Indicator](./sceneBuilder/controls/progressBarProgressIndicator.html)
+            - [Tooltip](./sceneBuilder/controls/tooltip.html)
+            - [Date Picker](./sceneBuilder/controls/datePicker.html)
+            - [Color Picker](./sceneBuilder/controls/colorPicker.html)
+            - [Obrir una nova finestra](./sceneBuilder/controls/obrirNOvaFinestra.html)
+        - Shapes
+            - [Shapes 2D](./sceneBuilder/shape2D/shape2D.html)
+                - Línea
+                - Rectangle
+                - El·lipse
+                - Circle
+                - Polygons
+                - Cubic Curve
+                - Quad Curve
+            - [Shapes 3D](./sceneBuilder/shape3D/shape3D.html)
+                - Mode de dibuix
+                - Material de l'objecte
+                - Càmares
+                - Box
+                - Cilindre
+                - Esfera
+        - [Chart (gràfiques)](./sceneBuilder/charts/chart.html)
+            - Pie Chart
+            - Art Chart
+            - Area Chart
+            - Bar Chart
+        - [Efectes](./sceneBuilder/effects/effects.html)
+            - Blend
+            - Bloom
+            - Blur Effects
+            - Color Ajust
+            - Color Input
+            - Glow
+            - Image Input
+            - Shadow
+            - Light Effects
+            - Perspective
+            - Reflection
+            - Tó Sepia
+            - Cadena d'efectes
+        - [Animacions](./sceneBuilder/animacions/animacions.html)
+            - Transició de rotació
+            - Transició d'escala
+            - Transició de translació
+            - Transició d'esvaïment
+            - Transició de farciment
+            - StrokeTransition
+            - Transició seqüencial
+            - Transició paral·lela
+            - Pause Transition
+            - Transició de ruta
+
+
+
 informació de: https://docs.oracle.com/
 
 [back](../..)

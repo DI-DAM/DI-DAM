@@ -1,0 +1,1165 @@
+<h1 id="java-fx---controls">Java FX - Controls</h1>
+
+<p>Anem a fer una descripció general dels controls de la interfície d’usuari JavaFX disponibles a través de la API.</p>
+
+<p>En la següent imatge es mostra els controls d’interfície d’usuari típics que pot trobar en l’aplicació de mostra Ensemble. Prove aquesta aplicació per a avaluar l’àmplia gamma de controls, el seu comportament i els estils disponibles.</p>
+
+<p><img src="./images/controls1.png" alt="controls" /></p>
+
+<h2 id="label">Label</h2>
+
+<p>L’etiqueta és un control d’interfície d’usuari, pot mostrar text, icona o tots dos.</p>
+
+<p><img src="./images/label1.gif" alt="label" /></p>
+
+<h3 id="example">Example:</h3>
+
+<p><img src="./images/label2.png" alt="label" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Label label = new Label("My Label");
+ 
+FlowPane root = new FlowPane();
+root.setPadding(new Insets(10));
+root.getChildren().add(label);
+</code></pre></div></div>
+
+<h3 id="label-amb-icona">Label amb icona</h3>
+
+<p>L’etiqueta pot mostrar text, icona o tots dos.</p>
+
+<p><img src="./images/label3.png" alt="label" /></p>
+
+<h3 id="font-color-wrap--effects">Font, Color, Wrap &amp; Effects</h3>
+
+<p>Es pot modificar la font, el color i  el borde del label amb els mètodes:</p>
+
+<ul>
+  <li>setFont</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Use a constructor of the Font class
+label1.setFont(new Font("Arial", 30));
+ 
+// Use the font method of the Font class
+label2.setFont(Font.font("Cambria", 32));
+</code></pre></div></div>
+
+<ul>
+  <li>setTextFill</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Set font color for the Label.
+label1.setTextFill(Color.web("#0076a3"));
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>setWrapText</p>
+  </li>
+  <li>
+    <p>Effects</p>
+  </li>
+</ul>
+
+<p>Pot crear alguns efectes simples per a Lable. Per exemple, pot girar l’etiqueta d’acord amb un cert angle. Moga-ho d’acord amb l’eix x. També podem fer que s’acoste, allunye quan moga el mouse sobre la superfície de l’etiqueta.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Rotate 45 degrees
+label4.setRotate(45);
+ 
+// Translate Y axis 30 pixel
+label4.setTranslateY(30);
+ 
+label5.setOnMouseEntered(new EventHandler&lt;MouseEvent&gt;() {
+   @Override
+   public void handle(MouseEvent e) {
+       label5.setScaleX(1.5);
+       label5.setScaleY(1.5);
+   }
+});
+ 
+label5.setOnMouseExited(new EventHandler&lt;MouseEvent&gt;() {
+   @Override
+   public void handle(MouseEvent e) {
+       label5.setScaleX(1);
+       label5.setScaleY(1);
+   }
+});
+
+</code></pre></div></div>
+
+<h2 id="button">Button</h2>
+
+<p>Permet als desenvolupadors processar una acció quan un usuari fa clic en un botó. La classe Button és una extensió de la classe Etiquetada. Pot mostrar text, una imatge o tots dos.</p>
+
+<p><img src="./images/button1.png" alt="button1" /></p>
+
+<p>Button es un node, per lo que hereda tots els métodes d’utilització d’events de la classe node.</p>
+
+<h3 id="botó-amb-imatge">botó amb imatge:</h3>
+
+<p>Es crea igual que un botó normal, pero se li afegeix una imatge.</p>
+
+<p><img src="./images/button1.png" alt="button2" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ImageView imageView = new ImageView(new Image("icons/icon.png"));
+Button button = new Button("Botó amb text i imatge", imageView);
+        
+//button2.setGraphic(imageView); &lt;- una opció alternativa
+</code></pre></div></div>
+
+<h3 id="botó-i-events">botó i events.</h3>
+
+<p>El botó, al igual que altres nodes disposa de diferents métodes amb els quals pot interactuar l’usuari amb ell.Si volem veure els métodes més utilitzats es poden veure en el menú code del scene builder. Per veure-ho amb més detall, fes clic <a href="https://openjfx.io/javadoc/14/javafx.controls/javafx/scene/control/ButtonBase.html">ací</a></p>
+
+<p>En el següent exemple, anem a indicar-li que quan detecta que ha fet click en el botó, escriu un text en consola:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>button.setOnAction(actionEvent -&gt; {
+            System.out.println("has clicat...");
+        });
+</code></pre></div></div>
+
+<h3 id="efectes">Efectes</h3>
+
+<p>Com la clase button s’exten de la classe node, pots aplicar els efectes del paquet javafx.scene.effect per modificar l’apariencia del botó.</p>
+
+<p>En el següent exemple, quan pasem el ratolí per damunt del botó, li posará una ombra.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>button.setOnMouseEntered(dragEvent -&gt; {
+	button.setEffect(shadow);
+});
+button.setOnMouseExited(mouseEvent -&gt; {
+        button.setEffect(null);
+});
+</code></pre></div></div>
+
+<h2 id="radio-button">Radio Button</h2>
+
+<p>Ara anem a parlar sobre el control del botó de radi i la classe RadioButton, una implementació especialitzada de la classe ToggleButton.</p>
+
+<p>Un control de radio button pot seleccionar-se o deseleccionarse. En general, els botons d’opció es combinen en un grup on sol es pot seleccionar un botó alhora. Aquest comportament els distingeix dels toggle buttons, ja què tots els botons d’alternança en un grup poden estar en un estat no seleccionat.</p>
+
+<p>També es pot crear al igual que feiem en els botons, un radio button que tinguera text, text i imatge o solament una imatge.</p>
+
+<ul>
+  <li>Afegir Radio Buttons a grups.</li>
+</ul>
+
+<p>Els botons d’opció s’usen generalment en un grup per a presentar diverses opcions mútuament excloents. L’objecte ToggleGroup proporciona referències a tots els botons de ràdio que estan associats amb ell i els administra perquè només es puga seleccionar un dels botons de ràdio alhora.</p>
+
+<p>En el següent exemple es crea un grup d’alternança, crea dos button radio, agrega cada botó de ràdio al grup d’alternança i especifica quin botó ha de seleccionar-se quan s’inicia l’aplicació.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Group
+ToggleGroup group = new ToggleGroup();
+ 
+// Radio 1: Male
+RadioButton button1 = new RadioButton("Male");
+button1.setToggleGroup(group);
+button1.setSelected(true);
+ 
+// Radio 3: Female.
+RadioButton button2 = new RadioButton("Female");
+button2.setToggleGroup(group);
+</code></pre></div></div>
+
+<h3 id="radio-button-en-scene-builder">Radio Button en scene Builder.</h3>
+
+<p>si estem creant el fitxer fxml en scene builder, afegirem els radioButtons arrosegant-lo en la part del panell que vulgam. seguidament, li indicarem a quin grup pertany. aço ho realitzem en l’opció ToggleGroup que trobem en la pestanya propieties:</p>
+
+<p><img src="./images/radioButton1.png" alt="radio button" /></p>
+
+<p>Com es veu en la imatge, també podem indicar-li l’element que volem que estiga seleccionat al principi.</p>
+
+<p><img src="./images/radioButton2.png" alt="radio button" /></p>
+
+<p>Ara podem veureun exemple d’un grup de Radio buttons, amb el seu codi fxml:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;VBox prefHeight="182.0" prefWidth="265.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controlsJavafx"&gt;
+    &lt;children&gt;
+        &lt;Label prefHeight="16.0" prefWidth="256.0" text="Indica el teu equip:"&gt;
+            &lt;font&gt;
+                &lt;Font size="14.0" /&gt;
+            &lt;/font&gt;
+        &lt;/Label&gt;
+        &lt;RadioButton mnemonicParsing="false" selected="true" text="C.D.Alcoiano"&gt;
+            &lt;VBox.margin&gt;
+                &lt;Insets bottom="15.0" left="15.0" right="15.0" top="15.0" /&gt;
+            &lt;/VBox.margin&gt;
+            &lt;toggleGroup&gt;
+                &lt;ToggleGroup fx:id="group" /&gt;
+            &lt;/toggleGroup&gt;
+            &lt;graphic&gt;
+                &lt;ImageView fitHeight="41.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true"&gt;
+                    &lt;image&gt;
+                        &lt;Image url="icons/CD_Alcoyano.png" /&gt;
+                    &lt;/image&gt;
+                &lt;/ImageView&gt;
+            &lt;/graphic&gt;
+        &lt;/RadioButton&gt;
+        &lt;RadioButton mnemonicParsing="false" text="F.C.Barcelona" toggleGroup="$group"&gt;
+            &lt;VBox.margin&gt;
+                &lt;Insets bottom="15.0" left="15.0" right="15.0" top="15.0" /&gt;
+            &lt;/VBox.margin&gt;
+            &lt;graphic&gt;
+                &lt;ImageView fitHeight="26.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true"&gt;
+                    &lt;image&gt;
+                        &lt;Image url="icons/barsa.jpg" /&gt;
+                    &lt;/image&gt;
+                &lt;/ImageView&gt;
+            &lt;/graphic&gt;
+        &lt;/RadioButton&gt;
+        &lt;RadioButton mnemonicParsing="false" text="Rayo Ibense" toggleGroup="$group"&gt;
+            &lt;VBox.margin&gt;
+                &lt;Insets bottom="15.0" left="15.0" right="15.0" top="15.0" /&gt;
+            &lt;/VBox.margin&gt;
+            &lt;graphic&gt;
+                &lt;ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true"&gt;
+                    &lt;image&gt;
+                        &lt;Image url="icons/rayo.png" /&gt;
+                    &lt;/image&gt;
+                &lt;/ImageView&gt;
+            &lt;/graphic&gt;
+        &lt;/RadioButton&gt;
+    &lt;/children&gt;
+&lt;/VBox&gt;
+</code></pre></div></div>
+
+<h2 id="tooglebutton">ToogleButton</h2>
+
+<p>Es poden combinar dos o més botons d’alternança en un grup on sol es pot seleccionar un botó alhora, o on no es requereix selecció. La següent figura mostra una captura de pantalla d’una aplicació que combina tres botons d’alternança en un grup. L’aplicació pinta el rectangle amb un color específic segons el botó d’alternança seleccionat.</p>
+
+<p><img src="./images/toggleButton1.png" alt="toggleButton" /></p>
+
+<p>Al igual que en els Radio Button, s’ha de indicar que els toggleButons pertanyen a un Toggle Group.</p>
+
+<p><img src="./images/radioButton1.png" alt="radio button" /></p>
+
+<h2 id="checkbox">Checkbox</h2>
+
+<p>Checkbox forma part del paquet JavaFX. És una casella amb una marca quan està seleccionada i buida quan no està seleccionada. Al principi, les caselles de verificació poden semblar similars als radio Button, però existeix la diferència entre elles que les caselles de verificació no es poden combinar en grups d’alternança, la qual cosa significa que no podem seleccionar diverses opcions al mateix temps.</p>
+
+<p><img src="./images/checkbox1.gif" alt="checkbox" /></p>
+
+<p>El checBox pot estar en els següents estats:</p>
+<ul>
+  <li><strong>Checked</strong>: quan indeterminat és fals i marcat és vertader</li>
+  <li><strong>Unchecked</strong>: quan indeterminat és fals i marcat és fals</li>
+  <li><strong>Undefined</strong>: quan indeterminat és vertader</li>
+</ul>
+
+<p>Els constructors de la classe són:</p>
+
+<ol>
+  <li>CheckBox(): crea una casella de verificació amb una cadena buida per a la seua etiqueta.</li>
+  <li>ChecBox(String t): crea una casella de verificació amb el text donat com a etiqueta.</li>
+</ol>
+
+<p>Els mètodes més utilitzats són:</p>
+
+<ul>
+  <li><strong>isIndeterminate()</strong>: Obté el valor de la propietat indeterminat.</li>
+  <li><strong>isSelected()</strong>: Obté el valor de la propietat selected.</li>
+  <li><strong>selectedProperty()</strong>: Indica si aquesta casella de verificació està marcada.</li>
+  <li><strong>setIndeterminate(boolean v)</strong>: Estableix el valor de la propietat indeterminat.</li>
+  <li><strong>setSelected(boolean v)</strong>: Estableix el valor de la propietat seleccionada.</li>
+</ul>
+
+<p>El codi fxml del checkbox seria:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;CheckBox fx:id="cbgroc" mnemonicParsing="false" text="Grog"&gt;
+&lt;/CheckBox&gt;
+</code></pre></div></div>
+
+<h2 id="choice-box">Choice Box</h2>
+
+<p>ChoiceBox és part del paquet JavaFX. Mostra un conjunt d’elements i permet a l’usuari seleccionar una sola opció i mostrarà l’element seleccionat actualment en la part superior. ChoiceBox per defecte no té cap element seleccionat llevat que se seleccione el contrari.</p>
+
+<p>Els constructors de la classe ChoiceBox són:</p>
+
+<ul>
+  <li><strong>ChoiceBox ()</strong>: crea un nou ChoiceBox buit.</li>
+  <li><strong>ChoiceBox (elements ObservableList)</strong>: crea un nou ChoiceBox amb el conjunt d’elements donat.</li>
+</ul>
+
+<p>Els mètodes que mes sol utilitzar són:</p>
+
+<ul>
+  <li><strong>getItems()</strong>: Obté el valor dels elements de propietat.</li>
+  <li><strong>getValue()</strong>: Obté el valor del valor de la propietat.</li>
+  <li><strong>hide()</strong>:  Tanca la llista d’opcions.</li>
+  <li><strong>setItems(ObservableList value)</strong>: Estableix el valor dels elements de propietat.</li>
+  <li><strong>setValue(T value)</strong>: Estableix el valor del valor de la propietat.</li>
+  <li><strong>show()</strong>: Obri la llista d’opcions.</li>
+</ul>
+
+<p>El codi fxml del checkbox seria:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ChoiceBox fx:id="choiceBox" layoutX="383.0" layoutY="65.0" prefHeight="26.0" prefWidth="111.0" AnchorPane.rightAnchor="52.0" /&gt;
+</code></pre></div></div>
+
+<p><img src="./images/choiceBox1.gif" alt="choiceBox" /></p>
+
+<h2 id="webview">WebView</h2>
+
+<p>JavaFX WebView és un mini navegador otambè anomenat navegador integrat en l’aplicació JavaFX. Aquest navegador es basa en WebKit, que és un motor de navegador de codi font obert que admet CSS, Javascript, DOM i HTML5.
+JavaFX WebView li permet fer les següents tasques en les seues aplicacions JavaFX:</p>
+
+<ul>
+  <li>Renderitzar contingut HTML des d’URL locals i remotes</li>
+  <li>Obtindre historial web</li>
+  <li>Executar comandos de Javascript</li>
+  <li>Realitzar crides ascendents des de Javascript a JavaFX</li>
+  <li>Administrar finestres emergents web</li>
+  <li>Aplicar efectes al navegador incrustat</li>
+</ul>
+
+<p>La implementació actual (JavaFX 2.3) del component WebView admet les següents característiques HTML5:</p>
+
+<ul>
+  <li>Canvas</li>
+  <li>Media Playback</li>
+  <li>Controls de formulari (excepte <code class="language-plaintext highlighter-rouge">&lt;input type = "color"&gt;</code>)</li>
+  <li>Contingut editable</li>
+  <li>Manteniment de la història</li>
+  <li>Suport per a les etiquetes:</li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;meter&gt;</code><meter></meter></li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;progress&gt;</code><progress>.</progress></li>
+  <li>Suport per a les etiquetes <code class="language-plaintext highlighter-rouge">&lt;details&gt;</code> i <code class="language-plaintext highlighter-rouge">&lt;summary&gt;</code>.</li>
+  <li>DOM</li>
+  <li>SVG</li>
+  <li>Suport per a noms de domini escrits en idiomes nacionals.</li>
+</ul>
+
+<p>A continuació es mostra una imatge amb l’arquitectura del navegador integrat en JavaFX:</p>
+
+<p><img src="./images/webView1.png" alt="WebEngine" /></p>
+
+<h3 id="web-engine">Web Engine</h3>
+
+<p>La classe WebEngine proporciona funcionalitat bàsica de pàgina web. Admet la interacció de l’usuari, com navegar per enllaços i enviar formularis HTML, encara que no interactua directament amb els usuaris. La classe WebEngine maneja una pàgina web alhora. Admet les funcions bàsiques de navegació de carregar contingut HTML i accedir al DOM, així com executar comandos Javascript.</p>
+
+<h3 id="webview-1">WebView</h3>
+
+<p>WebView s’estén des de la classe Node, embolica un objecte WebEngine i mostra contingut HTML. Pot obtindre l’objecte WebEngine de WebView utilitzant el mètode getEngine ().</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Create a WebView
+WebView browser = new WebView();
+ 
+// Get WebEngine via WebView
+WebEngine webEngine = browser.getEngine();
+ 
+// Load page
+webEngine.load("http://www.cipfpbatoi.es");
+</code></pre></div></div>
+
+<h3 id="mètodes-més-utilitzats">Mètodes més utilitzats</h3>
+
+<p><strong>getChildren()</strong>: Obté la llista de fills d’aquest pare.
+<strong>getEngine()</strong>: Retorna el motor de la vista web.
+<strong>getFontScale()</strong>: Retorna l’escala de font de l’objecte webview.
+<strong>getHeight()</strong>: Retorna l’altura d’aquest WebView.
+<strong>getMaxHeight()</strong>: Retorna l’altura màxima.
+<strong>getMaxWidth()</strong>: Retorna l’ample màxim.
+<strong>getMinHeight()</strong>: Estableix l’altura mínima.
+<strong>getMinWidth()</strong>: Retorna l’ample mínim.
+<strong>getPrefHeight()</strong>: Retorna l’altura preferida.
+<strong>getPrefWidth()</strong>: Retorna l’ample preferit.
+<strong>getWidth()</strong>: Retorna l’ample d’aquest WebView.
+<strong>getZoom()</strong>: Retorna el factor de zoom actual.
+<strong>maxHeight(double v)</strong>: Estableix l’altura màxima.
+<strong>maxWidth(double v)</strong>: Estableix l’ample màxim.
+<strong>minHeight(double v)</strong>: Estableix l’altura mínima.
+<strong>minWidth(double v)</strong>: Estableix l’ample mínim.
+<strong>prefHeight(double v)</strong>: Estableix l’altura preferida de la vista web.
+<strong>prefWidth(double v)</strong>: Estableix l’ample preferit de la vista web.
+<strong>setFontScale(double v)</strong>: Estableix l’escala de font de la vista web.
+<strong>setMaxHeight(double v)</strong>: Estableix l’altura màxima.
+<strong>setMaxWidth(double v)</strong>:  Estableix l’ample màxim.
+<strong>setMinHeight(double v)</strong>: Estableix l’altura mínima.
+<strong>setMinWidth(double v)</strong>: Estableix l’ample mínim.
+<strong>setPrefHeight(double v)</strong>: Estableix l’altura preferida.
+<strong>setPrefWidth(double v)</strong>: Estableix l’ample preferit.
+<strong>setZoom(double v)</strong>: Estableix el zoom per a la vista web.</p>
+
+<p><img src="./images/webview1.gif" alt="web view" /></p>
+
+<h2 id="tableview">TableView</h2>
+
+<p>La classe TableView s’uitilitza juntament amb TableColumn i TableCell per a mostrar les dades en forma de taula.</p>
+
+<p><img src="./images/tableView.png" alt="Table view" /></p>
+
+<h3 id="crear-una-taula">Crear una taula:</h3>
+
+<p>Primer s’ha de crear la tabla i dir-li que siga editable.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TableView table = new TableView();
+table.setEditable(true);
+</code></pre></div></div>
+
+<p>Una vegada creada, ja podem incloure-li les columnes que necessitem.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TableColumn nomCol = new TableColumn("Nom");
+TableColumn cognomCol = new TableColumn("Cognom");
+TableColumn direccioCol = new TableColumn("Direcció");
+</code></pre></div></div>
+
+<p>table.getColumns().addAll(nomCol, cognomCol, direccioCol);</p>
+
+<p>Si en algun moment es vol amagar alguna columna, podem fer-ho:</p>
+
+<p><code class="language-plaintext highlighter-rouge">aColumn.setVisible(false)</code></p>
+
+<p>Com sempre, aquesta tasca es pot realitzar des del Scene Builder.</p>
+
+<h3 id="columnes-anidades">Columnes anidades</h3>
+
+<p>També es poden crear columnes anidades.</p>
+
+<p>Suposem que en la columna direcció li volem afegir: carrer, població i provincia.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TableColumn carrerCol = new TableColumn("Carrer");
+TableColumn poblacioCol = new TableColumn("Població");
+TableColumn provinciaCol = new TableColumn("Provincia");
+</code></pre></div></div>
+
+<p>i ara ja es poden anidar dintre de la columna superior:</p>
+
+<p>direccioCol.getColumns().addAll(carrerCol, poblacioCol,provinciaCol)</p>
+
+<h3 id="afegir-dades">Afegir dades</h3>
+
+<p>El següent codi li mostra com agregar dades a una vista de taula. Cada fila de la taula representa a una persona amb nom i cognom.</p>
+
+<p>En la lògica de la interfície d’usuari, utilitza una ObservableList per a mantindre el valor d’una vista de taula. Cada element en la ObservableList és un objecte Person.</p>
+
+<p>En el controlador d’esdeveniments de botó, crea una nova Persona amb nom i cognom codificats, després s’agrega a la ObservableList.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>private ObservableList&lt;Person&gt; data_table = FXCollections.observableArrayList(
+        new Person("lmanzaneque", "lmanz@gmail.al", "Lluis", "Manzaneque", "true"),
+        new Person ......
+        );
+</code></pre></div></div>
+
+<p><img src="./images/tableView2.gif" alt="Table view" /></p>
+
+<h2 id="listview">ListView</h2>
+
+<p>JavaFX ListView mostra els seus elements vertical o horitzontalment.
+La següent imatge mostra un ListView vertical que inclou 3 elements.</p>
+
+<p><img src="./images/listView1.png" alt="list view" /></p>
+
+<p>Ara mostrem una llista horitzontal:</p>
+
+<p><img src="./images/listView2.png" alt="list view" /></p>
+
+<p>Fent funcionar un exemple:</p>
+
+<p><img src="./images/listView3.gif" alt="list view" /></p>
+
+<h3 id="métodes-listview">Métodes listView</h3>
+
+<p>alguns métodes que podem utilitzar amb ListView són els següents:</p>
+
+<ul>
+  <li><strong>getSelectionModel().setSelectionMode</strong> -&gt; permet indicar si es poden seleccionar varis elements de la llista a la  vegada.</li>
+  <li><strong>setOrientation</strong> -&gt; mostra la llista en forma vertical o horitzontal. Per deffecte es mostra en forma vertical.</li>
+  <li><strong>getSelectionModel().getSelectedIndex()</strong> –&gt; Retorna l’índex dels elements seleccionats</li>
+  <li><strong>getSelectionModel().getSelectedItem()</strong> –&gt; Retorna l’element seleccionat actualment</li>
+  <li><strong>getFocusModel().getFocusedIndex()</strong> – Retorna l’índex de l’element enfocat actualment</li>
+  <li><strong>getFocusModel().getFocusedItem()</strong> –&gt; Retorna l’element que té el focus actualment</li>
+</ul>
+
+<h3 id="creació-de-listview">Creació de listView.</h3>
+
+<p>En les seguents linees de codi es mostra comes crea un ListView a traves d’un ObservableList.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ListView&lt;String&gt; list = new ListView&lt;String&gt;();
+
+//definim l'Observable list amb els camps que tindrà la nostra ListView
+ObservableList&lt;String&gt; items = FXCollections.observableArrayList("iron Man", "Batman", "Capità America", "Green Lantern");
+//afegim tots els items al listView
+listView.setItems(items);
+</code></pre></div></div>
+
+<p>En el exemple que es mostra en la pròxima imatge, fem que aparega en un label l’últim item seleccionat. açó ho fem afegint un listener al mètode selectedItemPropierty:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>listView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener&lt;String&gt;() {
+     @Override
+      public void changed(ObservableValue&lt;? extends String&gt; observableValue, String s, String t1) {
+
+           labelItem.setText("- "+t1);
+      }
+});
+</code></pre></div></div>
+
+<p><img src="./images/listView4.gif" alt="list view" /></p>
+
+<p>També pot donar-se el cas de que vulgam afegir un element dintre de cadascun dels item del listview.</p>
+
+<p>en cas de que en una llista es vulga incloure un combo bóx, deurem de indicar que la llista siga editable, amb <code class="language-plaintext highlighter-rouge">listView.setEditable(true);</code> i despres dir-li que en cadascun dels items incloga un combobox:
+<code class="language-plaintext highlighter-rouge">listView.setCellFactory(ComboBoxListCell.forListView(names));</code></p>
+
+<p><img src="./images/listView5.gif" alt="list view" /></p>
+
+<h2 id="textfield">TextField</h2>
+
+<p>La classe TextField implementa un control d’interfície d’usuari que accepta i mostra l’entrada de text. Proporciona capacitats per a rebre entrada de text d’un usuari. Juntament amb un altre control d’entrada de text, PasswordField, aquesta classe estén la classe TextInput.</p>
+
+<p><img src="./images/textView1.png" alt="text view" />
+El contructor de la clase són:</p>
+
+<ul>
+  <li><strong>TextField()</strong>: Crea un TextView buit.</li>
+  <li><strong>TextField(String s)</strong>: Crea un TextField amb un text inicial.</li>
+</ul>
+
+<p>Alguns mètodes útils que ens podem trobar són:</p>
+
+<ul>
+  <li><strong>setPrefColumnCount(int v)</strong>: Estableix el valor de la propietat prefColumnCount.</li>
+  <li><strong>setOnAction(EventHandler value)</strong>: 	Estableix el valor de la propietat onAction.</li>
+  <li><strong>setAlignment(Pos v)</strong>: Estableix el valor de l’alineació de la propietat.</li>
+  <li><strong>prefColumnCountProperty()</strong>: El nombre preferit de columnes de text</li>
+  <li><strong>onActionProperty()</strong>: El controlador d’accions associat amb aquest camp de text, o nul si no s’assigna cap controlador d’accions.</li>
+  <li><strong>getPrefColumnCount()</strong>: Obté el valor de la propietat prefColumnCount.</li>
+  <li><strong>getOnAction()</strong>: Obté el valor de la propietat onAction.</li>
+  <li><strong>getAlignment()</strong>: Obté el valor de la propietat alineació.</li>
+  <li><strong>getCharacters()</strong>: Retorna la seqüència de caràcters que recolza el contingut del camp de text.</li>
+  <li><strong>setText()</strong>: escriu en el seu interior una cadena</li>
+  <li><strong>getText()</strong>: agafa text que conté.</li>
+  <li><strong>clear()</strong>: esborra el text de TextField.</li>
+  <li><strong>copy()</strong>: transfereix el rang seleccionat actualment en el text al portapapers, deixant la selecció actual.</li>
+  <li><strong>cut()</strong>: transfereix el rang seleccionat actualment en el text al portapapers, eliminant la selecció actual.</li>
+  <li><strong>paste()</strong>: transfereix el contingut del portapapers a aquest text, reemplaçant la selecció actual.</li>
+</ul>
+
+<p><img src="./images/textView2.gif" alt="text view" /></p>
+
+<h3 id="password-field">Password Field</h3>
+
+<p>És un camp de text que emmascara els caràcters ingressats (els caràcters ingressats no es mostren a l’usuari). Permet a l’usuari ingressar <strong>una sola línia de text sense format</strong>.</p>
+
+<p>Constructor de la classe PasswordField:</p>
+
+<ul>
+  <li><strong>PasswordField()</strong>: crea un nou PasswordField</li>
+</ul>
+
+<p>(PasswordField hereta TextField, per la qual cosa tots els mètodes de TextField es poden usar ací. No hi ha mètodes separats per al camp de contrasenya, tots s’hereten del camp de text).</p>
+
+<h3 id="text-area">Text Area</h3>
+
+<p>JavaFX TextArea és un component que permet als usuaris ingressar l’escriptura en diverses línies i l’aplicació pot llegir-lo.</p>
+
+<p><img src="./images/textArea1.gif" alt="text view" /></p>
+
+<h2 id="treeview">TreeView</h2>
+
+<p>La classe TreeView del paquet javafx.scene.control proporciona una vista de les estructures jeràrquiques. En cada arbre, l’objecte més alt de la jerarquia es denomina “arrel”. L’arrel conté diversos elements secundaris, que també poden tindre elements secundaris. Un article sense fills es diu “fulla”.</p>
+
+<p><img src="./images/treeView.png" alt="tree view" /></p>
+
+<p>Per crear un text Area:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Crea un TextArea
+TextArea textArea = new TextArea();
+ 
+// Inserta el text
+textArea.setText("Hello");
+ 
+// Obté el text
+String text= textArea.getText();
+</code></pre></div></div>
+
+<h3 id="creació-treeview">Creació TreeView</h3>
+
+<p>Quan crea una estructura d’arbre en JavaFX, es necessita crear una instància de la classe TreeView, despres es defineixen diversos objectes TreeItem. Fem que un d’aquestos items de l’arbre siga l’arrel. Agreguem l’arrel a la vista d’arbre i altres elements d’arbre a l’arrel.</p>
+
+<p>Pot acompanyar cada element de l’arbre amb una icona gràfica utilitzant el constructor corresponent de la classe TreeItem o cridant al mètode setGraphic. La grandària recomanada per a les icones és 16x16, però de fet, qualsevol objecte Node es pot establir com a icona i serà completament interactiu.</p>
+
+<p>En primer lloc es crea els nodes:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TreeItem&lt;String&gt; root = new TreeItem&lt;&gt;("Superherois");
+//Si volem que aparega expandit al principi, li posem:
+root.setExpanded(true);
+
+</code></pre></div></div>
+
+<p>Una vegada s’ha creat el node principal, podem afegir els fills:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TreeItem&lt;String&gt; avengers = new TreeItem&lt;&gt;("Avengers");
+
+root.getChildren().add(avengers);
+</code></pre></div></div>
+
+<p>Per poder afegir el root principal al TreeView:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>treeView.setRoot(root);
+</code></pre></div></div>
+
+<p><img src="./images/treeView2.gif" alt="tree view" /></p>
+
+<h2 id="treetableview">TreeTableView</h2>
+
+<p>JavaFX li proporciona la classe TreeTableView i s’usa juntament amb TreeItem, TreeTableColumn i TreeTableCell que l’ajuda a mostrar dades a Tabular i en arbre. Vegem la següent il·lustració:</p>
+
+<p><img src="./images/treeTableView1.png" alt="tree table view" /></p>
+
+<p>Igual que TableView, pot crear columnes anidades. Per a crear un TreeTableView, necessita:</p>
+
+<ol>
+  <li>Afegir TreeItem a TreeTableView per a formar una estructura d’arbre.</li>
+  <li>definir les columnes de la taula.</li>
+  <li>Definir la manera de mostrar dades en cada cel·la mitjançant el mètode TreeTableColumn.setCellValueFactory.</li>
+</ol>
+
+<h3 id="creació-de-treetableview">Creació de TreeTableView</h3>
+
+<p>Es defineixen les TreeTableView i les TreeTabletCol</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@FXML
+TreeTableView&lt;Empleat&gt; treeTableView;
+@FXML
+TreeTableColumn&lt;Empleat,String&gt; empCol, fnameCol, lnameCol, positionCol, genderCol;
+@FXML
+TreeTableColumn&lt;Empleat,Boolean&gt; singleCol;
+</code></pre></div></div>
+
+<p>Creem els items i afegim les dades:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Employee empBoss = new Employee("E00", "Abc@gmail.com", "Boss", "Boss", "Manager", "M", false); 
+Employee empSmith = new Employee("E01", "Smith@gmail.com", "Susan", "Smith", "Salesman", "F", true); 
+Employee empMcNeil = new Employee("E02", "McNeil@gmail.com", "Anne", "McNeil", "Cleck", "M", false);
+ 
+// Root Item
+TreeItem&lt;Employee&gt; itemRoot = new TreeItem&lt;Employee&gt;(empBoss);
+TreeItem&lt;Employee&gt; itemSmith = new TreeItem&lt;Employee&gt;(empSmith);
+TreeItem&lt;Employee&gt; itemMcNeil = new TreeItem&lt;Employee&gt;(empMcNeil);
+ 
+itemRoot.getChildren().addAll(itemSmith, itemMcNeil);
+ 
+// definim l'item arrel.
+
+treeTableView.setRoot(itemRoot);
+</code></pre></div></div>
+
+<p>Definim com omplir les dades per cada cel·la:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>empNoCol.setCellValueFactory(new TreeItemPropertyValueFactory&lt;Employee, String&gt;("empNo"));
+firstNameCol.setCellValueFactory(new TreeItemPropertyValueFactory&lt;Employee, String&gt;("firstName"));
+lastNameCol.setCellValueFactory(new TreeItemPropertyValueFactory&lt;Employee, String&gt;("lastName"));
+positionCol.setCellValueFactory(new TreeItemPropertyValueFactory&lt;Employee, String&gt;("position"));
+genderCol.setCellValueFactory(new TreeItemPropertyValueFactory&lt;Employee, String&gt;("gender"));
+singleCol.setCellValueFactory(new TreeItemPropertyValueFactory&lt;Employee, Boolean&gt;("single"));
+</code></pre></div></div>
+
+<p><img src="./images/treetableView2.gif" alt="tree table view" /></p>
+
+<h3 id="setcellfactory--setcellvaluefactory">setCellFactory &amp; setCellValueFactory</h3>
+<ul>
+  <li>
+    <p><strong>treeTableColumn.setCellValueFactory</strong>: És el mètode que especifica com mostrar les dades en la cel·la de TreeTableView.</p>
+  </li>
+  <li>
+    <p><strong>treeTableColumn.setCellFactory</strong>: És el mètode que especifica com representar un control mentre l’usuari està editant dades en la cel·la.</p>
+  </li>
+</ul>
+
+<h2 id="menú">Menú</h2>
+
+<p>Anem a explicar com crear menús i barres de menú, agregar elements de menú, agrupar els menús en categories, crear submenús i establir menús contextuals.</p>
+
+<p>Pot usar les següents classes de la API JavaFX per a crear menús en la seua aplicació JavaFX.</p>
+
+<p>Les parts d’un menú són les següents:</p>
+
+<p><img src="./images/menu1.png" alt="menú" /></p>
+
+<p>Menú Items:</p>
+
+<p><img src="./images/menu2.png" alt="menú" /></p>
+
+<ul>
+  <li>
+    <p>Menú Item</p>
+
+    <p><img src="./images/menu3.png" alt="menú" /></p>
+  </li>
+  <li>
+    <p>CheckMenuItem</p>
+
+    <p><img src="./images/menu4.png" alt="menú" /></p>
+  </li>
+  <li>
+    <p>RadioMenuItem</p>
+
+    <p><img src="./images/menu5.png" alt="menú" /></p>
+  </li>
+  <li>
+    <p>SeparatorMenuItem</p>
+
+    <p><img src="./images/menu6.png" alt="menú" /></p>
+  </li>
+</ul>
+
+<h3 id="ceacio-menu">ceacio menu</h3>
+
+<p>Anem a explicar com es realitza un menú que conte tots els elements explicats anteriorment. Gran part de l’explicació, es podria fer directament en SceneBuilder:</p>
+
+<p><img src="./images/menu7.gif" alt="menú" /></p>
+
+<ul>
+  <li>Creació del MenuBar</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        MenuBar menuBar = new MenuBar();
+</code></pre></div></div>
+
+<ul>
+  <li>Crear menus
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Menu fileMenu = new Menu("File");
+Menu editMenu = new Menu("Edit");
+Menu projectMenu = new Menu("Project");
+Menu helpMenu = new Menu("Help");
+</code></pre></div>    </div>
+  </li>
+  <li>Crear MenuItems</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MenuItem newItem = new MenuItem("New");
+newItem..setGraphic(new ImageView("icons/new.png"));
+newItem.setGraphic(new ImageView(newImage));
+ 
+MenuItem openFileItem = new MenuItem("Open File");
+</code></pre></div></div>
+
+<ul>
+  <li>Creació del SeparatorMenuItem.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SeparatorMenuItem separator= new SeparatorMenuItem();
+MenuItem exitItem = new MenuItem("Exit");
+ 
+MenuItem copyItem = new MenuItem("Copy");
+MenuItem pasteItem = new MenuItem("Paste");
+</code></pre></div></div>
+
+<ul>
+  <li>Crear CheckMenuItem</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CheckMenuItem buildItem = new CheckMenuItem("Build Automatically");
+Image buildImage = MyImageUtils.getImage("/org/o7planning/javafx/icon/build-16.png");
+buildItem.setGraphic(new ImageView("icons/build.png"));
+buildItem.setSelected(true);
+</code></pre></div></div>
+
+<ul>
+  <li>RadioMenuItem
+~~~
+RadioMenuItem updateItem1 = new RadioMenuItem(“Auto Update”);
+RadioMenuItem updateItem2 = new RadioMenuItem(“Ask for Update”);</li>
+</ul>
+
+<p>ToggleGroup group = new ToggleGroup();
+updateItem1.setToggleGroup(group);
+updateItem2.setToggleGroup(group);
+updateItem1.setSelected(true);</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        
+        
+- Afegir menuItems al Menus
+</code></pre></div></div>
+<p>fileMenu.getItems().addAll(newItem, openFileItem,separator, exitItem);
+editMenu.getItems().addAll(copyItem, pasteItem);
+projectMenu.getItems().add(buildItem);</p>
+
+<p>helpMenu.getItems().addAll(updateItem1,updateItem2);</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 
+- Afegir els menus al MenuBar
+</code></pre></div></div>
+<p>menuBar.getMenus().addAll(fileMenu, editMenu, projectMenu, helpMenu);</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+
+
+## Menú Contextual
+
+ContextMenu es pot associar amb controls com a etiquetes, camps de text, etc. El menú contextual s'activa en fer clic dret sobre els controls associats. Mostra una finestra emergent que conté diversos elements de menú o submenú.
+
+El ContextMenu és bastant similar a un Menú, pot afegir elements amb tipus de MenuItem, CheckMenuItem, RadioMenuItem o SeparatorMenuItem.
+
+Els constructors de la classe són:
+
+- ContextMenu (): crea un nou menú contextual buit.
+- ContextMenu (MenuItem ... i): crea un menú contextual que conté els elements del menú.
+
+Mètodes d'ús comú:
+- **getItems()**: retorna els elements del menú contextual
+- **getOnAction()**: retorna el valor de la propietat OnAction
+- **hide()**: oculta el menú contextual
+- **setOnAction(EventHandler v)**: estableix el valor de la propietat onAction
+- **show(Node a, doble X, doble I)**: mostra el menú contextual en una posició específica de la pantalla
+
+
+## Creació del menú contextual.
+
+Anem a basarnos en l'exemple que veiem en la imatge. 
+
+![menú contextual](./images/contextmenu1.gif) 
+
+- Creació de menú Contextual
+
+</code></pre></div></div>
+<p>contextMenu.getItems().addAll(menuItem1, menuItem2);</p>
+
+<p>// Creem el event d’acció per que canvie el text del label
+menuItem1.setOnAction(new EventHandler<ActionEvent>() {
+      @Override
+       public void handle(ActionEvent actionEvent) {
+           labelContext.setText("Has clicat en el Item 1");
+       }
+});
+menuItem2.setOnAction(new EventHandler<ActionEvent>() {
+       @Override
+       public void handle(ActionEvent actionEvent) {
+           labelContext.setText("Has clicat en el Item 2");
+       }
+});</ActionEvent></ActionEvent></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+
+- afegim els menus Item 
+
+</code></pre></div></div>
+<p>contextMenu.getItems().addAll(menuItem1, menuItem2);</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+- Quan cliquem el boto dret en el cercle, es desplega el menú contextual:
+
+circle.setOnContextMenuRequested(new EventHandler&lt;ContextMenuEvent&gt;() {
+            @Override
+            public void handle(ContextMenuEvent contextMenuEvent) {
+                contextMenu.show(circle, contextMenuEvent.getScreenX(),contextMenuEvent.getScreenY());
+            }
+        });
+
+## ImageView
+
+JavaFX li permet treballar amb tots els formats d'imatge populars. Usem la classe javafx.scene.image.Image per a carregar imatges des del disc dur o una font d'imatge de xarxa. Per a mostrar imatges en JavaFX, utilitzem la classe ImageView.
+
+Els constructors de la classe **Image** t'ajuden a carregar dades d'imatge:
+
+</code></pre></div></div>
+<p>Image(InputStream inputStream)</p>
+
+<p>Image(InputStream is, double requestedWidth, double requestedHeight, boolean preserveRatio, boolean smooth)</p>
+
+<p>Image(String url)</p>
+
+<p>Image(String url, boolean backgroundLoading)</p>
+
+<p>Image(String url, double requestedWidth, double requestedHeight, boolean preserveRatio, boolean smooth)</p>
+
+<p>Image(String url, double requestedWidth, double requestedHeight, boolean preserveRatio, boolean smooth, boolean backgroundLoading)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Si volem carregar imatges des de URL:
+
+</code></pre></div></div>
+<p>String url = “http://somedomain/images/image.png”;</p>
+
+<p>boolean backgroundLoading = true;</p>
+
+<p>// L’‘imatge està sent carregada en el background
+Image image = new Image(url, backgroundLoading);</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Però el més comú es que carregues una imatge en el disc dur.
+
+</code></pre></div></div>
+<p>// Un fitxer d’imatge en el disc dur.
+File file = new File(“C:/MyImages/myphoto.jpg”);</p>
+
+<p>// –&gt; file:/C:/MyImages/myphoto.jpg
+String localUrl = file.toURI().toURL().toString();</p>
+
+<p>Image image = new Image(localUrl);</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+ImageView és un component que l'ajuda a mostrar imatges en JavaFX. També pot aplicar efectes per a mostrar imatges com girar, acostar i allunyar, ...
+
+![image View](./images/imageView1.gif) 
+
+## Menu Button
+
+El botó menuButton quan es pressiona mostra un menú contextual que mostra un conjunt d'elements i l'usuari pot seleccionar qualsevol element. En general, conté diversos elements de menú i l'usuari pot seleccionar com a màxim un element de menú alhora.
+
+Quan els usuaris fan clic en MenuButton, es mostrarà un menú. Els elements del menú poden ser MunuItem, CheckMenuItem, RadioMenuItem o SeparatorMenuItem. I pot manejar esdeveniments quan els usuaris fan clic en els elements
+
+Els constructors de la classe MenuButton són:
+
+- **MenuButton()**: crea un nou botó de menú
+- **MenuButton(String t)**: crea un submenú amb un text especificat
+- **MenuButton(String t, Node g)**: crea un submenú amb un text especificat
+i gràfic
+- **MenuButton(String t, Node g, MenuItem ... i)** crea un submenú amb un text, gràfic i elements de menú especificats
+
+Mètodes d'ús comú:
+
+- **getItems()** retorna els elements del botó de menú
+- **getPopupSide()** obté el valor de la propietat popupSide
+- **hide()** oculta el menú contextual
+- **isShowing()** Obté el valor de la propietat que es mostra.
+- **setPopupSide(Side v)** Estableix el valor de la propietat popupSide.
+- **show()** mostra el menú contextual
+
+Els següents programes il·lustren la classe MenuButton:
+
+Programa per a crear un MenuButton i agregar-li MenuItems: Es crearà un MenuButton amb el nom m i s'afegiran 3 menuitems m1, m2, m3 al menuButton m. La barra de menú es crearà dins d'una escena, que al seu torn s'allotjarà dins d'un escenari. 
+
+![menu Button](./images/menuButton1.gif) 
+
+## Split Menu Button
+
+Un control lliscant és un control en JavaFX que s'utilitza per a mostrar un rang continu o discret d'opcions numèriques vàlides i permet a l'usuari interactuar amb el control. Un control lliscant es representa com una barra vertical o horitzontal amb una perilla que l'usuari pot lliscar per a indicar el valor desitjat. Un control lliscant també pot tindre marques i etiquetes per a indicar els intervals al llarg de la barra.
+Les tres variables fonamentals del control lliscant són min, max i value. El valor sempre ha de ser un número dins del rang definit per min i max. min sempre ha de ser menor que max. min per defecte és 0, mentre que max per defecte és 100.
+
+Constructors de la classe:
+
+- **Control lliscant()**: crea una instància de control lliscant predeterminada.
+- **Control lliscant(doble mínim, doble màxim, doble valor)**: construeix un control lliscant amb els valors mínims, màxims i actuals del control lliscant especificat.
+
+
+![menu Button](./images/menuButton2.gif) 
+
+## Slider
+
+Un control lliscant és un control en JavaFX que s'utilitza per a mostrar un rang continu o discret d'opcions numèriques vàlides i permet a l'usuari interactuar amb el control. Un control lliscant es representa com una barra vertical o horitzontal amb una perilla que l'usuari pot lliscar per a indicar el valor desitjat. Un control lliscant també pot tindre marques i etiquetes per a indicar els intervals al llarg de la barra.
+
+![slider](./images/slider1.png) 
+
+Les tres variables fonamentals del control lliscant són min, max i value. El valor sempre ha de ser un número dins del rang definit per min i max. min sempre ha de ser menor que max. min per defecte és 0, mentre que max per defecte és 100.
+
+![slider](./images/slider2.gif) 
+
+Constructors de la classe:
+
+- **Slider()**: crea una instància de control lliscant predeterminada.
+- **Slider(doble mínim, doble màxim, doble valor)**: construeix un control lliscant amb els valors mínims, màxims i actuals del control lliscant especificat.
+
+Mètodes d'ús comú:
+
+- **ajustValue(double newValue)**: Ajusta el valor perquè coincidisca amb valor nou.
+- **decrement()**: Disminueix el valor per blockIncrement, limitat per max.
+- **getBlockIncrement()**: Obté el valor de la propietat blockIncrement.
+- **getMax()**: Obté el valor de la propietat max.
+- **getMin()**: Obté el valor de la propietat min.
+- **getMajorTickUnit(**): Obté el valor de la propietat majorTickUnit.
+- **getMinorTickCount()**: Obté el valor de la propietat minorTickCount.
+- **getValue()**: Obté el valor del valor de la propietat.
+- **increment()**: Incrementa el valor per blockIncrement, limitat per max.
+- **setBlockIncrement(double value)**: Estableix el valor de la propietat blockIncrement.
+- **setMajorTickUnit(double value)**: Estableix el valor de la propietat majorTickUnit.
+- **setMax(double value)**: Estableix el valor de la propietat max.
+- **setMin(double value)**: Estableix el valor de la propietat min.
+- **setMinorTickCount(int value)**: Estableix el valor de la propietat minorTickCount.
+- **setValue(double value)**: Estableix el valor del valor de la propietat.
+- **setValueChanging(boolean value)**: Estableix el valor de la propietat valueChanging.
+- **setShowTickMarks(boolean value)**: Estableix el valor de la propietat showTickMarks.
+- **setShowTickLabels(boolean value)**: Estableix el valor de la propietat showTickLabels.
+- **isShowTickLabels()**: Obté el valor de la propietat showTickLabels.
+- **isShowTickMarks()**: Obté el valor de la propietat showTickMarks.
+
+![slider](./images/slider3.gif) 
+
+## Spinner
+
+Els spinners són similars als quadres combinats i les llistes, ja que permeten a l'usuari triar entre una varietat de valors. Igual que els quadres combinats editables, els controls giratoris permeten a l'usuari escriure un valor. A diferència dels quadres combinats, els spinners no tenen una llista desplegable que puga cobrir altres components. Pel fet que els spinners no mostren valors possibles, només el valor actual és visible, sovint s'usen en lloc de quadres combinats o llistes quan el conjunt de valors possibles és extremadament gran.
+
+![spinner](./images/spinner1.gif) 
+
+![spinner](./images/spinner2.png) 
+
+Lestrictura del spinner és:
+
+![spinner](./images/spinner4.png) 
+
+
+A continuació es pot veure un exemple amb l'acces a les dades `spinner.getValue()`del spinner.
+
+![spinner](./images/spinner5.gif) 
+
+## Progress Bar &amp; Progress Indicator
+
+
+### Progress Bar
+
+És una especialització del ProgressIndicator que es representa com una barra horitzontal. La barra de progrés generalment mostra la quantitat de finalització d'una tasca.
+
+Els constructors de la classe ProgressBar són:
+
+- **ProgressBar()**: crea una nova barra de progrés intermèdia.
+- **ProgressBar(double p)**: crea una barra de progrés amb un progrés especificat.
+
+Mètodes d'ús comú:
+
+- **isIndeterminate()** Obté el valor de la propietat indeterminat.
+- **getProgress()** Obté el valor del progrés de la propietat.
+- **setProgress(double v)** Estableix el valor del progrés de la propietat
+
+### Progress Indicator
+
+És un control circular que s'utilitza per a indicar el progrés, ja siga infinit o finit. Sovint s'utilitza amb la API de tasques per a representar el progrés de les tasques en segon pla. En general, mostra la quantitat de finalització d'una tasca.
+
+Constructor de la classe són:
+
+- **ProgressIndicator()**: crea un nou indicador de progrés intermedi.
+- **ProgressIndicator(doble p)**: crea un indicador de progrés amb un progrés especificat
+
+Mètodes d'ús comú
+- **isIndeterminate()** Obté el valor de la propietat indeterminat.
+- **getProgress()** Obté el valor del progrés de la propietat.
+- **setProgress(double v)** Estableix el valor del progrés de la propietat
+
+El següent programa il·lustra l'ús de l'indicador de progrés i de progress bar sense temps determinat:
+
+![progress Bar](./images/progressBar2.gif) 
+
+A continuació s'observa un Progress Bar i un Progress Indicator per una determinada tasca:
+
+
+![progress Bar](./images/progressBar1.gif) 
+
+
+## Tooltip
+
+Tooltip s'utilitza per a mostrar informació addicional a l'usuari quan el mouse es troba sobre el component. Tots els components es poden associar amb una informació sobre eines i també es pot associar amb una part de la pantalla.
+
+Constructors de la classe Tooltip:
+
+- **Tooltip()**: crea una informació sobre eines amb una cadena buida per al seu text.
+- **Tooltip(String t)**: crea una informació sobre eines amb el text especificat.
+
+Mètodes d'ús comú:
+- getFont() Obté el valor de la font de la propietat.
+- **getText()**: Obté el valor del text de propietat.
+- **getTextAlignment()**: Obté el valor de la propietat textAlignment.
+- **install(Node n, Tooltip t)**: Associa la informació sobre eines donada amb el node donat.
+- **isActivated()**: Obté el valor de la propietat activada.
+- **setFont(Font v)**: Estableix el valor de la font de la propietat.
+- **setText(String v)**: Estableix el valor del text de propietat.
+- **setTextAlignment(TextAlignment v)**: Estableix el valor de la propietat textAlignment.
+
+per crear un Tooltip sense SceneBuilder:
+
+TextField field_userName= new TextField();
+ 
+Tooltip tooltip_userName=new Tooltip("Enter user name");
+ 
+</code></pre></div></div>
+<p>// Set tooltip
+field_userName.setTooltip(tooltip_userName);</p>
+
+<p>// Or using Tooltip.install
+Tooltip.install(field_userName, tooltip_userName);</p>
+
+<p>// Uninstall tooltip
+Tooltip.uninstall(field_userName, tooltip_userName);</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+![ToolTip](./images/toolTip.png) 
+
+## Date Picker
+
+DatePicker permet seleccionar la data del calendari emergent o escriure el text manualment en el camp de text del selector de data.
+
+Els constructors de la classe DatePicker són:
+
+- **DatePicker()**: crea una instància predeterminada de DatePicker amb un valor de data nul establit.
+- **DatePicker(LocalDate l)**: crea una instància de DatePicker i estableix el valor en la data donada.
+
+Mètodes d'ús comú:
+- **getChronology()**: Obté el valor de la cronologia de la propietat.
+- **getEditor()**: retorna l'editor de text del selector de data
+- **isShowWeekNumbers()**: retorna si el número de setmana es mostra o no
+- **setChronology(Chronology v)**: Estableix el valor de la cronologia de la propietat.
+- **setShowWeekNumbers(boolean v)**: estableix el selector de data per a mostrar el número de setmana si el valor vertader es passa com a argument
+
+En el següent exemple es crea un datePicker i se li asigna el dia, mes i any a un label. Per extraure aquestos tres valors utilitzem:
+
+![DatePicker1](./images/datePicker1.gif) 
+
+</code></pre></div></div>
+<p>// Per utilitzar botó similar a SplitMenuButton
+colorPicker.getStyleClass().add(“split-button”);</p>
+
+<p>// Per utilitzar botó similar a MenuButton
+colorPicker.getStyleClass().add(“button”);</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+
+## Color Picker
+
+ColorPicker li permet a l'usuari triar un color d'un conjunt de colors determinat o fer el seu propi color personalitzat. Es pot establir un Color inicial usant la funció setValue() o definint-lo en un constructor. El color seleccionat per l'usuari es pot trobar usant la funció getValue ().
+
+Es genera un esdeveniment d'Acció quan l'usuari selecciona un color del selector de color. Aquest esdeveniment pot manejar-se usant un controlador d'esdeveniments.
+
+L'aparença de ColorPicker es pot controlar de 
+
+![color Picker](./images/colorPicker5.png)
+
+Els constructors de la classe són:
+
+- **ColorPicker ()**: crea una instància predeterminada de ColorPicker amb un color seleccionat establit en blanc.
+- **ColorPicker (Color c)**: crea una instància de ColorPicker i estableix el color seleccionat per al color donat.
+
+Mètodes d'ús comú:
+- **getCustomColors()** Obté la llista de colors personalitzats que l'usuari agrega a la Paleta de colors.
+- **setValue(Color c)** estableix el color del selector de color en color c
+- **getValue()** retorna un objecte de color que defineix el color seleccionat per l'usuari
+
+![color Picker](./images/colorPicker1.gif) 
+
+El color es pot personalitzar:
+
+![color Picker](./images/colorPicker2.png) 
+
+A continuació es poden elegir els components del ColorPicker:
+
+![color Picker](./images/colorPicker3.png) 
+
+Per la personalització del color:
+
+![color Picker](./images/colorPicker4.png) 
+
+fer exemple:
+https://o7planning.org/en/11135/javafx-colorpicker-tutorial
+
+## Obrir una nova finestra
+
+![stage](./images/stage1.png) 
+
+Hi ha tres models que pot aplicar a l'escenari a través del mètode stage.initModality (Modelity).
+
+- **Modality.NONE**: Quan obri una nova finestra amb aquest mode, la nova finestra serà independent de la finestra principal. Pot interactuar amb la finestra principal o tancar-la sense afectar la nova finestra.
+- **Modality.WINDOW_MODAL**: Quan obri una nova finestra amb aquest mode, bloquejarà la finestra principal. No pot interactuar amb la finestra principal fins que aquesta finestra estiga tancada.
+- **Modality.APPLICATION_MODAL**: Quan obri una nova finestra amb aquest mode, bloquejarà qualsevol altra finestra de l'aplicació. No pot interactuar amb cap altra finestra fins que aquesta finestra estiga tancada.
+
+Exemple modality.NONE
+
+</code></pre></div></div>
+<p>//creem un nou Stage:
+Stage newWindow
+//li podem introduir nou a la nova finestra
+newWindow.setTitle(“Second Stage”);
+//Li afegim la escena dintre del stage.
+newWindow.setScene(secondScene);</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+![stage](./images/stage2.gif) 
+
+Example modality.WINDOWS_MODAL
+
+</code></pre></div></div>
+<p>// li indiquem la modalitat de la finestra
+stage.initModality(Modality.WINDOW_MODAL);
+// especifiquem el propietari de la finestra  (parent) per la novafinestra
+newWindow.initOwner(primaryStage);
+~~~</p>
+
+<p><img src="./images/stage3.gif" alt="stage" /></p>
+
+<p><a href="../../javafx.html">back</a></p>
+

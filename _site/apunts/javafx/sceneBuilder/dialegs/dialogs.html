@@ -1,0 +1,195 @@
+<h1 id="java-fx---dialeg">Java FX - Dialeg</h1>
+
+<p>La classe Alert és una subclasse de la classe Dialog, i proporciona suport per a diversos tipus de diàleg preconstruidos que es poden mostrar fàcilment als usuaris per a sol·licitar una resposta.
+Per a molts usuaris, la classe Alert és la classe més adequada per a les seues necessitats (en lloc d’usar Dialog directament). 
+Alternativament, els usuaris que desitgen sol·licitar a un usuari que ingresse text o que trien d’una llista d’opcions rebrien un millor servei utilitzant TextInputDialog i ChoiceDialog, respectivament.</p>
+
+<p><img src="./images/dialeg1.jpeg" alt="dialegs" /></p>
+
+<p>A continuació es mostra la ilustració d’una finestra d’alerta.</p>
+
+<p><img src="./images/dialeg2.png" alt="dialegs" /></p>
+
+<ul>
+  <li>
+    <p>Header Region
+Aquesta regió s’utilitza per a mostrar una breu notificació i icona.</p>
+  </li>
+  <li>
+    <p>Content Region</p>
+  </li>
+</ul>
+
+<p>De manera predeterminada, la regió de contingut mostra una etiqueta, pot establir el text per a aquesta etiqueta mitjançant el mètode <code class="language-plaintext highlighter-rouge">alert.setContentText(String)</code>. També pot mostrar un altre node a la regió de contingut a través de <code class="language-plaintext highlighter-rouge">alert.getDialogPane().SetContent(Node)</code>.</p>
+
+<p><img src="./images/dialeg3.png" alt="dialegs" /></p>
+
+<ul>
+  <li>Footer Regon</li>
+</ul>
+
+<p>Aquesta regió s’usa per a mostrar botons. Pot personalitzar els botons que es mostren.</p>
+
+<h3 id="standard-alert">Standard Alert</h3>
+
+<p>Alert és una finestra de diàleg que mostra informació. A continuació es mostra una imatge d’una Alerta d’informació estàndard:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Alert alert = new Alert(AlertType.INFORMATION);
+alert.setTitle("Information Dialog");
+alert.setHeaderText("Results:");
+alert.setContentText("Connect to the database successfully!");
+
+alert.showAndWait();
+</code></pre></div></div>
+
+<p><img src="./images/dialeg4.png" alt="dialegs" /></p>
+
+<p>Pot tindre un text en la capcelera, o pot ser un Alert sense text en la capcelera.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.......
+alert.setHeaderText(null);
+.......
+</code></pre></div></div>
+
+<p><img src="./images/dialeg5.png" alt="dialegs" /></p>
+
+<h3 id="warning-alert">Warning Alert</h3>
+
+<p>La alerta de advertencia es similar a una alerta de información, excepto por su icono y el uso previsto. La alerta de advertencia se utiliza para advertir a un usuario de posibles riesgos o problemas, aunque probablemente no ocurra.</p>
+
+<p>Té les mateixes parts que l’alert standard:</p>
+
+<p><img src="./images/dialeg6.png" alt="dialegs" /></p>
+
+<p>A continuació podem veure exemples de alert, amb:</p>
+<ul>
+  <li>La capcelera de text per defecte</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Alert alert = new Alert(AlertType.WARNING);
+alert.setTitle("Warning alert");
+ 
+// alert.setHeaderText("Battery Status:");
+alert.setContentText("The battery charge is low!");
+ 
+alert.showAndWait();
+</code></pre></div></div>
+
+<ul>
+  <li>sense capcelera de text:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Alert alert = new Alert(AlertType.WARNING);
+alert.setTitle("Warning alert");
+ 
+// Header Text: null
+alert.setHeaderText(null);
+alert.setContentText("The battery charge is low!");
+ 
+alert.showAndWait();
+</code></pre></div></div>
+
+<p><img src="./images/dialeg7.gif" alt="dialegs" /></p>
+
+<h3 id="error-alert">Error Alert</h3>
+
+<p>L’alerta d’error és la mateixa que l’alerta d’informació i l’alerta d’advertiment, excepte per la icona i l’ús previst. L’alerta d’error s’utilitza per a notificar l’ocurrència d’un assumpte greu.
+Per a crear una alerta d’error, ha d’usar AlertType.ERROR.</p>
+
+<p><img src="./images/dialeg8.png" alt="dialegs" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Alert alert = new Alert(AlertType.ERROR);
+ 
+alert.setTitle("Error alert");
+alert.setHeaderText("Can not add user");
+alert.setContentText("The 'abc' user does not exists!");
+ 
+alert.showAndWait();
+</code></pre></div></div>
+
+<p><img src="./images/dialeg9.png" alt="dialegs" /></p>
+
+<h3 id="confirm-alert">Confirm Alert</h3>
+
+<p>Es mostra l’alerta de confirmació per demanar als usuaris que confirmin que es farà o no una acció. Està predeterminat que l’alerta de confirmació tindrà 2 opcions per a usuaris: OK o Cancel·la.</p>
+
+<p><img src="./images/dialeg10.png" alt="dialegs" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Alert alert = new Alert(AlertType.CONFIRMATION);
+alert.setTitle("Delete File");
+alert.setHeaderText("Are you sure want to move this file to the Recycle Bin?");
+alert.setContentText("C:/MyFile.txt");
+</code></pre></div></div>
+
+<h3 id="custom-buttons">Custom Buttons</h3>
+
+<p>El diàleg d’Alerta permet personalitzar els botons que es visualitzen en el peu del Alert.</p>
+
+<p><img src="./images/dialeg11.png" alt="dialegs" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Alert alert = new Alert(AlertType.CONFIRMATION);
+alert.setTitle("Select");
+alert.setHeaderText("Choose the sport you like:");
+ 
+ButtonType football = new ButtonType("Football");
+ButtonType badminton = new ButtonType("Badminton");
+ButtonType volleyball = new ButtonType("Volleyball");
+ 
+// Remove default ButtonTypes
+alert.getButtonTypes().clear();
+ 
+alert.getButtonTypes().addAll(football, badminton, volleyball);
+ 
+// option != null.
+Optional&lt;ButtonType&gt; option = alert.showAndWait();
+ 
+if (option.get() == null) {
+    this.label.setText("No selection!");
+} else if (option.get() == football) {
+    this.label.setText("You like Football");
+} else if (option.get() == badminton) {
+    this.label.setText("You like Badminton");
+} else if (option.get() == volleyball) {
+    this.label.setText("You like Volleyball");
+} else {
+    this.label.setText("-");
+}
+</code></pre></div></div>
+
+<h3 id="text-input-dialog">Text Input Dialog</h3>
+
+<p>Aquet dialog, li permet al usuari interactuar d’alguna forma amb el programa. Lo més usual és que l’usuari puga donar informació a l’aplicació a través d’un textField.</p>
+
+<p><img src="./images/textInput.png" alt="dialegs" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TextInputDialog dialog = new TextInputDialog("Tran");
+dialog.setTitle("o7Planning");
+dialog.setHeaderText("Enter your name");
+dialog.setContentText("Name:");
+
+// Traditional way to get the response value.
+Optional&lt;String&gt; result = dialog.showAndWait();
+</code></pre></div></div>
+
+<p>El resultat de result.isPresent() serà false si clickem en cancelled o true si clickem en OK.</p>
+
+<h3 id="choice-dialog">Choice Dialog</h3>
+
+<p>Aquest és un dialeg molt semblant al anterior, però en aquest cas ens comunicarem amb l’aplicació amb un choice button.</p>
+
+<p><img src="./images/choiceDialog.png" alt="dialegs" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>List&lt;String&gt; choices = new ArrayList&lt;&gt;();
+choices.add("cSharp Tutorial for Begginers");
+choices.add("b");
+choices.add("c");
+
+ChoiceDialog&lt;String&gt; dialog = new ChoiceDialog&lt;&gt;("cSharp Tutorial for Begginers", choices);
+dialog.setTitle("o7Planning");
+dialog.setHeaderText("Select a Book:");
+dialog.setContentText("Book:");
+</code></pre></div></div>
+
+<p>El resultat de result.isPresent(), al igual que en el dialeg anterior, serà false si clickem en cancelled o true si clickem en OK.</p>
+
+<p><a href="../../javafx.html">back</a></p>

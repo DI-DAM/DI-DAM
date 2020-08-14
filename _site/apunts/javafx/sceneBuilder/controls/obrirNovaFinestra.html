@@ -1,0 +1,36 @@
+<h1 id="obrir-una-nova-finestra">Obrir una nova finestra</h1>
+
+<p><img src="./images/stage1.png" alt="stage" /></p>
+
+<p>Hi ha tres models que pot aplicar a l’escenari a través del mètode stage.initModality (Modelity).</p>
+
+<ul>
+  <li><strong>Modality.NONE</strong>: Quan obri una nova finestra amb aquest mode, la nova finestra serà independent de la finestra principal. Pot interactuar amb la finestra principal o tancar-la sense afectar la nova finestra.</li>
+  <li><strong>Modality.WINDOW_MODAL</strong>: Quan obri una nova finestra amb aquest mode, bloquejarà la finestra principal. No pot interactuar amb la finestra principal fins que aquesta finestra estiga tancada.</li>
+  <li><strong>Modality.APPLICATION_MODAL</strong>: Quan obri una nova finestra amb aquest mode, bloquejarà qualsevol altra finestra de l’aplicació. No pot interactuar amb cap altra finestra fins que aquesta finestra estiga tancada.</li>
+</ul>
+
+<p>Exemple modality.NONE</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//creem un nou Stage:
+Stage newWindow
+//li podem introduir nou a la nova finestra
+newWindow.setTitle("Second Stage");
+//Li afegim la escena dintre del stage.
+newWindow.setScene(secondScene);
+</code></pre></div></div>
+
+<p><img src="./images/stage2.gif" alt="stage" /></p>
+
+<p>Example modality.WINDOWS_MODAL</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// li indiquem la modalitat de la finestra
+stage.initModality(Modality.WINDOW_MODAL);
+// especifiquem el propietari de la finestra  (parent) per la novafinestra
+newWindow.initOwner(primaryStage);
+</code></pre></div></div>
+
+<p><img src="./images/stage3.gif" alt="stage" /></p>
+
+<p><a href="../../javafx.html">back</a></p>
+

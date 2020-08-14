@@ -1,0 +1,33 @@
+<h1 id="date-picker">Date Picker</h1>
+
+<p>DatePicker permet seleccionar la data del calendari emergent o escriure el text manualment en el camp de text del selector de data.</p>
+
+<p>Els constructors de la classe DatePicker són:</p>
+
+<ul>
+  <li><strong>DatePicker()</strong>: crea una instància predeterminada de DatePicker amb un valor de data nul establit.</li>
+  <li><strong>DatePicker(LocalDate l)</strong>: crea una instància de DatePicker i estableix el valor en la data donada.</li>
+</ul>
+
+<p>Mètodes d’ús comú:</p>
+<ul>
+  <li><strong>getChronology()</strong>: Obté el valor de la cronologia de la propietat.</li>
+  <li><strong>getEditor()</strong>: retorna l’editor de text del selector de data</li>
+  <li><strong>isShowWeekNumbers()</strong>: retorna si el número de setmana es mostra o no</li>
+  <li><strong>setChronology(Chronology v)</strong>: Estableix el valor de la cronologia de la propietat.</li>
+  <li><strong>setShowWeekNumbers(boolean v)</strong>: estableix el selector de data per a mostrar el número de setmana si el valor vertader es passa com a argument</li>
+</ul>
+
+<p>En el següent exemple es crea un datePicker i se li asigna el dia, mes i any a un label. Per extraure aquestos tres valors utilitzem:</p>
+
+<p><img src="./images/datePicker1.gif" alt="DatePicker1" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Per utilitzar botó similar a SplitMenuButton
+colorPicker.getStyleClass().add("split-button");
+ 
+// Per utilitzar botó similar a MenuButton
+colorPicker.getStyleClass().add("button");
+</code></pre></div></div>
+
+<p><a href="../../javafx.html">back</a></p>
+

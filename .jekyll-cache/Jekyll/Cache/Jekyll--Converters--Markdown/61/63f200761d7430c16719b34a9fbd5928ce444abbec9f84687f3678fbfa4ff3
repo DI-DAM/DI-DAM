@@ -1,0 +1,370 @@
+I"ba<h1 id="java-fx---animacions">Java FX - Animacions</h1>
+
+<p>En general, l’animació es pot definir com la transició que crea el mite del moviment d’un objecte. És el conjunt de transformacions aplicades a un objecte durant la duració especificada de manera seqüencial perquè l’objecte es puga mostrar com està en moviment.</p>
+
+<p>Això es pot fer mitjançant la visualització ràpida de fotogrames. En JavaFX, el paquet javafx.animation conté totes les classes per a aplicar les animacions en els nodes. Totes les classes d’aquest paquet amplien la classe javafx.animation.Animation.</p>
+
+<p>JavaFX proporciona les classes per a les transicions com RotateTransition, ScaleTransition, TranslateTransition, FadeTransition, FillTransition, StrokeTransition, etc.</p>
+
+<h2 id="transicions-bàsiques">Transicions bàsiques</h2>
+
+<ol>
+  <li><strong>Rotate Transition</strong>: Gira el node al llarg d’un dels eixos durant la duració especificada.</li>
+  <li><strong>Scale Transition</strong>: Anima l’escala del node durant la duració especificada.</li>
+  <li><strong>Translate Transition</strong>: Trasllada el node d’una posició a una altra durant el temps especificat.</li>
+  <li><strong>Fade Transition</strong>: Anima l’opacitat del node. Continua actualitzant l’opacitat del node durant un període específic per a aconseguir un valor d’opacitat objectiu</li>
+  <li><strong>Fill Transition</strong>: Anima el color de farciment del node perquè el color de farciment del node fluctue entre els dos valors de color durant la duració especificada.</li>
+  <li><strong>Stroke Transition</strong>: Anima el color de traç del node de manera que el color del traç del node fluctue entre els dos valors de color durant la duració especificada.</li>
+  <li><strong>Realitza la llista de transicions</strong> en un node en ordre seqüencial..</li>
+  <li><strong>Parallel Transition</strong>: Realitza la llista de transicions en un node en paral·lel.</li>
+  <li><strong>Path Transition</strong>: Mou el node al llarg de la ruta especificada durant la duració especificada.</li>
+</ol>
+
+<h2 id="passos-per-a-aplicar-animacions">Passos per a aplicar animacions</h2>
+
+<ol>
+  <li>Creua el node de destí i configure les seues propietats.</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Rectangle rect = new Rectangle(120,100,100,100);
+rect.setFill(Color.RED); 
+</code></pre></div></div>
+
+<ol>
+  <li>Instància de la classe de transició respectiva</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>RotateTransition rotate = new RotateTransition(); 
+</code></pre></div></div>
+
+<ol>
+  <li>Estableix les propietats desitjades com a duració, recompte de cicles, etc. per a la transició.</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rotate.setDuration(Duration.millis(1000));
+rotate.setAxis(Rotate.Y_Axis);
+rotate.setCycleCount(500);
+</code></pre></div></div>
+
+<ol>
+  <li>Estableix el node de destí en el qual s’aplicarà la transició. Utilitza el següent mètode per a aquest propòsit.</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rotate.setNode(rect);
+</code></pre></div></div>
+
+<ol>
+  <li>Finalment, reproduïsca la transició usant el mètode play().</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rotate.play();
+</code></pre></div></div>
+
+<h2 id="transició-de-rotació">Transició de rotació</h2>
+
+<p>Aquesta transició s’utilitza per a aplicar la transició de rotació en el node. Gira el node al llarg de qualsevol dels tres eixos durant la duració especificada.</p>
+
+<p>RotateTransition està representat per la classe javafx.animation.RotateTransition. Només necessitem crear una instància d’aquesta classe per a generar un RotateTransition apropiat.</p>
+
+<p><img src="./images/rotate.gif" alt="Rotació" /></p>
+
+<ul>
+  <li>
+    <p>Propietats</p>
+
+    <ul>
+      <li><strong>setAxis(Point3D value)</strong>: Aquesta és una propietat de tipus d’objecte de la classe Point3D. Això representa l’eix de transició de rotació.</li>
+      <li><strong>setByAngle(double value)</strong>: Aquesta és una propietat de tipus doble. Això representa l’angle en el qual es girarà l’objecte.</li>
+      <li><strong>setDuration(Duration value)</strong>: Aquesta és la propietat de tipus d’objecte de la classe Duració. Això representa la duració de la transició de rotació.</li>
+      <li><strong>setFromAngle(double value)</strong>: És una propietat de tipus doble. Representa l’angle d’inici de la transició de rotació.</li>
+      <li><strong>setNode(Node value)</strong>: És una propietat de tipus d’objecte de la classe Node. Representa el node en el qual s’aplicarà la transició de rotació.</li>
+      <li><strong>setToAngle(double value)</strong>: És una propietat de tipus doble. Representa el valor de l’angle de parada per a la transició de rotació.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Constructors</p>
+
+    <ul>
+      <li><strong>RotateTransition()</strong>: crea la nova instància de RotateTransition amb els paràmetres predeterminats.</li>
+      <li><strong>RotateTransition(Duration duration)</strong>: crea la nova instància de RotateTransition amb el valor de duració especificat</li>
+      <li><strong>RotateTransition(Duration duration, Node node)</strong>: crea la nova instància de RotateTransition amb el valor de duració especificat i el node en el qual s’aplica.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="transició-descala">Transició d’escala</h2>
+
+<p>Aquesta transició anima l’escala del node durant la duració especificada pel factor especificat en qualsevol o totes les tres direccions X, Y i Z.</p>
+
+<p>En JavaFX, ScaleTransition està representat per la classe javafx.animation.ScaleTransition. Necessitem crear una instància d’aquesta classe per a generar una transició d’escala adequada.</p>
+
+<p><img src="./images/scale.gif" alt="scale" /></p>
+
+<ul>
+  <li>
+    <p>Propietats</p>
+
+    <ul>
+      <li><strong>setByX(double value)</strong>: Aquesta és una propietat de tipus doble. Representa el valor del factor X de parada incrementat.</li>
+      <li><strong>setByY(double value)</strong>: Aquesta és una propietat de tipus doble. Representa el valor del factor Y de parada incrementat.</li>
+      <li><strong>setByZ(double value)</strong>: Aquesta és una propietat de tipus doble. Representa el valor del factor Z de parada incrementat.</li>
+      <li><strong>setDuration(Duration value)</strong>: Aquesta és una propietat de tipus d’objecte de la classe Duració. Representa la duració de la transició d’escala.</li>
+      <li><strong>setFromX(double value)</strong>: Aquesta és una propietat de tipus doble. Representa el valor X inicial de ScaleTransition.</li>
+      <li><strong>setFromY(double value)</strong>: Aquesta és una propietat de tipus doble. Representa el valor I inicial de ScaleTransition.</li>
+      <li><strong>setFromZ(double value)</strong>: Aquesta és una propietat de tipus doble. Representa el valor Z inicial de ScaleTransition.</li>
+      <li><strong>setNode(Node node)</strong>: Aquesta és una propietat de tipus d’objecte de la classe Node. Representa sobre el qual s’aplica la transició d’escala.</li>
+      <li><strong>setToX(double value)</strong>: Aquesta és una propietat de tipus doble. Representa el valor d’escala X de parada de la transició d’escala.</li>
+      <li><strong>setToY(double value)</strong>: Aquesta és una propietat de tipus doble. Representa el valor d’escala Y de parada de la transició d’escala.</li>
+      <li><strong>setToZ(double value)</strong>: Aquesta és una propietat de tipus doble. Representa el valor de l’escala Z de parada de la transició d’escala.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Constructors</p>
+
+    <ul>
+      <li><strong>TranslateTransition()</strong>: crea la nova instància de TranslateTransition amb els paràmetres predeterminats.</li>
+      <li><strong>TranslateTransition(Duration duration)</strong>: crea la nova instància de TranslateTransition amb la duració especificada.</li>
+      <li><strong>TranslateTransition(Duration duration, Node node)</strong>: crea la nova instància de Translate Transition amb la duració i el node especificats.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="transició-de-translació">Transició de translació</h2>
+
+<p>mou el node d’una posició a una altra durant la duració especificada. La transició es realitza mitjançant l’actualització contínua de les propietats translateX i translateY del node a intervals regulars.</p>
+
+<p>La velocitat de la transició depén del nombre de cicles que tindrà la transició en la duració especificada.</p>
+
+<p>En JavaFX, TranslateTransition està representada per la classe javafx.animation.TranslateTransition. Necessitem crear una instància d’aquesta classe per a aplicar una Transició de traducció adequada en un objecte.</p>
+
+<p><img src="./images/transition.gif" alt="translate" /></p>
+
+<ul>
+  <li>
+    <p>Propietats</p>
+
+    <ul>
+      <li><strong>setByX(double value)</strong>: Aquesta és una propietat de tipus doble. Representa el valor de la coordenada X incrementada en el qual es deté la traducció.</li>
+      <li><strong>setByY(double value)</strong>: Aquesta és una propietat de tipus doble. Representa el valor de la coordenada Y incrementada en el qual es deté la traducció.</li>
+      <li><strong>setByZ(double value)</strong>: Aquesta és una propietat de tipus doble. Representa el valor de la coordenada Z incrementada en el qual es deté la traducció.</li>
+      <li><strong>setDuration(Duration value)</strong>: Aquesta és una propietat de tipus d’objecte de la classe Duració. Representa la duració de la transició del Traductor.</li>
+      <li><strong>setFromX(double value)</strong>: Aquesta és una propietat de tipus doble. Representa el valor de la coordenada X a partir del qual comença la translació.</li>
+      <li><strong>setFromY(double value)</strong>: Aquesta és una propietat de tipus doble. Representa el valor de la coordenada Y a partir del qual comença la translació. Aquesta és una propietat de tipus doble.</li>
+      <li><strong>setFromZ(double value)</strong>: Aquesta és una propietat de tipus doble. Representa el valor de la coordenada Z a partir del qual comença la translació.</li>
+      <li><strong>setNode(Node node)</strong>: Aquesta és una propietat de tipus d’objecte de la classe Node. Representa el node en el qual s’aplica la transició d’escala.</li>
+      <li><strong>setToX(double value)</strong>: Aquesta és una propietat de tipus doble. Representa el valor de la coordenada X de parada de la transició de translació.</li>
+      <li><strong>setToY(double value)</strong>: Aquesta és una propietat de tipus doble. Representa el valor de la coordenada Y de parada de la transició de translació.</li>
+      <li><strong>setToZ(double value)</strong>: Aquesta és una propietat de tipus doble. Representa el valor de la coordenada Z de parada de la transició d’escala.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Constructors</p>
+
+    <ul>
+      <li><strong>TranslateTransition()</strong>: crea la nova instància de TranslateTransition amb els paràmetres predeterminats.</li>
+      <li><strong>TranslateTransition(Duration duration)</strong>: crea la nova instància de TranslateTransition amb la duració especificada.</li>
+      <li><strong>TranslateTransition(Duration duration, Node node)</strong>: crea la nova instància de Translate Transition amb la duració i el node especificats.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="transició-desvaïment">Transició d’esvaïment</h2>
+
+<p>Anima l’opacitat del node perquè el color de farciment del node es torne opac. Això es pot fer en continuar disminuint l’opacitat del color de farciment durant una duració específica per a aconseguir un valor d’opacitat objectiu.</p>
+
+<p>En JavaFX, la classe javafx.animation.FadeTransition representa FadeTransition. Necessitem crear una instància d’aquesta classe per a crear la transició de fos adequada.</p>
+
+<p><img src="./images/fade.gif" alt="fade" /></p>
+
+<ul>
+  <li>
+    <p>Propietats</p>
+
+    <ul>
+      <li><strong>setByValue(double property)</strong>: És una propietat de tipus doble. Representa el valor d’opacitat de parada incrementada de la transició de fos.</li>
+      <li><strong>setDuration(Duration duration)</strong>: Aquesta és una propietat de tipus d’objecte de la classe Duració. Representa la duració d’aquesta transició d’esvaïment.</li>
+      <li><strong>setFromValue(double value)</strong>: Aquesta és una propietat de tipus doble. Representa l’opacitat inicial per a la transició de fos.</li>
+      <li><strong>setNode(Node node)</strong>: Aquesta és una propietat de tipus d’objecte de la classe Node. Això representa el node en el qual s’aplicarà la transició.</li>
+      <li><strong>setToValue(double value)</strong>: Aquesta és una propietat de tipus doble. Això representa el valor de parada de l’opacitat per a la transició de fos.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Constructors</p>
+
+    <ul>
+      <li><strong>TranslateTransition()</strong>: crea la nova instància de TranslateTransition amb els paràmetres predeterminats.</li>
+      <li><strong>TranslateTransition(Duration duration)</strong>: crea la nova instància de TranslateTransition amb la duració especificada.</li>
+      <li><strong>TranslateTransition(Duration duration, Node node)</strong>: crea la nova instància de Translate Transition amb la duració i el node especificats.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="transició-de-farciment">Transició de farciment</h2>
+
+<p>Anima el color de farciment del node perquè el color de farciment puga fluctuar entre els dos valors de color durant la duració especificada.</p>
+
+<p>En JavaFX, la classe javafx.animation.FillTransition representa la transició de farciment. Necessitem crear una instància d’aquesta classe per a crear un efecte de transició de farciment apropiat.</p>
+
+<p><img src="./images/fill.gif" alt="fill" /></p>
+
+<ul>
+  <li>
+    <p>Propietats</p>
+
+    <ul>
+      <li><strong>setDuration(Duration duration)</strong>: És una propietat de tipus d’objecte de la classe Duració. Representa la duració de la transició de farciment.</li>
+      <li><strong>setFromValue(Color value)</strong>: És una propietat de tipus doble. Representa el valor del color inicial per a la transició de farciment.</li>
+      <li><strong>setShape(Shape shape)</strong>: És una propietat de tipus d’objecte de la classe Shape. Representa la forma en la qual s’aplica la transició de farciment.</li>
+      <li><strong>setToValue(Color value)</strong>: Aquesta és una propietat de tipus doble. Representa el valor del color de parada per a la transició de farciment.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Constructors</p>
+
+    <ul>
+      <li><strong>FillTransition()</strong>: crea la instància de FillTransition amb els paràmetres predeterminats.</li>
+      <li><strong>FillTransition(Duration duration)</strong>: crea la instància de FillTransition amb la duració especificada.</li>
+      <li><strong>FillTransition(Duration duration, Shape shape)</strong>: crea la instància de FillTransition amb la duració especificada i els valors de color inicial i final.</li>
+      <li><strong>FillTransition(Duration duration, Shape shape, Color fromValue)</strong>: crea la instància de FillTransition amb la duració especificada i l’objecte de forma sobre el qual s’aplica.</li>
+      <li><strong>FillTransition(Duration duration, Shape shape, Color fromValue, Color toValue)</strong>: crea la nova instància de FillTransition amb la duració, la forma i els valors de color inicial i final especificats.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="stroketransition">StrokeTransition</h2>
+
+<p>Anima el color del traç del node perquè el color del traç puga fluctuar entre els dos valors de color durant la duració especificada.</p>
+
+<p>En JavaFX, la classe javafx.animation.FillTransition representa la transició de farciment. Necessitem crear una instància d’aquesta classe per a crear una Transició de farciment adequada.</p>
+
+<p><img src="./images/stroke.gif" alt="stroke" /></p>
+
+<p>-Propietats</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- **setDuration(Duration duration)**: Aquesta és una propietat de tipus d'objecte de la classe Duració. Representa la duració de la transició del traç. 
+- **setFromValue(Color value)**: Aquesta és una propietat de tipus de color. Representa el valor inicial del color per a la transició del traç.
+- **setShape(Shape shape)**: Aquesta és una propietat de tipus d'objecte de la classe Forma. Representa la forma sobre la qual s'aplicarà la transició de traç. 
+- **setToValue(Color value)**: Aquesta és la propietat de tipus de color. Representa el valor objectiu del color per a la transició del traç.
+</code></pre></div></div>
+
+<p>Constructors</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- **StokeTransition()**: crea la nova instància de StrokeTransition amb els paràmetres predeterminats.
+- **StokeTransition(Duration duration)**: crea la nova instància de Stroke Transition amb el valor de duració especificat
+- **StokeTransition(Duration duration, Shape shape)**: crea la nova instància de StrokeTransition amb la duració especificada, el valor inicial del color i el valor objectiu del color.
+- **StokeTransition(Duration duration, Shape shape, Color fromValue)**: crea la nova instància de StrokeTransition amb la duració especificada i la forma a la qual s'aplicarà la transició.
+- **StokeTransition(Duration duration, Shape shape, Color fromValue, Color toValue)**: crea la nova instància de StrokeTransition amb la duració, forma, valor inicial del color i valor objectiu del color especificats.
+</code></pre></div></div>
+
+<h2 id="transició-seqüencial">Transició seqüencial</h2>
+
+<p>Aquesta transició s’utilitza per a aplicar la llista d’animacions en un node en ordre seqüencial (una per una). La transició seqüencial és important en el disseny d’un joc que anima les seues entitats en ordre seqüencial.</p>
+
+<p>En JavaFX, la classe javafx.animation.SequentialTransition s’usa per a representar la transició seqüencial. Necessitem passar la llista de múltiples objectes de transició al constructor d’aquesta classe. Aquestes animacions s’aplicaran en el node en ordre seqüencial (en l’ordre en què es passen al constructor).</p>
+
+<p><img src="./images/sequential.gif" alt="sequential" /></p>
+
+<p>Propietats</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- **setNode(Node node)**: És una propietat de tipus d'objecte de la classe Node. Representa el node sobre el qual s'aplicarà la transició.
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>Constructors</p>
+
+    <ul>
+      <li><strong>SequentialTransition()</strong>: crea una instància de SequentialTransition amb els paràmetres predeterminats.</li>
+      <li><strong>SequentialTransition(Animation? children)</strong>: crea una instància de SequentialTransition amb la llista d’animacions.</li>
+      <li><strong>SequentialTransition(Node node)</strong>: crea una instància de sequentialTransition amb el node especificat en el qual s’aplicarà la transició seqüencial.</li>
+      <li><strong>SequentialTransition(Node node, Animation? children)</strong>: crea una instància de SequentialTransition amb el node especificat i la llista d’animacions.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="transició-parallela">Transició paral·lela</h2>
+
+<p>Aquesta transició aplica múltiples animacions en un node en paral·lel. És similar a la transició seqüencial, excepte pel fet que aplica la transició múltiple en un node al mateix temps, mentre que la transició seqüencial aplica la transició múltiple en el node per l’ordre en què les animacions es passen al constructor.</p>
+
+<p>En JavaFX, la classe javafx.animation.ParallelTransition representa la transició paral·lela. Només necessitem passar la llista de transicions al constructor mentre instanciamos aquesta classe.</p>
+
+<p><img src="./images/parallel.gif" alt="parallel" /></p>
+
+<ul>
+  <li>
+    <p>Propietats</p>
+
+    <ul>
+      <li><strong>setNode(Node node)</strong>: Aquesta és la propietat de la mena d’objecte de la classe Node. Representa el node sobre el qual s’aplicarà la transició.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Constructors</p>
+
+    <ul>
+      <li><strong>ParallelTransition()</strong>: crea una instància de ParallelTransition amb els paràmetres predeterminats.</li>
+      <li><strong>ParallelTransition( Animation? children)</strong>: crea una instància de ParallelTransition amb la llista d’animacions.</li>
+      <li><strong>ParallelTransition(Node node)</strong>: crea una instància de ParallelTransition amb el node especificat en el qual s’aplicarà la transició en paral·lel.</li>
+      <li><strong>ParallelTransition(Node node, Animation? children)</strong>: crea una instància de ParallelTransition amb el node especificat i la llista d’animacions.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="pause-transition">Pause Transition</h2>
+
+<p>Com suggereix el nom, aquesta transició s’usa per a fer una pausa entre les múltiples animacions aplicades en un node en ordre seqüencial. Durant la vida útil d’aquesta transició, el node roman inamovible en la pantalla.</p>
+
+<p>En JavaFX, la classe javafx.animation.PauseTransition representa aquesta transició. Només necessitem crear una instància d’aquesta classe per a crear una transició de pausa adequada.</p>
+
+<p><img src="./images/pause.gif" alt="pause" /></p>
+
+<p>Propietats</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- **setDuration(Duration duration)**: És un tipus d'objecte de la classe Duració. Representa la vida útil de la transició.
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>Constructors</p>
+
+    <ul>
+      <li><strong>PauseTransition()</strong>: crea la nova instància de PauseTransition amb els paràmetres predeterminats.</li>
+      <li><strong>PauseTransition(Duration duration)</strong>: crea la nova instància de PauseTransition amb la duració especificada.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="transició-de-ruta">Transició de ruta</h2>
+
+<p>Permet que el node s’anime a través d’una ruta específica durant la duració especificada. En JavaFX, la ruta es defineix instanciant la classe javafx.scene.shape.Path.</p>
+
+<p>La traducció al llarg d’aquesta ruta es realitza actualitzant les coordenades x e y del node a intervals regulars. La rotació sols es pot realitzar en el cas que l’orientació estiga configurada com OrientationType.ORTHOGONAL_TO_TANGENT.</p>
+
+<p>En JavaFX, la classe javafx.animation.PathTransition representa la transició de la ruta. Necessitem crear una instància d’aquesta classe per a crear una transició de ruta adequada.</p>
+
+<p><img src="./images/path.gif" alt="path" /></p>
+
+<ul>
+  <li>
+    <p>Propietats</p>
+
+    <ul>
+      <li><strong>setDuraton(Duration duration)</strong>: Aquesta propietat és un tipus d’objecte de la classe Duració. Això representa la vida útil de la transició.</li>
+      <li><strong>setNode(Node node)</strong>: Aquest és un objecte de la classe Node. Això representa el node en el qual s’aplicarà la transició.</li>
+      <li><strong>SetOrientation(PathTransition.OrientationType orientation-type)</strong>: Aquesta és una propietat de tipus d’objecte referenciada per PathTransition.OrientationType. Representa l’orientació vertical del node al llarg del camí.</li>
+      <li><strong>setPath(Shape shape)</strong>: Aquesta és una propietat de tipus d’objecte de la classe Shape. Va especificar la forma a través de la qual se sotmet el contorn del camí animat.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Constructors</p>
+
+    <ul>
+      <li><strong>PathTransition()</strong>: crea la instància de la transició de ruta amb els paràmetres predeterminats</li>
+      <li><strong>PathTransition(Duration duration, Shape path)</strong>: crea la instància de transició de ruta amb la duració i ruta especificades</li>
+      <li><strong>PathTransition(Duration duration, Shape path, Node node)</strong>: crea la instància de PathTransition amb la duració, ruta i node especificats.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><a href="../../javafx.html">back</a></p>
+:ET

@@ -1,0 +1,181 @@
+I"m<h1 id="menú">Menú</h1>
+
+<p>Anem a explicar com crear menús i barres de menú, agregar elements de menú, agrupar els menús en categories, crear submenús i establir menús contextuals.</p>
+
+<p>Pot usar les següents classes de la API JavaFX per a crear menús en la seua aplicació JavaFX.</p>
+
+<p>Les parts d’un menú són les següents:</p>
+
+<p><img src="./images/menu1.png" alt="menú" /></p>
+
+<p>Menú Items:</p>
+
+<p><img src="./images/menu2.png" alt="menú" /></p>
+
+<ul>
+  <li>
+    <p>Menú Item</p>
+
+    <p><img src="./images/menu3.png" alt="menú" /></p>
+  </li>
+  <li>
+    <p>CheckMenuItem</p>
+
+    <p><img src="./images/menu4.png" alt="menú" /></p>
+  </li>
+  <li>
+    <p>RadioMenuItem</p>
+
+    <p><img src="./images/menu5.png" alt="menú" /></p>
+  </li>
+  <li>
+    <p>SeparatorMenuItem</p>
+
+    <p><img src="./images/menu6.png" alt="menú" /></p>
+  </li>
+</ul>
+
+<h3 id="ceacio-menu">ceacio menu</h3>
+
+<p>Anem a explicar com es realitza un menú que conte tots els elements explicats anteriorment. Gran part de l’explicació, es podria fer directament en SceneBuilder:</p>
+
+<p><img src="./images/menu7.gif" alt="menú" /></p>
+
+<ul>
+  <li>Creació del MenuBar</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        MenuBar menuBar = new MenuBar();
+</code></pre></div></div>
+
+<ul>
+  <li>Crear menus
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Menu fileMenu = new Menu("File");
+Menu editMenu = new Menu("Edit");
+Menu projectMenu = new Menu("Project");
+Menu helpMenu = new Menu("Help");
+</code></pre></div>    </div>
+  </li>
+  <li>Crear MenuItems</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MenuItem newItem = new MenuItem("New");
+newItem..setGraphic(new ImageView("icons/new.png"));
+newItem.setGraphic(new ImageView(newImage));
+ 
+MenuItem openFileItem = new MenuItem("Open File");
+</code></pre></div></div>
+
+<ul>
+  <li>Creació del SeparatorMenuItem.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SeparatorMenuItem separator= new SeparatorMenuItem();
+MenuItem exitItem = new MenuItem("Exit");
+ 
+MenuItem copyItem = new MenuItem("Copy");
+MenuItem pasteItem = new MenuItem("Paste");
+</code></pre></div></div>
+
+<ul>
+  <li>Crear CheckMenuItem</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CheckMenuItem buildItem = new CheckMenuItem("Build Automatically");
+Image buildImage = MyImageUtils.getImage("/org/o7planning/javafx/icon/build-16.png");
+buildItem.setGraphic(new ImageView("icons/build.png"));
+buildItem.setSelected(true);
+</code></pre></div></div>
+
+<ul>
+  <li>RadioMenuItem
+~~~
+RadioMenuItem updateItem1 = new RadioMenuItem(“Auto Update”);
+RadioMenuItem updateItem2 = new RadioMenuItem(“Ask for Update”);</li>
+</ul>
+
+<p>ToggleGroup group = new ToggleGroup();
+updateItem1.setToggleGroup(group);
+updateItem2.setToggleGroup(group);
+updateItem1.setSelected(true);</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        
+        
+- Afegir menuItems al Menus
+</code></pre></div></div>
+<p>fileMenu.getItems().addAll(newItem, openFileItem,separator, exitItem);
+editMenu.getItems().addAll(copyItem, pasteItem);
+projectMenu.getItems().add(buildItem);</p>
+
+<p>helpMenu.getItems().addAll(updateItem1,updateItem2);</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 
+- Afegir els menus al MenuBar
+</code></pre></div></div>
+<p>menuBar.getMenus().addAll(fileMenu, editMenu, projectMenu, helpMenu);</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+
+
+## Menú Contextual
+
+ContextMenu es pot associar amb controls com a etiquetes, camps de text, etc. El menú contextual s'activa en fer clic dret sobre els controls associats. Mostra una finestra emergent que conté diversos elements de menú o submenú.
+
+El ContextMenu és bastant similar a un Menú, pot afegir elements amb tipus de MenuItem, CheckMenuItem, RadioMenuItem o SeparatorMenuItem.
+
+Els constructors de la classe són:
+
+- ContextMenu (): crea un nou menú contextual buit.
+- ContextMenu (MenuItem ... i): crea un menú contextual que conté els elements del menú.
+
+Mètodes d'ús comú:
+- **getItems()**: retorna els elements del menú contextual
+- **getOnAction()**: retorna el valor de la propietat OnAction
+- **hide()**: oculta el menú contextual
+- **setOnAction(EventHandler v)**: estableix el valor de la propietat onAction
+- **show(Node a, doble X, doble I)**: mostra el menú contextual en una posició específica de la pantalla
+
+
+## Creació del menú contextual.
+
+Anem a basarnos en l'exemple que veiem en la imatge. 
+
+![menú contextual](./images/contextmenu1.gif) 
+
+- Creació de menú Contextual
+
+</code></pre></div></div>
+<p>contextMenu.getItems().addAll(menuItem1, menuItem2);</p>
+
+<p>// Creem el event d’acció per que canvie el text del label
+menuItem1.setOnAction(new EventHandler<ActionEvent>() {
+      @Override
+       public void handle(ActionEvent actionEvent) {
+           labelContext.setText("Has clicat en el Item 1");
+       }
+});
+menuItem2.setOnAction(new EventHandler<ActionEvent>() {
+       @Override
+       public void handle(ActionEvent actionEvent) {
+           labelContext.setText("Has clicat en el Item 2");
+       }
+});</ActionEvent></ActionEvent></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+
+- afegim els menus Item 
+
+</code></pre></div></div>
+<p>contextMenu.getItems().addAll(menuItem1, menuItem2);
+~~~</p>
+
+<ul>
+  <li>Quan cliquem el boto dret en el cercle, es desplega el menú contextual:</li>
+</ul>
+
+<p>circle.setOnContextMenuRequested(new EventHandler<ContextMenuEvent>() {
+            @Override
+            public void handle(ContextMenuEvent contextMenuEvent) {
+                contextMenu.show(circle, contextMenuEvent.getScreenX(),contextMenuEvent.getScreenY());
+            }
+        });</ContextMenuEvent></p>
+
+<p><a href="../../javafx.html">back</a></p>
+
+:ET

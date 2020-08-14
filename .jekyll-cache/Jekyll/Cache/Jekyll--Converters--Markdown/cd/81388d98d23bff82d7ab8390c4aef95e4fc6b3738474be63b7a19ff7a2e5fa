@@ -1,0 +1,114 @@
+I"�<h1 id="java-fx">Java FX</h1>
+
+<p>Podem trobar tota la informació referent a la instal·lació i configuració en la pàgina de Javafx:
+<a href="https://openjfx.io/openjfx-docs/">https://openjfx.io/openjfx-docs/</a></p>
+
+<ul>
+  <li><a href="./instalConfig/introduccio.html">Introducció</a></li>
+  <li><a href="./instalConfig/mavenIntellij.html">JavaFX amb el gestor de dependencies Maven</a></li>
+  <li><a href="./sceneBuilder/sceneBuilder.html">Element de l’Scene Builder</a>
+    <ul>
+      <li><a href="./sceneBuilder/panellContinguts.html">Panell de continguts</a></li>
+      <li><a href="./sceneBuilder/panellDocuments.html">Panell de Documents - Hierarchy</a></li>
+      <li><a href="./sceneBuilder/dissenyPanellBiblioteca.html">Panell Library</a>
+        <ul>
+          <li>Contenidors
+            <ul>
+              <li><a href="./sceneBuilder/contenidors/borderPane.html">BorderPane</a></li>
+              <li><a href="./sceneBuilder/contenidors/gridPane.html">GridPane</a></li>
+              <li><a href="./sceneBuilder/contenidors/anchorPane.html">AnchorPane</a></li>
+              <li><a href="./sceneBuilder/contenidors/flowPane.html">FlowPane</a></li>
+              <li><a href="./sceneBuilder/contenidors/HBox.html">HBox i VBox</a></li>
+              <li><a href="./sceneBuilder/contenidors/tilePane.html">TilePane</a></li>
+              <li><a href="./sceneBuilder/contenidors/Accordion.html">Accordion</a></li>
+              <li><a href="./sceneBuilder/contenidors/stackPane.html">StackPane</a></li>
+              <li><a href="./sceneBuilder/contenidors/scrollPane.html">ScrollPane</a></li>
+              <li><a href="./sceneBuilder/contenidors/titledPane.html">TitledPane</a></li>
+            </ul>
+          </li>
+          <li>Controls &amp; Menú
+            <ul>
+              <li><a href="./sceneBuilder/controls/label.html">label</a></li>
+              <li><a href="./sceneBuilder/controls/button.html">Button</a></li>
+              <li><a href="./sceneBuilder/controls/radioButton.html">Radio Button</a></li>
+              <li><a href="./controls/toogleButton.html">Toggle Button</a></li>
+              <li><a href="./sceneBuilder/controls/checkBox.html">Check Box</a></li>
+              <li><a href="./sceneBuilder/controls/choiceBox.html">Choice Box</a></li>
+              <li><a href="./sceneBuilder/controls/webView.html">Web View</a></li>
+              <li><a href="./sceneBuilder/controls/tableView.html">Table View</a></li>
+              <li><a href="./sceneBuilder/controls/listView.html">List View</a></li>
+              <li><a href="./sceneBuilder/controls/textField.html">Text Field, Password Field &amp; Text Area</a></li>
+              <li><a href="./sceneBuilder/controls/treeView.html">Tree View</a></li>
+              <li><a href="./sceneBuilder/controls/treeTableView.html">TreeTableView</a></li>
+              <li><a href="./sceneBuilder/controls/menu.html">Menú</a></li>
+              <li><a href="./sceneBuilder/controls/imageView.html">Image View</a></li>
+              <li><a href="./sceneBuilder/controls/menuButton.html">Menu Button &amp; Split Menu Button</a></li>
+              <li><a href="./sceneBuilder/controls/slider.html">Slider</a></li>
+              <li><a href="./sceneBuilder/controls/spinner.html">Spinner</a></li>
+              <li><a href="./sceneBuilder/controls/progressBarProgressIndicator.html">Progress Bar &amp; Progress Indicator</a></li>
+              <li><a href="./sceneBuilder/controls/tooltip.html">Tooltip</a></li>
+              <li><a href="./sceneBuilder/controls/datePicker.html">Date Picker</a></li>
+              <li><a href="./sceneBuilder/controls/colorPicker.html">Color Picker</a></li>
+              <li><a href="./sceneBuilder/controls/obrirNOvaFinestra.html">Obrir una nova finestra</a></li>
+            </ul>
+          </li>
+          <li>Shapes
+            <ul>
+              <li><a href="./sceneBuilder/shape2D/shape2D.html">Shapes 2D</a>
+                <ul>
+                  <li>Línea</li>
+                  <li>Rectangle</li>
+                  <li>El·lipse</li>
+                  <li>Circle</li>
+                  <li>Polygons</li>
+                  <li>Cubic Curve</li>
+                  <li>Quad Curve</li>
+                </ul>
+              </li>
+              <li><a href="./sceneBuilder/shape3D/shape3D.html">Shapes 3D</a>
+                <ul>
+                  <li>Mode de dibuix</li>
+                  <li>Material de l’objecte</li>
+                  <li>Càmares</li>
+                  <li>Box</li>
+                  <li>Cilindre</li>
+                  <li>Esfera</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="./sceneBuilder/charts/chart.html">Chart (gràfiques)</a>
+            <ul>
+              <li>Pie Chart</li>
+              <li>Art Chart</li>
+              <li>Area Chart</li>
+              <li>Bar Chart</li>
+            </ul>
+          </li>
+          <li><a href="./sceneBuilder/effects/effects.html">Efectes</a>
+            <ul>
+              <li>Blend</li>
+              <li>Bloom</li>
+              <li>Blur Effects</li>
+              <li>Color Ajust</li>
+              <li>Color Input</li>
+              <li>Glow</li>
+              <li>Image Input</li>
+              <li>Shadow</li>
+              <li>Light Effects</li>
+              <li>Perspective</li>
+              <li>Reflection</li>
+              <li>Tó Sepia
+  -Cadena d’efectes</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>informació de: https://docs.oracle.com/</p>
+
+<p><a href="../..">back</a></p>
+:ET

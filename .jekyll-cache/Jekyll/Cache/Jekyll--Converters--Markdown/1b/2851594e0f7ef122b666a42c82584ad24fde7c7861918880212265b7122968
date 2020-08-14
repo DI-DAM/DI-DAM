@@ -1,0 +1,680 @@
+I")�<h1 id="java-fx---effects">Java FX - Effects</h1>
+
+<p>Un efecte és qualsevol acció en una imatge gràfica per a crear una altra imatge gràfica. Un dels efectes que sol trobar és l’efecte de desenfocament de moviment, efecte d’ombra paral·lela, etc.</p>
+
+<p>Exemple d’efecte Motion Blur (desenfocament de moviment):</p>
+
+<p><img src="./images/effects.jpeg" alt="effect" /></p>
+
+<p>Efecte d’ombra paralel·la:</p>
+
+<p><img src="./images/effects2.jpeg" alt="effect" /></p>
+
+<p>En JavaFX, es pot usar un efecte per a un objecte de tipus Node a través del mètode Node.setEffect (efecte).</p>
+
+<p><img src="./images/effects1.jpeg" alt="effect" /></p>
+
+<p>JavaFX ha creat algunes classes d’efectes, per a diferents efectes, tots els quals estan en el paquet javafx.scene.effect. A continuació hi ha algunes classes en aquest paquet.</p>
+
+<ul>
+  <li>Blend</li>
+  <li>Bloom</li>
+  <li>BoxBlur</li>
+  <li>ColorAdjust</li>
+  <li>ColorInput</li>
+  <li>DropShadow</li>
+  <li>GaussianBlur</li>
+  <li>Glow</li>
+  <li>ImageInput</li>
+  <li>InnerShadow</li>
+  <li>Lighting</li>
+  <li>MotionBlur</li>
+  <li>PerspectiveTransform</li>
+  <li>Reflection</li>
+  <li>SepiaTone</li>
+  <li>Shadow</li>
+</ul>
+
+<p><img src="./images/effect3.png" alt="effect" /></p>
+
+<p>JavaFX proporciona un mètode anomenat setEffect() que ha de dir-se a través d’un objecte de node. Necessitem passar l’objecte de classe d’efecte a aquest mètode. Per a aplicar qualsevol efecte al node, hem de seguir els següents passos.</p>
+
+<ul>
+  <li>Crea el node</li>
+  <li>Crea l’objecte de la classe d’efecte respectiva que s’aplicarà en el node.</li>
+  <li>Estableix les propietats de l’efecte.</li>
+  <li>Cridea al mètode setEffect() a través de l’objecte de node i passa l’objecte de classe d’efecte en ell.</li>
+</ul>
+
+<p>A continuació es mostra un efecte exemple amb cadascún dels efectes:</p>
+
+<h2 id="blend">Blend</h2>
+
+<p>En general, el blend effect produeix l’eixida que es genera com a resultat de la mescla de dues o més nodes d’entrada diferents. Presa els píxels de dos o més nodes, els mescla segons la manera de fusió aplicat i produeix el node d’eixida en la mateixa ubicació.</p>
+
+<p>Si les dues imatges se superposen, la manera de fusió s’aplica en l’àrea superposada de totes dues imatges.</p>
+
+<ul>
+  <li>
+    <p>Propietats</p>
+
+    <ul>
+      <li><strong>setBottomInput(Effect value)</strong>:  L’entrada inferior per a l’operació de mescla. Aquesta és una propietat de tipus d’objecte.</li>
+      <li><strong>setMode(BlendMode value)</strong>: La manera segons el qual, les entrades es mesclen.</li>
+      <li><strong>setOpacity(double value)</strong>: opacitat Aquest és el valor d’opacitat de tipus doble.</li>
+      <li><strong>setTopInput(Effect Value)</strong>: L’entrada superior per a l’operació de mescla. setTopInput</li>
+    </ul>
+  </li>
+  <li>
+    <p>Constructors</p>
+  </li>
+</ul>
+
+<p>Hi ha tres constructors en aquesta classe.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- **Blend ()**: crea una instància de la classe Blend amb els valors predeterminats.
+- **Blend(BlendMode mode)**: instanciar la classe Blend amb la manera especificada
+- **Blend(BlendMode mode, Effect BottomInput, Effect TopInput)**: crea una instància de la classe Blend amb la manera de fusió especificat, l'efecte d'entrada inferior i l'efecte d'entrada superior
+</code></pre></div></div>
+
+<h3 id="blendmodes">Blendmodes</h3>
+
+<ul>
+  <li><strong>Add</strong>:  Els components de color de l’entrada superior s’agreguen als de l’entrada inferior.</li>
+</ul>
+
+<p><img src="./images/blendMode1.png" alt="bluemode" /></p>
+
+<ul>
+  <li><strong>Blue</strong>: Els components blaus de l’entrada inferior es reemplacen pel component blau de l’entrada superior.</li>
+</ul>
+
+<p><img src="./images/blendMode2.png" alt="bluemode" /></p>
+
+<ul>
+  <li><strong>COLOR_BURN</strong>: El color d’entrada inferior s’inverteix i es divideix pels components de color d’entrada superior. El resultat s’inverteix novament per a obtindre el color d’eixida</li>
+</ul>
+
+<p><img src="./images/blendMode3.png" alt="bluemode" /></p>
+
+<ul>
+  <li><strong>COLOR_DODGE</strong>: Els components de color superior s’inverteixen i divideixen els components de color inferior per a produir el color d’eixida.</li>
+</ul>
+
+<p><img src="./images/blendMode4.png" alt="bluemode" /></p>
+
+<ul>
+  <li><strong>DARKEN</strong>: El color més fosc dels dos colors del component d’entrada se selecciona per a produir el color resultant.</li>
+</ul>
+
+<p><img src="./images/blendMode5.png" alt="bluemode" /></p>
+
+<ul>
+  <li><strong>DIFFERENCE</strong>: El més fosc dels dos colors d’entrada es resta del color més clar per a produir el color resultant.</li>
+</ul>
+
+<p><img src="./images/blendMode6.png" alt="bluemode" /></p>
+
+<ul>
+  <li><strong>EXCLUSION</strong>: Els dos components de color d’entrada es multipliquen i dupliquen i després es resten de la suma dels components de color de fons per a produir el color desitjat.</li>
+</ul>
+
+<p><img src="./images/blendMode7.png" alt="bluemode" /></p>
+
+<ul>
+  <li><strong>GREEN</strong>: El component verd de l’entrada inferior es reemplaça per l’entrada verda del component superior.</li>
+</ul>
+
+<p><img src="./images/blendMode8.png" alt="bluemode" /></p>
+
+<ul>
+  <li><strong>HARD_LIGHT</strong>: Els components de color d’entrada es multipliquen o se seleccionen segons el color de fons.</li>
+</ul>
+
+<p><img src="./images/blendMode9.png" alt="bluemode" /></p>
+
+<ul>
+  <li><strong>LIGHTEN</strong>: El color més clar dels dos components de color es produeix com a eixida.</li>
+</ul>
+
+<p><img src="./images/blendMode10.png" alt="bluemode" /></p>
+
+<ul>
+  <li><strong>MULTIPLY</strong>: Tots dos components de color es multipliquen per a produir el color d’eixida.</li>
+</ul>
+
+<p><img src="./images/blendMode11.png" alt="bluemode" /></p>
+
+<ul>
+  <li><strong>OVERLAY</strong>: Els components de color d’entrada es filtren o multipliquen segons el color de fons.</li>
+</ul>
+
+<p><img src="./images/blendMode12.png" alt="bluemode" /></p>
+
+<ul>
+  <li><strong>RED</strong>: Els components rojos de l’entrada inferior es reemplacen amb els components rojos de l’entrada superior.</li>
+</ul>
+
+<p><img src="./images/blendMode13.png" alt="bluemode" /></p>
+
+<ul>
+  <li><strong>SCREEN</strong>: Tots dos components de color s’inverteixen, multipliquen i tornen a invertir per a produir el resultat desitjat.</li>
+</ul>
+
+<p><img src="./images/blendMode14.png" alt="bluemode" /></p>
+
+<ul>
+  <li><strong>SOFT_LIGHT</strong>: Els components de color d’entrada s’aclareixen o enfosqueixen.</li>
+</ul>
+
+<p><img src="./images/blendMode15.png" alt="bluemode" /></p>
+
+<ul>
+  <li><strong>SRC_ATOP</strong>: La part de l’entrada superior que es troba sobre l’entrada inferior es combina.</li>
+</ul>
+
+<p><img src="./images/blendMode16.png" alt="bluemode" /></p>
+
+<ul>
+  <li><strong>SRC_OVER</strong>: L’entrada superior es combina amb l’entrada inferior.</li>
+</ul>
+
+<p><img src="./images/blendMode17.png" alt="bluemode" /></p>
+
+<h2 id="bloom">Bloom</h2>
+
+<p>L’efecte Bloom s’usa per a il·luminar píxels d’algunes de les parts de l’escena. Està representat per la classe javafx.scene.effect.Bloom. Aquesta classe conté diverses propietats que es poden establir en uns certs valors per a aplicar els efectes apropiats.</p>
+
+<ul>
+  <li>
+    <p>Propietats</p>
+
+    <ul>
+      <li><strong>setInput(Effect value)</strong>: Aquesta propietat és de tipus efecte. S’utilitza per a proporcionar una entrada a aquest efecte de lluentor.</li>
+      <li><strong>setThresholf(Double value)</strong>: Aquesta propietat és del tipus doble. És un valor mínim per a la lluminositat dels píxels.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Constructors</p>
+
+    <ul>
+      <li><strong>Bloom()</strong>: crea una nova instància de la classe Bloom amb els paràmetres predeterminats.</li>
+      <li><strong>Bloom(Double Threshold_Value)</strong>: crea una nova instància de la classe Bloom amb els paràmetres especificats.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>La imatge mostra l’efecte bloom en el llindar predeterminat i en un llindar d’1.0.</p>
+
+<p><img src="./images/bloom.jpg" alt="bloom" /></p>
+
+<h2 id="blur-effects">Blur Effects</h2>
+
+<p>El desenfocament són efectes comuns que es poden usar per a proporcionar més enfocament als objectes seleccionats. Amb JavaFX pot aplicar un quadre borrós, un desenfocament de moviment o un desenfocament gaussià.</p>
+
+<h3 id="boxblur">BoxBlur</h3>
+
+<p>JavaFX ens permet fer que els nodes es difuminen utilitzant els efectes de desenfocament de JavaFX. En general, el desenfocament fa que la imatge siga poc clara. JavaFX proporciona la classe javafx.scene.effect.BoxBlur que deu instanciarse per a aplicar l’efecte de desenfocament als nodes. El filtre Box s’utilitza en el cas de l’efecte BoxBlur en JavaFX.</p>
+
+<ul>
+  <li>
+    <p>Propietats:</p>
+
+    <ul>
+      <li><strong>setHeight(double value)</strong>: Aquesta és una propietat de tipus doble. Representa l’altura de l’efecte de desenfocament.</li>
+      <li><strong>setWidth(double value)</strong>: Aquesta és una propietat de tipus doble. Representa l’ample de l’efecte de desenfocament.</li>
+      <li><strong>setInput(Effect value)</strong>: Aquesta propietat és de tipus Effect. Això representa l’entrada de l’efecte.</li>
+      <li><strong>setIterations(int value)</strong>: Representa el nombre de repeticions de l’efecte de desenfocament. Aquest és de tipus sencer.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Constructors</p>
+  </li>
+  <li><strong>BoxBlur()</strong>: crea la nova instància amb el valor predeterminat de propietats.</li>
+  <li><strong>BoxBlur(Double width, Double height, int iterations)</strong>: crea la nova instància amb els valors especificats.</li>
+</ul>
+
+<p>La Figura mostra dues mostres de text borrós.</p>
+
+<p><img src="./images/boxblur.jpg" alt="bloom" /></p>
+
+<h3 id="motion-blur">Motion Blur</h3>
+
+<p>MotionBlur és similar a aquest efecte de desenfocament gaussià. L’efecte de desenfocament de moviment també s’usa per a desenfocar els nodes. L’única diferència entre l’efecte Desenfocament gaussià i l’efecte Desenfocament de moviment és que l’efecte de desenfocament de moviment utilitza l’angle especificat amb el qual es desenfocaran els nodes.</p>
+
+<p>Com suggereix el seu nom, en aplicar aquest efecte, es veu que el node està en moviment. La classe javafx.scene.effect.MotionBlur representa l’efecte motionblur. S’ha de crear una instància d’aquesta classe per a generar l’efecte apropiat.</p>
+
+<ul>
+  <li>
+    <p>Propietats</p>
+  </li>
+  <li>
+    <p>Propietats</p>
+
+    <ul>
+      <li><strong>setAngle(Double value)</strong>: Representa l’angle de l’efecte de moviment. És una propietat de tipus doble.</li>
+      <li><strong>setInput(Effect value)</strong>: Representa l’entrada de l’efecte. És una propietat de tipus d’objecte Effect.</li>
+      <li><strong>setRadius(Double radius)</strong>: Representa el radi del kernel de desenfocament. És una propietat de tipus doble.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Constructors</p>
+
+    <ul>
+      <li><strong>MotionBlur()</strong>: crea una instància de la classe motionblur amb els paràmetres predeterminats.</li>
+      <li><strong>MotionBlur(double angle, double radius)</strong>: crea una instància de la classe MotionBlur amb l’angle i el radi especificats.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="./images/motionblur.png" alt="modtion" /></p>
+
+<h3 id="gausian-blur">Gausian Blur</h3>
+
+<p>L’efecte GaussianBlur és molt similar a aquest efecte BoxBlur. L’única diferència entre tots dos és que l’efecte GaussianBlur usa un kernel de convolució gaussià per a desenfocar els nodes. No obstant això, JavaFX proporciona la classe javafx.scene.effect.GaussianBlur per a implementar GaussianBlur en els nodes. S’ha de crear una instància d’aquesta classe per a aplicar un efecte apropiat en el node.
+Propietats</p>
+
+<ul>
+  <li>
+    <p>Propietat:</p>
+
+    <ul>
+      <li><strong>setInput(Effect value)</strong>: Aquesta propietat és de tipus efecte. Representa l’entrada de l’efecte.</li>
+      <li><strong>setRadius(Double value)</strong>: Aquesta propietat és de tipus doble. Representa el radi del kernel de desenfocament.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Constructors</p>
+
+    <ul>
+      <li><strong>GaussianBlur()</strong>: crea la nova instància amb el valor predeterminat dels paràmetres.</li>
+      <li><strong>GaussianBlur(double radius)</strong>: crea una nova instància amb el valor especificat dels paràmetres.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="./images/gaussianblur.jpg" alt="gausian" /></p>
+
+<h2 id="coloradjust">ColorAdjust</h2>
+
+<p>JavaFX ens permet ajustar el color d’una imatge ajustant les propietats com el to, la saturació, la lluentor i el contrast del color de la imatge. La classe javafx.scene.effect.ColorAdjust conté diverses propietats i mètodes que es poden usar per a aplicar l’efecte ColorAdjust en el node.</p>
+
+<ul>
+  <li>Propietats</li>
+</ul>
+
+<p>Les propietats de la classe javafx.scene.effect.ColorAdjust juntament amb els seus mètodes d’establiment es descriuen a continuació.
+    - <strong>setBrightness(double value)</strong>: realitzada en la lluentor del color. És una propietat de doble tipus. 
+    - <strong>setContrast(double value)</strong> Ajust realitzat en contrast del color.
+    - <strong>setHue(double value)</strong>: Ajust de matís realitzat en tinte del color. 
+    - <strong>setInput(double value)</strong>: Valor d’entrada per a l’efecte. 
+    - <strong>setSaturation(double value)</strong>:  Ajust realitzat en la saturació del color.</p>
+
+<ul>
+  <li>Constructors</li>
+</ul>
+
+<p>La classe conté dos constructors donats a continuació.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- **ColorAdjust()**: crea la nova instància de ColorAdjust amb els paràmetres predeterminats.
+- **ColorAdjust(double hue, double saturation, double brightness, double contrast)**: crea la nova instància de ColorAdjust amb els paràmetres especificats.
+</code></pre></div></div>
+
+<h2 id="colorinput">ColorInput</h2>
+
+<p>ColorInput produeix una eixida similar a un rectangle acolorit. No mostra el node sinó el quadre rectangular. Es passa principalment als altres efectes com a entrada. La classe javafx.scene.effect.ColorInput representa l’efecte ColorInput. L’objecte d’aquesta classe es passa com a entrada per als altres efectes.</p>
+
+<ul>
+  <li>
+    <p>Propietats</p>
+
+    <ul>
+      <li><strong>setHeight(double value)</strong>: És de doble tipus. Representa l’altura de la regió que s’omplirà.</li>
+      <li><strong>setPaint(Paint value)</strong>: Representa la pintura amb la qual s’emplenarà la regió.</li>
+      <li><strong>setWidth(double value)</strong>: És de doble tipus. Representa l’ample de la regió que s’omplirà.</li>
+      <li><strong>setX(double value)</strong>: Representa la coordenada X de la cantonada superior esquerra de la regió.</li>
+      <li><strong>setY(double value)</strong>: Representa la coordenada Y de la cantonada superior esquerra de la regió.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Constructors</p>
+
+    <ul>
+      <li><strong>ColorInput()</strong>: crea una nova instància de ColorInput amb els paràmetres predeterminats.</li>
+      <li><strong>ColorInput(double x, double y, double width, double height, Paint paint)</strong>: crea una nova instància de ColorInput amb els paràmetres especificats.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="glow">Glow</h2>
+
+<p>Igual que l’efecte Bloom, l’efecte Glow també s’usa per a il·luminar els píxels de la imatge. No obstant això, fa que la imatge siga molt més brillant. La classe javafx.scene.effect.Glow representa l’efecte Glow. La classe conté diverses propietats que es poden establir en uns certs valors per a aplicar l’efecte apropiat.</p>
+
+<ul>
+  <li>
+    <p>Propietats</p>
+
+    <ul>
+      <li><strong>setInput(Effect value)</strong>: Això representa l’entrada per a l’efecte. Aquesta és una propietat de tipus d’objecte de classe effect.</li>
+      <li><strong>setLevel(double value)</strong>: Representa un valor que controla la intensitat de l’efecte de lluentor en el node.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Constructors</p>
+
+    <ul>
+      <li><strong>Glow()</strong>: és el constructor predeterminat. Instància la classe amb els paràmetres predeterminats.</li>
+      <li><strong>Glow(double level)</strong>: crea la instància amb el valor de nivell especificat.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="./images/glow.png" alt="glow" /></p>
+
+<h2 id="imageinput">ImageInput</h2>
+
+<p>Aquest efecte s’utilitza principalment per a passar la imatge no modificada com a entrada per als altres efectes. La classe javafx.scene.effect.ImageInput representa l’efecte ImageInput. Aquesta classe conté diverses propietats que es poden establir en un determinat valor per a representar una imatge adequada.</p>
+
+<ul>
+  <li>Propietats
+    <ul>
+      <li><strong>setSource(Image image)</strong>: URL d’origen de la imatge d’origen.</li>
+      <li><strong>setX(Double value)</strong>: La coordenada X del conjunt d’imatges</li>
+      <li><strong>setY(Double value)</strong>: La coordenada Y del conjunt d’imatges Y</li>
+    </ul>
+  </li>
+  <li>
+    <p>Constructors</p>
+
+    <ul>
+      <li><strong>ImageInput()</strong>: instància la classe ImageInput amb els paràmetres predeterminats.</li>
+      <li><strong>ImageInput(Image source)</strong>: crea una instància de ImageInput amb la font d’imatge especificada.</li>
+      <li><strong>ImageInput(Image source, Double X, Double Y)</strong>: crea una instància de ImageInput amb la font d’imatge predeterminada i les coordenades especificades</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="shadow">Shadow</h2>
+
+<p>Com suggereix el seu nom, aquest efecte crea l’ombra del node duplicant el node i fent que les seues vores es tornen borrosos. La classe denominada javafx.scene.effect.Shadow representa l’efecte d’ombra. Només necessitem crear una instància d’aquesta classe per a generar un efecte d’ombra apropiat.</p>
+
+<ul>
+  <li>
+    <p>Propietats</p>
+
+    <ul>
+      <li><strong>setBlurType(BlurType value)</strong>: Aquesta és una propietat de tipus de desenfocament. Això representa l’algorisme que s’utilitza per a difuminar l’ombra.</li>
+      <li><strong>setColor(Color value)</strong>: Aquesta és la propietat de tipus de color. Representa el color de l’ombra.</li>
+      <li><strong>setHeight(double value)</strong>: Representa la grandària vertical de l’ombra borrosa.</li>
+      <li><strong>setInput(Effect value)</strong>: Representa l’entrada per a aquest efecte.</li>
+      <li><strong>setRadius(double value)</strong>: Representa el radi de l’ombra.</li>
+      <li><strong>setWidth(double value)</strong>: Representa la grandària horitzontal de l’ombra borrosa.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Constructors</p>
+
+    <ul>
+      <li><strong>Shadow()</strong>: crea una nova instància amb els paràmetres predeterminats</li>
+      <li><strong>Shadow(double radius, Color color)</strong>: crea una nova instància amb el radi i el color especificats.</li>
+      <li><strong>Shadow(BlurType blurtype, Color color, double radius)</strong>: crea una nova instància amb el radi, color i tipus de desenfocament especificats.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="./images/shadow.png" alt="shadow" /></p>
+
+<h3 id="dropshadow">DropShadow</h3>
+
+<p>Aquest efecte és similar a aquest efecte d’ombra. No obstant això, en DropShadow, el duplicat del node es mostra darrere del node original amb la grandària i color especificats. La classe javafx.scene.effect.DropShadow representa l’efecte DropShadow. Només necessitem crear una instància d’aquesta classe per a generar un efecte apropiat.</p>
+
+<ul>
+  <li>
+    <p>Propietats</p>
+
+    <ul>
+      <li><strong>setBlurType(BlurType value)</strong>: Això representa l’algorisme utilitzat per a difuminar l’ombra.</li>
+      <li><strong>setColor(Color value)</strong>: El color del kernel de desenfocament d’ombra. Aquesta propietat és de tipus de color.</li>
+      <li><strong>setHeight(Double value)</strong>: Representa l’altura del kernel de difuminat d’ombres. Aquesta propietat és de tipus doble.</li>
+      <li><strong>setInput(Effect value)</strong>: Això representa l’entrada per a l’efecte.</li>
+      <li><strong>setOffsetX(Double value)</strong>: Això representa la coordenada X del desplaçament d’ombra. Això pròpiament és de tipus doble.</li>
+      <li><strong>setOffsetY(Double value)</strong>: Això representa la coordenada I del desplaçament d’ombra. Aquesta propietat és de tipus doble.</li>
+      <li><strong>setRadius(Double value)</strong>: Representa el radi del kernel de difuminat d’ombres.</li>
+      <li><strong>setSpread(Double value)</strong>: Representa l’extensió del kernel de difuminat d’ombres. És de tipus doble.</li>
+      <li><strong>setWidth(double value)</strong>: Representa l’ample del kernel de difuminat d’ombres.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Constructors</p>
+
+    <ul>
+      <li><strong>DropShadow()</strong>: Crea la instància amb els paràmetres predeterminats.</li>
+      <li><strong>DropShadow(double radius, Color color)</strong>: Crea la instància amb els valors de radi i color especificats.</li>
+      <li><strong>DropShadow(double radius, double offsetX, double offsetY, Color color)</strong>: Crea la instància amb els valors de radi, offset i color especificats.</li>
+      <li><strong>DropShadow(BlurType blurtype, Color color, double radius, double spread, double offsetX, double offsetY)</strong>: Crea la instància amb els valors de BlurType, color, ràdio, extensió i compensació especificats.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="./images/shadow.jpg" alt="shadow" /></p>
+
+<blockquote>
+  <p>Fer que l’ombra paral·lela siga massa ampla li dóna a l’element l’aparença de pesadesa. El color de l’ombra ha de ser realista, generalment uns tons més clars que el color de fons.
+Si té diversos objectes amb ombres paral·leles, oriente l’ombra paral·lela de la mateixa manera per a tots els objectes. Una ombra paral·lela dóna l’aparença d’una llum que prové d’una direcció i projecta una ombra sobre els objectes.</p>
+</blockquote>
+
+<h3 id="innershadow">InnerShadow</h3>
+
+<p>En aplicar aquest efecte al node, l’ombra es mostra dins de les vores del node. La classe javafx.scene.effect.InnerShadow representa l’efecte InnerShadow. Només necessitem crear una instància d’aquesta classe per a generar un efecte apropiat.</p>
+
+<p>Propietats</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- **setBlurType(BlurType value)**: Això representa l'algorisme utilitzat per a difuminar l'ombra.
+- **setChoke(Double value)**: Aquesta propietat és de tipus doble. Això representa l'escanyament de l'ombra.
+- **setColor(Color value)**: El color del kernel de desenfocament d'ombra. Aquesta propietat és de tipus de color. 
+- **setHeight(Double value)**: Representa l'altura del kernel de difuminat d'ombres. Aquesta propietat és de tipus doble. 
+- **setInput(Effect value)**: Això representa l'entrada per a l'efecte.
+- **setOffsetX(Double value)**: Això representa la coordenada X del desplaçament d'ombra. Això pròpiament és de tipus doble.
+- **setOffsetY(Double value)**: Això representa la coordenada I del desplaçament d'ombra. Aquesta propietat és de tipus doble.
+- **setRadius(Double value)**: Representa el radi del kernel de difuminat d'ombres.
+- **setWidth(double value)**: Representa l'ample del kernel de difuminat d'ombres.
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>Constructors</p>
+
+    <ul>
+      <li><strong>InnerShadow()</strong>: crea la instància amb els paràmetres predeterminats.</li>
+      <li><strong>InnerShadow(double radius, Color color)</strong>: crea la instància amb el radi i el valor de color especificats.</li>
+      <li><strong>InnerShadow(double radius, double offsetX, double offsetY, Color color)</strong>: crea la instància amb els valors de radi, offset i color especificats.</li>
+      <li><strong>InnerShadow(BlurType blurtype, Color color, double radius, double choke, double offsetX, double offsetY)</strong>: crea la instància amb el BlurType especificat. Valors de color, ràdio, escanyament i desplaçament.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="./images/inner.jpg" alt="inner" /></p>
+
+<h2 id="light-effects">Light Effects</h2>
+
+<p>Aquest efecte s’utilitza per a il·luminar un node des d’una font de llum. Hi ha diversos tipus de fonts de llum, és a dir, puntuals, distants i puntuals. La classe javafx.scene.effect.Lighting representa l’efecte d’il·luminació. Necessitem crear una instància d’aquesta classe per a generar un efecte apropiat en el node.</p>
+
+<p>Propietats</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- **setBumpInput(Effect value)**: És una propietat de tipus d'objecte d'efecte. Representa l'entrada del mapa de relleu per a l'efecte. 
+- **setContentInput(Effect value)**: És una propietat de tipus d'objecte Effect. Representa l'entrada de contingut per a l'efecte. 
+- **setDiffuseConstant(Double value)**: És una propietat de tipus Double. Representa la constant difusa. 
+- **setLight(Light value)**: És una propietat de tipus d'objecte Light. Representa la font de llum de l'efecte. 
+- **setSpecularConstant(double value)**: És una propietat de tipus doble. Representa la constant especular. 
+- **setSpecularExponent(double value)**: És una propietat de tipus doble. Representa l'exponent especular. 
+- **setSurfaceScale(double value)**: És una propietat de tipus doble. Representa l'escala de superfície de la llum. 
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>Constructors</p>
+
+    <ul>
+      <li><strong>Lighting()</strong>: crea una nova instància d’Il·luminació amb el valor predeterminat de font de llum.</li>
+      <li><strong>Lighting(Light light)</strong>: crea una nova instància d’Il·luminació amb el valor especificat de font de llum.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="./images/light.png" alt="light" /></p>
+
+<h3 id="lightdistant-effect">Light.Distant Effect</h3>
+
+<p>En aquest efecte, el node s’il·lumina des d’una font de llum distant. La font de llum distant és la que es manté a una distància considerable de l’objecte i la llum s’atenua en una direcció des de la font fins a l’objecte. En JavaFX, la classe javafx.scene.effect.Light.Distant representa la font de llum distant. Necessitem crear una instància d’aquesta classe per a generar la llum adequada en el node.</p>
+
+<ul>
+  <li>
+    <p>Propietats</p>
+
+    <ul>
+      <li><strong>setAzimuth(double value)</strong>: Aquesta propietat és del tipus double i representa l’azimut de la llum.</li>
+      <li><strong>setAlivation(double value)</strong>: Aquesta propietat és de tipus doble i representa l’elevació de la llum.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Constructors</p>
+
+    <ul>
+      <li>Light.Distant(): crea la nova instància de la classe amb els paràmetres predeterminats.</li>
+      <li>Light.Distant(double azimuth, double elevation, Color color): crea la nova instància de la classe amb els paràmetres especificats.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="./images/light2.png" alt="light2" /></p>
+
+<h3 id="lightspot-effect">Light.Spot Effect</h3>
+
+<p>Aquest efecte il·lumina el node mitjançant una font de llum puntual. La font de llum puntual és aquella la llum de la qual s’atenua en totes les direccions. La intensitat de la font de llum depén de la distància entre la font de llum i el node. La classe javafx.scene.effect.Light.Espot representa aquest efecte. Només necessitem crear una instància d’aquesta classe per a generar la llum adequada en el node.</p>
+
+<p>Propietats</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- **setPointsAtX(double value)**: Aquesta és una propietat de tipus doble. Representa la coordenada X del vector de direcció de la llum 
+- **setPointsAtY(double value)**: Aquesta és una propietat de tipus doble. Representa la coordenada I del vector de direcció de la llum 
+- **setPointsAtZ(double value)**: Aquesta és una propietat de tipus doble. Representa la coordenada Z del vector de direcció de la llum. 
+- **setSpecularExponent(double value)**: Aquesta és una propietat de tipus doble. Representa el component especulatiu. S'utilitza per a alterar l'enfocament de la font de llum. 
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>Constructors</p>
+
+    <ul>
+      <li><strong>Light.Espot()</strong>: crea una nova instància amb els paràmetres predeterminats.</li>
+      <li><strong>Light.Spot(double x, double y, double z, double specularexponent, color color)</strong>: crea una nova instància amb els paràmetres especificats.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="./images/light3.png" alt="light3" /></p>
+
+<h3 id="lightpoint-effect">Light.Point Effect</h3>
+
+<p>En aquest efecte d’il·luminació, la font de llum rep una determinada posició en l’espai 3D. Com suggereix el nom, la font de llum està situada en un punt determinat i els nodes estan units per a il·luminar-se des d’aqueixa font en particular. La classe javafx.scene.effect.Light.Point representa aquesta font de llum. Necessitem crear una instància d’aquesta classe per a generar la il·luminació adequada en el node.</p>
+
+<ul>
+  <li>
+    <p>Propietats</p>
+
+    <ul>
+      <li><strong>setX(Double value)</strong>: És una propietat de tipus doble. Representa la coordenada X de la font de llum.</li>
+      <li><strong>setY(Double value)</strong>: És una propietat de tipus doble. Representa la coordenada I de la font de llum.</li>
+      <li><strong>setZ(Double value)</strong>: És una propietat de tipus doble. Representa la coordenada Z de la font de llum.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Constructors</p>
+
+    <ul>
+      <li><strong>Light.Point()</strong>: crea la nova instància amb els paràmetres predeterminats.</li>
+      <li><strong>Light.Point(double x, double y, double z, Color color)</strong>: crea la nova instància amb les coordenades 3D i el color de llum especificats</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="perspectivetransform">PerspectiveTransform</h2>
+
+<p>L’efecte de perspectiva crea un efecte tridimensional d’un altre objecte bidimensional.</p>
+
+<p><img src="./images/perspective.jpg" alt="perspective" /></p>
+
+<p>Una transformació de perspectiva pot assignar qualsevol quadrat a un altre quadrat, al mateix temps que conserva la rectitud de les línies. A diferència de les transformacions afins, el paral·lelisme de les línies en la font no es conserva necessàriament en l’eixida.</p>
+
+<blockquote>
+  <p>Aquest efecte no ajusta les coordenades dels esdeveniments d’entrada ni cap mètode que mesure la contenció en un node. El clic del mouse i els mètodes de contenció no estan definits si s’aplica un efecte de perspectiva a un node.</p>
+</blockquote>
+
+<p>Les coodenades per al effecte de perspectiva, són:</p>
+
+<p><img src="./images/perspective2.jpg" alt="perspective" /></p>
+
+<h2 id="reflection">Reflection</h2>
+
+<p>En general, la Reflexió es pot definir com el canvi de direcció. JavaFX ens permet generar l’efecte de reflexió en qualsevol node. L’efecte de reflexió bàsicament agrega la reflexió del node a la seua part inferior. Està representat per la classe javafx.scene.effect.Reflection. Només necessitem crear una instància d’aquesta classe per a aplicar l’efecte apropiat a un node.</p>
+
+<ul>
+  <li>
+    <p>Propietats</p>
+
+    <ul>
+      <li><strong>setBottomOpacity(double value)</strong>: És una propietat de tipus doble. Representa l’opacitat del reflex en l’extrem inferior.</li>
+      <li><strong>setFraction(double value)</strong>: És una propietat de tipus doble. Representa la fracció de l’entrada que es mostrarà en la reflexió.</li>
+      <li><strong>setInput(Effect value)</strong>: És una propietat de tipus d’objecte. Representa l’entrada de l’efecte.</li>
+      <li><strong>setTopOffset(Double value)</strong>: És una propietat de tipus doble. Representa la distància entre la part superior i inferior del reflex.</li>
+      <li><strong>setTopOpacity(Double value)</strong>: Representa l’opacitat del reflex en la part superior de l’entrada.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Constructors</p>
+
+    <ul>
+      <li><strong>Reflection():</strong> crea una nova instància de Reflection amb els paràmetres predeterminats</li>
+      <li><strong>Reflection(double topOffset, double fraction, double topOpacity, double bottomOpacity)</strong>: Crea una nova instància de Reflection amb els paràmetres especificats</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="./images/reflection.jpg" alt="reflection" /></p>
+
+<blockquote>
+  <p>La reflexió d’un node amb un efecte de reflexió no respondrà als esdeveniments del mouse ni als mètodes de contenció en el node.</p>
+</blockquote>
+
+<h2 id="tó-sepia">Tó Sepia</h2>
+
+<p>L’efecte SepiaTone bàsicament canvia el to de la imatge al color marró vermellós. En JavaFX, la classe javafx.scene.effect.SepiaTone representa l’efecte SepiaTone. Només necessitem crear una instància d’aquesta classe per a generar un efecte apropiat.</p>
+
+<ul>
+  <li>
+    <p>Propietats</p>
+
+    <ul>
+      <li><strong>setInput(Effect value)</strong>: Aquesta és una propietat de tipus Efecte (Objecte). Representa l’entrada per a aquest efecte.</li>
+      <li><strong>setLevel(Double value)</strong>: Aquesta és una propietat de tipus doble. Representa el valor de nivell que controla la intensitat de l’efecte sépia.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Constructors</p>
+
+    <ul>
+      <li><strong>Sepiatone()</strong>: crea una nova instància amb paràmetres predeterminats</li>
+      <li><strong>Sepiatone(double level)</strong>: crea una nova instància amb un valor de nivell especificat.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="crear-una-cadena-defectes">Crear una cadena d’efectes</h2>
+
+<p>Alguns dels efectes tenen una propietat d’entrada que pot usar per a crear una cadena d’efectes. La cadena d’efectes pot ser una estructura en forma d’arbre, perquè alguns efectes tenen dues entrades i altres no.</p>
+
+<p>En la Figura, l’efecte de reflexió s’usa com una entrada per a l’efecte d’ombra paral·lela, la qual cosa significa que primer el rectangle es reflecteix per l’efecte de reflexió i després l’efecte d’ombra paral·lela s’aplica al resultat.</p>
+
+<p><img src="./images/chain.jpg" alt="chain" /></p>
+
+<p><a href="../../javafx.html">back</a></p>
+:ET

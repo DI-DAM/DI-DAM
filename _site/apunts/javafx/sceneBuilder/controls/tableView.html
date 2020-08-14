@@ -1,0 +1,62 @@
+<h1 id="tableview">TableView</h1>
+
+<p>La classe TableView s’uitilitza juntament amb TableColumn i TableCell per a mostrar les dades en forma de taula.</p>
+
+<p><img src="./images/tableView.png" alt="Table view" /></p>
+
+<h2 id="crear-una-taula">Crear una taula:</h2>
+
+<p>Primer s’ha de crear la tabla i dir-li que siga editable.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TableView table = new TableView();
+table.setEditable(true);
+</code></pre></div></div>
+
+<p>Una vegada creada, ja podem incloure-li les columnes que necessitem.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TableColumn nomCol = new TableColumn("Nom");
+TableColumn cognomCol = new TableColumn("Cognom");
+TableColumn direccioCol = new TableColumn("Direcció");
+</code></pre></div></div>
+
+<p>table.getColumns().addAll(nomCol, cognomCol, direccioCol);</p>
+
+<p>Si en algun moment es vol amagar alguna columna, podem fer-ho:</p>
+
+<p><code class="language-plaintext highlighter-rouge">aColumn.setVisible(false)</code></p>
+
+<p>Com sempre, aquesta tasca es pot realitzar des del Scene Builder.</p>
+
+<h2 id="columnes-anidades">Columnes anidades</h2>
+
+<p>També es poden crear columnes anidades.</p>
+
+<p>Suposem que en la columna direcció li volem afegir: carrer, població i provincia.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TableColumn carrerCol = new TableColumn("Carrer");
+TableColumn poblacioCol = new TableColumn("Població");
+TableColumn provinciaCol = new TableColumn("Provincia");
+</code></pre></div></div>
+
+<p>i ara ja es poden anidar dintre de la columna superior:</p>
+
+<p>direccioCol.getColumns().addAll(carrerCol, poblacioCol,provinciaCol)</p>
+
+<h2 id="afegir-dades">Afegir dades</h2>
+
+<p>El següent codi li mostra com agregar dades a una vista de taula. Cada fila de la taula representa a una persona amb nom i cognom.</p>
+
+<p>En la lògica de la interfície d’usuari, utilitza una ObservableList per a mantindre el valor d’una vista de taula. Cada element en la ObservableList és un objecte Person.</p>
+
+<p>En el controlador d’esdeveniments de botó, crea una nova Persona amb nom i cognom codificats, després s’agrega a la ObservableList.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>private ObservableList&lt;Person&gt; data_table = FXCollections.observableArrayList(
+        new Person("lmanzaneque", "lmanz@gmail.al", "Lluis", "Manzaneque", "true"),
+        new Person ......
+        );
+</code></pre></div></div>
+
+<p><img src="./images/tableView2.gif" alt="Table view" /></p>
+
+<p><a href="../../javafx.html">back</a></p>
+

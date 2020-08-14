@@ -1,0 +1,43 @@
+<h1 id="tooltip">Tooltip</h1>
+
+<p>Tooltip s’utilitza per a mostrar informació addicional a l’usuari quan el mouse es troba sobre el component. Tots els components es poden associar amb una informació sobre eines i també es pot associar amb una part de la pantalla.</p>
+
+<p>Constructors de la classe Tooltip:</p>
+
+<ul>
+  <li><strong>Tooltip()</strong>: crea una informació sobre eines amb una cadena buida per al seu text.</li>
+  <li><strong>Tooltip(String t)</strong>: crea una informació sobre eines amb el text especificat.</li>
+</ul>
+
+<p>Mètodes d’ús comú:</p>
+<ul>
+  <li>getFont() Obté el valor de la font de la propietat.</li>
+  <li><strong>getText()</strong>: Obté el valor del text de propietat.</li>
+  <li><strong>getTextAlignment()</strong>: Obté el valor de la propietat textAlignment.</li>
+  <li><strong>install(Node n, Tooltip t)</strong>: Associa la informació sobre eines donada amb el node donat.</li>
+  <li><strong>isActivated()</strong>: Obté el valor de la propietat activada.</li>
+  <li><strong>setFont(Font v)</strong>: Estableix el valor de la font de la propietat.</li>
+  <li><strong>setText(String v)</strong>: Estableix el valor del text de propietat.</li>
+  <li><strong>setTextAlignment(TextAlignment v)</strong>: Estableix el valor de la propietat textAlignment.</li>
+</ul>
+
+<p>per crear un Tooltip sense SceneBuilder:</p>
+
+<p>TextField field_userName= new TextField();</p>
+
+<p>Tooltip tooltip_userName=new Tooltip(“Enter user name”);</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Set tooltip
+field_userName.setTooltip(tooltip_userName);
+ 
+// Or using Tooltip.install
+Tooltip.install(field_userName, tooltip_userName);
+ 
+// Uninstall tooltip
+Tooltip.uninstall(field_userName, tooltip_userName);
+</code></pre></div></div>
+
+<p><img src="./images/toolTip.png" alt="ToolTip" /></p>
+
+<p><a href="../../javafx.html">back</a></p>
+
