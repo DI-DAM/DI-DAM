@@ -82,6 +82,12 @@ Podem trobar tota la informació referent a la instal·lació i configuració en
             - Reflection
             - Tó Sepia
             - Cadena d'efectes
+        - [Transformacions](./sceneBuilder/transformacions/transformacions.html)
+            - Translació
+            - Rotació
+            - Escalament
+            - Shearing
+            - Transformació Múltiple
         - [Animacions](./sceneBuilder/animacions/animacions.html)
             - Transició de rotació
             - Transició d'escala
@@ -93,7 +99,18 @@ Podem trobar tota la informació referent a la instal·lació i configuració en
             - Transició paral·lela
             - Pause Transition
             - Transició de ruta
-
+        - [Colors](./sceneBuilder/color/color.html)
+            - Color RGB
+            - Color Name
+            - HSB Color
+            - Web Color
+            - Gradient
+                - Linear Gradient
+                - Radial Gradient
+        - [Alert & Dialegs](./sceneBuilder/dialegs/dialegs.html)
+- [Drag & Drop](./sceneBuilder/dragAndDrop/dragAndDrop.html)
+    - [Exemple D&D amb text](./sceneBuilder/dragAndDrop/dNdExempleText.html)
+    - [Exemple D&D amb imatges](./sceneBuilder/dragAndDrop/dNdExempleImage.html)
 
 
 informació de: https://docs.oracle.com/
