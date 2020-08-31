@@ -1,4 +1,4 @@
-I"n<h1 id="java-fx">Java FX</h1>
+I"�<h1 id="java-fx">Java FX</h1>
 
 <p>Podem trobar tota la informació referent a la instal·lació i configuració en la pàgina de Javafx:
 <a href="https://openjfx.io/openjfx-docs/">https://openjfx.io/openjfx-docs/</a></p>
@@ -52,8 +52,102 @@
               <li><a href="./sceneBuilder/controls/obrirNOvaFinestra.html">Obrir una nova finestra</a></li>
             </ul>
           </li>
+          <li>Shapes
+            <ul>
+              <li><a href="./sceneBuilder/shape2D/shape2D.html">Shapes 2D</a>
+                <ul>
+                  <li>Línea</li>
+                  <li>Rectangle</li>
+                  <li>El·lipse</li>
+                  <li>Circle</li>
+                  <li>Polygons</li>
+                  <li>Cubic Curve</li>
+                  <li>Quad Curve</li>
+                </ul>
+              </li>
+              <li><a href="./sceneBuilder/shape3D/shape3D.html">Shapes 3D</a>
+                <ul>
+                  <li>Mode de dibuix</li>
+                  <li>Material de l’objecte</li>
+                  <li>Càmares</li>
+                  <li>Box</li>
+                  <li>Cilindre</li>
+                  <li>Esfera</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="./sceneBuilder/charts/chart.html">Chart (gràfiques)</a>
+            <ul>
+              <li>Pie Chart</li>
+              <li>Art Chart</li>
+              <li>Area Chart</li>
+              <li>Bar Chart</li>
+            </ul>
+          </li>
+          <li><a href="./sceneBuilder/effects/effects.html">Efectes</a>
+            <ul>
+              <li>Blend</li>
+              <li>Bloom</li>
+              <li>Blur Effects</li>
+              <li>Color Ajust</li>
+              <li>Color Input</li>
+              <li>Glow</li>
+              <li>Image Input</li>
+              <li>Shadow</li>
+              <li>Light Effects</li>
+              <li>Perspective</li>
+              <li>Reflection</li>
+              <li>Tó Sepia</li>
+              <li>Cadena d’efectes</li>
+            </ul>
+          </li>
+          <li><a href="./sceneBuilder/transformacions/transformacions.html">Transformacions</a>
+            <ul>
+              <li>Translació</li>
+              <li>Rotació</li>
+              <li>Escalament</li>
+              <li>Shearing</li>
+              <li>Transformació Múltiple</li>
+            </ul>
+          </li>
+          <li><a href="./sceneBuilder/animacions/animacions.html">Animacions</a>
+            <ul>
+              <li>Transició de rotació</li>
+              <li>Transició d’escala</li>
+              <li>Transició de translació</li>
+              <li>Transició d’esvaïment</li>
+              <li>Transició de farciment</li>
+              <li>StrokeTransition</li>
+              <li>Transició seqüencial</li>
+              <li>Transició paral·lela</li>
+              <li>Pause Transition</li>
+              <li>Transició de ruta</li>
+            </ul>
+          </li>
+          <li><a href="./sceneBuilder/color/color.html">Colors</a>
+            <ul>
+              <li>Color RGB</li>
+              <li>Color Name</li>
+              <li>HSB Color</li>
+              <li>Web Color</li>
+              <li>Gradient
+                <ul>
+                  <li>Linear Gradient</li>
+                  <li>Radial Gradient</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="./sceneBuilder/dialegs/dialegs.html">Alert &amp; Dialegs</a></li>
         </ul>
       </li>
+    </ul>
+  </li>
+  <li><a href="./sceneBuilder/dragAndDrop/dragAndDrop.html">Drag &amp; Drop</a>
+    <ul>
+      <li><a href="./sceneBuilder/dragAndDrop/dNdExempleText.html">Exemple D&amp;D amb text</a></li>
+      <li><a href="./sceneBuilder/dragAndDrop/dNdExempleImage.html">Exemple D&amp;D amb imatges</a></li>
     </ul>
   </li>
 </ul>

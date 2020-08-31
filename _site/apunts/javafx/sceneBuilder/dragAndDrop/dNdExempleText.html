@@ -1,0 +1,134 @@
+<h1 id="java-fx---drag-and-drop">Java FX - Drag And Drop</h1>
+
+<h1 id="exemple">Exemple</h1>
+
+<p>Un gest de pressionar, arrossegar i soltar</p>
+
+<p>Existeixen diferents tipus de gestos de pressionar, arrossegar i soltar. Al principi discutirem el <strong>gest simple de pressionar-arrossegar-soltar</strong> i el** gest complet de pressionar-arrossegar-soltar**.</p>
+
+<p>Anem a basar-nos amb el exemple que podem observar en la següen imatge:</p>
+
+<p><img src="./images/dnd1.gif" alt="example" /></p>
+
+<h2 id="un-simple-gest-de-pressionar-arrossegar-i-soltar">Un simple gest de pressionar, arrossegar i soltar</h2>
+
+<p>El simple gest de pressionar, arrossegar i soltar és el gest d’arrossegar predeterminat. S’utilitza quan el gest d’arrossegar implica només un node (el node en el qual es va iniciar el gest). Durant el gest d’arrossegament, tots els tipus de MouseDragEvent (arrossegar amb el mouse ingressat, arrossegar el mouse sobre, arrossegar el mouse per a eixir, i soltar l’acció d’arrossegar el mouse) s’envien només al node d’origen del gest.</p>
+
+<p>Quan es pressiona el botó del mouse, se selecciona el Node superior i <strong>tots els esdeveniments posteriors del mouse s’envien a aqueix node fins que se solta el botó del mouse</strong>.</p>
+
+<p><strong>Quan s’arrossega el mouse a un altre Node, el Node en el qual es va iniciar el gest encara està davall del cursor</strong> i, per tant, cap altre node rep els esdeveniments fins que se solta el botó del mouse.</p>
+
+<p>L’explicació anterior demostra un cas del simple gest de pressionar, arrossegar i soltar.</p>
+
+<p>Afegeim dos nodes diferents de la classe TextField a una escena. Un es diu node d’origen (source) i l’altre node de destinació (target). El node de destí afegeix controladors <code class="language-plaintext highlighter-rouge">MouseDragEvent</code> per a detectar qualsevol esdeveniment d’arrossegament del mouse en ell.</p>
+
+<p>Tinga en compte que l’esdeveniment de detecció d’arrossegament es genera una vegada després d’arrossegar el mouse. L’objecte <code class="language-plaintext highlighter-rouge">MouseEvent</code> té un indicador <code class="language-plaintext highlighter-rouge">dragDetect</code>, que es pot configurar en els esdeveniments <code class="language-plaintext highlighter-rouge">mouse-pressed</code> i <code class="language-plaintext highlighter-rouge">mouse-dragged</code>. Si s’estableix en vertader, l’esdeveniment subsegüent que es genera és l’esdeveniment de <code class="language-plaintext highlighter-rouge">drag-detect</code>. El valor predeterminat és generar-lo després de l’esdeveniment <code class="language-plaintext highlighter-rouge">mouse-dragged</code>. Si desitja generar-ho després de l’esdeveniment <code class="language-plaintext highlighter-rouge">mouse-pressed</code>, i no depres de l’esdeveniment <code class="language-plaintext highlighter-rouge">mouse-dragged</code>, ha de modificar els controladors d’esdeveniments:</p>
+
+<p>Els mètodes que es poden utilitzar per crear un event com aquest son els següents. En la següent llista es poden veure més métodes dels esencialment necessaris:</p>
+
+<ul>
+  <li><strong>setOnMousePressed</strong>: Defineix una funció que es crida quan es pressiona un botó del mouse en aquest Node.</li>
+  <li><strong>setOnMouseReleased</strong>: Defineix una funció que es crida quan es solta un botó del mouse en aquest Node.</li>
+  <li><strong>setOnMouseDragged</strong>: Defineix una funció que es crida quan es <strong>pressiona un botó</strong> del mouse en aquest Node <strong>i despres s’arrosega</strong>.</li>
+  <li><strong>setOnDragDetected</strong>: Defineix una funció que es crida quan es <strong>detecta</strong> un gest d’arrossegament.</li>
+  <li><strong>setOnMouseDragEntered</strong>: Defineix una funció que es cridarà quan un gest complet de <em>pressionar, arrossegar i soltar</em> <strong>ingresa</strong> a aquest node.</li>
+  <li><strong>setOnMouseDragOver</strong>: Defineix una funció que es cridarà quan un gest d’arrosegament <strong>progresa</strong> dintre d’aquest node.</li>
+  <li><strong>setOnMouseDragReleased</strong>: Defineix una funció que es cridarà quan finalitza un gest complet de <em>pressionar, arrossegar i soltar</em> (soltar el botó del mouse) dintre d’aquest node.</li>
+  <li><strong>setOnMouseDragExited</strong>: Defineix una funció que es cridarà quan un gest complet de <em>pressionar, arrossegar i soltar</em> <strong>abandona</strong> aquest node.</li>
+</ul>
+
+<p>A continuació es pot observar la part del codi on es defineixen les funcions activades per un event del mouse. (No està la resta del codi).</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//quan fem click en el botó del ratolí.
+        textSource.setOnMousePressed(new EventHandler &lt;MouseEvent&gt;()
+        {
+            public void handle(MouseEvent event)
+            {
+                textSource.setMouseTransparent(true);
+                System.out.println("Event en Orige: mouse pressed");
+                event.setDragDetect(true);
+            }
+        });
+
+        //QWuan soltem botó del ratolí.
+        textSource.setOnMouseReleased(new EventHandler &lt;MouseEvent&gt;()
+        {
+            public void handle(MouseEvent event)
+            {
+                textSource.setMouseTransparent(false);
+                System.out.println("Event en Orige: mouse released");
+            }
+        });
+
+
+        //funció que es crida una vegada cada vegada que el mouse es mou mentres es té el bot´o apretat.
+        textSource.setOnMouseDragged(new EventHandler &lt;MouseEvent&gt;()
+        {
+            public void handle(MouseEvent event)
+            {
+                System.out.println("Event en Orige: mouse dragged");
+                event.setDragDetect(false);
+            }
+        });
+
+        // detecta inici d'arrosegament.
+        textSource.setOnDragDetected(new EventHandler &lt;MouseEvent&gt;()
+        {
+            public void handle(MouseEvent event)
+            {
+                System.out.println("Event en Orige: drag detected");
+                textSource.startFullDrag();
+            }
+        });
+
+        //es cridat quan un event que està sent arrosegat, entra en el node. s'utilitza en el node detí.
+        textTarget.setOnMouseDragEntered(new EventHandler &lt;MouseDragEvent&gt;()
+        {
+            public void handle(MouseDragEvent event)
+            {
+                System.out.println("Event en destí: mouse dragged");
+            }
+        });
+
+        //defineix la funció quan el gest d'arrosegament progresa en el node.
+        textTarget.setOnMouseDragOver(new EventHandler &lt;MouseDragEvent&gt;()
+        {
+            public void handle(MouseDragEvent event)
+            {
+                System.out.println("Event en destí: mouse drag over");
+            }
+        });
+
+        //Aquesta funció s'activa quan es solta el botó despres del gest del event drag and drop
+        textTarget.setOnMouseDragReleased(new EventHandler &lt;MouseDragEvent&gt;()
+        {
+            public void handle(MouseDragEvent event)
+            {
+                textTarget.setText(textSource.getSelectedText());
+                System.out.println("Event en destí: mouse drag released");
+            }
+        });
+
+        //Defineix una funció que es cridará quan un gest complet de Drag&amp;Drop ha abandonat aquest node.
+        textSource.setOnMouseDragExited(new EventHandler &lt;MouseDragEvent&gt;()
+        {
+            public void handle(MouseDragEvent event)
+            {
+                System.out.println("Event en destí: mouse drag exited");
+            }
+        });
+</code></pre></div></div>
+
+<p>Examples:</p>
+
+<ul>
+  <li>
+    <p>Text: https://examples.javacodegeeks.com/desktop-java/javafx/event-javafx/javafx-drag-drop-example/</p>
+  </li>
+  <li>
+    <p>images: https://www.youtube.com/watch?v=Ulp1Kimblg0
+  El tinc fet en el intellij idea</p>
+  </li>
+</ul>
+
+<p><a href="../../javafx.html">back</a></p>

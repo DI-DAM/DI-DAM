@@ -1,0 +1,137 @@
+I"+<h1 id="java-fx---css">Java FX - CSS</h1>
+
+<p>CSS (Cascading Style Sheets) és un llenguatge de disseny que s’utilitza per a millorar l’aparença de les pàgines web sense canviar la seua funcionalitat. Només s’ocupa de la forma en què es presenta una pàgina web en el navegador web.</p>
+
+<p>Usant CSS, podem definir el color, grandària, estils de font, espaiat entre el paràgraf, alineació i moltes coses més per a una pàgina web perquè es veja millor i més precisa. També podem configurar el fons de l’aplicació, el disseny, el disseny i la varietat de visualització per als dispositius de diferents grandàries.</p>
+
+<p>Per Observar les diferents propietats que se li poden asignar a qualsevol elements que tingam en la nostra aplicació, pot consultar la següent pàgina -&gt; <a href="https://docs.oracle.com/javafx/2/api/javafx/scene/doc-files/cssref.html">guia de referencia CSS de JavaFX</a></p>
+
+<h2 id="css-en-javafx">CSS en JavaFX</h2>
+
+<p>JavaFX proporciona el paquet javafx.css que conté totes les classes per a aplicar CSS a l’aplicació JavaFX.</p>
+
+<p>Aplicar CSS a l’aplicació JavaFX és similar a aplicar CSS a la pàgina HTML.</p>
+
+<h2 id="fulla-destil-predeterminada">Fulla d’estil predeterminada</h2>
+
+<p>JavaFX usa caspian.css com a arxiu CSS predeterminat. Es troba en l’arxiu JAR de temps d’execució de JavaFX, <strong>jfxrt.jar</strong>. Aquesta fulla d’estil defineix les regles d’estil predeterminades per al node arrel i els controls d’IU. Aquest arxiu es troba en la ruta /jre/lib sota el directori d’instal·lació de JDK. El següent comando es pot utilitzar per a extraure la fulla d’estil de l’arxiu JAR.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># jar xf jfxrt.jar    
+# com/sun/javafx/scene/control/skin/caspian/caspian.css
+</code></pre></div></div>
+
+<h2 id="afegir-fulles-destil-a-lescena">Afegir fulles d’estil a l’escena</h2>
+
+<p>JavaFX ens brinda la possibilitat d’anul·lar la fulla d’estil predeterminada i definir els nostres propis estils per a cada node de l’aplicació. La fulla d’estil que creguem ha de tindre l’extensió .css i ha d’estar situada en el directori on resideix la classe principal de l’aplicació.</p>
+
+<p>Podem fer-ho des del mateix codi o des de l’scene Builder:</p>
+
+<ol>
+  <li>En JavaFX, existeix una sintaxi específica per a aplicar CSS a l’escena. La sintaxi es dóna com segueix;
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Scene scene = new Scene(root,500,400);
+scene.getStylesheet().add("path/Stylesheet.css");
+</code></pre></div>    </div>
+  </li>
+  <li>Podem definir l’estil que anem a aplicar en l’scene Builder. Per acò, cal que creem el full d’estils. A continuació en la opció de propietats del pane li indicarem on es troba:</li>
+</ol>
+
+<p><img src="./images/css1.png" alt="css" /></p>
+
+<h2 id="definició-destils-en-stylesheet">Definició d’estils en StyleSheet</h2>
+
+<p>Es pot donar una definició d’estil utilitzant el nom de l’estil, que també es coneix com a selector i una sèrie de regles que estableixen les propietats dels estils. Les <strong>regles d’estil es donen entre claus</strong>. Ens basem en el següent exemple anomenat mystyle.css. Defineix la definició d’estil per a cada node de botó utilitzat en la seua aplicació contenidora.</p>
+
+<ul>
+  <li>Example:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.button {
+  -fx-font : 14px "serief";
+  -fx-padding : 10;
+  -fx-background-color : #CCFF99;
+}
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="selectors">Selectors</h2>
+
+<p>Hi ha diversos tipus d’estils utilitzats en JavaFX. No obstant això, cada tipus considera les seues pròpies convencions respecte als selectors. Les convencions de nomenclatura dels selectors de classes d’estil són,</p>
+
+<ol>
+  <li>Si el selector de classe d’estil consta de més d’una paraula, utilitze el <strong>guió</strong> entre elles.</li>
+  <li>Els noms dels selectors de classes d’estil estan precedits per un punt (.)</li>
+</ol>
+
+<p>Exemples de selectors són:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.button
+.check-box
+.label
+</code></pre></div></div>
+
+<p>l’estil d’un node en particular es pot definir mitjançant l’ID del node. S’Utilitza el símbol # abans de Node_ID per a crear un nom d’estil per a aqueix node. Per exemple, el node que té id my_label pot tindre el següent tipus de nom de selector.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#my_label
+</code></pre></div></div>
+
+<h2 id="definició-de-regles-en-fulles-destil">Definició de regles en fulles d’estil</h2>
+
+<p>Les regles per a una definició d’estil assignen valors a les propietats. Existeixen algunes convencions per als noms de propietat que es donen a continuació.</p>
+
+<ol>
+  <li>Si el nom de la propietat consta de més d’una paraula, utilitze un guió (-) per a separar-les.</li>
+  <li>El nom de propietat dels estils està precedit per -fx-.</li>
+  <li>El nom de la propietat i el valor estan separats per dos punts (:).</li>
+  <li>Les regles estan separades per punt i coma (;).</li>
+</ol>
+
+<p>l’exemple de definició de regles per a les propietats és el següent.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-fx-background-color : #333356;
+-fx-font : 16px "serief";
+</code></pre></div></div>
+
+<p>Existeix una classe d’estil especial denominada .root definida en javafx. S’aplica al node arrel de l’objecte d’escena. Atés que tots els nodes de l’aplicació són fills del node arrel, les regles d’estil aplicades a aquesta classe es poden aplicar a tot l’escenari gràfic de l’aplicació.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.root
+{
+    -fx-font-family : "serief";
+    -fx-background1 : rgb(225,227,2255);
+}
+</code></pre></div></div>
+
+<h2 id="estils-de-classe">Estils de classe</h2>
+
+<p>Els estils de classe es poden crear agregant la seua definició a la nostra fulla d’estil. Per exemple;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.label1{
+    -fx-background-color : rgb(123,126,227);
+    -fx-padding : 5;
+    -fx-text-fill : rgb(245,123,201);
+</code></pre></div></div>
+
+<p>per afegir la classe d’estil esmentada anteriorment al node apropiat, utilitze el mètode getStyleClass().add().</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Button button = new Button("SUBMIT");
+button.getStyleClass().add(button1);
+</code></pre></div></div>
+
+<h2 id="estils-didentificació">Estils d’identificació</h2>
+
+<p>JavaFX ens brinda la possibilitat de crear l’estil per al node individual. El nom de l’estil es pot donar com el nom de ID precedit pel símbol de <em>almohadilla</em> (#).</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#submit-button{
+    -fx-font : bold 18pt "serief";
+    -fx-background-color : rgb(120,190,201);
+}
+</code></pre></div></div>
+
+<h2 id="establir-estils-en-línia">Establir estils en línia</h2>
+
+<p>JavaFX ens facilita definir les regles CSS en el propi codi de l’aplicació JavaFX. No obstant això, les regles definides en el codi de l’aplicació JavaFX tenen prioritat sobre els estils de la fulla d’estil.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Label label1 = new Label("Name: ");
+label1.setStyle("-fx-background-color : blue, -fx-text-fill : white");
+</code></pre></div></div>
+
+<p><a href="../../javafx.html">back</a></p>
+:ET

@@ -120,10 +120,10 @@ En JavaFX, TranslateTransition està representada per la classe javafx.animation
 
 - Propietats
 
-    - **setByX(double value)**: Aquesta és una propietat de tipus doble. Representa el valor de la coordenada X incrementada en el qual es deté la traducció. 
-    - **setByY(double value)**: Aquesta és una propietat de tipus doble. Representa el valor de la coordenada Y incrementada en el qual es deté la traducció.
-    - **setByZ(double value)**: Aquesta és una propietat de tipus doble. Representa el valor de la coordenada Z incrementada en el qual es deté la traducció. 
-    - **setDuration(Duration value)**: Aquesta és una propietat de tipus d'objecte de la classe Duració. Representa la duració de la transició del Traductor. 
+    - **setByX(double value)**: Aquesta és una propietat de tipus doble. Representa el valor de la coordenada X incrementada en el qual es deté la translació. 
+    - **setByY(double value)**: Aquesta és una propietat de tipus doble. Representa el valor de la coordenada Y incrementada en el qual es deté la translació.
+    - **setByZ(double value)**: Aquesta és una propietat de tipus doble. Representa el valor de la coordenada Z incrementada en el qual es deté la translació. 
+    - **setDuration(Duration value)**: Aquesta és una propietat de tipus d'objecte de la classe Duració. Representa la duració de la transició del translació. 
     - **setFromX(double value)**: Aquesta és una propietat de tipus doble. Representa el valor de la coordenada X a partir del qual comença la translació. 
     - **setFromY(double value)**: Aquesta és una propietat de tipus doble. Representa el valor de la coordenada Y a partir del qual comença la translació. Aquesta és una propietat de tipus doble. 
     - **setFromZ(double value)**: Aquesta és una propietat de tipus doble. Representa el valor de la coordenada Z a partir del qual comença la translació. 
