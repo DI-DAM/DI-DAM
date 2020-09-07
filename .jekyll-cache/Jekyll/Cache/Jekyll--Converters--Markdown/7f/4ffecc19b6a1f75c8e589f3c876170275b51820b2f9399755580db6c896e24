@@ -1,0 +1,317 @@
+I"�j<h1 id="interfície-dusuari-i-navegació">Interfície d’usuari i navegació</h1>
+
+<p>#Crear IU responsiva amb ConstraintLayout.</p>
+
+<p><a href="https://developer.android.com/reference/androidx/constraintlayout/widget/ConstraintLayout">ConstraintLayout</a> et permet crear dissenys grans i complexos amb una jerarquia de vistes plana (sense grups de vistes niades). És similar a <a href="https://developer.android.com/reference/android/widget/RelativeLayout">RelativeLayout</a> quant a que es presenten totes les vistes d’acord amb les relacions entre les vistes del mateix nivell i el disseny de nivell superior, però és més flexible que RelativeLayout i més fàcil d’usar amb l’editor de disseny d’Android Studio.</p>
+
+<p>Tota la potència de ConstraintLayout està disponible directament des de les eines visuals de l’editor de disseny, ja que la API de disseny i l’editor de disseny es van crear específicament per a funcionar en conjunt. Així, pots crear tot el teu disseny amb ConstraintLayout arrossegant i soltant elements, en lloc d’editar el XML.</p>
+
+<p>En aquesta pàgina, s’inclou una guia per a crear un disseny amb ConstraintLayout en Android Studio 3.0 o versions posteriors. Si desitges obtindre més informació sobre l’editor de disseny, consulta la <a href="https://developer.android.com/studio/write/layout-editor">guia d’Android Studio sobre Com crear una IU amb l’editor de disseny</a>.</p>
+
+<p>Per a veure una sèrie de dissenys que pots crear amb ConstraintLayout, consulta el <a href="https://github.com/android/views-widgets-samples/tree/master/ConstraintLayoutExamples">projecte d’exemples de Constraint Layout en GitHub</a>.</p>
+
+<p>https://www.youtube.com/watch?v=XamMbnzI5vE&amp;feature=youtu.be</p>
+
+<h2 id="descripció-general-de-les-restriccions">Descripció general de les restriccions</h2>
+
+<p>Per a definir la posició d’una vista en ConstraintLayout, has <strong>d’agregar almenys una restricció horitzontal i una vertical</strong>. Cada restricció representa una connexió o alineació amb una altra vista, el disseny de nivell superior o una guia invisible. Cada restricció defineix la posició de la vista al llarg de l’eix vertical o horitzontal, per la qual cosa cada vista ha de tindre un mínim d’una restricció per a cada eix, encara que sovint es necessiten més.</p>
+
+<p>Quan soltes una vista en l’editor de disseny, aquesta roman on la deixes, fins i tot si no té restriccions. Tanmateix, això només serveix per a facilitar l’edició. <strong>Si una vista no té restriccions quan executes el seu disseny en un dispositiu, s’obri en la posició [0,0]</strong> (la cantonada superior esquerra).</p>
+
+<p>En la figura 1, el disseny es veu bé en l’editor, però no hi ha restricció vertical en la vista C. Quan aquest disseny s’obri en un dispositiu, la vista C s’alinea horitzontalment amb les vores esquerre i dret de la vista A, però apareix en la part superior de la pantalla perquè no té restricció vertical.</p>
+
+<p><img src="./images/constraintLayout1.png" alt="constraintlayout1" />
+Figura 1: L’editor mostra la vista C davall de la A, però no té restricció vertical.</p>
+
+<p><img src="./images/constraintLayout2.png" alt="constraintlayout2" />
+Figura 2: La vista C ara té una restricció vertical davall de la vista A</p>
+
+<p>Si bé l’absència de restriccions no causa errors de compilació, l’editor de disseny mostrarà un error en la barra d’eines. Per a veure els errors i altres advertiments, fes clic en <strong>Show Warnings and Errors</strong><img src="./images/errors.png" alt="errors" /> . Per a evitar que falten restriccions, l’editor de disseny pot agregar restriccions automàticament amb les funcions Infer Constraints i Autoconnect.</p>
+
+<h2 id="com-agregar-constraintlayout-al-teu-projecte">Com agregar ConstraintLayout al teu projecte</h2>
+
+<p>Per a usar ConstraintLayout en el teu projecte, segueix aquests passos:</p>
+
+<ul>
+  <li>Assegura’t de tindre el repositori maven.google.com declarat en l’arxiu build.gradle de nivell de mòdul:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>repositories {
+	google()
+}
+</code></pre></div></div>
+
+<ul>
+  <li>Agrega la biblioteca com una dependència en el mateix arxiu build.gradle, com es mostra en el següent exemple. Tingues en compte que l’última versió pot ser diferent de la que es mostra en l’exemple:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dependencies {
+	implementation "androidx.constraintlayout:constraintlayout:2.0.0-rc1"
+}
+</code></pre></div></div>
+
+<ul>
+  <li>En la barra d’eines o notificació de sincronització, fes clic en Sync Project with Gradle Files.</li>
+</ul>
+
+<p>Ja està tot llest per a crear el disseny amb ConstraintLayout.</p>
+
+<h2 id="com-convertir-un-disseny">Com convertir un disseny</h2>
+
+<p>Per a convertir un disseny existent en un de ConstraintLayout, segueix aquests passos:</p>
+
+<p>Obri el disseny existent en Android Studio i fes clic en la pestanya Design, en la part inferior de la finestra de l’editor.
+En la finestra Component Tree, fes clic amb el botó dret en el disseny i, després, en Convert layout to ConstraintLayout.</p>
+
+<p><img src="./images/convertir.png" alt="convertir" /></p>
+
+<p>Figura 3: Menú per a convertir un disseny en ConstraintLayout</p>
+
+<h2 id="com-crear-un-disseny-nou">Com crear un disseny nou</h2>
+
+<p>Per a iniciar un arxiu de disseny amb restriccions nou, segueix aquests passos:</p>
+
+<ul>
+  <li>En la finestra Project, fes clic en la carpeta del mòdul i, després, selecciona File &gt; New &gt; XML &gt; Layout XML.</li>
+  <li>Ingressa un nom per a l’arxiu de disseny i “androidx.constraintlayout.widget.ConstraintLayout” en Root Tag.</li>
+  <li>Fes clic en Finish.</li>
+</ul>
+
+<h2 id="com-agregar-o-llevar-una-restricció">Com agregar o llevar una restricció</h2>
+
+<p>Per a agregar una restricció, fes el següent:</p>
+
+<p><a href="https://developer.android.com/images/training/constraint-layout/constraint-layout-constrain-left.mov"><img src="https://developer.android.com/images/training/constraint-layout/constraint-layout-constrain-left.mov" alt="video creació layout costat esquerre" /></a></p>
+
+<p>El costat esquerre d’una vista està restringit al costat esquerre de l’element superior</p>
+
+<ol>
+  <li>Arrossega una vista des de la finestra Palette fins a l’editor.
+Quan agregues una vista en un ConstraintLayout, es mostra un quadre de límit amb controladors de canvi de grandària quadrats en cada cantonada i controladors de restriccions circulars en cada costat.</li>
+  <li>Fes clic en la vista per a seleccionar-la.</li>
+  <li>Realitza alguna de les següents accions:
+    <ul>
+      <li>Fes clic en un controlador de restricció i arrossega’l fins a un punt d’ancoratge disponible. Aqueix punt pot ser la vora d’una altra vista, la vora del disseny o una guia. Tingues en compte que, a mesura que arrossegues el controlador de restriccions, l’editor de disseny mostra possibles ancoratges de connexió i superposicions (aquestes últimes en color blau).</li>
+      <li>Fes clic en un dels botons de Create <img src="./images/attributesplus.png" alt="botoplus" /> a connection en la secció Layout de la finestra Attributes, com es mostra en la figura.
+<img src="./images/constraintLayout3.png" alt="botoplus" />
+Figura: La secció Layout de la finestra Attributes et permet crear connexions.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>Quan es crea la restricció, l’editor li atorga un marge predeterminat per a separar les dues vistes.</p>
+
+<p>Quan crees restriccions, recorda les següents <strong>regles</strong>:</p>
+
+<ul>
+  <li>Cada vista ha de tindre almenys <strong>dues restriccions, una horitzontal i una vertical</strong>.</li>
+  <li>Pots crear <strong>restriccions només entre un controlador de restricció i un punt d’ancoratge que compartisquen el mateix pla</strong>. Per tant, un pla vertical (els costats esquerre i dret) d’una vista pot limitar-se només a un altre pla vertical; i les línies de base només poden limitar-se a altres línies de base.</li>
+  <li>Cada identificador de restricció es pot usar per a una sola restricció, però és possible crear múltiples restriccions (des de diferents vistes) en el mateix punt d’ancoratge.</li>
+</ul>
+
+<p>Per a <strong>esborrar</strong> una restricció, pots optar per alguna de les següents alternatives:</p>
+
+<ul>
+  <li>
+    <p>Fes clic en una restricció per a seleccionar-la i, després, pressiona <strong>Delete</strong>.</p>
+  </li>
+  <li>
+    <p>Mantingues pressionat Control (<em>Command</em> en macOS) i, després, fes clic en un ancoratge de restricció. Quan la restricció es mostra de color roig, pots fer clic per a esborrar-la, com s’il·lustra en la figura.</p>
+  </li>
+</ul>
+
+<p><img src="./images/constraintLayout4.png" alt="constraintlayout4" />
+Figura: Quan una restricció es mostra de color roig, pots fer clic per a esborrar-la</p>
+
+<ul>
+  <li>En la secció Layout de la finestra Attributes, fes clic en un ancoratge de restricció, com es mostra en la figura.
+<img src="./images/constraintLayout5.png" alt="constraintlayout5" />
+Figura: Fes clic en un ancoratge de restricció per a esborrar-lo.</li>
+</ul>
+
+<p>Si agregues restriccions oposades en una vista, les línies de restricció es tornen ondulades com un ressort per a indicar les forces oposades, segons es mostra en el vídeo. L’efecte és més visible quan la grandària de la vista es defineix com “Fixed” o “Wrap content”, i en aquest cas la vista se centra entre les restriccions. Si en canvi desitges que la vista s’expandisca per a ajustar-se a les restriccions, modifica la manera de grandària a “Match constraints”; finalment, si desitges mantindre la grandària actual, però moure la vista perquè no estiga centrada, ajusta el biaix (sesgo) de restriccions.</p>
+
+<p><a href="https://developer.android.com/images/training/constraint-layout/constraint-layout-opposing.mov"><img src="https://developer.android.com/images/training/constraint-layout/constraint-layout-opposing.mov" alt="video creació layout costat esquerre" /></a>
+Vídeo: Com agregar una restricció oposada a una existent</p>
+
+<p>Pots usar restriccions per a aconseguir diferents tipus de comportament de disseny, com es descriu en les següents seccions.</p>
+
+<h3 id="posició-superior">Posició superior</h3>
+
+<p>Restringeix el costat d’una vista a la vora corresponent del disseny.</p>
+
+<p>En la figura, el costat esquerre de la vista està connectat a la vora esquerra del disseny de nivell superior. Pots definir la distància des de la vora amb marge.</p>
+
+<p><img src="./images/constraintLayout6.png" alt="constraintlayout6" />
+Figura: Restricció horitzontal de l’element superior</p>
+
+<h3 id="posició-dordre">Posició d’ordre</h3>
+
+<p>Defineix l’ordre d’aparició de dues vistes, ja siga de manera horitzontal o vertical.</p>
+
+<p>En la figura, la vista B està restringida a mostrar-se sempre a la dreta de A, i C està restringida a aparéixer davall de A. No obstant això, aquestes restriccions no impliquen alineació, per la qual cosa B pot moure’s cap amunt i a baix.</p>
+
+<p><img src="./images/constraintLayout7.png" alt="constraintlayout7" />
+Figura: Restricció horitzontal i vertical</p>
+
+<h3 id="alineació">Alineació</h3>
+
+<p>Alinea la vora d’una vista amb la mateixa vora d’una altra vista.</p>
+
+<p>En la figura, el costat esquerre de B està alineat amb el costat esquerre de A. Si desitges alinear els centres de les vistes, crea una restricció en tots dos costats.</p>
+
+<p><img src="./images/constraintLayout8.png" alt="constraintlayout8" /></p>
+
+<p>Pots compensar l’alineació arrossegant la vista des de la restricció cap a dintre. Per exemple, en la figura següent, es mostra la vista B amb 24 dp de desplaçament en l’alineació. El desplaçament està definit pel marge de la vista restringida.</p>
+
+<p><img src="./images/constraintLayout9.png" alt="constraintlayout9" /></p>
+
+<p>També pots seleccionar totes les vistes que vols alinear i, després, fer clic en Align <img src="./images/align.png" alt="align" />en la barra d’eines per a seleccionar el tipus d’alineació.</p>
+
+<h3 id="alineació-de-línia-de-base">Alineació de línia de base</h3>
+
+<p>Alinea la línia de base de text d’una vista amb la línia de base de text d’una altra.</p>
+
+<p>En la figura, la primera línia de B està alineada amb el text de A.</p>
+
+<p>Per a crear una restricció de línia de base, fes clic amb el botó dret en la vista de text que desitges restringir i, després, fes clic en <strong>Show Baseline</strong>. Després, fes clic en la línia de base de text i arrossega-la fins a una altra línia de base.</p>
+
+<p><img src="./images/constraintLayout10.png" alt="constraintlayout10" /></p>
+
+<h3 id="com-aplicar-una-restricció-a-una-guia">Com aplicar una restricció a una guia</h3>
+
+<p>Pots agregar una guia vertical o horitzontal en la qual siga possible restringir les vistes; la guia serà invisible per als usuaris de l’aplicació. Pots col·locar la guia dins del disseny segons les unitats de dp o percentatge, en relació amb la vora del disseny.</p>
+
+<p>Per a crear una guia, fes clic en <strong>Guidelines</strong> <img src="./images/guidelines.png" alt="guidelines" /> en la barra d’eines i, després, en <strong>Add Vertical Guideline</strong> o <strong>Add Horitzontal Guideline</strong>.</p>
+
+<p>Arrossega la línia puntejada per a canviar la posició i fes clic en el cercle que està en la vora de la guia a fi d’activar o desactivar la manera de mesurament.</p>
+
+<p><img src="./images/constraintLayout11.png" alt="constraintlayout11" /></p>
+
+<h3 id="com-aplicar-una-restricció-a-una-barrera">Com aplicar una restricció a una barrera</h3>
+
+<p>Com succeeix amb les guies, una barrera és una línia invisible respecte de la qual pots restringir vistes. No obstant això, la barrera no defineix la seua pròpia posició, sinó que es desplaça en funció de la posició de les vistes que conté. Això és útil si desitges restringir una vista a un conjunt de vistes en lloc d’una vista específica.</p>
+
+<p>Per exemple, en la figura es mostra que la vista C està limitada al costat dret d’una barrera. La barrera s’estableix en l’“extrem” (o el costat dret en un disseny d’esquerra a dreta) de la vista A i la vista B. D’aquesta manera, el desplaçament de la barrera depén de si el costat dret de la vista A o la vista B és el que està més a la dreta.</p>
+
+<p><img src="./images/constraintLayout12.png" alt="constraintlayout12" /></p>
+
+<p><img src="./images/constraintLayout13.png" alt="constraintlayout13" /></p>
+
+<p>Per a crear una barrera, segueix aquests passos:</p>
+
+<ol>
+  <li>Fes clic en <strong>Guidelines</strong> <img src="./images/guidelines.png" alt="guidelines" /> en la barra d’eines i, després, en <strong>Add Vertical Barrier</strong> o <strong>Add Horitzontal Barrier</strong>.</li>
+  <li>En la finestra <strong>Component Tree</strong>, selecciona les vistes que desitges dins de la barrera i arrossega-les fins al component de barrera.</li>
+  <li>Selecciona la barrera en <strong>Component Tree</strong>, obri la finestra <strong>Attributes</strong> <img src="./images/atributes.png" alt="atributes" /> i, després, configura la <strong>barrierDirection</strong>.</li>
+</ol>
+
+<p>Ara pots crear una restricció des d’una altra vista fins a la barrera.</p>
+
+<p>També pots restringir a la barrera les vistes que estan dins de la barrera. D’aquesta manera, pots assegurar-te que totes les vistes de la barrera sempre estiguen alineades entre si, encara que no sàpies quina de les vistes serà la més llarga o la més alta.</p>
+
+<p>També pots incloure una guia dins d’una barrera a fi de garantir una posició “mínima” de la barrera.</p>
+
+<h3 id="com-ajustar-el-biaix-sesgo-de-restriccions">Com ajustar el biaix (<em>sesgo</em>) de restriccions</h3>
+
+<p>Quan agregues una restricció a banda i banda d’una vista (i la grandària de la mateixa dimensió és “Fixed” o “Wrap content”), la vista se centra entre les dues restriccions amb un biaix del 50% de manera predeterminada. Per a ajustar el biaix, arrossega el control lliscant en la finestra <strong>Attributes</strong> o arrossega la vista.</p>
+
+<p>En canvi, si vols que la vista s’estire per a ajustar-se a les restriccions, canvia la grandària a “Match constraints”.</p>
+
+<h3 id="com-ajustar-la-grandària-de-la-vista">Com ajustar la grandària de la vista</h3>
+
+<p>Pots usar els controladors de les cantonades per a canviar la grandària d’una vista, però aquesta acció fixa la grandària dins del codi a fi que la vista no canvie de grandària per a diferents continguts o grandàries de pantalla. Si vols seleccionar una manera de grandària diferent, fes clic en una vista i obri la finestra <strong>Attributes</strong> <img src="./images/atributes.png" alt="atributes" /> en el costat dret de l’editor.</p>
+
+<p>Prop de la part superior de la finestra <strong>Attributes</strong>, es troba l’inspector de vistes, que inclou controls per a diversos atributs de disseny, com es mostra en la figura (disponible solo per a vistes en un disseny de restriccions).</p>
+
+<p><img src="./images/constraintLayout14.png" alt="constraintlayout14" />
+Figura 14</p>
+
+<p>Per a canviar la forma en què es calculen l’altura i l’ample, fes clic en els símbols que s’indiquen amb la llegenda 3 en la figura. Els símbols representen la mode de grandària de la següent manera (fes clic en el símbol per a alternar entre les diferents configuracions):</p>
+
+<ul>
+  <li><img src="./images/fixed.png" alt="fixed" /> <strong>Fixed</strong>: Has de definir una dimensió específica en el quadre de text de baix o canviar la grandària de la vista en l’editor.</li>
+  <li><img src="./images/wrap.png" alt="wrap" /> <strong>Wrap Content</strong>: La vista s’expandeix només el necessari per a ajustar-se al seu contingut.</li>
+  <li><img src="./images/match.png" alt="match" /> <strong>Match Constraints</strong>: La vista s’expandeix tant com siga possible per a ajustar-se a les restriccions de cada costat (després de restar els marges de la vista). No obstant això, pots modificar aqueix comportament amb els següents atributs i valors (aquests atributs només tenen efecte quan estableixes que l’ample de la vista coincidisca amb les restriccions):
+    <ul>
+      <li><strong>layout_constraintWidth_default</strong>
+        <ul>
+          <li><strong>spread</strong>: Expandeix la vista tant com siga possible per a ajustar-la a les restriccions de cada costat. Aquest és el comportament predeterminat.</li>
+          <li>wrap: Expandeix la vista només el necessari per a ajustar el seu contingut, però permet que siga més xicoteta si les restriccions el requereixen. Per tant, la diferència entre això i usar Wrap Content (a dalt) és que, quan s’estableix l’ample en Wrap Content, sempre ha de coincidir exactament amb l’ample del contingut; d’altra banda, quan s’usa Match Constraints amb layout_constraintWidth_default establit en wrap, també es permet que la vista siga més xicoteta que l’ample del contingut.</li>
+        </ul>
+      </li>
+      <li><strong>layout_constraintWidth_min</strong>: Presa una dimensió en dp per a l’ample mínim de la vista.</li>
+      <li><strong>layout_constraintWidth_max</strong>: Presa una dimensió en dp per a l’ample màxim de la vista.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>No obstant això, si la dimensió determinada té una sola restricció, la vista s’expandeix per a ajustar-se al seu contingut. L’ús d’aquesta manera en l’ample o l’altura també et permet establir una proporció de grandària.</p>
+
+<blockquote>
+  <p>Nota: No pots usar match_parent per a cap vista en un ConstraintLayout. En canvi, has d’usar “Match Constraints” (0dp).</p>
+</blockquote>
+
+<h3 id="establiment-de-la-grandària-com-a-proporció">Establiment de la grandària com a proporció</h3>
+
+<p>Pots establir la grandària de la vista en una proporció, com 16:9, si almenys una de les dimensions de la vista està configurada com “Match Constraints” (0dp). Per a habilitar la proporció, fes clic en <strong>Toggle Aspect Ràtio Constraint</strong> (llegenda 1 en la figura anterior) i, després, ingressa la proporció d’ample:altura en l’entrada que es mostra.</p>
+
+<p>Si tant l’ample com l’altura estan configurats per a ajustar-se a les restriccions, pots fer clic en <strong>Toggle Aspect Ràtio Constraint</strong> a fi de seleccionar quina dimensió es basa en una proporció de l’altra. L’inspector de vistes connecta les vores corresponents amb una línia contínua per a indicar quina vista s’estableix com a proporció.</p>
+
+<p>Per exemple, si estableixes tots dos costats com “Match Constraints”, fes clic en <strong>Toggle Aspect Ràtio Constraint</strong> dues vegades per a definir l’ample com a proporció de l’altura. Ara la grandària total depén de l’altura de la vista (que es pot definir de qualsevol forma), com es mostra en la figura.</p>
+
+<p><img src="./images/constraintLayout15.png" alt="constraintlayout15" /></p>
+
+<h3 id="com-ajustar-els-marges-de-la-vista">Com ajustar els marges de la vista</h3>
+
+<p>Per a assegurar-te que totes les vistes estiguen espaiades de manera uniforme, fes clic en Margin <img src="./images/margin.png" alt="Margin" /> en la barra d’eines a fi de seleccionar el marge predeterminat per a cada vista que agregues al disseny. Qualsevol canvi que realitzes en el marge predeterminat s’aplicarà només a les vistes que agregues a partir d’aqueix moment.</p>
+
+<p>Per a controlar el marge de cada vista en la finestra Attributes, fes clic en el número de la línia que representa cada restricció (en la figura 14, la llegenda 4 mostra que es va establir el marge inferior en 16 dp).</p>
+
+<p><img src="./images/margin2.png" alt="Margin 2" /></p>
+
+<p>Tots els marges que ofereix l’eina són factors de 8 dp, la qual cosa t’ajudarà a alinear les vistes amb les recomanacions de quadrícula quadrada de 8 dp de Material Design.</p>
+
+<h3 id="com-controlar-grups-lineals-amb-una-cadena">Com controlar grups lineals amb una cadena</h3>
+
+<p><img src="./images/constraintLayout16.png" alt="constraintlayout16" /></p>
+
+<p>Una cadena és un grup de vistes que estan vinculades entre si amb restriccions de posició bidireccionals. Dins d’una cadena, es poden distribuir les vistes de manera horitzontal o vertical.</p>
+
+<p><img src="./images/constraintLayout17.png" alt="constraintlayout17" /></p>
+
+<p>Les cadenes es poden dissenyar d’una de les següents maneres:</p>
+
+<ol>
+  <li><strong>Spread</strong>: Les vistes es distribueixen uniformement (després de restar els marges). És el valor predeterminat.</li>
+  <li><strong>Spread inside</strong>: La primera i l’última vista es fixen a les restriccions de cada extrem de la cadena i la resta es distribueix de manera uniforme.</li>
+  <li><strong>Weighted</strong>: Quan es defineix la cadena com spread o spread inside, pots configurar una o més vistes com “Match Constraints” (0dp) per a omplir l’espai restant. De manera predeterminada, es distribueix l’espai uniformement entre les vistes configurades com “Match Constraints”, però pots assignar una ponderació d’importància a cada vista amb els atributs <strong>layout_constraintHorizontal_weight</strong> i <strong>layout_constraintVertical_weight</strong>. Això funciona de la mateixa manera que layout_weight en un <a href="https://developer.android.com/guide/topics/ui/layout/linear">disseny lineal</a>. Per tant, la vista amb el valor de ponderació més alt obté la major quantitat d’espai; les vistes que tinguen la mateixa ponderació obtindran la mateixa quantitat d’espai.</li>
+  <li><strong>Packed</strong>: S’agrupen les vistes (una vegada que es resten els marges). Després pots ajustar el biaix de tota la cadena (esquerra/dreta o a dalt/a baix) canviant el biaix de la vista d’extrem de la cadena.</li>
+</ol>
+
+<p>La vista de “extrem” de la cadena (la situada més a l’esquerra en una cadena horitzontal i més amunt en una cadena vertical) defineix l’estil de la cadena en XML. No obstant això, pots seleccionar qualsevol vista en la cadena <img src="./images/cadena.png" alt="cadena" /> i fer clic en el botó de la cadena que apareix davall de la vista per a alternar entre <strong>Spread</strong>, <strong>Spread inside</strong> i <strong>Packed</strong>.</p>
+
+<p>Per a crear una cadena, selecciona totes les vistes que s’inclouran en ella, fes clic amb el botó dret en una de les vistes, selecciona <strong>Chains</strong> i, després, <strong>Center Horizontally</strong> o <strong>Center Vertically</strong>, com es mostra en el vídeo:</p>
+
+<p><a href="https://developer.android.com/images/training/constraint-layout/constraint-layout-chain.mov"><img src="https://developer.android.com/images/training/constraint-layout/constraint-layout-chain.mov" alt="video creació layout costat esquerre" /></a></p>
+
+<p>A continuació, s’esmenten altres qüestions que has de tindre en compte quan uses cadenes:</p>
+
+<ul>
+  <li>Una vista pot formar part d’una cadena horitzontal i d’una cadena vertical, la qual cosa facilita la creació de dissenys de quadrícula flexibles.</li>
+  <li>La cadena funciona correctament només si cada extrem està restringit a un altre objecte en el mateix eix, com es mostra en la figura 14.</li>
+  <li>Encara que l’orientació d’una cadena és vertical o horitzontal, quan se l’usa no s’alineen les vistes en aqueixa direcció. Per tant, has d’assegurar-te d’incloure altres restriccions per a aconseguir la posició adequada de cada vista en la cadena, com a restriccions d’alineació.</li>
+</ul>
+
+<h3 id="com-crear-restriccions-automàticament">Com crear restriccions automàticament</h3>
+
+<p>En lloc d’agregar restriccions a cada vista a mesura que les col·loques en el disseny, pots moure cada vista a les posicions que desitges i, després, fer clic en Infer Constraints per a crear restriccions de manera automàtica.</p>
+
+<p>Infer Constraints analitza el disseny a fi de determinar el conjunt de restriccions més efectiu per a totes les vistes. La seua tasca és restringir les vistes a les seues posicions actuals i, al mateix temps, brindar flexibilitat. Possiblement has de realitzar alguns ajustos per a assegurar-te que el disseny responga com ho desitges davant diferents grandàries de pantalla i orientacions.</p>
+
+<p>Autoconnect to parent és una funció separada que també pots habilitar. Si l’habilites, quan agregues vistes secundàries a una superior, aquesta funció crearà automàticament dues o més restriccions per a cada vista a mesura que les agregues al disseny, però només quan siga apropiat restringir la vista al disseny de nivell superior. La connexió automàtica no crea restriccions per a altres vistes del disseny.</p>
+
+<p>La connexió automàtica està inhabilitada de manera predeterminada. Per a habilitar-la, fes clic en Enable Autoconnection to Parent en la barra d’eines de l’editor de disseny.</p>
+
+<p><a href="../..">back</a></p>
+:ET

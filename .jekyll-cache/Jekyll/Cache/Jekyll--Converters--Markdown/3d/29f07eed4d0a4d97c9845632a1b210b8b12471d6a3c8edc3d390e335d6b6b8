@@ -1,4 +1,4 @@
-I"�<h1 id="java-fx">Java FX</h1>
+I"�<h1 id="java-fx">Java FX</h1>
 
 <p>Podem trobar tota la informació referent a la instal·lació i configuració en la pàgina de Javafx:
 <a href="https://openjfx.io/openjfx-docs/">https://openjfx.io/openjfx-docs/</a></p>
@@ -150,6 +150,7 @@
       <li><a href="./sceneBuilder/dragAndDrop/dNdExempleImage.html">Exemple D&amp;D amb imatges</a></li>
     </ul>
   </li>
+  <li><a href="./sceneBuilder/css/css.html">CSS</a></li>
 </ul>
 
 <p>informació de: https://docs.oracle.com/</p>

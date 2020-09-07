@@ -1,0 +1,259 @@
+<h1 id="interfície-dusuari-i-navegació">Interfície d’usuari i navegació</h1>
+
+<p>#Disseny</p>
+
+<p>Un disseny defineix l’estructura d’una interfície d’usuari en la teua aplicació, com, per exemple, en una activitat. Tots els elements del disseny es creen usant una jerarquia d’objectes View i ViewGroup. Una <a href="https://developer.android.com/reference/android/view/View?hl=es-419">View</a> sol mostrar un element que l’usuari pot veure i amb el qual pot interactuar. Per part seua, <a href="https://developer.android.com/reference/android/view/ViewGroup?hl=es-419">ViewGroup</a> és un contenidor invisible que defineix l’estructura de disseny de View i altres objectes ViewGroup.</p>
+
+<p><img src="./images/viewgroup.png" alt="view group" /></p>
+
+<p>Els objectes View solen dir-se “widgets” i poden ser una de les moltes subclasses, com <a href="https://developer.android.com/reference/android/widget/Button?hl=es-419">Button</a> o <a href="https://developer.android.com/reference/android/widget/TextView?hl=es-419">TextView</a>. Els objectes ViewGroup es denominen generalment “dissenys” i poden ser de molts tipus que proporcionen una estructura diferent, com <a href="https://developer.android.com/reference/android/widget/LinearLayout?hl=es-419">LinearLayout</a> o <a href="https://developer.android.com/reference/androidx/constraintlayout/widget/ConstraintLayout?hl=es-419">ConstraintLayout</a>.</p>
+
+<p>Pots declarar un disseny de dues maneres:</p>
+
+<ul>
+  <li>
+    <p><strong>Declarar elements de la IU en XML</strong>. Android proporciona un vocabulari XML simple que coincideix amb les classes i subclasses de vistes, com les que s’usen per a widgets i dissenys.</p>
+
+    <p>També pots utilitzar la funció Layout Editor d’Android Studio per a crear el teu disseny XML mitjançant una interfície d’arrossegar i soltar.</p>
+  </li>
+  <li>
+    <p><strong>Crear una instància d’elements de disseny durant el temps d’execució</strong>. La teua aplicació pot crear objectes View i ViewGroup (i manipular les seues propietats) de manera programàtica.</p>
+  </li>
+</ul>
+
+<p>Declarar el teu IU en XML et permet separar la presentació de la teua aplicació del codi que controla el seu comportament. L’ús d’arxius XML també facilita la creació de diferents dissenys per a diferents grandàries de pantalla i orientacions.</p>
+
+<p>El marc de treball d’Android t’ofereix la flexibilitat d’usar un d’aquests mètodes o tots dos per a crear l’IU de la teua aplicació. Per exemple, pots declarar els dissenys predeterminats de la teua aplicació en XML i, després, modificar el disseny durant el temps d’execució.</p>
+
+<blockquote>
+  <p>Suggeriment: Per a depurar el teu disseny durant el temps d’execució, usa l’eina <a href="https://developer.android.com/studio/debug/layout-inspector?hl=es-419">Layout Inspector</a>.</p>
+</blockquote>
+
+<h2 id="escriu-en-xml">Escriu en XML</h2>
+
+<p>En usar vocabulari XML d’Android, pots crear ràpidament dissenys d’IU i dels elements de pantalla que contenen, de la mateixa manera que cregues pàgines web en HTML, amb una sèrie d’elements niats.</p>
+
+<p>Cada arxiu de disseny ha de contindre exactament un element arrel, que ha de ser un objecte View o ViewGroup. Una vegada que hages definit l’element arrel, pots agregar ginys o objectes de disseny addicionals com a elements secundaris per a crear gradualment una jerarquia de vistes que definisca el teu disseny. Per exemple, ací et vam mostrar un disseny XML que usa un LinearLayout vertical per a incloure una TextView i un Button:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical" &gt;
+    &lt;TextView android:id="@+id/text"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Hello, I am a TextView" /&gt;
+    &lt;Button android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello, I am a Button" /&gt;
+&lt;/LinearLayout&gt;
+</code></pre></div></div>
+
+<p>Després de declarar el teu disseny en XML, guarda l’arxiu amb l’extensió .xml en el directori cap de bestiar/layout/ del teu projecte d’Android perquè puga compilar-se correctament.</p>
+
+<p>Pots trobar més informació sobre la sintaxi per a un arxiu de disseny XML en el document Recursos de disseny.</p>
+
+<h2 id="càrrega-el-recurs-xml">Càrrega el recurs XML</h2>
+
+<p>Quan compiles la teua aplicació, cada arxiu de disseny XML es compila en un recurs View. Has de carregar el recurs de disseny des del codi de la teua aplicació, en la implementació de devolució de la cridada a <a href="https://developer.android.com/reference/android/app/Activity?hl=es-419#onCreate(android.os.Bundle)">Activity.onCreate()</a>. Per a això, crida a <a href="https://developer.android.com/reference/android/app/Activity?hl=es-419#setContentView(int)">setContentView()</a> passant la referència al teu recurs de disseny en forma de R.layout.layout_file_name. Per exemple, si el teu disseny XML es guarda com main_layout.xml, els carregaràs per a la teua activitat de la mateixa manera:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.main_layout);
+}
+</code></pre></div></div>
+
+<p>El marc de treball d’Android crida al mètode de devolució anomenat onCreate() en la teua activitat quan aquesta es llança.</p>
+
+<h2 id="atributs">Atributs</h2>
+
+<p>Cada objecte View i ViewGroup admet la seua pròpia varietat d’atributs XML. Alguns atributs són específics d’un objecte View (per exemple, TextView admet l’atribut textSize), encara que aquests atributs també són heretats per qualsevol objecte View que puga estendre aquesta classe. Alguns són comuns per a tots els objectes View, perquè s’hereten de la classe arrel View (com l’atribut id). Altres atributs es consideren “paràmetres de disseny” i són atributs que descriuen unes certes orientacions de disseny de l’objecte View, tal com el defineix l’objecte principal ViewGroup d’aqueix objecte.</p>
+
+<h2 id="id">ID</h2>
+
+<p>Qualsevol objecte View pot tindre un ID enter associat per a identificar-se de manera única dins de l’arbre. Quan es compila l’aplicació, es fa referència a aquest ID com un nombre enter, però l’ID s’assigna normalment en l’arxiu XML de disseny com una string de l’atribut id. Aquest és un atribut XML comú per a tots els objectes View (definit per la classe View) i l’utilitzaràs molt sovint La sintaxi d’un ID dins d’una etiqueta XML és la següent:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>android:id="@+id/my_button"
+</code></pre></div></div>
+
+<p>El símbol arrova (<strong>@</strong>) al començament de la string indica que l’analitzador de XML ha d’analitzar i expandir la resta de la string de ID i identificar-la com un recurs d’ID. El símbol més (<strong>+</strong>) significa que és un nou nom de recurs que s’ha de crear i agregar als nostres recursos (en l’arxiu R.java). El marc de treball d’Android ofereix altres recursos d’ID. En fer referència a un ID de recurs d’Android, no necessites el símbol més, però has d’agregar l’espai de noms de paquet android de la següent manera:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>android:id="@android:id/empty"
+</code></pre></div></div>
+
+<p>Amb l’espai de noms de paquet android establit, ara fem referència a un ID de la classe de recursos android.R, en lloc de la classe de recursos local.</p>
+
+<p>Per a crear vistes i fer referència a elles des de l’aplicació, pots seguir aquest patró comú:</p>
+
+<p>Definir una vista o un widget en l’arxiu de disseny i assignar-li un ID únic:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Button android:id="@+id/my_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_button_text"/&gt;
+</code></pre></div></div>
+
+<p>Després, crear una instància de l’objecte View i capturar-la des del disseny (generalment en el mètode onCreate()):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Button myButton = (Button) findViewById(R.id.my_button);
+</code></pre></div></div>
+
+<p>Definir ID per a objectes View és important quan es crea un <a href="https://developer.android.com/reference/android/widget/RelativeLayout?hl=es-419">RelativeLayout</a>. En un disseny relatiu, les vistes del mateix nivell poden definir el seu disseny en funció d’una altra vista del mateix nivell, que s’identifica amb un ID únic.</p>
+
+<p>No és necessari que un ID siga únic en tot l’arbre, però ha de ser únic dins de la part de l’arbre en la qual estàs buscant (que sovint pot ser l’arbre complet, per la qual cosa és millor que, en la mesura del possible, siga sempre únic).</p>
+
+<h2 id="paràmetres-de-disseny">Paràmetres de disseny</h2>
+
+<p>Els atributs de disseny XML denominats <em>layout_something</em> defineixen paràmetres de disseny per a l’objecte View que són adequats per a l’objecte ViewGroup en el qual resideix.</p>
+
+<p>Cada classe ViewGroup implementa una classe aniada que estén <a href="https://developer.android.com/reference/android/view/ViewGroup.LayoutParams?hl=es-419">ViewGroup.LayoutParams</a>. Aquesta subclasse conté tipus de propietat que defineixen la grandària i la posició de cada vista secundària, segons resulte apropiat per al grup de vistes. Com pots veure en la figura, el grup de vistes principal defineix paràmetres de disseny per a cada vista secundària (inclòs el grup de vistes secundari).</p>
+
+<p><img src="./images/disseny.png" alt="view group" /></p>
+
+<p>Figura: Visualització d’una jerarquia de vistes amb paràmetres de disseny associats amb cada vista</p>
+
+<p>Tingues en compte que cada subclasse LayoutParams té la seua pròpia sintaxi per a configurar valors. Cada element secundari ha de definir LayoutParams adequats per al seu element primari, encara que també pot definir diferents LayoutParams per als seus propis elements secundaris.</p>
+
+<p>Tots els grups de vistes inclouen un ample i una altura (<strong>layout_width</strong> i <strong>layout_height</strong>), i cada vista ha de definir-los. Molts LayoutParams també inclouen marges i vores opcionals.</p>
+
+<p>Pots especificar l’ample i l’altura amb mesures exactes, encara que probablement no vols fer-ho amb molta freqüència. Generalment, usaràs una d’aquestes constants per a establir l’ample o l’altura:</p>
+
+<ul>
+  <li><strong>wrap_content</strong> indica a la teua vista que modifique la seua grandària conforme als requisits d’aquest contingut.</li>
+  <li><strong>match_parent</strong> indica a la teua vista que s’engrandisca tant com ho permeta el seu grup de vistes principal.</li>
+</ul>
+
+<p>En general, no es recomana especificar l’ample ni l’altura d’un disseny amb unitats absolutes com a píxels. En canvi, l’ús de mesures relatives com a <strong>unitats de píxels independents de densitat (dp), wrap_content o match_parent</strong> és un millor enfocament, ja que ajuda a garantir que la teua aplicació es mostre correctament en dispositius amb pantalles de diferents grandàries. Els tipus de mesures acceptats es defineixen en el document Recursos disponibles.</p>
+
+<h2 id="posició-del-disseny">Posició del disseny</h2>
+
+<p>La geometria d’una vista és la d’un rectangle. Una vista té una ubicació, expressada com un parell de coordenades esquerra i superior, i dues dimensions, expressades com un ample i una altura. La unitat per a la ubicació i les dimensions és el píxel.</p>
+
+<p>És possible recuperar la ubicació d’una vista en invocar els mètodes <a href="https://developer.android.com/reference/android/view/View?hl=es-419#getLeft()">getLeft()</a> i <a href="https://developer.android.com/reference/android/view/View?hl=es-419#getTop()">getTop()</a>. El primer mostra la coordenada esquerra, o X, del rectangle que representa la vista. El segon mostra la coordenada superior, o Y, del rectangle que representa la vista. Tots dos mètodes retornen la ubicació de la vista respecte del seu element primari. Per exemple, quan getLeft() mostra 20, significa que la vista es troba a 20 píxels a la dreta de la vora esquerra del seu element primari directe.</p>
+
+<p>A més, s’ofereixen diversos mètodes convenients per a evitar càlculs innecessaris, denominats <a href="https://developer.android.com/reference/android/view/View?hl=es-419#getRight()">getRight()</a> i <a href="https://developer.android.com/reference/android/view/View?hl=es-419#getBottom()">getBottom()</a>. Aquests mètodes mostren les coordenades de les vores dret i superior del rectangle que representa la vista. Per exemple, cridar a getRight() és similar al següent càlcul: getLeft() + getWidth().</p>
+
+<h2 id="grandària-farciment-i-marges">Grandària, farciment i marges</h2>
+
+<p>La grandària d’una vista s’expressa amb un ample i una altura. En realitat, una vista té dos parells de valors d’ample i altura.</p>
+
+<p>El primer parell es coneix com a <strong>ample mesurat</strong> i <strong>altura mesurada</strong>. Aquestes dimensions defineixen <strong>que gran vol ser una vista dins del seu element primari</strong>. Les dimensions mesurades es poden obtindre cridant a <a href="https://developer.android.com/reference/android/view/View?hl=es-419#getMeasuredWidth()">getMeasuredWidth()</a> i a <a href="https://developer.android.com/reference/android/view/View?hl=es-419#getMeasuredHeight()">getMeasuredHeight()</a>.</p>
+
+<p>El segon parell es coneix simplement com a <strong>ample i altura</strong>, o, algunes vegades, ample de dibuix i altura de dibuix. Aquestes dimensions defineixen la <strong>grandària real de la vista en la pantalla en el moment de dibuixar-les i després del disseny</strong>. Aquests valors poden ser diferents de l’ample i l’altura mesurats, però no necessàriament. L’ample i l’altura es poden obtindre cridant a <a href="https://developer.android.com/reference/android/view/View?hl=es-419#getWidth()">getWidth()</a> i <a href="https://developer.android.com/reference/android/view/View?hl=es-419#getHeight()">getHeight()</a>.</p>
+
+<p>Per a mesurar aquestes dimensions, una vista considera el seu farciment. El farciment s’expressa en píxels per a les parts esquerra, superior, dreta i inferior de la vista. El farciment es pot usar per a desplaçar el contingut de la vista una determinada quantitat de píxels. Per exemple, un farciment esquerre de 2 espenta el contingut de la vista 2 píxels cap a la dreta de la vora esquerra. El farciment es pot ajustar usant el mètode <a href="https://developer.android.com/reference/android/view/View?hl=es-419#setPadding(int,%20int,%20int,%20int)">setPadding(int, int, int, int)</a> i es pot consultar cridant a <a href="https://developer.android.com/reference/android/view/View?hl=es-419#getPaddingLeft()">getPaddingLeft()</a>, <a href="https://developer.android.com/reference/android/view/View?hl=es-419#getPaddingTop()">getPaddingTop()</a>, <a href="https://developer.android.com/reference/android/view/View?hl=es-419#getPaddingRight()">getPaddingRight()</a> i <a href="https://developer.android.com/reference/android/view/View?hl=es-419#getPaddingBottom()">getPaddingBottom()</a>.</p>
+
+<p>Si bé una vista pot definir un farciment, no proporciona cap mena de compatibilitat per a marges. No obstant això, els grups de vistes sí que la proporcionen. Consulta ViewGroup i <a href="https://developer.android.com/reference/android/view/ViewGroup.MarginLayoutParams?hl=es-419">ViewGroup.MarginLayoutParams</a> per a obtindre més informació.</p>
+
+<p>Per a obtindre més informació sobre les dimensions, llig <a href="https://developer.android.com/guide/topics/resources/more-resources?hl=es-419#Dimension">Valors de dimensió</a>.</p>
+
+<h2 id="dissenys-comuns">Dissenys comuns</h2>
+
+<p>Cada subclasse de la classe ViewGroup proporciona una manera única de mostrar les vistes que aniden en ella. Ací tens alguns dels tipus de disseny més comuns integrats en la plataforma Android.</p>
+
+<blockquote>
+  <p>Nota: Si bé pots anidar un o més dissenys dins d’un altre disseny per a crear la presentació de la IU, has d’esforçar-te per mantindre la teua jerarquia de disseny el més senzilla possible. El teu disseny es processa més ràpid si té menys dissenys anidats (una jerarquia de vistes ampla és millor que una de vista profunda).</p>
+</blockquote>
+
+<ul>
+  <li><a href="https://developer.android.com/guide/topics/ui/layout/linear?hl=es-419"><strong>Disseny lineal</strong></a>: Un disseny que organitza els seus elements secundaris en una sola fila horitzontal o vertical. Si la longitud de la finestra supera la de la pantalla, crea una barra de desplaçament.</li>
+</ul>
+
+<p><img src="./images/linearlayout.png" alt="linear" /></p>
+
+<ul>
+  <li><a href="https://developer.android.com/guide/topics/ui/layout/relative?hl=es-419"><strong>Disseny relatiu</strong></a>: Et permet especificar la ubicació dels objectes secundaris en funció d’ells mateixos (l’objecte secundari A a l’esquerra de l’objecte secundari B) o en funció de l’element primari (alineat amb la part superior de l’element primari).</li>
+</ul>
+
+<p><img src="./images/relativelayout.png" alt="relative" /></p>
+
+<ul>
+  <li><a href="https://developer.android.com/guide/webapps/webview?hl=es-419"><strong>Vista web</strong></a>: Mostra pàgines web.</li>
+</ul>
+
+<p><img src="./images/webview.png" alt="web" /></p>
+
+<h2 id="creació-de-dissenys-amb-un-adaptador">Creació de dissenys amb un adaptador</h2>
+
+<p>Quan el contingut del teu disseny siga dinàmic o no siga predeterminat, pots usar un disseny amb la subclasse <a href="https://developer.android.com/reference/android/widget/AdapterView?hl=es-419">AdapterView</a> per a completar el disseny amb vista durant el temps d’execució. Una subclasse de la classe AdapterView usa un <a href="https://developer.android.com/reference/android/widget/Adapter?hl=es-419">Adapter</a> per a enllaçar dades amb el seu disseny. Adapter es comporta com a intermediari entre la font de dades i el disseny AdapterView; Adapter recupera les dades (d’una font com una matriu o una consulta a la base de dades) i converteix cada entrada en una vista que pots agregar al disseny AdapterView.</p>
+
+<p>Els dissenys comuns recolzats per un adaptador inclouen:</p>
+
+<ul>
+  <li>
+    <p><a href="https://developer.android.com/guide/topics/ui/layout/recyclerview?hl=es-419">Vista de llista</a>: Mostra una sola llista de columnes desplaçable.</p>
+  </li>
+  <li>
+    <p><a href="https://developer.android.com/guide/topics/ui/layout/recyclerview?hl=es-419">Vista de quadrícula</a>: Mostra una quadrícula desplaçable de columnes i files.</p>
+  </li>
+</ul>
+
+<h3 id="farciment-duna-vista-de-ladaptador-amb-dades">Farciment d’una vista de l’adaptador amb dades</h3>
+
+<p>Pots completar una AdapterView, com <a href="">ListView</a>( o <a href="">GridView</a>, enllaçant la instància AdapterView amb un Adapter, que recupera dades d’una font externa i crea una View que representa cada entrada de dades.</p>
+
+<p>Android proporciona diverses subclasses de Adapter que resulten útils per a recuperar diferents tipus de dades i generar vistes per a una AdapterView. Els dos adaptadors més comuns són els següents:</p>
+
+<h4 id="arrayadapter"><a href="https://developer.android.com/reference/android/widget/ArrayAdapter?hl=es-419">ArrayAdapter</a></h4>
+
+<p>Usa aquest adaptador quan la font de dades siga una matriu. Segons la configuració predeterminada, ArrayAdapter crea una vista per a cada element de la matriu cridant a <a href="https://developer.android.com/reference/java/lang/Object?hl=es-419#toString()">toString()</a> en cada element i disposant els continguts en una TextView.</p>
+
+<p>Per exemple, si hi ha una matriu de strings que desitges visualitzar en una ListView, inicialitza un nou ArrayAdapter usant un constructor per a especificar el disseny de cada string i la matriu de strings:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ArrayAdapter&lt;String&gt; adapter = new ArrayAdapter&lt;String&gt;(this,
+android.R.layout.simple_list_item_1, myStringArray);
+</code></pre></div></div>
+
+<p>Els arguments per a aquest constructor són els següents:</p>
+
+<ul>
+  <li>El <a href="https://developer.android.com/reference/android/content/Context?hl=es-419">Context</a> de la teua app</li>
+  <li>El disseny que conté una TextView per a cada string de la matriu</li>
+  <li>La matriu de strings</li>
+</ul>
+
+<p>Després, simplement, crida a setAdapter() en la teua ListView:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ListView listView = (ListView) findViewById(R.id.listview);
+listView.setAdapter(adapter);
+</code></pre></div></div>
+
+<p>Per a personalitzar l’aspecte de cada element, pots anul·lar el mètode toString() dels objectes de la teua matriu. Com a alternativa, si desitges crear una vista per a cada element que no siga una TextView (per exemple, si desitges una ImageView per a cada element de la matriu), estén la classe de ArrayAdapter i anul·la getView() a fi de mostrar el tipus de vista que desitges per a cada element.</p>
+
+<h4 id="simplecursoradapter"><a href="https://developer.android.com/reference/android/widget/SimpleCursorAdapter?hl=es-419">SimpleCursorAdapter</a></h4>
+
+<p>Usa aquest adaptador quan les teues dades provinguen d’un Cursor. Quan uses SimpleCursorAdapter, has d’especificar un disseny per a cada fila en el Cursor i quines columnes de Cursor s’han d’inserir en quines vistes del disseny. Per exemple, si desitges crear una llista de noms i números de telèfon de persones, pots realitzar una consulta que mostre un Cursor amb una fila per a cada persona i columnes per als noms i els números. Després, crearàs una matriu de strings que especifique les columnes del Cursor que desitges en el disseny per a cada resultat i una matriu amb valors sencers que especifique les vistes corresponents en les quals s’haja de col·locar cada columna:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>String[] fromColumns = {ContactsContract.Data.DISPLAY_NAME,
+ContactsContract.CommonDataKinds.Phone.NUMBER};
+int[] toViews = {R.id.display_name, R.id.phone_number};
+</code></pre></div></div>
+
+<p>Quan crees una instància del SimpleCursorAdapter, passa el disseny que s’ha d’usar per a cada resultat, el <a href="https://developer.android.com/reference/android/database/Cursor?hl=es-419">Cursor</a> que conté els resultats i aquestes dues matrius:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SimpleCursorAdapter adapter = new SimpleCursorAdapter(this,
+R.layout.person_name_and_number, cursor, fromColumns, toViews, 0);
+ListView listView = getListView();
+listView.setAdapter(adapter);
+</code></pre></div></div>
+
+<p>Després, el SimpleCursorAdapter crea una vista per a cada fila en el Cursor usant el disseny proporcionat en inserir cada element <strong>fromColumns</strong> en la vista <strong>toViews</strong> corresponent.</p>
+
+<h2 id="com-manejar-esdeveniments-de-clic">Com manejar esdeveniments de clic</h2>
+
+<p>Pots respondre a esdeveniments de clic en cada element d’una AdapterView en implementar la interfície AdapterView.OnItemClickListener<a href="https://developer.android.com/reference/android/widget/AdapterView.OnItemClickListener?hl=es-419">AdapterView.OnItemClickListener</a>.
+Per exemple:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Create a message handling object as an anonymous class.
+private OnItemClickListener messageClickedHandler = new OnItemClickListener() {
+public void onItemClick(AdapterView parent, View v, int position, long aneu) {
+// Do something in response to the clic
+}
+};
+
+listView.setOnItemClickListener(messageClickedHandler);
+</code></pre></div></div>
+
+<p><a href="../..">back</a></p>

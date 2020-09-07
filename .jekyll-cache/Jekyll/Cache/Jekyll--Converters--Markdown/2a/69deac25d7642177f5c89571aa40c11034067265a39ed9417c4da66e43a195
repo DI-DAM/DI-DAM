@@ -1,0 +1,271 @@
+I"�J<h1 id="interfície-dusuari-i-navegació">Interfície d’usuari i navegació</h1>
+
+<p>#Com administrar animacions de moviment i ginys amb MotionLayout</p>
+
+<p><a href="https://developer.android.com/reference/androidx/constraintlayout/motion/widget/MotionLayout">MotionLayout</a> MotionLayout és un tipus de disseny que t’ajuda a administrar les animacions de moviment i widgets en la teua app. MotionLayout és una subclasse de ConstraintLayout i es basa en les seues capacitats de disseny enriquit. Com a part de la biblioteca de ConstraintLayout, MotionLayout està disponible com una biblioteca de compatibilitat i és compatible amb versions anteriors a la API nivell 14.</p>
+
+<p><img src="./images/motion1.gif" alt="motion layout" /></p>
+
+<p>MotionLayout redueix les diferències entre les transicions de disseny i el maneig de moviment complex, la qual cosa ofereix una combinació de característiques entre el marc d’animació de propietats<a href="https://developer.android.com/guide/topics/graphics/prop-animation">marc d’animació de propietats</a>  , <a href="https://developer.android.com/training/transitions">TransitionManager</a> TransitionManager i <a href="https://developer.android.com/reference/androidx/coordinatorlayout/widget/CoordinatorLayout">CoordinatorLayout</a> CoordinatorLayout.</p>
+
+<p>A més de descriure les transicions entre dissenys, MotionLayout també et permet animar qualsevol propietat de disseny. A més, és inherentment compatible amb les transicions que admeten cerques. Això significa que pots mostrar de manera instantània qualsevol punt dins de la transició en funció d’alguna condició, com l’entrada tàctil. MotionLayout també admet fotogrames clau, la qual cosa habilita l’ús de transicions totalment personalitzades per a satisfer les teues necessitats.</p>
+
+<p>MotionLayout és totalment declaratiu, la qual cosa significa que pots descriure qualsevol transició en XML, independentment de la seua complexitat.</p>
+
+<blockquote>
+  <p>Nota: MotionLayout funciona només amb els seus elements secundaris directes. No admet jerarquies de disseny anidat ni transicions d’activitats.</p>
+</blockquote>
+
+<h2 id="consideracions-del-disseny">Consideracions del disseny</h2>
+
+<p>MotionLayout està dissenyat per a moure, canviar la grandària i animar els elements de la IU amb els quals interactuen els usuaris, com a botons i barres de títols. En la teua app, el moviment no ha de ser simplement un efecte especial injustificat. S’ha d’usar per a ajudar els usuaris a comprendre el que fa la teua app. Per a obtindre més informació sobre com dissenyar una app amb moviment, consulta la secció Material Design en Informació sobre el moviment<a href="https://material.io/design/motion/understanding-motion.html">Informació sobre el moviment</a>.</p>
+
+<h2 id="començar">Començar</h2>
+
+<p>Segueix aquests passos per a començar a usar MotionLayout en el teu projecte.</p>
+
+<ul>
+  <li><strong>Inclou la dependència</strong> <em>ConstraintLayout</em>: per a usar MotionLayout en el teu projecte, agrega la dependència ConstraintLayout 2.0 a l’arxiu build.gradle de la teua app. Si uses AndroidX, agrega la següent dependència:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dependencies {
+	implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta1'
+}
+</code></pre></div></div>
+
+<p>Si no uses AndroidX, agrega la següent dependència de la biblioteca de compatibilitat:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dependencies {
+ implementation 'com.android.support.constraint:constraint-layout:2.0.0-beta1'
+}
+</code></pre></div></div>
+
+<ul>
+  <li>Crea un arxiu <code class="language-plaintext highlighter-rouge">MotionLayout: MotionLayout</code> és una subclasse de ConstraintLayout, de manera que pots transformar qualsevol ConstraintLayout existent en un MotionLayout si reemplaces el nom de la classe en el teu arxiu de recursos de disseny, com es mostra en els següents exemples:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- before: ConstraintLayout --&gt;
+&lt;androidx.constraintlayout.widget.ConstraintLayout .../&gt;
+&lt;!-- after: MotionLayout --&gt;
+&lt;androidx.constraintlayout.motion.widget.MotionLayout .../&gt;
+</code></pre></div></div>
+
+<p>Aquest és un exemple complet d’un arxiu MotionLayout que pots usar per a crear el moviment en la figura anterior:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;!-- activity_main.xml --&gt;
+&lt;androidx.constraintlayout.motion.giny.MotionLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:aneu="@+aneu/motionLayout"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+app:layoutDescription="@xml/scene_01"
+tools:showPaths="true"&gt;
+
+&lt;View
+android:id="@+id/button"
+android:layout_width="64dp"
+android:layout_height="64dp"
+android:background="@color/colorAccent"
+android:text="Button" /&gt;
+
+&lt;/androidx.constraintlayout.motion.widget.MotionLayout&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>Crea un arxiu MotionScene: en l’exemple de MotionLayout anterior, l’atribut app:layoutDescription fa referència a un MotionScene. MotionScene és un arxiu XML de recursos que conté totes les descripcions de moviments per al disseny corresponent. A fi de mantindre la informació de disseny separada de les descripcions de moviments, cada MotionLayout fa referència a un arxiu MotionScene separat. Tingues en compte que les definicions de MotionScene tenen prioritat sobre qualsevol definició similar de MotionLayout.</li>
+</ul>
+
+<p>El següent és un exemple d’arxiu MotionScene en el qual es descriu el moviment horitzontal bàsic en la figura anterior:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:motion="http://schemas.android.com/apk/res-auto"&gt;
+
+&lt;Transition
+motion:constraintSetStart="@+id/start"
+motion:constraintSetEnd="@+id/end"
+motion:duration="1000"&gt;
+&lt;OnSwipe
+motion:touchAnchorId="@+id/button"
+motion:touchAnchorSide="right"
+motion:dragDirection="dragRight" /&gt;
+&lt;/Transition&gt;
+
+&lt;ConstraintSet android:id="@+id/start"&gt;
+&lt;Constraint
+android:id="@+id/button"
+android:layout_width="64dp"
+android:layout_height="64dp"
+android:layout_marginStart="8dp"
+motion:layout_constraintBottom_toBottomOf="parent"
+motion:layout_constraintStart_toStartOf="parent"
+motion:layout_constraintTop_toTopOf="parent" /&gt;
+&lt;/ConstraintSet&gt;
+
+&lt;ConstraintSet android:id="@+id/end"&gt;
+&lt;Constraint
+android:id="@+id/button"
+android:layout_width="64dp"
+android:layout_height="64dp"
+android:layout_marginEnd="8dp"
+motion:layout_constraintBottom_toBottomOf="parent"
+motion:layout_constraintEnd_toEndOf="parent"
+motion:layout_constraintTop_toTopOf="parent" /&gt;
+&lt;/ConstraintSet&gt;
+
+&lt;/MotionScene&gt;
+</code></pre></div></div>
+
+<p>Tingues en compte el següent:</p>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">&lt;Transition&gt;</code></strong> conté la definició bàsica del moviment.
+    <ul>
+      <li><strong>motion:constraintSetStart</strong> i <strong>motion:constraintSetEnd</strong> són referències als extrems del moviment. S’inclou la definició d’aquests extrems en els elements <code class="language-plaintext highlighter-rouge">&lt;ConstraintSet&gt;</code> més endavant, en l’arxiu MotionScene.</li>
+      <li><strong>motion:duration</strong> especifica la quantitat de mil·lisegons que tarda a completar-se el moviment.</li>
+    </ul>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">&lt;OnSwipe&gt;</code></strong> et permet controlar el moviment a través del tacte.
+    <ul>
+      <li><strong>motion:touchAnchorId</strong> fa referència a la vista que pots lliscar i arrossegar.</li>
+      <li><strong>motion:touchAnchorSide</strong> indica que s’arrossega la vista des del costat dret.</li>
+      <li><strong>motion:dragDirection</strong> fa referència a la direcció de progrés de l’arrossegament. Per exemple, <strong>motion:dragDirection=”dragRight”</strong> indica que el progrés augmenta a mesura que arrossegues cap a la dreta.</li>
+    </ul>
+  </li>
+  <li>
+    <ConstraintSet> és on has de definir les diverses restriccions que descriuen el teu moviment. En aquest exemple, definim un ConstraintSet per a cada extrem del nostre moviment. Aquests extrems estan centrats verticalment (a través d'app:layout_constraintTop_toTopOf="parent" i app:layout_constraintBottom_toBottomOf="parent"). De manera horitzontal, els extrems estan en els límits esquerre i dret de la pantalla.
+
+</ConstraintSet>
+  </li>
+</ul>
+<p>Per a obtindre una vista més detallada dels diversos elements compatibles amb MotionScene, consulta els exemples de MotionLayout<a href="https://developer.android.com/training/constraint-layout/motion-layout-examples">exemples de MotionLayout</a>.</p>
+
+<h2 id="atributs-interpolats">Atributs interpolats</h2>
+
+<p>Dins d’un arxiu MotionScene, els elements ConstraintSet poden contindre atributs addicionals que s’interpolen durant la transició. A més de la posició i els límits, MotionLayout interpola els següents atributs:</p>
+
+<ul>
+  <li>alpha</li>
+  <li>visibility</li>
+  <li>elevation</li>
+  <li>rotation, rotationX, rotationY</li>
+  <li>translationX, translationY, translationZ</li>
+  <li>scaleX, scaleY</li>
+</ul>
+
+<h2 id="atributs-personalitzats">Atributs personalitzats</h2>
+
+<p>Dins d’un <code class="language-plaintext highlighter-rouge">&lt;Constraint&gt;</code>, pots usar l’element <code class="language-plaintext highlighter-rouge">&lt;CustomAttribute&gt;</code> per a especificar una transició per als atributs que no estan simplement relacionats amb la posició o els atributs View.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Constraint
+android:id="@+id/button" ...&gt;
+&lt;CustomAttribute
+motion:attributeName="backgroundColor"
+motion:customColorValue="#D81B60"/&gt;
+&lt;/Constraint&gt;
+</code></pre></div></div>
+
+<p>Un <code class="language-plaintext highlighter-rouge">&lt;CustomAttribute&gt;</code> conté dos atributs propis:</p>
+
+<ul>
+  <li><strong>motion:attributeName</strong> és obligatori i ha de coincidir amb un objecte que tinga mètodes get i set. Aquests han de coincidir amb un patró específic. Per exemple, backgroundColor és compatible, ja que la nostra vista té mètodes <strong>getBackgroundColor()</strong> i <strong>setBackgroundColor()</strong> subjacents.</li>
+  <li>L’altre atribut que has de proporcionar es basa en la mena de valor. Tria entre els següents tipus admesos:
+    <ul>
+      <li><strong>motion:customColorValue</strong> per als colors</li>
+      <li><strong>motion:customIntegerValue</strong> per a nombres enters</li>
+      <li><strong>motion:customFloatValue</strong> per a valors flotants</li>
+      <li><strong>motion:customStringValue</strong> per a strings</li>
+      <li><strong>motion:customDimension</strong> per a dimensions</li>
+      <li><strong>motion:customBoolean</strong> per a valors booleans</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Tingues en compte que quan especifiques un atribut personalitzat, has de definir valors d’extrem en els elements <code class="language-plaintext highlighter-rouge">&lt;ConstraintSet&gt;</code> d’inici i de finalització.</p>
+
+<h3 id="exemple-canviar-el-color-de-fons">Exemple: Canviar el color de fons</h3>
+
+<p>Basant-nos en el nostre exemple anterior, fem que la vista canvie de color mentre es mou, com es mostra en la figura següent.</p>
+
+<p><img src="./images/motion2.gif" alt="motion layout" /></p>
+
+<p>Agrega un element <strong><code class="language-plaintext highlighter-rouge">&lt;CustomAttribute&gt;</code></strong> a cada element <strong>ConstraintSet</strong>, com es mostra a continuació:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ConstraintSet android:id="@+id/start"&gt;
+&lt;Constraint
+android:id="@+id/button"
+android:layout_width="64dp"
+android:layout_height="64dp"
+android:layout_marginStart="8dp"
+motion:layout_constraintBottom_toBottomOf="parent"
+motion:layout_constraintStart_toStartOf="parent"
+motion:layout_constraintTop_toTopOf="parent"&gt;
+&lt;CustomAttribute
+motion:attributeName="backgroundColor"
+motion:customColorValue="#D81B60" /&gt;
+&lt;/Constraint&gt;
+&lt;/ConstraintSet&gt;
+
+&lt;ConstraintSet android:id="@+id/end"&gt;
+&lt;Constraint
+android:id="@+id/button"
+android:layout_width="64dp"
+android:layout_height="64dp"
+android:layout_marginEnd="8dp"
+motion:layout_constraintBottom_toBottomOf="parent"
+motion:layout_constraintEnd_toEndOf="parent"
+motion:layout_constraintTop_toTopOf="parent"&gt;
+&lt;CustomAttribute
+motion:attributeName="backgroundColor"
+motion:customColorValue="#9999FF" /&gt;
+&lt;/Constraint&gt;
+&lt;/ConstraintSet&gt;
+</code></pre></div></div>
+
+<h2 id="atributs-addicionals-de-motionlayout">Atributs addicionals de MotionLayout</h2>
+
+<p>A més dels atributs que es mostren en l’exemple anterior, <strong>MotionLayout</strong> té altres atributs que convé especificar:</p>
+
+<ul>
+  <li><strong>app:applyMotionScene=”boolean”</strong> indica si s’ha d’aplicar l’arxiu MotionScene. El valor predeterminat per a aquest atribut és true.</li>
+  <li><strong>app:showPaths=”boolean”</strong> indica si es mostren les rutes de moviment mentre s’executa el moviment. El valor predeterminat per a aquest atribut és false.</li>
+  <li><strong>app:progress=”float”</strong> et permet especificar explícitament el progrés de la transició. Pots usar qualsevol valor de punt flotant des de 0 (l’inici de la transició) fins a 1 (el final de la transició).</li>
+  <li><strong>app:currentState=”reference”</strong> et permet especificar un ConstraintSet específic.</li>
+  <li><strong>app:motionDebug</strong> et permet mostrar informació addicional de depuració sobre el moviment. Els valors possibles són “XOU_PROGRESS”, “XOU_PATH” o “XOU_ALL”.</li>
+</ul>
+
+<h2 id="recursos-addicionals">Recursos addicionals</h2>
+
+<p>Per a obtindre més informació sobre MotionLayout, consulta els següents vincles:</p>
+
+<p><a href="https://codelabs.developers.google.com/codelabs/motion-layout">Com usar MotionLayout per a animar apps per a Android (codelab)</a> 
+<a href="https://developer.android.com/training/constraint-layout/motion-layout-examples">Exemples de MotionLayout</a> Exemples de MotionLayout
+<a href="https://github.com/android/views-widgets-samples/tree/master/ConstraintLayoutExamples">Mostres de MotionLayout/ConstraintLayout (GitHub)</a> 
+<a href="https://medium.com/google-developers/introduction-to-motionlayout-part-i-29208674b10d">Introducció a MotionLayout (part I)</a>
+<a href="https://medium.com/google-developers/introduction-to-motionlayout-part-ii-a31acc084f59">Introducció a MotionLayout (part II)</a>
+<a href="https://medium.com/google-developers/introduction-to-motionlayout-part-iii-47cd64d51a5">Introducció a MotionLayout (part III)</a>
+<a href="https://medium.com/google-developers/defining-motion-paths-in-motionlayout-6095b874d37">Introducció a MotionLayout (part IV)</a></p>
+
+<h2 id="referencies-xml-de-motion-layout">Referencies XML de Motion Layout</h2>
+
+<p>MotionLayout usa un arxiu d’ambient en moviment per a definir una seqüència de moviment. Un arxiu d’ambient en moviment és un arxiu XML que especifica tots els aspectes d’una seqüència de moviment. El node <MotionLayout> de l'arxiu de disseny conté un atribut app:layoutDescription que apunta a l'arxiu d'ambient en moviment.</MotionLayout></p>
+
+<p>Aquesta referència no és exhaustiva. Proporciona informació sobre els elements més importants de l’arxiu d’ambient en moviment i els seus atributs més utilitzats.</p>
+
+<ul>
+  <li><a href="https://developer.android.com/training/constraint-layout/motionlayout/ref/motionscene"><strong><code class="language-plaintext highlighter-rouge">&lt;MotionScene&gt;</code></strong></a> L’element arrel d’un arxiu d’ambient en moviment.</li>
+  <li><a href="https://developer.android.com/training/constraint-layout/motionlayout/ref/constraintset"><strong><code class="language-plaintext highlighter-rouge">&lt;ConstraintSet&gt;</code></strong></a>Especifica les posicions i els atributs de totes les vistes en un punt d’una seqüència de moviment.</li>
+  <li><a href="https://developer.android.com/training/constraint-layout/motionlayout/ref/constraint"><strong><code class="language-plaintext highlighter-rouge">&lt;Constraint&gt;</code></strong></a>Especifica la ubicació i els atributs d’un dels elements en una seqüència de moviment.</li>
+  <li><a href="https://developer.android.com/training/constraint-layout/motionlayout/ref/transition"><strong><code class="language-plaintext highlighter-rouge">&lt;Transition&gt;</code></strong></a>Especifica els estats d’inici i fi d’una seqüència de moviment, qualsevol estat intermedi desitjat i les interaccions de l’usuari que activen la seqüència.</li>
+  <li><a href="https://developer.android.com/training/constraint-layout/motionlayout/ref/onclick"><strong><code class="language-plaintext highlighter-rouge">&lt;onClick&gt;</code></strong></a>Especifica l’acció que s’ha de realitzar quan l’usuari pressiona una vista específica.</li>
+  <li><a href="https://developer.android.com/training/constraint-layout/motionlayout/ref/onswipe"><strong><code class="language-plaintext highlighter-rouge">&lt;onSwipe&gt;</code></strong></a>Especifica l’acció que ha de realitzar quan l’usuari llisca el dit sobre el disseny.</li>
+  <li><a href="https://developer.android.com/training/constraint-layout/motionlayout/ref/keyframeset"><strong><code class="language-plaintext highlighter-rouge">&lt;KeyFrameSet&gt;</code></strong></a>Especifica la ubicació i els atributs de les vistes en el transcurs de la seqüència de moviment.</li>
+  <li><a href="https://developer.android.com/training/constraint-layout/motionlayout/ref/keyposition"><strong><code class="language-plaintext highlighter-rouge">&lt;KeyPosition&gt;</code></strong></a>Especifica la ubicació d’una vista en un moment específic durant la seqüència de moviment.</li>
+  <li><a href="https://developer.android.com/training/constraint-layout/motionlayout/ref/keyattribute"><strong><code class="language-plaintext highlighter-rouge">&lt;KeyAttribute&gt;</code></strong></a>Especifica els atributs d’una vista en un moment específic durant la seqüència de moviment.</li>
+</ul>
+
+<p><a href="../..">back</a></p>
+:ET

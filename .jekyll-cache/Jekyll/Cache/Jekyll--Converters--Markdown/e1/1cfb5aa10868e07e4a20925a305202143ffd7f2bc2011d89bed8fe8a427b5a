@@ -1,4 +1,4 @@
-I"ba<h1 id="java-fx---animacions">Java FX - Animacions</h1>
+I"ga<h1 id="java-fx---animacions">Java FX - Animacions</h1>
 
 <p>En general, l’animació es pot definir com la transició que crea el mite del moviment d’un objecte. És el conjunt de transformacions aplicades a un objecte durant la duració especificada de manera seqüencial perquè l’objecte es puga mostrar com està en moviment.</p>
 
@@ -144,10 +144,10 @@ rotate.setCycleCount(500);
     <p>Propietats</p>
 
     <ul>
-      <li><strong>setByX(double value)</strong>: Aquesta és una propietat de tipus doble. Representa el valor de la coordenada X incrementada en el qual es deté la traducció.</li>
-      <li><strong>setByY(double value)</strong>: Aquesta és una propietat de tipus doble. Representa el valor de la coordenada Y incrementada en el qual es deté la traducció.</li>
-      <li><strong>setByZ(double value)</strong>: Aquesta és una propietat de tipus doble. Representa el valor de la coordenada Z incrementada en el qual es deté la traducció.</li>
-      <li><strong>setDuration(Duration value)</strong>: Aquesta és una propietat de tipus d’objecte de la classe Duració. Representa la duració de la transició del Traductor.</li>
+      <li><strong>setByX(double value)</strong>: Aquesta és una propietat de tipus doble. Representa el valor de la coordenada X incrementada en el qual es deté la translació.</li>
+      <li><strong>setByY(double value)</strong>: Aquesta és una propietat de tipus doble. Representa el valor de la coordenada Y incrementada en el qual es deté la translació.</li>
+      <li><strong>setByZ(double value)</strong>: Aquesta és una propietat de tipus doble. Representa el valor de la coordenada Z incrementada en el qual es deté la translació.</li>
+      <li><strong>setDuration(Duration value)</strong>: Aquesta és una propietat de tipus d’objecte de la classe Duració. Representa la duració de la transició del translació.</li>
       <li><strong>setFromX(double value)</strong>: Aquesta és una propietat de tipus doble. Representa el valor de la coordenada X a partir del qual comença la translació.</li>
       <li><strong>setFromY(double value)</strong>: Aquesta és una propietat de tipus doble. Representa el valor de la coordenada Y a partir del qual comença la translació. Aquesta és una propietat de tipus doble.</li>
       <li><strong>setFromZ(double value)</strong>: Aquesta és una propietat de tipus doble. Representa el valor de la coordenada Z a partir del qual comença la translació.</li>

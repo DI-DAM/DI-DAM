@@ -6,7 +6,7 @@ layout: default
 
 ## Què és?
 
-Scrum és una metodologia àgil i flexible per a gestionar el desenvolupament de programari, el principal objectiu del qual és maximitzar el retorn de la inversió per a la seua empresa (ROI). Es basa a construir primer la funcionalitat de major valor per al client i en els principis d'inspecció contínua, adaptació, acte-gestió i innovació.
+Scrum és una metodologia àgil i flexible per a gestionar el desenvolupament de programari, el principal objectiu del qual és maximitzar el retorn de la inversió per a la seua empresa (ROI). Es basa a construir primer la funcionalitat de major valor per al client i en els principis d'inspecció contínua, adaptació, auto-gestió i innovació.
 
 ![model scrum](./images/scrum1.jpg)
 
@@ -18,7 +18,7 @@ Aquesta metòdica de treball promou la innovació, motivació i compromís de l'
  
 ## Beneficis
 
-- E**mplene d'expectatives**: El client estableix les seues expectatives indicant el valor que li aporta cada requisit / historia del projecte, l'equip els estima i amb aquesta informació el Product Owner estableix la seua prioritat. De manera regular, en les demos de Sprint el Product Owner comprova que efectivament els requisits s'han complit i transmet es feedback a l'equip. 
+- **Acompliment d'expectatives**: El client estableix les seues expectatives indicant el valor que li aporta cada requisit / historia del projecte, l'equip els valora i amb aquesta informació el Product Owner estableix la seua prioritat. De manera regular, en les demos de Sprint el Product Owner comprova que efectivament els requisits s'han complit i transmet es feedback a l'equip. 
 - **Flexibilitat a canvis**: Alta capacitat de reacció davant els canvis de requeriments generats per necessitats del client o evolucions del mercat. La metodologia està dissenyada per a adaptar-se als canvis de requeriments que comporten els projectes complexos.
 - **Reducció del Time to Market**: El client pot començar a utilitzar les funcionalitats més importants del projecte abans que estiga finalitzat per complet.
 - **Major qualitat del programari**: La metòdica de treball i la necessitat d'obtindre una versió funcional després de cada iteració, ajuda a l'obtenció d'un programari de qualitat superior.
