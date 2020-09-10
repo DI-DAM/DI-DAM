@@ -9,7 +9,7 @@ El rol que exerceix el Dissenyador d'Experiència d'Usuari dins del disseny de p
 - Les necessitats comunicatives que estableix la persona o institució que sol·licita o encarrega el producte (clients).
 - Les necessitats informatives i funcionals de les persones que usaran el producte (usuaris).
 
-El dissenyado r ha de lograr un equilibri en el proces comunicatiu entre emisors (clients) i receptors (usuaris).
+El dissenyador ha de lograr un equilibri en el proces comunicatiu entre emissors (clients) i receptors (usuaris).
 
 
 ![Rol del dissenyador en el procés de creació](./images/expUser1.png)
@@ -18,6 +18,18 @@ Existeix una frase que actualment s'ha convertit en un lema per a tots els que s
 >“Depén”
 
 En el disseny de programari no existeix gens absolut, les decisions de disseny més encertades varien en funció del context, els continguts i els usuaris. És per això que resulta difícil definir pautes o metodologies rígides per a la seua realització, i es fa imprescindible que els dissenyadors afronten de manera flexible cada projecte concret.
+
+
+## El per què, el qué i el com de l'ús del producte
+
+S'ha de considerar el **per què**, el **què** i el **com** de l'ús del producte. 
+- El **per què** implica les motivacions dels usuaris per a adoptar un producte, ja siga que es relacionen amb una tasca que desitgen realitzar amb ell o amb valors i punts de vista que els usuaris associen amb la propietat i l'ús del producte. 
+- El **Què** aborda les coses que les persones poden fer amb un producte: la seua funcionalitat. 
+- El **Com** es relaciona amb el disseny de la funcionalitat d'una manera accessible i estèticament agradable. 
+
+Els dissenyadors de UX comencen amb el Per què abans de determinar el què i després, finalment, el Com per a crear productes amb els quals els usuaris puguen formar experiències significatives. En els dissenys de programari, haurà d'assegurar-se que la "substància" del producte arribe a través d'un dispositiu existent i oferisca una experiència fluida i sense problemes.
+
+![que](./images/que.jpeg)
 
 ## Metodologia
 
@@ -28,7 +40,7 @@ L'enfocament metodològic proposat en el present treball es basa en les etapes d
 - **Tècniques**: Són les que responen al que es fa per a aconseguir els processos i tasca **com?**
 - **Eines**: Són les que responen a què s'usa per a aplicar les tècniques **amb què?**
 
-## Etapes
+### Etapes
 Les etapes es divideixen en quatre moments per els que transcurreixen le labor del dissenyador del software:
 
 1. **Investigació**: en la qual s'obté tota la informació possible del projecte, usuaris i producte a dissenyar.
@@ -41,11 +53,12 @@ El resultat d'aquesta etapa es materialitza en forma d'entregable o artefacte
 ![Etapes de disseny d'experiencia d'usuari](./images/expUser2.png)
 
 
-## Activitats o tasques
-En la següent imatge es mostren les activitats o tasques que es realitzarien primcipalment dorant cada etapa.
+### Activitats o tasques
+En la següent imatge es mostren les activitats o tasques que es realitzarien primcipalment durant cada etapa.
+
 ![Activitats de disseny d'experiencia d'usuari](./images/expUser3.png)
 
-### Etapa 1. Investigacio
+#### Etapa 1. Investigacio
  
 Durant aquesta etapa es tracta d'obtindre la major quantitat d'informació possible i necessària per al projecte a realitzar, tant sobre el client com dels usuaris. El correcte balanç entre demandes i necessitats dels uns i els altres és el que porta a l'èxit el producte a crear.
 
@@ -53,7 +66,7 @@ Durant aquesta etapa es tracta d'obtindre la major quantitat d'informació possi
 	- Definir les necessitats generals del projecte.
 	- Definir la temàtica general del producte a realitzar o redissenyar.
 	- Definir els objectius dels clients o emissors amb el producte.
-	- Definir la intensión comunicativa del producte (Informar, entretindre, alertar)
+	- Definir la intenció comunicativa del producte (Informar, entretindre, alertar)
 	- Definir la tipologia de producte que es desitja.
 	- Definir de manera general als usuaris del producte, el seu context d'ús, i els continguts que tindrà el mateix.
 - Estudi d'Usuaris (receptors)
@@ -83,7 +96,7 @@ Durant aquesta etapa es tracta d'obtindre la major quantitat d'informació possi
 
 1. Els artefactes generats durant aquesta etapa serien: Informes i Diagrames en forma d'organigrames i mapes.
 
-### Etapa 2. Organització
+#### Etapa 2. Organització
 Aquesta és l'etapa que més es relaciona amb l'expressió artística. És quan el dissenyador usa tant criteris cientificotècnics com culturals per a organitzar tota la informació obtinguda durant l'etapa anterior.
 
 - Representar totes les estructures possibles dels continguts, en correspondència a les necessitats d'usuaris i el seu context.
@@ -93,7 +106,7 @@ Aquesta és l'etapa que més es relaciona amb l'expressió artística. És quan 
 
 Els artefactes generats durant aquesta etapa serien: **Diagrames manuscrits i anotacions en forma d'esborrany.**
 
-### Etapa 3. Disseny
+#### Etapa 3. Disseny
  És l'etapa en la qual es plasmen els resultats de l'etapa anterior, ara amb tots els requeriments tècnics amb la finalitat que siguen compresos per usuaris, client i la resta de l'equip de treball.
 
 - Definir l'estructura del producte (taxonomia i diagrames d'organització o blueprints).
@@ -105,7 +118,7 @@ Els artefactes generats durant aquesta etapa serien: **Diagrames manuscrits i an
 
 Els artefactes generats durant aquesta etapa serien: Diagrames digitals i prototips, informes del producte.
 
-### Etapa 5. Prova
+#### Etapa 4. Prova
 És l'etapa en la qual es comproven les propostes de disseny. Les proves es realitzen tant amb clients com amb usuaris. Amb els clients amb l'objectiu de saber si s'han aconseguit els objectius i demandes plantejades. I amb els usuaris, amb l'objectiu de saber resoltes les necessitats identificades.
 
 - Proves de prototips.
@@ -114,7 +127,7 @@ Els artefactes generats durant aquesta etapa serien: Diagrames digitals i protot
 - Comprensió dels serveis dissenyats per part dels usuaris.
 
 Els artefactes generats durant aquesta etapa serien: Informes avaluatius
-## Tècniques
+### Tècniques
 Les tècniques no estan obligatòriament relacionades amb les activitats ni les etapes, per la qual cosa poden usar-se en qualsevol moment del projecte. Tot depén del que es vulga obtindre amb la tècnica. Hi ha tècniques que tenen major ús durant alguna etapa o activitat, però no per ells estan restringides a aquestes. Si es necessita, es poden mesclar tècniques entre si per a aconseguir algun objectiu específic. Per exemple: Aplicar un card sorting a experts, o realitzar una tempesta d'idees dins d'un Disseny Participatiu.
 
 Es mostren algunes tècniques usades segons la seua funció principal, encara que no exclusiva:
@@ -171,7 +184,7 @@ Tècniques usades per a fer els test del disseny plantejat:
 - Mapatge de clics dins de la pantalla del producte (MouseTracking).
 - Monitoratge o seguiment visual (EyeTracking).
 
-## Eines
+### Eines
 Les eines per al treball del dissenyador d'experiència d'usuari varien segons les possibilitats econòmiques i tecnològiques del projecte. En el mercat existeixen tant eines professionals d'un alt cost monetari com a eines gratuïtes.
 
 Per al maneig de la informació amb usuaris podem comptar amb les enquestes online, eines que permeten dissenyar un enquesta en línia i que els usuaris, de manera remota, la responguen.

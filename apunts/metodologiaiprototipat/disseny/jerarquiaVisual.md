@@ -6,13 +6,14 @@ layout: default
 
 # Jerarquia Visual.
 
-La jerarquia visual és una de les técniques bàsiques que s'aplica al procés de disseny. es basa inicialment en la teoria psicolófica de Gestalt, que examina la percepció visual dels elements en relació amb els demes i mostra com els usuaris tendeixen a unificar els elements visuals en grup. 
+La jerarquia visual és una de les técniques bàsiques que s'aplica al procés de disseny. es basa inicialment en la teoria psicológica de Gestalt, que examina la percepció visual dels elements en relació amb els demes i mostra com els usuaris tendeixen a unificar els elements visuals en grup. 
 
 La jerarquia visual té com objectiu presentar el contingut d'una aplicació de tal manera que els usuaris poden comprendre el nivell d'importancia de cada element. Per aixó, organitza els elements de l'interficie de forma que el cervell puga distinguir els objectes en base a les diferencies físiques, com el tamany, color, contraste, estil, etc... 
 
 De fet, la presentació visual dels elements de l'interficie d'usuari té una gran influencia en l'experiencia de l'usuari d'una aplicació. Si els components de contingut es veuen com un desastre, l'usuari no pot navegar dintre de l'aplicació o interactuar amb ella de forma adecuada. 
 
-Dins de les tècniques a aplicar a una interfície, les de jerarquia visual són d'allò més important, perquè depenent de com s'apliquen, fan que la tasca a realitzar per part de l'usuari, es comprenga o resulte confusa
+Dins de les tècniques a aplicar a una interfície, les de jerarquia visual són d'allò més important, perquè depenent de com s'apliquen, fan que la tasca a realitzar per part de l'usuari, es comprenga o resulte confusa.
+
 ![jerarquia visual 1](./images/jerarquiaVisual1.png)
 
 A continuació es mostren un conjunt de atributs per ajudar a generar una jerarquia clara:
@@ -32,7 +33,7 @@ Quanta més diferència de contrast (Ej: blanc sobre negre) cridarà més l'aten
 ![exemple jerarquia contrast](./images/elementsjv2.jpg)
 
 ## Color
-Els colors càlids (roig, groc, taronja) són més pròxims es perceben com més importants que els freds (blaus, violetes...). Podem ambliar els coneixements dels colors [ací](./colors.html).
+Els colors càlids (roig, groc, taronja) són més pròxims es perceben com més importants que els freds (blaus, violetes...). Podem ampliar els coneixements dels colors [ací](./colors.html).
 ![exemple jerarquia color](./images/elementsjv3.jpg)
 
 ## Saturació
@@ -82,11 +83,17 @@ Segueix la forma de la lletra Z. Un disseny del patró z traça la ruta que reco
 	- Després, cap avall i cap al costat esquerre de la pàgina, creant una línia diagonal
 	- Finalment, de tornada a la dreta novament, formant una segona línia horitzontal
 	Quan els ulls dels espectadors es mouen en aquest patró, es forma una "Z" imaginària:
+	
 	![zpattern1](./images/zpattern.jpg)
-		Aquest patró funciona perquè la majoria dels lectors occidentals escanejaran la seua pàgina de la mateixa manera que escanejarien un full de paper: de dalt a baix, d'esquerra a dreta.
-		L'escaneig de Z-Pattern ocorre en pàgines que no estan centrades en el text (per a pàgines amb molt de text com a articles o resultats de cerca, és millor usar F-Pattern). Això fa que el patró z siga una bona solució per a dissenys simples amb una còpia mínima i alguns elements clau que han de veure's. Les pàgines minimalistes o les pàgines de destí centrades principalment en un o dos elements principals poden implementar el patró Z perquè el procediment d'escaneig de pàgines siga molt més fàcil per als visitants del lloc.
-		![zpattern2](./images/zpattern2.png)
+	
+Aquest patró funciona perquè la majoria dels lectors occidentals escanejaran la seua pàgina de la mateixa manera que escanejarien un full de paper: de dalt a baix, d'esquerra a dreta.
+
+L'escaneig de Z-Pattern ocorre en pàgines que no estan centrades en el text (per a pàgines amb molt de text com a articles o resultats de cerca, és millor usar F-Pattern). Això fa que el patró z siga una bona solució per a dissenys simples amb una còpia mínima i alguns elements clau que han de veure's. Les pàgines minimalistes o les pàgines de destí centrades principalment en un o dos elements principals poden implementar el patró Z perquè el procediment d'escaneig de pàgines siga molt més fàcil per als visitants del lloc.
+		
+![zpattern2](./images/zpattern2.png)
+		
 ### Altres patrons utilitzats són:
+
 - Layer-cake Pattern: els usuaris segueixen aquest patró en escanejar encapçalats i subtítols per a determinar ràpidament on (i si) la informació que busquen es pot trobar en la pàgina.
 - spotted Patern: les creativitats solen seguir aquest model d'escaneig, on ometen grans fragments de text i escanegen components visuals com el color, les formes i les anomalies de proporció per a trobar una informació específica.
 - Marking pattern: igual que un ballarí que es fixa en un objecte per a mantindre's equilibrat mentre giren, els usuaris mantenen l'ull enfocat en un lloc mentre es desplacen, un patró molt comú per a UX mòbil.

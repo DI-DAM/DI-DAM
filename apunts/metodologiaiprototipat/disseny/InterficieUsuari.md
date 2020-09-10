@@ -13,7 +13,7 @@ Pel contrari, l'experiencia interactiva fa referència al comportament de l'usua
 ## Principis pel disseny de l'interficie d'usuari
 ![objectius disseny interficie](./images/interfazUser2.webp)
 
-- **Mantín l'interficie simple**: les millors interficies són casi invisibles per al usuari, eviten els elements innecessaris i son clares en el llenguatge que itilitzen en les etiquetes i en els missatges.
+- **Mantín l'interficie simple**: les millors interficies són casi invisibles per al usuari, eviten els elements innecessaris i son clares en el llenguatge que utilitzen en les etiquetes i en els missatges.
 - **Mantenir la interficie Responsive**: l'interficie ha de ser independent del dispositiu que s'utilitze, així la transició de l'usuari al accedir al contingut de l'aplicació en un ordinador, mòbil o tablet ha de ser perfecta. Així els elements de disseny han de reflectar-se mutuament.
 - **Crea coherencia i utilitza elements comuns de l'interficie**: A l'utilitzar elements comuns en l'interficie, els usuaris es senten més còmodes i poden fer les coses més ràpidament. També és important crear patrons de llenguatge, disposició i disseny en tota l'aplicació per ajudar a facilitar l'eficiencia. Una vegada que l'usuari apren a fer algo, deu ser capaç de transferir eixa habilitat a altres parts de l'aplicació.
 - **Sigues decidit en el disseny de la pàgina**. Considera les relacions espacials entre els elements de la pàgina i, estructura la pàgina en funció de l'importancia. La colocació cuidadosa dls elements pot ajudar a cridar l'atencio sobre les peses d'informació més importants i pot ajudar a l'exploració i la legibilitat.
