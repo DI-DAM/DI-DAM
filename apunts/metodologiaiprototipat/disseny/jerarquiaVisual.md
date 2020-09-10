@@ -94,7 +94,7 @@ L'escaneig de Z-Pattern ocorre en pàgines que no estan centrades en el text (pe
 		
 ### Altres patrons utilitzats són:
 
-- Layer-cake Pattern: els usuaris segueixen aquest patró en escanejar encapçalats i subtítols per a determinar ràpidament on (i si) la informació que busquen es pot trobar en la pàgina.
+- Layer-Cake Pattern: els usuaris segueixen aquest patró en escanejar encapçalats i subtítols per a determinar ràpidament on (i si) la informació que busquen es pot trobar en la pàgina.
 - spotted Patern: les creativitats solen seguir aquest model d'escaneig, on ometen grans fragments de text i escanegen components visuals com el color, les formes i les anomalies de proporció per a trobar una informació específica.
 - Marking pattern: igual que un ballarí que es fixa en un objecte per a mantindre's equilibrat mentre giren, els usuaris mantenen l'ull enfocat en un lloc mentre es desplacen, un patró molt comú per a UX mòbil.
 - Bypassing Pattern: els usuaris ometen deliberadament les primeres paraules d'una línia quan diverses línies de text en una llista comencen totes amb les mateixes paraules.
