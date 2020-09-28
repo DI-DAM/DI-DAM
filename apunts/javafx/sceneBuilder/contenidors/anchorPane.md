@@ -16,7 +16,7 @@ El panell de disseny AnchorPane li permet ancorar nodes a la part superior, infe
 
 Els subcomponentes poden ancorar-se en 4 costats de AnchorPane:
 
-![Anchor Pane](./images/anchorPane3.png)
+![Anchor Pane](./images/AnchorPane3.png)
 
 ## Menú Propietats
 
