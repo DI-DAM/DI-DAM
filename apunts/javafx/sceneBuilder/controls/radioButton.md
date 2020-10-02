@@ -11,7 +11,7 @@ Un control de radio button pot seleccionar-se o deseleccionarse. En general, els
 
 També es pot crear al igual que feiem en els botons, un radio button que tinguera text, text i imatge o solament una imatge.
 
-- Afegir Radio Buttons a grups. 
+## Afegir Radio Buttons a grups. 
 
 Els botons d'opció s'usen generalment en un grup per a presentar diverses opcions mútuament excloents. L'objecte ToggleGroup proporciona referències a tots els botons de ràdio que estan associats amb ell i els administra perquè només es puga seleccionar un dels botons de ràdio alhora. 
 
