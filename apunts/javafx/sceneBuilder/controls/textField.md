@@ -48,7 +48,7 @@ Constructor de la classe PasswordField:
 
 JavaFX TextArea és un component que permet als usuaris ingressar l'escriptura en diverses línies i l'aplicació pot llegir-lo.
 
-![text view](./images/textArea1.gif)
+![text view](./images/textArea.gif)
 
 
 
