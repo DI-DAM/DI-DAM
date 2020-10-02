@@ -28,7 +28,7 @@ Podem trobar tota la informació referent a la instal·lació i configuració en
             - [label](./sceneBuilder/controls/label.html)
             - [Button](./sceneBuilder/controls/button.html)
             - [Radio Button](./sceneBuilder/controls/radioButton.html)
-            - [Toggle Button](./controls/controls/toogleButton.html)
+            - [Toggle Button](./sceneBuilder/controls/toogleButton.html)
             - [Check Box](./sceneBuilder/controls/checkBox.html)
             - [Choice Box](./sceneBuilder/controls/choiceBox.html)
             - [Web View](./sceneBuilder/controls/webView.html)
