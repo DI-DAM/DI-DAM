@@ -24,9 +24,10 @@ Una vegada creada, ja podem incloure-li les columnes que necessitem.
 TableColumn nomCol = new TableColumn("Nom");
 TableColumn cognomCol = new TableColumn("Cognom");
 TableColumn direccioCol = new TableColumn("Direcció");
-~~~
+
 
 table.getColumns().addAll(nomCol, cognomCol, direccioCol);
+~~~
 
 Si en algun moment es vol amagar alguna columna, podem fer-ho:
 
