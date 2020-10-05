@@ -50,6 +50,18 @@ JavaFX TextArea és un component que permet als usuaris ingressar l'escriptura e
 
 ![text view](./images/textArea.gif)
 
+Per crear un text Area: 
+
+~~~
+// Crea un TextArea
+TextArea textArea = new TextArea();
+ 
+// Inserta el text
+textArea.setText("Hello");
+ 
+// Obté el text
+String text= textArea.getText();
+~~~
 
 
 [back](../../javafx.html)
