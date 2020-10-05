@@ -84,6 +84,7 @@ buildItem.setSelected(true);
 ~~~
  
 - RadioMenuItem
+
 ~~~
 RadioMenuItem updateItem1 = new RadioMenuItem("Auto Update");
 RadioMenuItem updateItem2 = new RadioMenuItem("Ask for Update");
@@ -96,6 +97,7 @@ updateItem1.setSelected(true);
         
         
 - Afegir menuItems al Menus
+
 ~~~
 fileMenu.getItems().addAll(newItem, openFileItem,separator, exitItem);
 editMenu.getItems().addAll(copyItem, pasteItem);
@@ -105,6 +107,7 @@ helpMenu.getItems().addAll(updateItem1,updateItem2);
 ~~~
  
 - Afegir els menus al MenuBar
+
 ~~~
 menuBar.getMenus().addAll(fileMenu, editMenu, projectMenu, helpMenu);
 ~~~
