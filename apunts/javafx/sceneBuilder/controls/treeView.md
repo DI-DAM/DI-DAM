@@ -9,20 +9,6 @@ La classe TreeView del paquet javafx.scene.control proporciona una vista de les 
 
 ![tree view](./images/treeView.png)
 
-Per crear un text Area: 
-
-~~~
-// Crea un TextArea
-TextArea textArea = new TextArea();
- 
-// Inserta el text
-textArea.setText("Hello");
- 
-// Obté el text
-String text= textArea.getText();
-~~~
-
-
 ## Creació TreeView
 
 Quan crea una estructura d'arbre en JavaFX, es necessita crear una instància de la classe TreeView, despres es defineixen diversos objectes TreeItem. Fem que un d'aquestos items de l'arbre siga l'arrel. Agreguem l'arrel a la vista d'arbre i altres elements d'arbre a l'arrel.
