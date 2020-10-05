@@ -109,8 +109,6 @@ helpMenu.getItems().addAll(updateItem1,updateItem2);
 menuBar.getMenus().addAll(fileMenu, editMenu, projectMenu, helpMenu);
 ~~~
 
-
-
 ## Menú Contextual
 
 ContextMenu es pot associar amb controls com a etiquetes, camps de text, etc. El menú contextual s'activa en fer clic dret sobre els controls associats. Mostra una finestra emergent que conté diversos elements de menú o submenú.
