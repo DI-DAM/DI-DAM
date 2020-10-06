@@ -46,7 +46,7 @@ Podem trobar tota la informació referent a la instal·lació i configuració en
             - [Tooltip](./sceneBuilder/controls/tooltip.html)
             - [Date Picker](./sceneBuilder/controls/datePicker.html)
             - [Color Picker](./sceneBuilder/controls/colorPicker.html)
-            - [Obrir una nova finestra](./sceneBuilder/controls/obrirNOvaFinestra.html)
+            - [Obrir una nova finestra](./sceneBuilder/controls/obrirNovaFinestra.html)
         - Shapes
             - [Shapes 2D](./sceneBuilder/shape2D/shape2D.html)
                 - Línea
