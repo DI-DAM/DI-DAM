@@ -166,12 +166,14 @@ contextMenu.getItems().addAll(menuItem1, menuItem2);
 
 - Quan cliquem el boto dret en el cercle, es desplega el menú contextual:
 
+~~~
 circle.setOnContextMenuRequested(new EventHandler<ContextMenuEvent>() {
             @Override
             public void handle(ContextMenuEvent contextMenuEvent) {
                 contextMenu.show(circle, contextMenuEvent.getScreenX(),contextMenuEvent.getScreenY());
             }
         });
+~~~
 
 
 [back](../../javafx.html)
