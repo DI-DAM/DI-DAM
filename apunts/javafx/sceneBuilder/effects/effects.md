@@ -67,9 +67,9 @@ Si les dues imatges se superposen, la manera de fusió s'aplica en l'àrea super
 
 Hi ha tres constructors en aquesta classe.
 
-    - **Blend ()**: crea una instància de la classe Blend amb els valors predeterminats.
-    - **Blend(BlendMode mode)**: instanciar la classe Blend amb la manera especificada
-    - **Blend(BlendMode mode, Effect BottomInput, Effect TopInput)**: crea una instància de la classe Blend amb la manera de fusió especificat, l'efecte d'entrada inferior i l'efecte d'entrada superior
+- **Blend ()**: crea una instància de la classe Blend amb els valors predeterminats.
+- **Blend(BlendMode mode)**: instanciar la classe Blend amb la manera especificada
+- **Blend(BlendMode mode, Effect BottomInput, Effect TopInput)**: crea una instància de la classe Blend amb la manera de fusió especificat, l'efecte d'entrada inferior i l'efecte d'entrada superior
 
 ### Blendmodes
 
