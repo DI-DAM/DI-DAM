@@ -194,8 +194,6 @@ Com suggereix el seu nom, en aplicar aquest efecte, es veu que el node està en 
 
 - Propietats
 
-- Propietats
-
     - **setAngle(Double value)**: Representa l'angle de l'efecte de moviment. És una propietat de tipus doble. 
     - **setInput(Effect value)**: Representa l'entrada de l'efecte. És una propietat de tipus d'objecte Effect. 
     - **setRadius(Double radius)**: Representa el radi del kernel de desenfocament. És una propietat de tipus doble. 
