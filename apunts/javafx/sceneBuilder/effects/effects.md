@@ -343,7 +343,7 @@ Si té diversos objectes amb ombres paral·leles, oriente l'ombra paral·lela de
 
 En aplicar aquest efecte al node, l'ombra es mostra dins de les vores del node. La classe javafx.scene.effect.InnerShadow representa l'efecte InnerShadow. Només necessitem crear una instància d'aquesta classe per a generar un efecte apropiat.
 
-Propietats
+- Propietats
 
     - **setBlurType(BlurType value)**: Això representa l'algorisme utilitzat per a difuminar l'ombra.
     - **setChoke(Double value)**: Aquesta propietat és de tipus doble. Això representa l'escanyament de l'ombra.
@@ -369,7 +369,7 @@ Propietats
 
 Aquest efecte s'utilitza per a il·luminar un node des d'una font de llum. Hi ha diversos tipus de fonts de llum, és a dir, puntuals, distants i puntuals. La classe javafx.scene.effect.Lighting representa l'efecte d'il·luminació. Necessitem crear una instància d'aquesta classe per a generar un efecte apropiat en el node.
 
-Propietats
+- Propietats
 
     - **setBumpInput(Effect value)**: És una propietat de tipus d'objecte d'efecte. Representa l'entrada del mapa de relleu per a l'efecte. 
     - **setContentInput(Effect value)**: És una propietat de tipus d'objecte Effect. Representa l'entrada de contingut per a l'efecte. 
@@ -406,7 +406,7 @@ En aquest efecte, el node s'il·lumina des d'una font de llum distant. La font d
 
 Aquest efecte il·lumina el node mitjançant una font de llum puntual. La font de llum puntual és aquella la llum de la qual s'atenua en totes les direccions. La intensitat de la font de llum depén de la distància entre la font de llum i el node. La classe javafx.scene.effect.Light.Espot representa aquest efecte. Només necessitem crear una instància d'aquesta classe per a generar la llum adequada en el node.
 
-Propietats
+- Propietats
 
     - **setPointsAtX(double value)**: Aquesta és una propietat de tipus doble. Representa la coordenada X del vector de direcció de la llum 
     - **setPointsAtY(double value)**: Aquesta és una propietat de tipus doble. Representa la coordenada I del vector de direcció de la llum 
