@@ -229,7 +229,6 @@ JavaFX ens permet ajustar el color d'una imatge ajustant les propietats com el t
 
 - Propietats
 
-Les propietats de la classe javafx.scene.effect.ColorAdjust juntament amb els seus mètodes d'establiment es descriuen a continuació.
     - **setBrightness(double value)**: realitzada en la lluentor del color. És una propietat de doble tipus. 
     - **setContrast(double value)** Ajust realitzat en contrast del color.
     - **setHue(double value)**: Ajust de matís realitzat en tinte del color. 
@@ -237,8 +236,6 @@ Les propietats de la classe javafx.scene.effect.ColorAdjust juntament amb els se
     - **setSaturation(double value)**:  Ajust realitzat en la saturació del color. 
 
 - Constructors
-
-La classe conté dos constructors donats a continuació.
 
     - **ColorAdjust()**: crea la nova instància de ColorAdjust amb els paràmetres predeterminats.
     - **ColorAdjust(double hue, double saturation, double brightness, double contrast)**: crea la nova instància de ColorAdjust amb els paràmetres especificats.
