@@ -74,74 +74,26 @@ Hi ha tres constructors en aquesta classe.
 ### Blendmodes
 
 - **Add**:  Els components de color de l'entrada superior s'agreguen als de l'entrada inferior. 
-
-![bluemode](./images/blendMode1.png)
-
 - **Blue**: Els components blaus de l'entrada inferior es reemplacen pel component blau de l'entrada superior. 
-
-![bluemode](./images/blendMode2.png)
-
-
 - **COLOR_BURN**: El color d'entrada inferior s'inverteix i es divideix pels components de color d'entrada superior. El resultat s'inverteix novament per a obtindre el color d'eixida
-
-![bluemode](./images/blendMode3.png)
-
-
 - **COLOR_DODGE**: Els components de color superior s'inverteixen i divideixen els components de color inferior per a produir el color d'eixida.
-
-![bluemode](./images/blendMode4.png)
-
 - **DARKEN**: El color més fosc dels dos colors del component d'entrada se selecciona per a produir el color resultant.
-
-![bluemode](./images/blendMode5.png)
-
 - **DIFFERENCE**: El més fosc dels dos colors d'entrada es resta del color més clar per a produir el color resultant.
-
-![bluemode](./images/blendMode6.png)
-
 - **EXCLUSION**: Els dos components de color d'entrada es multipliquen i dupliquen i després es resten de la suma dels components de color de fons per a produir el color desitjat.
-
-![bluemode](./images/blendMode7.png)
-
 - **GREEN**: El component verd de l'entrada inferior es reemplaça per l'entrada verda del component superior.
-
-![bluemode](./images/blendMode8.png)
-
 - **HARD_LIGHT**: Els components de color d'entrada es multipliquen o se seleccionen segons el color de fons. 
-
-![bluemode](./images/blendMode9.png)
-
 - **LIGHTEN**: El color més clar dels dos components de color es produeix com a eixida.
-
-![bluemode](./images/blendMode10.png)
-
 - **MULTIPLY**: Tots dos components de color es multipliquen per a produir el color d'eixida.
-
-![bluemode](./images/blendMode11.png)
-
 - **OVERLAY**: Els components de color d'entrada es filtren o multipliquen segons el color de fons. 
-
-![bluemode](./images/blendMode12.png)
-
 - **RED**: Els components rojos de l'entrada inferior es reemplacen amb els components rojos de l'entrada superior. 
-
-![bluemode](./images/blendMode13.png)
-
 - **SCREEN**: Tots dos components de color s'inverteixen, multipliquen i tornen a invertir per a produir el resultat desitjat. 
-
-![bluemode](./images/blendMode14.png)
-
 - **SOFT_LIGHT**: Els components de color d'entrada s'aclareixen o enfosqueixen. 
-
-![bluemode](./images/blendMode15.png)
-
 - **SRC_ATOP**: La part de l'entrada superior que es troba sobre l'entrada inferior es combina.
-
-![bluemode](./images/blendMode16.png)
-
 - **SRC_OVER**: L'entrada superior es combina amb l'entrada inferior.
 
-![bluemode](./images/blendMode17.png)
+![bluemode](./images/blendModes1.png)
+
+![bluemode](./images/blendModes2.png)
 
 ## Bloom
 
