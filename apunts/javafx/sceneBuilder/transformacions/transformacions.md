@@ -80,7 +80,6 @@ La imatge il·lustra la transformació de rotació. el rectangle que es mostra e
 
 - Constructors
 
-Rotate(): crea la transformació de rotació amb els paràmetres predeterminats.
     - **Rotate(double angle)**: crea la transformació de rotació amb l'angle especificat mesurat en graus. Els punts de pivot s'estableixen en (0,0).
     - **Rotate(double angle, double pivotX)**: crea la transformació de rotació 3D amb la transformació especificada. Els punts de pivot s'estableixen en (0,0,0).
     - **Rotate(double angle, double pivotX, double pivotY)**: crea la transformació de rotació amb l'angle especificat i la coordenada de pivot (x, y).
