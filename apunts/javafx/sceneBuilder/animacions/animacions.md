@@ -24,7 +24,7 @@ JavaFX proporciona les classes per a les transicions com RotateTransition, Scale
 
 ## Passos per a aplicar animacions
 
-1. Creua el node de destí i configure les seues propietats.
+1. Crea el node de destí i configure les seues propietats.
 
 ~~~
 Rectangle rect = new Rectangle(120,100,100,100);
