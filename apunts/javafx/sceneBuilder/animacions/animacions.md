@@ -24,20 +24,20 @@ JavaFX proporciona les classes per a les transicions com RotateTransition, Scale
 
 ## Passos per a aplicar animacions
 
-1. Crea el node de destí i configure les seues propietats.
+- Crea el node de destí i configure les seues propietats.
 
 ~~~
 Rectangle rect = new Rectangle(120,100,100,100);
 rect.setFill(Color.RED); 
 ~~~
 
-2. Instància de la classe de transició respectiva
+- Instància de la classe de transició respectiva
 
 ~~~
 RotateTransition rotate = new RotateTransition(); 
 ~~~
 
-3. Estableix les propietats desitjades com a duració, recompte de cicles, etc. per a la transició.
+- Estableix les propietats desitjades com a duració, recompte de cicles, etc. per a la transició.
 
 ~~~
 rotate.setDuration(Duration.millis(1000));
@@ -45,13 +45,13 @@ rotate.setAxis(Rotate.Y_Axis);
 rotate.setCycleCount(500);
 ~~~
 
-4. Estableix el node de destí en el qual s'aplicarà la transició. Utilitza el següent mètode per a aquest propòsit.
+- Estableix el node de destí en el qual s'aplicarà la transició. Utilitza el següent mètode per a aquest propòsit.
 
 ~~~
 rotate.setNode(rect);
 ~~~
 
-5. Finalment, reproduïsca la transició usant el mètode play().
+- Finalment, reproduïsca la transició usant el mètode play().
 
 ~~~
 rotate.play();
