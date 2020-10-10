@@ -191,14 +191,14 @@ En JavaFX, la classe javafx.animation.FillTransition representa la transició de
 
 ![stroke](./images/stroke.gif)
 
--Propietats
+- Propietats
 
     - **setDuration(Duration duration)**: Aquesta és una propietat de tipus d'objecte de la classe Duració. Representa la duració de la transició del traç. 
     - **setFromValue(Color value)**: Aquesta és una propietat de tipus de color. Representa el valor inicial del color per a la transició del traç.
     - **setShape(Shape shape)**: Aquesta és una propietat de tipus d'objecte de la classe Forma. Representa la forma sobre la qual s'aplicarà la transició de traç. 
     - **setToValue(Color value)**: Aquesta és la propietat de tipus de color. Representa el valor objectiu del color per a la transició del traç.
 
-Constructors
+- Constructors
 
     - **StokeTransition()**: crea la nova instància de StrokeTransition amb els paràmetres predeterminats.
     - **StokeTransition(Duration duration)**: crea la nova instància de Stroke Transition amb el valor de duració especificat
@@ -214,7 +214,7 @@ En JavaFX, la classe javafx.animation.SequentialTransition s'usa per a represent
 
 ![sequential](./images/sequential.gif)
 
-Propietats
+- Propietats
 
     - **setNode(Node node)**: És una propietat de tipus d'objecte de la classe Node. Representa el node sobre el qual s'aplicarà la transició.
 
@@ -253,7 +253,7 @@ En JavaFX, la classe javafx.animation.PauseTransition representa aquesta transic
 
 ![pause](./images/pause.gif)
 
-Propietats
+- Propietats
 
     - **setDuration(Duration duration)**: És un tipus d'objecte de la classe Duració. Representa la vida útil de la transició.
 
