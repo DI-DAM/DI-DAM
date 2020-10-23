@@ -52,7 +52,7 @@ L'últim que hem de fer és acceptar els arxius quan se solten. El mètode setOn
 ~~~
 imageView.setOnDragDropped(new EventHandler&lt;DragEvent&gt;() {
     public void handle(DragEvent event) {
-        List&lt;File&gt; files = event.getDragboard().getFiles();
+        List<File>t; files = event.getDragboard().getFiles();
         System.out.println("Got " + files.size() + " files");
         imageView.setImage(new Image(new FileInputStream(files.get(0))));
          
