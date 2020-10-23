@@ -107,17 +107,18 @@ Existeix una classe d'estil especial denominada .root definida en javafx. S'apli
 Els estils de classe es poden crear agregant la seua definició a la nostra fulla d'estil. Per exemple;
 
 ~~~
-.label1{
-    -fx-background-color : rgb(123,126,227);
-    -fx-padding : 5;
-    -fx-text-fill : rgb(245,123,201);
+.button {
+    -fx-font : 14px "serief";
+    -fx-padding : 10;
+    -fx-background-color : #CCFF99;
+}
 ~~~
 
 per afegir la classe d'estil esmentada anteriorment al node apropiat, utilitze el mètode getStyleClass().add().
 
 ~~~
-Button button = new Button("SUBMIT");
-button.getStyleClass().add(button1);
+Button button1 = new Button("SUBMIT");
+button1.getStyleClass().add(button);
 ~~~
 
 ### Estils d'identificació
