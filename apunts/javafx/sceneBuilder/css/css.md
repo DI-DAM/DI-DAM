@@ -55,7 +55,7 @@ Es pot donar una definició d'estil utilitzant el nom de l'estil, que també es 
 }
 ~~~
 
-## Selectors
+### Selectors
 
 Hi ha diversos tipus d'estils utilitzats en JavaFX. No obstant això, cada tipus considera les seues pròpies convencions respecte als selectors. Les convencions de nomenclatura dels selectors de classes d'estil són,
 
@@ -76,7 +76,7 @@ l'estil d'un node en particular es pot definir mitjançant l'ID del node. S'Util
 #my_label
 ~~~
 
-## Definició de regles en fulles d'estil
+### Definició de regles en fulles d'estil
 
 Les regles per a una definició d'estil assignen valors a les propietats. Existeixen algunes convencions per als noms de propietat que es donen a continuació.
 
@@ -102,7 +102,7 @@ Existeix una classe d'estil especial denominada .root definida en javafx. S'apli
 }
 ~~~
 
-## Estils de classe
+### Estils de classe
 
 Els estils de classe es poden crear agregant la seua definició a la nostra fulla d'estil. Per exemple;
 
@@ -120,7 +120,7 @@ Button button = new Button("SUBMIT");
 button.getStyleClass().add(button1);
 ~~~
 
-## Estils d'identificació
+### Estils d'identificació
 
 JavaFX ens brinda la possibilitat de crear l'estil per al node individual. El nom de l'estil es pot donar com el nom de ID precedit pel símbol de *almohadilla* (#).
 
@@ -131,7 +131,7 @@ JavaFX ens brinda la possibilitat de crear l'estil per al node individual. El no
 }
 ~~~
 
-## Establir estils en línia
+### Establir estils en línia
 
 JavaFX ens facilita definir les regles CSS en el propi codi de l'aplicació JavaFX. No obstant això, les regles definides en el codi de l'aplicació JavaFX tenen prioritat sobre els estils de la fulla d'estil.
 
