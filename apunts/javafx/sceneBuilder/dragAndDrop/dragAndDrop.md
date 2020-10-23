@@ -50,7 +50,7 @@ Aquesta línia fa que el component estiga llest per a acceptar les dades entrant
 L'últim que hem de fer és acceptar els arxius quan se solten. El mètode setOnDragDropped permet aconseguir això. 
 
 ~~~
-imageView.setOnDragDropped(new EventHandler&lt;DragEvent&gt;() {
+imageView.setOnDragDropped(new EventHandler<DragEvent>() {
     public void handle(DragEvent event) {
         List<File> files = event.getDragboard().getFiles();
         System.out.println("Got " + files.size() + " files");
@@ -73,7 +73,7 @@ Per a enviar dades des de la font, s'usa una instància de ClipboardContent. Com
 Ara la font permetrà arrossegar dades de cadena. és a dir, actua com a font.
 
 ~~~
-source.setOnDragDetected(new EventHandler&lt;MouseEvent&gt;() {
+source.setOnDragDetected(new EventHandler<MouseEvent>() {
     public void handle(MouseEvent event) {
         Dragboard db = source.startDragAndDrop(TransferMode.ANY);
          
