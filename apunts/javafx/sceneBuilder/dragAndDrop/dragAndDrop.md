@@ -66,7 +66,7 @@ Llavors, això és tan simple com una operació d'arrossegar i soltar. Ara vegem
 
 ## Arrossegar i soltar entre dos components interns
 
-Per a fer que un node estiga llest per a ser arrossegat, podem usar el mètode **setOnDragDetected**. Aquesta funció es dirà sempre que es realitze una operació d'arrossegament en el component. Ací, la font és una variable de text que conté una mica de text.
+Per a fer que un node estiga llest per a ser arrossegat, podem usar el mètode **setOnDragDetected**. Aquesta funció es cridarà sempre que es realitze una operació d'arrossegament en el component. Ací, la font és una variable de text que conté una mica de text.
 
 Quan s'arrossega la font, la classe Dragboard de javafx.scene.input.Dragboard es construeix cridant al mètode source.startDragAndDrop(). Les maneres de transferència defineixen el tipus de transferència que ocorre entre la font del gest i el destí del gest. Les maneres de transferència disponibles inclouen CÒPIA, MOURE i ENLLAÇ.
 Per a enviar dades des de la font, s'usa una instància de ClipboardContent. Com estem enviant dades String, s'usa el mètode putString. Després de configurar el contingut, s'associa amb Dragboard db.
